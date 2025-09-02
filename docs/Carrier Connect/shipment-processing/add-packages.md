@@ -30,7 +30,7 @@ These possible references are combined in the *shipmentReference* (DTO). Again, 
 </shipmentReference>
 ```
 
-A package is described within the *<packages>* tag. It has its own references and attributes.
+A package is described within the *`<packages>`* tag. It has its own references and attributes.
 
 ```xml
 <packages>
