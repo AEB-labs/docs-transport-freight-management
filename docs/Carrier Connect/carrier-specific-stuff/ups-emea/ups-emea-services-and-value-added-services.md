@@ -16,18 +16,18 @@ next:
 
 The UPS Access Point™ Economy service is a slower, more economical alternative to the UPS Standard domestic service and is available for domestic shipments in Belgium, Canada, France, Germany, Italy, Luxembourg, Mexico, Netherlands, Poland, United Kingdom, and satellites of these countries.
 
-> ❗️ 
-> 
+> ❗️
+>
 > Must be combined with:
-> 
-> - Access Point™ – Ship to a UPS Access Point™ Location
-> - Access Point™ – Electronic authorization code
-> - Access Point™ – Addressee Only Delivery
-> - Access Point™ – C.O.D
-> 
+>
+> * Access Point™ – Ship to a UPS Access Point™ Location
+> * Access Point™ – Electronic authorization code
+> * Access Point™ – Addressee Only Delivery
+> * Access Point™ – C.O.D
+>
 > Must not be combined with:
-> 
-> - Access Point™ – Not at home UPS Access Point™ delivery
+>
+> * Access Point™ – Not at home UPS Access Point™ delivery
 
 # Value Added Services
 
@@ -55,15 +55,15 @@ b) If the ShopID of the UPS Access Point location is not filled in Carrier Conne
 
 With this service, you enable your customers to ensure that only the original consignee named on the shipping label may collect the parcel from the UPS Access Point location (no pick-up by a third party allowed).
 
-> ❗️ 
-> 
+> ❗️
+>
 > Must be combined with:
-> 
-> - Access Point™ – Ship to a UPS Access Point™ Location
-> 
+>
+> * Access Point™ – Ship to a UPS Access Point™ Location
+>
 > Must not be combined with:
-> 
-> - Access Point™ – Electronic authorization code
+>
+> * Access Point™ – Electronic authorization code
 
 <br />
 
@@ -71,10 +71,10 @@ With this service, you enable your customers to ensure that only the original co
 
 Collect on delivery collected at the UPS Access Point ™. 
 
-> ❗️ 
-> 
+> ❗️
+>
 > Must be combined with:
-> 
+>
 > Access Point™ – Ship to a UPS Access Point™ Location
 
 <br />
@@ -83,8 +83,8 @@ Collect on delivery collected at the UPS Access Point ™.
 
 Delivery to a UPS Access Point (after the first, unsuccessful delivery attempts). UPS InfoNotice is stored, informing customers that and where they can collect their parcels
 
-> ❗️ 
-> 
+> ❗️
+>
 > May not be combined with the other Access Point value-added services
 
 ### Access Point - Electronic authorization code
@@ -93,14 +93,14 @@ Electronic authorization code for package pickup.
 
 Provide your customers with a security code. This give them more security and also enable them to have their parcels collected by a third party. This option also allows the use of the UPS Access Point network if the identity of the recipient is unknown (e.g. customer service technician). The authorization code is entered in the extra field "Electronic authorization code - UPSELAUTHCODE" 
 
-> ❗️ 
-> 
+> ❗️
+>
 > Must be combined with:
-> 
+>
 > Access Point™ – Ship to a UPS Access Point™ Location
-> 
+>
 > Must not be combined with:
-> 
+>
 > Access Point™ – Addressee Only Delivery
 
 <br />
@@ -109,12 +109,12 @@ Provide your customers with a security code. This give them more security and al
 
 This topic describes the UPS Access Point™ pick-up service, which offers consumers an alternative to home delivery. Shipments are delivered directly to UPS Access Point™ locations where customers can pick up their packages. UPS Access Point™ locations are retail locations that facilitate transactions on behalf of UPS.
 
-> ❗️ 
-> 
+> ❗️
+>
 > Can be combined with:
-> 
-> Access Point™ – Electronic authorization code  
-> Access Point™ – Addressee Only Delivery  
+>
+> Access Point™ – Electronic authorization code\
+> Access Point™ – Addressee Only Delivery\
 > Access Point™ – C.O.D
 
 <br />
@@ -131,8 +131,8 @@ For further information see helpcenter article [UPS: Digitally transmitting comm
 
 All options have in common that UPS does not proactively drive to the customer to pick up a provided package but waits for the customer to contact UPS. UPS then reactively sends a driver to pick up the package.
 
-> ❗️ 
-> 
+> ❗️
+>
 > We currrently only implemented on demand return services meaning you need to create an additional shipping order for the return shipment - with new reference number.
 
 ### Return Service – Electronic Return Label
