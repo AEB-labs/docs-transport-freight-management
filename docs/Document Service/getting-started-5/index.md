@@ -16,33 +16,28 @@ You want to add document or label generation to your current ERP system? You wan
 
 In order to optimally use the full potential of the _Document Service_, it is important to look around and see what's available there.
 
-1. First, there are some [<glossary:Document processor>s](doc:document-processors). This helps you to understand what kind of documents we can generate for you.
-2. Categorized by the <glossary:Document processor tag>, there exist <glossary:Document template>s. See which templates we have already [prepared for you](doc:document-templates).
+1. First, there are some [`<glossary:Document processor>`s](doc:document-processors). This helps you to understand what kind of documents we can generate for you.
+2. Categorized by the `<glossary:Document processor tag>`, there exist `<glossary:Document template>`s. See which templates we have already [prepared for you](doc:document-templates).
 3. Then, pick a template and [generate documents](doc:document-preparation) with it. Use the existing examples or your own data.
 
 # Quick Examples
 
-[block:tutorial-tile]
-{
-  "backgroundColor": "#018FF4",
-  "emoji": "⌨️",
-  "id": "6426c42a3c4e4300183c0dd9",
-  "link": "https://transport-freight-management.docs.developers.aeb.com/v3/recipes/create-example-document",
-  "slug": "create-example-document",
-  "title": "Create Example Document"
-}
-[/block]
+<TutorialTile
+  backgroundColor="#018FF4"
+  emoji="⌨️"
+  link="https://transport-freight-management.docs.developers.aeb.com/v3/recipes/create-example-document"
+  slug="create-example-document"
+  title="Create Example Document"
+/>
 
-[block:tutorial-tile]
-{
-  "backgroundColor": "#018FF4",
-  "emoji": "⌨️",
-  "id": "649ad40c78e725000cf65b0a",
-  "link": "https://transport-freight-management.docs.developers.aeb.com/v3/recipes/create-and-edit-staged-document",
-  "slug": "create-and-edit-staged-document",
-  "title": "Create and Edit Staged Document"
-}
-[/block]
+<TutorialTile
+  backgroundColor="#018FF4"
+  emoji="⌨️"
+  link="https://transport-freight-management.docs.developers.aeb.com/v3/recipes/create-and-edit-staged-document"
+  slug="create-and-edit-staged-document"
+  title="Create and Edit Staged Document"
+/>
+
 
 # Playing around with the API
 
