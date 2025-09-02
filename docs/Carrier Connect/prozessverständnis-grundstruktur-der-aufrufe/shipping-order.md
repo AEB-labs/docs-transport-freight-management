@@ -18,44 +18,30 @@ There are two main options how to integrate the shipping order and label creatio
 
 Option 1:
 
-- You can create data for all physical packages first and then print all labels at once at the end of the packing process. 
+* You can create data for all physical packages first and then print all labels at once at the end of the packing process. 
 
 Option 2:
 
-- Or you can print labels one by one per package, i.e. as soon as the first package is physically created, a label can be be printed, then second package, second label etc. The shipment will be left open for further package processing during the day. Finally, with the last package or a separate API call the shipment needs to be closed.
-- Prerequisite is single-package handling being activated in the account setup of the carrier configuration. You configure the so-called single package handling under _Carrier configurations – Accounts – Single pkg. handling_ field group: enable option. If this option cannot be activated, it is not supported by the interface of the carrier.
+* Or you can print labels one by one per package, i.e. as soon as the first package is physically created, a label can be be printed, then second package, second label etc. The shipment will be left open for further package processing during the day. Finally, with the last package or a separate API call the shipment needs to be closed.
+* Prerequisite is single-package handling being activated in the account setup of the carrier configuration. You configure the so-called single package handling under *Carrier configurations – Accounts – Single pkg. handling* field group: enable option. If this option cannot be activated, it is not supported by the interface of the carrier.
 
 # Printing labels at once at the end of the packing process
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/119de37559edc026c88aeb59e1b581d59dd754aecce18d42eeee84aa99921a07-Get_Started_Carrier_Connect_JWA_-_Collective_Package_Handling.jpg",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/119de37559edc026c88aeb59e1b581d59dd754aecce18d42eeee84aa99921a07-Get_Started_Carrier_Connect_JWA_-_Collective_Package_Handling.jpg" />
 
 **Use case**
 
-In some cases, processes allow that all shipping data is available and finalized. No changes are expected anymore.  
+In some cases, processes allow that all shipping data is available and finalized. No changes are expected anymore.\
 This provides an easy context and makes it possible to ship by just sending one API call. With this one call you can create the shipment, include packages and items, complete the shipment, and request documents to be returned in the response.
 
 **Consequences**
 
-- The overall number of packages is already known when you start printing labels. It is possible to print total values on the labels, e.g. "1 of 5", "2 of 5" as package counter or even total weight of the shipment.
-- This is often preferred by the carriers, especially LTL carriers. 
+* The overall number of packages is already known when you start printing labels. It is possible to print total values on the labels, e.g. "1 of 5", "2 of 5" as package counter or even total weight of the shipment.
+* This is often preferred by the carriers, especially LTL carriers. 
 
 ## Overview of the necessary API calls
 
-1. _[createShipment](https://transport-freight-management.docs.developers.aeb.com/reference/createshipment)_: create shipment containing all packages, request all label documents, parameter `doCompletion` = `true`
+1. *[createShipment](https://transport-freight-management.docs.developers.aeb.com/reference/createshipment)*: create shipment containing all packages, request all label documents, parameter `doCompletion` = `true`
 
 ## Example API call
 
@@ -269,38 +255,24 @@ And this is how the response looks like:
 
 # Printing labels one by one per package
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/dc748a63c388e436683e130de7709663653ec156d5ee3f1cc71f9e7eb3b177fd-Get_Started_Carrier_Connect_JWA_-_Single_Package_Handling.jpg",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/dc748a63c388e436683e130de7709663653ec156d5ee3f1cc71f9e7eb3b177fd-Get_Started_Carrier_Connect_JWA_-_Single_Package_Handling.jpg" />
 
 **Use case**
 
-Many of our customers know very early in the shipping process where and with which carrier (and service) they want to ship. However, they may know only very late the details like the total number of packages, exact total weights, dimensions, etc. Once each of the packages is ready, it is processed and the label should be printed. The shipment remains open until the very last minute for further packages to be added.  
-You simply need to create the shipping order with _createShipment_, add the packages with _processShipment_, and once you are done send another _processShipment_ to complete the shipping order. You can also complete the shipping order with the last package, i.e. with the last processShipment call.
+Many of our customers know very early in the shipping process where and with which carrier (and service) they want to ship. However, they may know only very late the details like the total number of packages, exact total weights, dimensions, etc. Once each of the packages is ready, it is processed and the label should be printed. The shipment remains open until the very last minute for further packages to be added.\
+You simply need to create the shipping order with *createShipment*, add the packages with *processShipment*, and once you are done send another *processShipment* to complete the shipping order. You can also complete the shipping order with the last package, i.e. with the last processShipment call.
 
-**Consequences **
+**Consequences**
 
-- Allows you to add packages one by one to the shipping order. Therefore, you can delete packages or repack them easier, without cancelling the whole shipping order. 
-- You get labels right away (no need to buffer or risk of having unlabeled packages)
-- You will not be able to print total values on the labels, e.g. "1 of 5", "2 of 5", except you know the total package number or total weight of the shipment already with the first package. 
+* Allows you to add packages one by one to the shipping order. Therefore, you can delete packages or repack them easier, without cancelling the whole shipping order. 
+* You get labels right away (no need to buffer or risk of having unlabeled packages)
+* You will not be able to print total values on the labels, e.g. "1 of 5", "2 of 5", except you know the total package number or total weight of the shipment already with the first package. 
 
 ## Overview of the necessary API calls
 
-1. [_createShipment_](https://transport-freight-management.docs.developers.aeb.com/reference/createshipment): create shipment without packages or with only the first package
-2. n times: [_processShipment_](https://transport-freight-management.docs.developers.aeb.com/reference/processshipment): add a package, request label documents. For detailed information see [🔄 Update](doc:process).
-3. When shipment status in ERP is closed, then _processShipment_ with paremeter `doCompletion` = `true`
+1. [*createShipment*](https://transport-freight-management.docs.developers.aeb.com/reference/createshipment): create shipment without packages or with only the first package
+2. n times: [*processShipment*](https://transport-freight-management.docs.developers.aeb.com/reference/processshipment): add a package, request label documents. For detailed information see [🔄 Update](doc:process).
+3. When shipment status in ERP is closed, then *processShipment* with paremeter `doCompletion` = `true`
 
 ## Example API call
 
