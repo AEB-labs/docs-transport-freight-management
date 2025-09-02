@@ -17,7 +17,7 @@ next:
 The UPS Ready Vendor Certification is a program by United Parcel Service (UPS) that recognizes third-party software providers that integrate UPS shipping, tracking, and logistics solutions into their products. This certification ensures that the vendor's software meets UPS’s standards for seamless integration and reliable performance.
 
 > 📘 AEB is UPS Ready Vendor
-> 
+>
 > **To facilitate a simplified acceptance process, please provide the following information to your UPS contact person:**
 
 | Software Name | Software-Version | Software Vendor Code |
@@ -34,7 +34,7 @@ The UPS format is called PLD200.
 
 ### Document upload
 
-Documents will be uploaded when closing the <<glossary:pickup>>.
+Documents will be uploaded when closing the <Glossary>pickup</Glossary>.
 
 ### Webservice for Dangerous Goods, Access Points or Trade document upload
 
