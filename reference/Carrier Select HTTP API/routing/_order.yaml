@@ -7,3 +7,4 @@
 - getroutingrequirementtypes
 - getroutingtaskresult
 - getsupplementtaskresult
+- waitforroutingtaskresult
