@@ -10,18 +10,20 @@ metadata:
 next:
   description: ''
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 # Extended information: References and texts
 
-> 💡 
-> 
-> German: Referenztexte
+<Callout icon="💡" theme="default">
+  ### German: Referenztexte
+</Callout>
 
 ![](https://files.readme.io/e0c9f61-image.png)
 
@@ -52,14 +54,14 @@ Reference texts can be used to transmit standardized types of information to Car
 
 To use these references and texts there are two fields to be filled:
 
-- `type`: Name of the reference field. All valid types are listed in the <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank">API Reference</a> of Carrier Connect.
-- `value`: Value of the reference field.
+* `type`: Name of the reference field. All valid types are listed in the <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank">API Reference</a> of Carrier Connect.
+* `value`: Value of the reference field.
 
 # Extra fields
 
-> 💡 
-> 
-> German: Zusatzfelder
+<Callout icon="💡" theme="default">
+  ### German: Zusatzfelder
+</Callout>
 
 ![](https://files.readme.io/7d8bf47-image.png)
 
@@ -70,9 +72,9 @@ There are two usecases for extra fields:
 
 To use an extra field in Carrier Connect, there are three fields to be considered: 
 
-- `name`: The name of the additional value field (available in the carrier configuration). 
-- `type`: The type of format that is used for the value. 
-- `value`: The actual value of the field. 
+* `name`: The name of the additional value field (available in the carrier configuration). 
+* `type`: The type of format that is used for the value. 
+* `value`: The actual value of the field. 
 
 ```json
 "shipment": {
