@@ -26,3 +26,4 @@
 - changeadminpassword
 - generateclientidentcode
 - getduplicateclientprogress
+- getdownloadablefilesrefs
