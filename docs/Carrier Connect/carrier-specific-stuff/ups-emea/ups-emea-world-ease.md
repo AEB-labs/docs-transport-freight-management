@@ -17,8 +17,8 @@ metadata:
 next:
   description: ''
 ---
-> ❗️ 
-> 
+> ❗️
+>
 > World Ease is not available for shipments between EU countries
 
 # Requirements
@@ -31,31 +31,31 @@ There are specific requirements that shipments must meet to be consolidated:
 
 ## Requirements all shipments
 
-:white_check_mark: All shipments (master and child) must have the same shipping date  
+:white_check_mark: All shipments (master and child) must have the same shipping date\
 :white_check_mark: All shipments must have the same billing option
 
 ## Requirements master shipment
 
-:white_check_mark: The importer must be entered in the master shipment as the recipient. This is done automatically when creating the master shipment from the first child shipment, provided that the importer is filled in the child.  
-:white_check_mark: The master shipment must be a document shipment  
-:white_check_mark: A maximum of one package is allowed in the master shipment  
-:white_check_mark: The value added service _World Ease® Master_ must be set in the master shipment
+:white_check_mark: The importer must be entered in the master shipment as the recipient. This is done automatically when creating the master shipment from the first child shipment, provided that the importer is filled in the child.\
+:white_check_mark: The master shipment must be a document shipment\
+:white_check_mark: A maximum of one package is allowed in the master shipment\
+:white_check_mark: The value added service *World Ease® Master* must be set in the master shipment
 
 ## Requirements child shipment
 
-:white_check_mark: All child shipments must use the same clearance port as the master-shipment  
-:white_check_mark: All child shipments must use the same importer  
-:white_check_mark: All child shipments must be goods shipments  
-:white_check_mark: The currency for all child shipments must be identical, e.g. EUR everywhere  
-:white_check_mark: The unit of weight for all child shipments must be identical. As of 08/2019 only KGS is implemented  
-:white_check_mark: All child shipments within a master shipment for UPS Expedited and UPS Standard (Package and Shipment) **must contain the same service level**. UPS Express, UPS Epress Plus and UPS Express Saver are allowed within one World Ease shipment. The allowed service level can be seen in the POE file.  
-:white_check_mark: The value added service _World Ease® Child_ must be set in the child shipment
+:white_check_mark: All child shipments must use the same clearance port as the master-shipment\
+:white_check_mark: All child shipments must use the same importer\
+:white_check_mark: All child shipments must be goods shipments\
+:white_check_mark: The currency for all child shipments must be identical, e.g. EUR everywhere\
+:white_check_mark: The unit of weight for all child shipments must be identical. As of 08/2019 only KGS is implemented\
+:white_check_mark: All child shipments within a master shipment for UPS Expedited and UPS Standard (Package and Shipment) **must contain the same service level**. UPS Express, UPS Epress Plus and UPS Express Saver are allowed within one World Ease shipment. The allowed service level can be seen in the POE file.\
+:white_check_mark: The value added service *World Ease® Child* must be set in the child shipment
 
 ## Not allowed for World Ease
 
-:x: Dangerous Goods  
-:x: All UPS Return Services  
-:x: UPS package types: Letter, 10KG BOX and 25KG BOX are not allowed in child shipments.  
+:x: Dangerous Goods\
+:x: All UPS Return Services\
+:x: UPS package types: Letter, 10KG BOX and 25KG BOX are not allowed in child shipments.\
 :x: Document shipments are not allowed for child shipments
 
 # Possible variants for World Ease shipments
