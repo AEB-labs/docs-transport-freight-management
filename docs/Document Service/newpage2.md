@@ -10,11 +10,8 @@ metadata:
 next:
   description: ''
 ---
-[block:api-header]
-{
-  "title": "Playing around with the API"
-}
-[/block]
+## Playing around with the API
+
 If you just want to play around with the API Methods of Document Service, you can use  the following option:
 
 ## Swagger
