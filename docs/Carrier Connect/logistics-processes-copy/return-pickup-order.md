@@ -35,7 +35,7 @@ Every shipment prints two labels: the normal outbound label and the return label
 - This is often used in the B2C area or when it is known that this outbound shipment will also lead to a return (e.g. because the broken part is to be returned in the spare parts shipment).
 - It is not certain that the return will actually take place. The carrier has not yet been commissioned.
 - There is only one shipping order, the address constellation is that of the outbound.
-- The "Enclosure" return is activated via an value added service (`shipment > valueAddedServices`in the `createShipment` call).
+- The "Enclosure" return is activated via a value added service (`shipment > valueAddedServices` in the `createShipment` call).
 
 ### Return "On demand":
 
