@@ -25,3 +25,4 @@
 - getbuildforsolution
 - changeadminpassword
 - generateclientidentcode
+- getduplicateclientprogress
