@@ -17,5 +17,5 @@ We have prepared information to assist you in integrating your processes with a 
 Below, you will find some of the most common scenarios and how you can implement them using our API.
 
 > 📘 Keeping data and documents right
-> 
+>
 > **Due to the various shipping scenarios our customers are faced with, Carrier Connect provides maximum flexibility in its API.** However, this means that you have to keep in mind that after you've started printing documents all following changes might alter the data printed on the documents. It is your responsibility to make sure that no negative consequences on your processes and the carriers' operational processes result from these subsequent changes.
