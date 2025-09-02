@@ -30,3 +30,4 @@
 - printdocumentinstance
 - querydocumentreferenceobjects
 - updatedocumentinstancetrusted
+- getprocessorinfo
