@@ -12,21 +12,15 @@ next:
 ---
 This page explains how to work with the API methods in order to create & manage the following data objects:
 
-* <<glossary:Order>> 
-* <<glossary:Order item>>
+* <Glossary>Order</Glossary> 
+* <Glossary>Order item</Glossary>
 
 # Order
 
 ## Minimal Order
-The minimal message that is needed to create an <<glossary:Order>>:
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "TODO",
-      "language": "json"
-    }
-  ]
-}
-[/block]
+The minimal message that is needed to create an <Glossary>Order</Glossary>:
+
+```json
+TODO
+```
