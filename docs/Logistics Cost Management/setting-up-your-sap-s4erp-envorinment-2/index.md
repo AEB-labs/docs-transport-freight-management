@@ -111,7 +111,7 @@ You are now at step 2 "Consumer Security". Choose User ID / Password. In the fie
 
 | Field name                        | Value                              | Explanation                                                                                                                  |
 | :-------------------------------- | :--------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| URL access path                   | test2billing /servlet/bf/BillingBF | /<Pathname target system>/servlet/bf/BillingBF                                                                               |
+| URL access path                   | test2billing /servlet/bf/BillingBF | `<Pathname target system>`/servlet/bf/BillingBF                                                                               |
 | Computer name of access URL       | rz3.aeb.de                         | Server name of target system                                                                                                 |
 | Port number of access URL         | 443                                | Port under which the target system can be accessed                                                                           |
 | URL Protocol Information          | HTTPS                              | HTTP or HTTPS. To be selected according to the desired connection type.                                                      |
