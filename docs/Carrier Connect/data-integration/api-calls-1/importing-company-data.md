@@ -63,5 +63,5 @@ next:
 
 <br />
 
-- ["Doku"](https://rz3.aeb.de/test1cai/servlet/bf/doc/LogisticsBF/de/aeb/xnsg/logistics/bf/ILogisticsBF.html#setCompanyMasterFileData(de.aeb.xnsg.logistics.bf.SetCompanyMasterFileDataRequestDTO))
-- <https://rz3.aeb.de/test1cai/servlet/bf/doc/LogisticsBF/de/aeb/xnsg/logistics/bf/ILogisticsBF.html>
+* ["Doku"](https://rz3.aeb.de/test1cai/servlet/bf/doc/LogisticsBF/de/aeb/xnsg/logistics/bf/ILogisticsBF.html#setCompanyMasterFileData\(de.aeb.xnsg.logistics.bf.SetCompanyMasterFileDataRequestDTO\))
+* [https://rz3.aeb.de/test1cai/servlet/bf/doc/LogisticsBF/de/aeb/xnsg/logistics/bf/ILogisticsBF.html](https://rz3.aeb.de/test1cai/servlet/bf/doc/LogisticsBF/de/aeb/xnsg/logistics/bf/ILogisticsBF.html)
