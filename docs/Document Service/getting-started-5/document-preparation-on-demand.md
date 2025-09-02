@@ -15,7 +15,7 @@ next:
 ---
 ## Try it out
 
-When you have selected a <<glossary:Document template>> and prepared some suitable data that match the <<glossary:Document schema>> of the template, you can generate your first document.
+When you have selected a &lt;&lt;glossary:Document template&gt;&gt; and prepared some suitable data that match the &lt;&lt;glossary:Document schema&gt;&gt; of the template, you can generate your first document.
 
 Alternatively, you can just use the predefined example values for the `DemoDoc10.pdf`.
 
@@ -31,39 +31,15 @@ The most comfortable way is to use the [Swagger UI](https://rz3.aeb.de/demo1docs
 
 Now execute the request
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/95ca585-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
+<div align="center">
+  <img src="https://files.readme.io/95ca585-image.png" alt="" style={{ border: true }} />
+</div>
 
 You get a response like this:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/810c9e1-image.png",
-        null,
-        ""
-      ],
-      "align": "center",
-      "border": true
-    }
-  ]
-}
-[/block]
+<div align="center">
+  <img src="https://files.readme.io/810c9e1-image.png" alt="" style={{ border: true }} />
+</div>
 
 You then use the _Download file_ link to save the response into a file on your computer.
 
@@ -77,14 +53,9 @@ The same request can be theoretically [executed here](/reference/createdocument_
 
 ### Using command line
 
-
-[block:tutorial-tile]
-{
-  "backgroundColor": "#018FF4",
-  "emoji": "⌨️",
-  "id": "6426c42a3c4e4300183c0dd9",
-  "link": "https://transport-freight-management.docs.developers.aeb.com/v3/recipes/create-example-document",
-  "slug": "create-example-document",
-  "title": "Create Example Document"
-}
-[/block]
+<div style={{ backgroundColor: "#018FF4", borderRadius: "5px", padding: "10px" }}>
+  <span role="img" aria-label="keyboard">⌨️</span>
+  <a href="https://transport-freight-management.docs.developers.aeb.com/v3/recipes/create-example-document" style={{ color: "white", textDecoration: "none" }}>
+    <strong>Create Example Document</strong>
+  </a>
+</div>
