@@ -330,4 +330,4 @@ lo_zlcm_rest_call->create_call(
 
 Of course you must adjust the fixed values to your needs. 
 
-The method to use as exporting paramater is 'createServiceItems'. Please also see: <https://transport-freight-management.docs.developers.aeb.com/docs/the-first-service-item-1>
+The method to use as exporting paramater is 'createServiceItems'. Please also see: [https://transport-freight-management.docs.developers.aeb.com/docs/the-first-service-item-1](https://transport-freight-management.docs.developers.aeb.com/docs/the-first-service-item-1)
