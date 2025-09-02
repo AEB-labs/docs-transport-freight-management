@@ -135,7 +135,7 @@ Configuring a logical port with SOMANAGER (SAP NetWeaver Release 7.1 and higher)
 * In the entry, click on the link in the Internal name column.
 * In the consumer proxy details displayed below, select the Configurations sheet and click Create – Manual configuration.
 * Enter a name of your choice for the logical port and its description, then click the Next.
-* In the Consumer security sheet, select the User ID and password option for an HTTPS connection, i.e. for all connections to the AEB data center. Specify the user ID in the format of <user in the target system>@<client of the target system> and the password matching the user.\
+* In the Consumer security sheet, select the User ID and password option for an HTTPS connection, i.e. for all connections to the AEB data center. Specify the user ID in the format of `<user in the target system>`@`<client of the target system>` and the password matching the user.\
   When you are finished, click Next.
 * In the HTTP settings step, enter the following values:
 
