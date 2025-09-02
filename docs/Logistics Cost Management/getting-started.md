@@ -10,11 +10,8 @@ metadata:
 next:
   description: ''
 ---
-[block:api-header]
-{
-  "title": "Playing around with the API"
-}
-[/block]
+## Playing around with the API
+
 If you just want to play around with the API Methods of  Logistics Cost Management, you can use one of the following options.
 
 ## Readme.io
@@ -26,25 +23,24 @@ If you just want to play around with the API Methods of  Logistics Cost Manageme
 
 * Authenticate yourself by clicking the Authorize button at the top of the page.
 * Go to the [Swagger UI of the demo engine](https://rz3.aeb.de/demo1billing/swagger/).
-[block:api-header]
-{
-  "title": "Manually setting up the API"
-}
-[/block]
+
+## Manually setting up the API
+
 The Logistics Cost Management API methods can be found at: 
 
 ## REST (OpenApi)
+
 `*ENGINE_URL*/rest/openapi.json` (e.g. `https://rz3.aeb.de/demo1billing/rest/openapi.json`)
 
 ## SOAP
-Business facade for the Billing Engine
+
+Business facade for the Billing Engine\
 `*ENGINE_URL*/servlet/bf/BillingBF?WSDL` (e.g. `https://rz3.aeb.de/demo1billing/servlet/bf/BillingBF?WSDL`)
 
-Business facade for rates in the Billing Engine
+Business facade for rates in the Billing Engine\
 `*ENGINE_URL*/servlet/bf/RateBF?WSDL` (e.g. `https://rz3.aeb.de/demo1billing/servlet/bf/RateBF?WSDL`)
 
-Business facade interface, handling requests for external invoice project
+Business facade interface, handling requests for external invoice project\
 `*ENGINE_URL*/servlet/bf/ExternalInvoiceBF?WSDL` (e.g. `https://rz3.aeb.de/demo1billing/servlet/bf/ExternalInvoiceBF?WSDL`)
-
 
 For Authentication see: [REST Authentication](https://transport-freight-management.docs.developers.aeb.com/v2/docs/setup-your-environment-1#section-rest-authentication)
