@@ -10,14 +10,14 @@ metadata:
 next:
   description: ''
 ---
-You want to add document or label generation to your current ERP system? You want to print documents, or labels using data of your system? Or you need to upload, save and archive documents?Or do you intend to relate uploaded documents to a business object? No problem: State-of-the-art APIs make it easy to integrate document service into your IT environment.
+You want to add document or label generation to your current ERP system? You want to print documents, or labels using data of your system? Or you need to upload, save and archive documents? Or do you intend to relate uploaded documents to a business object? No problem: State-of-the-art APIs make it easy to integrate document service into your IT environment.
 
 # Tutorial
 
 In order to optimally use the full potential of the _Document Service_, it is important to look around and see what's available there.
 
-1. First, there are some [<<glossary:Document processor>>s](doc:document-processors). This helps you to understand what kind of documents we can generate for you.
-2. Categorized by the <<glossary:Document processor tag>>, there exist <<glossary:Document template>>s. See which templates we have already [prepared for you](doc:document-templates).
+1. First, there are some [<glossary:Document processor>s](doc:document-processors). This helps you to understand what kind of documents we can generate for you.
+2. Categorized by the <glossary:Document processor tag>, there exist <glossary:Document template>s. See which templates we have already [prepared for you](doc:document-templates).
 3. Then, pick a template and [generate documents](doc:document-preparation) with it. Use the existing examples or your own data.
 
 # Quick Examples
@@ -33,7 +33,6 @@ In order to optimally use the full potential of the _Document Service_, it is im
 }
 [/block]
 
-
 [block:tutorial-tile]
 {
   "backgroundColor": "#018FF4",
@@ -44,7 +43,6 @@ In order to optimally use the full potential of the _Document Service_, it is im
   "title": "Create and Edit Staged Document"
 }
 [/block]
-
 
 # Playing around with the API
 
