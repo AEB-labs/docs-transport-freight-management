@@ -12,7 +12,7 @@ next:
 ---
 This page explains how to work with the API methods in order to create & manage the following data objects:
 
-* <<glossary:Shipment>>  
-* <<glossary:Shipment item>> 
-* <<glossary:Shipping unit>> 
-* <<glossary:Transport>>
+* <Glossary>Shipment</Glossary>  
+* <Glossary>Shipment item</Glossary> 
+* <Glossary>Shipping unit</Glossary> 
+* <Glossary>Transport</Glossary>
