@@ -14,12 +14,14 @@ next:
       slug: processparms
       title: ⚙️ Process parameters
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 # Supported printer models
 
@@ -29,4 +31,6 @@ In order to successfully print labels with Carrier Connect you need to use a sup
 
 Creating documents like labels and loading lists is an essential part of Carrier Connect.
 
-> 💡 Find more details in our guide <a href="https://docs.aeb.com/doc/cm-809258763-823972491-en-US/t-823972491-809258763-en-US" target="_blank">Printing with Carrier Connect</a>.
+<Callout icon="💡" theme="default">
+  ### Find more details in our guide <a href="https://docs.aeb.com/doc/cm-809258763-823972491-en-US/t-823972491-809258763-en-US" target="_blank">Printing with Carrier Connect</a>.
+</Callout>
