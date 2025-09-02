@@ -10,12 +10,14 @@ metadata:
 next:
   description: ''
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 <br />
 
@@ -36,7 +38,7 @@ When working with Carrier Connect, certain API calls are fundamental to processi
 
 | API Call       | Function                                       | Key Notes                                  |
 | :------------- | :--------------------------------------------- | :----------------------------------------- |
-| `createPickup` | Creates a pickup which contains _n_ shipments. | For more info see [🌱 Create](doc:create). |
+| `createPickup` | Creates a pickup which contains *n* shipments. | For more info see [🌱 Create](doc:create). |
 
 For further information and the whole overview of all the webservice calls, please consider the [API Reference](https://transport-freight-management.docs.developers.aeb.com/docs/processparms).
 
@@ -46,20 +48,20 @@ Not all API calls are required for every shipment. In many cases, a single `crea
 
 However, more complex workflows need additional API calls. The key milestones for a shipment are:
 
-- **Creation**– The shipment is created.
-- **Label Preparation** – Labels are generated and ready for printing.
-- **Label Printing** – Labels are physically printed.
-- **Shipment Closure** – The shipment is finalized; no further changes allowed (except cancellation).
+* **Creation**– The shipment is created.
+* **Label Preparation** – Labels are generated and ready for printing.
+* **Label Printing** – Labels are physically printed.
+* **Shipment Closure** – The shipment is finalized; no further changes allowed (except cancellation).
 
 If all these steps occur simultaneously, additional API calls are unnecessary. Otherwise, `processShipment` calls will be needed to handle changes incrementally.
 
 ## Key Questions for the implementation
 
-- Do you ship multi-package shipments?
-  - Print all labels at once? -> [Simple Shipping](https://transport-freight-management.docs.developers.aeb.com/docs/%EF%B8%8Fintegration-of-api-calls-in-your-process-copy#simple-shipping-one-step-process)  
-  - Print each package label individually as soon as it's packed? -> [Advanced Shipping with package-by-package-handling](https://transport-freight-management.docs.developers.aeb.com/docs/%EF%B8%8Fintegration-of-api-calls-in-your-process-copy#advanced-shipping-with-package-by-package-handling) 
-- Is customs information (e.g., MRN, invoice value) available later in the process?
-  - If so, before or after label printing?
+* Do you ship multi-package shipments?
+  * Print all labels at once? -> [Simple Shipping](https://transport-freight-management.docs.developers.aeb.com/docs/%EF%B8%8Fintegration-of-api-calls-in-your-process-copy#simple-shipping-one-step-process)  
+  * Print each package label individually as soon as it's packed? -> [Advanced Shipping with package-by-package-handling](https://transport-freight-management.docs.developers.aeb.com/docs/%EF%B8%8Fintegration-of-api-calls-in-your-process-copy#advanced-shipping-with-package-by-package-handling) 
+* Is customs information (e.g., MRN, invoice value) available later in the process?
+  * If so, before or after label printing?
 
 # How to Structure Your Shipment Process
 
@@ -108,8 +110,8 @@ You have all the information at once, but you want to print the labels for each 
 
 Therefore, your milestones would look like this: 
 
-createShipment with first package label being printed  
-processShipment for the next packages until all items are packed.  
+createShipment with first package label being printed\
+processShipment for the next packages until all items are packed.\
 In this case you should set the processParms like this (For more information on the processParms have a look here.): 
 
 `createShipment`:
@@ -199,21 +201,7 @@ You could also vary this process by developing a `processShipment` call that onl
 
 As you can see, there are various options for integrating and fully automating your processes with Carrier Connect.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4874df5f7f759ddf11b383bebf2e9bb78b7752b690a8735b2df17329567c71f8-hostsystem_cco_packbypack_EN.png",
-        null,
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/4874df5f7f759ddf11b383bebf2e9bb78b7752b690a8735b2df17329567c71f8-hostsystem_cco_packbypack_EN.png" />
 
 ## Advanced Shipping with paperless trade process
 
@@ -221,13 +209,13 @@ There are multiple options to include the paperless trade option that many carri
 
 There are certain aspects to consider when it comes to including paperless trade in your process. 
 
-This process is only necessary for shipments that need export declarations. Therefore you need to make sure, that only these shipments are using that specific process.  
-Paperless trade means, that the export accompanying document and the invoice (pro-forma invoice or commercial invoice) need to be electronically transmitted to the carrier via Carrier Connect.  
-These documents need to be added to the Carrier Connect shipment before setting the milestone "close shipment" aka "doCompletion =true".  
+This process is only necessary for shipments that need export declarations. Therefore you need to make sure, that only these shipments are using that specific process.\
+Paperless trade means, that the export accompanying document and the invoice (pro-forma invoice or commercial invoice) need to be electronically transmitted to the carrier via Carrier Connect.\
+These documents need to be added to the Carrier Connect shipment before setting the milestone "close shipment" aka "doCompletion =true".\
 Besides the documents, specific information regarding the export must be provided, such as MRN, invoice number, customs value, customs tariffs numbers and some more (see Help Center).
 
-Some of this information (e.g. on item-level) cannot be added via the `processShipment` but must be updated via `updateCustomsData` (For more details have a look [here](https://transport-freight-management.docs.developers.aeb.com/docs/process#updatecustomsdata-update-customs-data)) - hopefully you can just transmit most of the information with the initial `createShipment`.  
-If you cannot add the documents via `addShipmentAttachments`, you could also manually upload them, however, this is not recommended.  
+Some of this information (e.g. on item-level) cannot be added via the `processShipment` but must be updated via `updateCustomsData` (For more details have a look [here](https://transport-freight-management.docs.developers.aeb.com/docs/process#updatecustomsdata-update-customs-data)) - hopefully you can just transmit most of the information with the initial `createShipment`.\
+If you cannot add the documents via `addShipmentAttachments`, you could also manually upload them, however, this is not recommended.\
 You can integrate the print label by label process, if necessary. Please see the upper version on how to change the parameters then.
 
 ![](https://files.readme.io/3148b6c5bae7710bfe51cf61b0f086029bc13c1374c88db0216dffa2bce8dfc2-hostsystem_cco_export_PLT_Processs_EN.png)
