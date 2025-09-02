@@ -146,7 +146,7 @@ Your are now at step 2 "Consumer Security". Choose User ID / Password. In the fi
       </td>
 
       <td>
-        /<Pathname target system>/servlet/bf/ATCConnec torBF
+        `<Pathname target system>`/servlet/bf/ATCConnec torBF
       </td>
     </tr>
 
