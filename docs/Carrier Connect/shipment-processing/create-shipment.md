@@ -14,34 +14,25 @@ next:
       slug: add-packages
       title: Adding packages
 ---
-[block:api-header]
-{
-  "title": "Everything starts with the shipment"
-}
-[/block]
-Creating a shipment is the starting point for everything which can be accomplished within Carrier Connect.
-Using <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank">createShipment</a> creates a shipment and returns a unique shipment number after successfully creating the shipment.
+## Everything starts with the shipment
+
+Creating a shipment is the starting point for everything which can be accomplished within Carrier Connect.\
+Using <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank">createShipment</a> creates a shipment and returns a unique shipment number after successfully creating the shipment.\
 This shipment number can be used to reference the shipment when adding futher operations to the shipment later on.
-[block:code]
-{
-  "codes": [
-    {
-      "code": " <result>\n       <hasErrors>false</hasErrors>\n       <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>\n       <hasWarnings>false</hasWarnings>\n   <shipmentNumber>0007544</shipmentNumber>\n        ...\n</result>\n",
-      "language": "xml"
-    }
-  ]
-}
-[/block]
-However, <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank"> createShipment</a> also allows to create a complete shipment with packages, items, etc., set the shipment to 'complete' and request all related documents within one call!
+
+```xml
+<result>
+       <hasErrors>false</hasErrors>
+       <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>
+       <hasWarnings>false</hasWarnings>
+   <shipmentNumber>0007544</shipmentNumber>
+        ...
+</result>
+```
+
+However, <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank"> createShipment</a> also allows to create a complete shipment with packages, items, etc., set the shipment to 'complete' and request all related documents within one call!\
 This provides a quick and easy process if all necessary data is available before creating the shipment.
 
 **See also our SOAP Java documentation.**
-[block:embed]
-{
-  "html": false,
-  "url": "https://rz3.aeb.de/demo1cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/DLCreateShipmentResponseDTO.html",
-  "title": "DLCreateShipmentResponseDTO (DespatchLight_ClientIF.3.0 20180118 API)",
-  "favicon": null,
-  "iframe": false
-}
-[/block]
+
+<Embed url="https://rz3.aeb.de/demo1cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/DLCreateShipmentResponseDTO.html" title="DLCreateShipmentResponseDTO (DespatchLight_ClientIF.3.0 20180118 API)" favicon="null" iframe="false" provider="rz3.aeb.de" href="https://rz3.aeb.de/demo1cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/DLCreateShipmentResponseDTO.html" />
