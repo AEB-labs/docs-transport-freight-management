@@ -12,12 +12,14 @@ metadata:
 next:
   description: ''
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 We use different fields to control and influence the operations that Carrier Connect performs with each API call. We call those fields `processParms`. 
 
@@ -31,13 +33,13 @@ API calls can be performed synchronously or asynchronously.
 
 ### Process mode "BASIC" - asynchronous
 
-> 📘 
-> 
-> In the _asynchronous_ communication mode, Carrier Connect checks whether it is generally possible to perform an operation (e.g. check transactionId for uniqueness) and accepts the task if no issues are detected. Only then, more sophisticated validations are performed. 
-> 
+> 📘
+>
+> In the *asynchronous* communication mode, Carrier Connect checks whether it is generally possible to perform an operation (e.g. check transactionId for uniqueness) and accepts the task if no issues are detected. Only then, more sophisticated validations are performed. 
+>
 > The calling system only learns about possible warnings by frequently synchronizing with Carrier Connect using the sync calls of the API.
 
-Triggers asynchronous communication. Default mode if nothing else is provided.  
+Triggers asynchronous communication. Default mode if nothing else is provided.\
 The operation is processed in an asynchronous job after performing some basic checks.
 
 ```json
@@ -58,14 +60,14 @@ The operation is processed in an asynchronous job after performing some basic ch
 
 ### Process mode "EXTENDED" - synchronous
 
-> 📘 
-> 
-> These options are provided to match the shipping context and the technical capabilities of the calling system.  
-> _Synchronous_ communication responds with more distinct results. No additional lookup to verify the final result of an operation is needed. 
-> 
+> 📘
+>
+> These options are provided to match the shipping context and the technical capabilities of the calling system.\
+> *Synchronous* communication responds with more distinct results. No additional lookup to verify the final result of an operation is needed. 
+>
 > On the other hand, it closely links the calling system with Carrier Connect and sometimes it might be preferable to avoid this.
 
-Triggers synchronous communication.  
+Triggers synchronous communication.\
 The operation is executed directly within the API request transaction and no response is returned until the process is finished.
 
 ```json
@@ -85,28 +87,28 @@ The operation is executed directly within the API request transaction and no res
 ```
 
 > 📘 What is common use?
-> 
+>
 > Most customers prefer the synchronous calls with EXTENDED mode.
 
 ## documentPrepareScope and documentOutputScope
 
-The _documentPrepareScope_ and _documentOutputScope_ are parameters used in Carrier Connect to control the preparation and output of documents, such as labels, and the possible separation of these processes.
+The *documentPrepareScope* and *documentOutputScope* are parameters used in Carrier Connect to control the preparation and output of documents, such as labels, and the possible separation of these processes.
 
-The _documentPrepareScope_ parameter determines which documents need to be generated or prepared. The possible values for this parameter are:
+The *documentPrepareScope* parameter determines which documents need to be generated or prepared. The possible values for this parameter are:
 
-- `NONE`: No preparation will happen.
-- `ALL`: All documents including the already processed ones are considered.
-- `REMAINING`: Only the remaining, not yet processed documents are considered.
-- `REQUEST`: Only documents for the packages included in the specific API call are considered.
-- `SHIPMENTONLY`: No package documents are processed. The shipment (header) is prepared, and all possible calculations like routing data are calculated. This leads to improved performance when package documents are prepared.
+* `NONE`: No preparation will happen.
+* `ALL`: All documents including the already processed ones are considered.
+* `REMAINING`: Only the remaining, not yet processed documents are considered.
+* `REQUEST`: Only documents for the packages included in the specific API call are considered.
+* `SHIPMENTONLY`: No package documents are processed. The shipment (header) is prepared, and all possible calculations like routing data are calculated. This leads to improved performance when package documents are prepared.
 
-The _documentOutputScope_ parameter determines the desired output of the documents, the possible values for this parameter are the same as those for the _documentPrepareScope_ parameter.
+The *documentOutputScope* parameter determines the desired output of the documents, the possible values for this parameter are the same as those for the *documentPrepareScope* parameter.
 
-By setting the _documentPrepareScope_ and _documentOutputScope_ parameters to different values, the user can completely separate the creation of documents from printing them. That means, you could generate documents and request them for printing later. This provides flexibility and optimization for performance and data processing for label printing on package level.
+By setting the *documentPrepareScope* and *documentOutputScope* parameters to different values, the user can completely separate the creation of documents from printing them. That means, you could generate documents and request them for printing later. This provides flexibility and optimization for performance and data processing for label printing on package level.
 
 ### Example
 
-In the provided example, the `createShipment` API call is used to create a shipment, and the _documentPrepareScope_ parameter is set to `SHIPMENTONLY`, indicating that no package documents are generated. The _documentOutputScope_ parameter is set to `NONE`, indicating that no output is generated.
+In the provided example, the `createShipment` API call is used to create a shipment, and the *documentPrepareScope* parameter is set to `SHIPMENTONLY`, indicating that no package documents are generated. The *documentOutputScope* parameter is set to `NONE`, indicating that no output is generated.
 
 ```json
 "processParms": {
@@ -129,7 +131,7 @@ In the provided example, the `createShipment` API call is used to create a shipm
 </processParms>
 ```
 
-In the `processShipment` API call, used to add one or more packages, the _documentPrepareScope_ parameter is set to `REQUEST`, indicating that only documents for the packages included in the specific API call are considered. The _documentOutputScope_ parameter is also set to `REQUEST`, 
+In the `processShipment` API call, used to add one or more packages, the *documentPrepareScope* parameter is set to `REQUEST`, indicating that only documents for the packages included in the specific API call are considered. The *documentOutputScope* parameter is also set to `REQUEST`, 
 
 ```json
 "processParms": {
@@ -162,7 +164,9 @@ In the `processShipment` API call, used to add one or more packages, the _docume
 
 ## documentOutputMode
 
-> 💡 Find more details in our guide "[Printing with Carrier Connect](https://docs.aeb.com/doc/cm-809258763-823972491-en-US/t-823972491-809258763-en-US)".
+<Callout icon="💡" theme="default">
+  ### Find more details in our guide "[Printing with Carrier Connect](https://docs.aeb.com/doc/cm-809258763-823972491-en-US/t-823972491-809258763-en-US)".
+</Callout>
 
 The Carrier Connect system provides two output modes for creating and handling documents, such as labels and loading lists: `RETURN` and `PRINT`. Additionally, there is  `NONE` if no output is required.
 
@@ -232,9 +236,11 @@ The documents generated by Carrier Connect will be returned in `packageResults` 
 
 ### PRINT mode
 
-> 💡 Print mode should not be the first choice for printing
-> 
-> It is important to note, that this mode should not be the first choice for printing, as it can have slower printing performance than the `RETURN` mode, and more information about the printing infrastructure, such as specific printers (not just the type of printers), must be provided in Carrier Connect. There can also be additional costs for the Cloud Printing Agent installation via AEB.
+<Callout icon="💡" theme="default">
+  ### Print mode should not be the first choice for printing
+
+  It is important to note, that this mode should not be the first choice for printing, as it can have slower printing performance than the `RETURN` mode, and more information about the printing infrastructure, such as specific printers (not just the type of printers), must be provided in Carrier Connect. There can also be additional costs for the Cloud Printing Agent installation via AEB.
+</Callout>
 
 The `PRINT` mode is a special mode designed for cases when the host system has no printing capabilities and works only in connection with an AEB printing agent. In this mode, print jobs are assigned to the workstation ID used in the API call, and the AEB print agent running on the client system responsible for printing constantly polls for print jobs using a specific workstation ID. To use the `PRINT` mode, the user needs to set the mode parameter of the documentOutputMode field to `PRINT` in the API call.
 
@@ -320,7 +326,7 @@ More information can also be found in the [config guide](https://docs.aeb.com/do
 </processParms>
 ```
 
-# _processParms_ for common use cases
+# *processParms* for common use cases
 
 ## Use case #1: Complete the shipment and return all labels
 
