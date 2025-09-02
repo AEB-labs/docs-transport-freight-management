@@ -27,3 +27,4 @@
 - generateclientidentcode
 - getduplicateclientprogress
 - getdownloadablefilesrefs
+- getscriptexecutionstate
