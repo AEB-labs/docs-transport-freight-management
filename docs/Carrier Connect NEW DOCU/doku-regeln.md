@@ -12,21 +12,21 @@ next:
 ---
 > 📘 Hinweis
 
-> 💡 Tipp
+<Callout icon="💡" theme="default">
+  ### Tipp
+</Callout>
 
 > ❗️ Achtung
 
-- Überschriften: Carrier Connect Use Cases
-- Feldnamen: **documentOutputMode**
-- Feldinhalte: `RETURN`
+* Überschriften: Carrier Connect Use Cases
+* Feldnamen: **documentOutputMode**
+* Feldinhalte: `RETURN`
 
 > 📘 Wenn es Sinn macht, Begriffe per Glossar erklären.
 
 ```json JSON
-
 ```
 ```xml
-
 ```
 
 [link](doc:account-numbers-in-carrier-connect#test-link)
