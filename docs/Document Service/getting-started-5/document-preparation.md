@@ -14,17 +14,17 @@ When you have picked up a template and got a data file, you can generate a final
 
 # Staged Documents
 
-- Synchronous or asynchronous document preparation and storage
-- Retrieval of created documents within a 35-day period
-- Prerequisite for archiving
-- Visual document data editing (PDF-XFA templates only)
-- Upload of external documents
-- [Try it out](/docs/document-preparation-staged#try-it-out)
+* Synchronous or asynchronous document preparation and storage
+* Retrieval of created documents within a 35-day period
+* Prerequisite for archiving
+* Visual document data editing (PDF-XFA templates only)
+* Upload of external documents
+* [Try it out](/docs/document-preparation-staged#try-it-out)
 
 # Staged Document Instances
 
-- Initial manual effort required to create some configurations in the Document Service (_document types_, _reference object types_, _output settings_)
-- Simpler document manipulation (thanks to predefined configuration for archiving, printing, content variants etc.)
-- Supports document printing (_AEB Cloud Printing Service_ installation required on premises)
-- Please approach your AEB project contact person in case you intend to use this variant!
-- [Try it out](/docs/staged-document-instances#try-it-out)
+* Initial manual effort required to create some configurations in the Document Service (*document types*, *reference object types*, *output settings*)
+* Simpler document manipulation (thanks to predefined configuration for archiving, printing, content variants etc.)
+* Supports document printing (*AEB Cloud Printing Service* installation required on premises)
+* Please approach your AEB project contact person in case you intend to use this variant!
+* [Try it out](/docs/staged-document-instances#try-it-out)
