@@ -61,16 +61,16 @@ A warning is returned if if the operation couldn't be performed because there is
 
 Note: At the moment, the `indentationLevel` is not used. It is always "0".
 
-> ❗️ 
-> 
+> ❗️
+>
 > Be aware that **no shipment will be created** on a `createShipment` if you are using the following parameter combination: 
-> 
-> - `doCompletion = true` && 
-> - `creationMode = VALIDATION_OK` 
-> 
+>
+> * `doCompletion = true` && 
+> * `creationMode = VALIDATION_OK` 
+>
 > And getting back only warnings: 
-> 
-> - `hasErrors = false` && 
-> - `hasWarnings = true` 
-> 
+>
+> * `hasErrors = false` && 
+> * `hasWarnings = true` 
+>
 > Since a shipment can't be closed/completed (`doCompletion = true`) without the necessary label documents being created, in this special case you have to handle the warnings as if they where errors.
