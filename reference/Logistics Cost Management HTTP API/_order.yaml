@@ -11,3 +11,4 @@
 - updateratesheetentries
 - createexternalinvoices
 - getchangedexternalinvoices
+- acknowledgechangedexternalinvoices
