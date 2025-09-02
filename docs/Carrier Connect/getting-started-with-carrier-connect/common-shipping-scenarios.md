@@ -19,190 +19,859 @@ From many years of experience in enabling our customers to seamlessly integrate 
 We have prepared information to assist you in integrating your processes with a very flexible API which covers simple as well as more complex shipping scenarios in an easy and homogeneous way.
 
 Below, you will find some of the most common scenarios and how you can implement them using our API.
-[block:callout]
-{
-  "type": "info",
-  "title": "Keeping data and documents right",
-  "body": "**Due to the various shipping scenarios our customers are faced with, Carrier Connect provides maximum flexibility in its API.** However, this means that you have to keep in mind that after you've started printing documents all following changes might alter the data printed on the documents. It is your responsibility to make sure that no negative consequences on your processes and the carriers' operational processes result from these subsequent changes."
-}
-[/block]
-##Shipping with only one API call
-In some cases, processes allow that all shipping data are available and finalized. No changes are expected anymore.
+
+> 📘 Keeping data and documents right
+>
+> **Due to the various shipping scenarios our customers are faced with, Carrier Connect provides maximum flexibility in its API.** However, this means that you have to keep in mind that after you've started printing documents all following changes might alter the data printed on the documents. It is your responsibility to make sure that no negative consequences on your processes and the carriers' operational processes result from these subsequent changes.
+
+## Shipping with only one API call
+
+In some cases, processes allow that all shipping data are available and finalized. No changes are expected anymore.\
 This provides an easy context and makes it possible to ship by just sending one API call. With this one call you can create the shipment, include packages and items, complete the shipment, and request that documents should be returned in the response.
 
 **An example with one package:**
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"clientSystemId\":\"SOAPUI\",\n   \"clientIdentCode\":\"APITEST\",\n   \"userName\":\"API_TEST\",\n   \"resultLanguageIsoCodes\":[\n      \"EN\"\n   ],\n   \"creationParms\":{\n      \"creationMode\":\"VALIDATION_OK\"\n   },\n   \"shipment\":{\n      \"transactionId\":\"SHIPMENT_TEST_1\",\n      \"transactionLabel\":\"SHIPMENT_TEST_1\",\n      \"isDocumentShipment\":\"false\",\n      \"referenceNumber1\":\"SHIPMENT_TEST_1\",\n      \"shippingDate\":\"2018-01-01\",\n      \"contents\":\"SHIPMENT_CONTENT\",\n      \"shippingPt\":{\n         \"companyNumber\":\"SHIP_COMPANY_1\",\n         \"name\":\"AEB Shipping Point\",\n         \"street\":\"AEB Street 1\",\n         \"postcode\":\"70567\",\n         \"city\":\"Stuttgart\",\n         \"countryISOCode\":\"DE\",\n         \"initFromCompanyMasterFileData\":\"false\"\n      },\n      \"shippingPtContact\":{\n         \"name\":\"Peter Maier\",\n         \"phone\":\"0049711728420\"\n      },\n      \"consignee\":{\n         \"companyNumber\":\"CONSIGNEE_COMPANY_1\",\n         \"name\":\"Max Muster\",\n         \"street\":\"Muster Street 1\",\n         \"postcode\":\"10555\",\n         \"city\":\"Berlin\",\n         \"countryISOCode\":\"DE\",\n         \"initFromCompanyMasterFileData\":\"false\"\n      },\n      \"consigneeContact\":{\n         \"name\":\"Max Muster\",\n         \"phone\":\"0049123456789\"\n      },\n      \"carrierIdentCode\":\"DPD_DE\",\n      \"serviceCode\":\"DPD_EXPR10\",\n      \"termsOfDeliveryCode\":\"DDP\",\n      \"packages\":[\n         {\n            \"packageTypeIdentCode\":\"BOX\",\n            \"packageNumber\":\"1\",\n            \"packageTransactionId\":\"PACKAGE_TEST_1\",\n            \"referenceNumber1\":\"PACKAGE_TEST_1\",\n            \"grossWeight\":{\n               \"value\":\"25\",\n               \"unit\":\"kg\"\n            }\n         }\n      ]\n   },\n   \"processParms\":{\n      \"processMode\":{\n         \"mode\":\"EXTENDED\"\n      },\n      \"documentPrepareScope\":{\n         \"scope\":\"ALL\"\n      },\n      \"workstationId\":\"PDF_WORKSTATION\",\n      \"documentOutputScope\":{\n         \"scope\":\"ALL\"\n      },\n      \"documentOutputMode\":{\n         \"mode\":\"RETURN\"\n      },\n      \"doCompletion\":\"true\"\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<createShipment>\n   <request>\n      <clientSystemId>SOAPUI</clientSystemId>\n      <clientIdentCode>APITEST</clientIdentCode>\n      <userName>API_TEST</userName>\n      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>\n      <creationParms>\n         <creationMode>VALIDATION_OK</creationMode>\n      </creationParms>\n      <shipment>\n         <transactionId>SHIPMENT_TEST_1</transactionId>\n         <transactionLabel>SHIPMENT_TEST_1</transactionLabel>\n         <isDocumentShipment>false</isDocumentShipment>\n         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>\n         <shippingDate>2018-01-01</shippingDate>\n         <contents>SHIPMENT_CONTENT</contents>\n         <shippingPt>\n            <companyNumber>SHIP_COMPANY_1</companyNumber>\n            <name>AEB Shipping Point</name>\n            <street>AEB Street 1</street>\n            <postcode>70567</postcode>\n            <city>Stuttgart</city>\n            <countryISOCode>DE</countryISOCode>\n            <initFromCompanyMasterFileData>false</initFromCompanyMasterFileData>\n         </shippingPt>\n         <shippingPtContact>\n            <name>Peter Maier</name>\n            <phone>0049711728420</phone>\n         </shippingPtContact>\n         <consignee>\n            <companyNumber>CONSIGNEE_COMPANY_1</companyNumber>\n            <name>Max Muster</name>\n            <street>Muster Street 1</street>\n            <postcode>10555</postcode>\n            <city>Berlin</city>\n            <countryISOCode>DE</countryISOCode>\n            <initFromCompanyMasterFileData>false</initFromCompanyMasterFileData>\n         </consignee>\n         <consigneeContact>\n            <name>Max Muster</name>\n            <phone>0049123456789</phone>\n         </consigneeContact>\n         <carrierIdentCode>DPD_DE</carrierIdentCode>\n         <serviceCode>DPD_EXPR10</serviceCode>\n         <termsOfDeliveryCode>DDP</termsOfDeliveryCode>\n         <packages>\n            <packageTypeIdentCode>BOX</packageTypeIdentCode>\n            <packageNumber>1</packageNumber>\n            <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>\n            <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>\n            <grossWeight>\n               <value>25</value>\n               <unit>kg</unit>\n            </grossWeight>\n         </packages>\n      </shipment>\n      <processParms>\n         <processMode>\n            <mode>EXTENDED</mode>\n         </processMode>\n         <documentPrepareScope>\n            <scope>ALL</scope>\n         </documentPrepareScope>\n         <workstationId>PDF_WORKSTATION</workstationId>\n         <documentOutputScope>\n            <scope>ALL</scope>\n         </documentOutputScope>\n         <documentOutputMode>\n            <mode>RETURN</mode>\n         </documentOutputMode>\n         <doCompletion>true</doCompletion>\n      </processParms>\n   </request>\n</createShipment>",
-      "language": "xml",
-      "name": ""
-    }
-  ]
+   "clientSystemId":"SOAPUI",
+   "clientIdentCode":"APITEST",
+   "userName":"API_TEST",
+   "resultLanguageIsoCodes":[
+      "EN"
+   ],
+   "creationParms":{
+      "creationMode":"VALIDATION_OK"
+   },
+   "shipment":{
+      "transactionId":"SHIPMENT_TEST_1",
+      "transactionLabel":"SHIPMENT_TEST_1",
+      "isDocumentShipment":"false",
+      "referenceNumber1":"SHIPMENT_TEST_1",
+      "shippingDate":"2018-01-01",
+      "contents":"SHIPMENT_CONTENT",
+      "shippingPt":{
+         "companyNumber":"SHIP_COMPANY_1",
+         "name":"AEB Shipping Point",
+         "street":"AEB Street 1",
+         "postcode":"70567",
+         "city":"Stuttgart",
+         "countryISOCode":"DE",
+         "initFromCompanyMasterFileData":"false"
+      },
+      "shippingPtContact":{
+         "name":"Peter Maier",
+         "phone":"0049711728420"
+      },
+      "consignee":{
+         "companyNumber":"CONSIGNEE_COMPANY_1",
+         "name":"Max Muster",
+         "street":"Muster Street 1",
+         "postcode":"10555",
+         "city":"Berlin",
+         "countryISOCode":"DE",
+         "initFromCompanyMasterFileData":"false"
+      },
+      "consigneeContact":{
+         "name":"Max Muster",
+         "phone":"0049123456789"
+      },
+      "carrierIdentCode":"DPD_DE",
+      "serviceCode":"DPD_EXPR10",
+      "termsOfDeliveryCode":"DDP",
+      "packages":[
+         {
+            "packageTypeIdentCode":"BOX",
+            "packageNumber":"1",
+            "packageTransactionId":"PACKAGE_TEST_1",
+            "referenceNumber1":"PACKAGE_TEST_1",
+            "grossWeight":{
+               "value":"25",
+               "unit":"kg"
+            }
+         }
+      ]
+   },
+   "processParms":{
+      "processMode":{
+         "mode":"EXTENDED"
+      },
+      "documentPrepareScope":{
+         "scope":"ALL"
+      },
+      "workstationId":"PDF_WORKSTATION",
+      "documentOutputScope":{
+         "scope":"ALL"
+      },
+      "documentOutputMode":{
+         "mode":"RETURN"
+      },
+      "doCompletion":"true"
+   }
 }
-[/block]
+```
+```xml
+<createShipment>
+   <request>
+      <clientSystemId>SOAPUI</clientSystemId>
+      <clientIdentCode>APITEST</clientIdentCode>
+      <userName>API_TEST</userName>
+      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>
+      <creationParms>
+         <creationMode>VALIDATION_OK</creationMode>
+      </creationParms>
+      <shipment>
+         <transactionId>SHIPMENT_TEST_1</transactionId>
+         <transactionLabel>SHIPMENT_TEST_1</transactionLabel>
+         <isDocumentShipment>false</isDocumentShipment>
+         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>
+         <shippingDate>2018-01-01</shippingDate>
+         <contents>SHIPMENT_CONTENT</contents>
+         <shippingPt>
+            <companyNumber>SHIP_COMPANY_1</companyNumber>
+            <name>AEB Shipping Point</name>
+            <street>AEB Street 1</street>
+            <postcode>70567</postcode>
+            <city>Stuttgart</city>
+            <countryISOCode>DE</countryISOCode>
+            <initFromCompanyMasterFileData>false</initFromCompanyMasterFileData>
+         </shippingPt>
+         <shippingPtContact>
+            <name>Peter Maier</name>
+            <phone>0049711728420</phone>
+         </shippingPtContact>
+         <consignee>
+            <companyNumber>CONSIGNEE_COMPANY_1</companyNumber>
+            <name>Max Muster</name>
+            <street>Muster Street 1</street>
+            <postcode>10555</postcode>
+            <city>Berlin</city>
+            <countryISOCode>DE</countryISOCode>
+            <initFromCompanyMasterFileData>false</initFromCompanyMasterFileData>
+         </consignee>
+         <consigneeContact>
+            <name>Max Muster</name>
+            <phone>0049123456789</phone>
+         </consigneeContact>
+         <carrierIdentCode>DPD_DE</carrierIdentCode>
+         <serviceCode>DPD_EXPR10</serviceCode>
+         <termsOfDeliveryCode>DDP</termsOfDeliveryCode>
+         <packages>
+            <packageTypeIdentCode>BOX</packageTypeIdentCode>
+            <packageNumber>1</packageNumber>
+            <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>
+            <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>
+            <grossWeight>
+               <value>25</value>
+               <unit>kg</unit>
+            </grossWeight>
+         </packages>
+      </shipment>
+      <processParms>
+         <processMode>
+            <mode>EXTENDED</mode>
+         </processMode>
+         <documentPrepareScope>
+            <scope>ALL</scope>
+         </documentPrepareScope>
+         <workstationId>PDF_WORKSTATION</workstationId>
+         <documentOutputScope>
+            <scope>ALL</scope>
+         </documentOutputScope>
+         <documentOutputMode>
+            <mode>RETURN</mode>
+         </documentOutputMode>
+         <doCompletion>true</doCompletion>
+      </processParms>
+   </request>
+</createShipment>
+```
+
 **API Response to the above call**
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"hasErrors\":\"false\",\n   \"hasOnlyRetryableErrors\":\"false\",\n   \"hasWarnings\":\"false\",\n   \"shipmentNumber\":\"0000005\",\n   \"carrierShipmentNumber\":\"00000000000000\",\n   \"packageResults\":{\n      \"packageTransactionId\":\"PACKAGE_TEST_1\",\n      \"referenceNumber1\":\"PACKAGE_TEST_1\",\n      \"carrierPackageNumber\":\"00000000000000\",\n      \"documents\":{\n         \"documentType\":\"DPD Label DE\",\n         \"mimeType\":\"application/pdf\",\n         \"content\":\"PDF Content in Base64 encoded\"\n      }\n   },\n   \"accountInfo\":{\n      \"customerNumberAtCarrier\":\"1234567890\",\n      \"singlePackageHandlingActivated\":\"false\"\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<createShipmentResponse>\n   <result>\n      <hasErrors>false</hasErrors>\n      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>\n      <hasWarnings>false</hasWarnings>\n      <shipmentNumber>0000005</shipmentNumber>\n      <carrierShipmentNumber>00000000000000</carrierShipmentNumber>\n      <packageResults>\n         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>\n         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>\n         <carrierPackageNumber>00000000000000</carrierPackageNumber>\n         <documents>\n            <documentType>DPD Label DE</documentType>\n            <mimeType>application/pdf</mimeType>\n            <content>...PDF Content base64 encoded...</content>\n         </documents>\n      </packageResults>\n      <accountInfo>\n         <customerNumberAtCarrier>1234567890</customerNumberAtCarrier>\n         <singlePackageHandlingActivated>false</singlePackageHandlingActivated>\n      </accountInfo>\n   </result>\n</createShipmentResponse>",
-      "language": "xml",
-      "name": ""
-    }
-  ]
+   "hasErrors":"false",
+   "hasOnlyRetryableErrors":"false",
+   "hasWarnings":"false",
+   "shipmentNumber":"0000005",
+   "carrierShipmentNumber":"00000000000000",
+   "packageResults":{
+      "packageTransactionId":"PACKAGE_TEST_1",
+      "referenceNumber1":"PACKAGE_TEST_1",
+      "carrierPackageNumber":"00000000000000",
+      "documents":{
+         "documentType":"DPD Label DE",
+         "mimeType":"application/pdf",
+         "content":"PDF Content in Base64 encoded"
+      }
+   },
+   "accountInfo":{
+      "customerNumberAtCarrier":"1234567890",
+      "singlePackageHandlingActivated":"false"
+   }
 }
-[/block]
-###Packed items
-Some carriers or some shipping scenarios require that items are not just listed within the shipment, but they must be assigned to packages.
+```
+```xml
+<createShipmentResponse>
+   <result>
+      <hasErrors>false</hasErrors>
+      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>
+      <hasWarnings>false</hasWarnings>
+      <shipmentNumber>0000005</shipmentNumber>
+      <carrierShipmentNumber>00000000000000</carrierShipmentNumber>
+      <packageResults>
+         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>
+         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>
+         <carrierPackageNumber>00000000000000</carrierPackageNumber>
+         <documents>
+            <documentType>DPD Label DE</documentType>
+            <mimeType>application/pdf</mimeType>
+            <content>...PDF Content base64 encoded...</content>
+         </documents>
+      </packageResults>
+      <accountInfo>
+         <customerNumberAtCarrier>1234567890</customerNumberAtCarrier>
+         <singlePackageHandlingActivated>false</singlePackageHandlingActivated>
+      </accountInfo>
+   </result>
+</createShipmentResponse>
+```
+
+### Packed items
+
+Some carriers or some shipping scenarios require that items are not just listed within the shipment, but they must be assigned to packages.\
 The following example shows how to pack items. You can combine it with the above example. 
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"packageTypeIdentCode\":\"BOX\",\n   \"packageNumber\":\"1\",\n   \"packageTransactionId\":\"PACKAGE_TEST_1\",\n   \"referenceNumber1\":\"PACKAGE_TEST_1\",\n   \"grossWeight\":{\n      \"value\":\"25\",\n      \"unit\":\"kg\"\n   },\n   \"containedItems\":[\n      {\n         \"itemTransactionId\":\"ITEM_TEST_1\",\n         \"referenceNumber1\":\"ITEM_TEST_1\",\n         \"quantityValue\":\"10\"\n      }\n   ]\n}",
-      "language": "json"
-    },
-    {
-      "code": "<packages>\n   <packageTypeIdentCode>BOX</packageTypeIdentCode>\n   <packageNumber>1</packageNumber>\n   <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>\n   <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>\n   <grossWeight>\n      <value>25</value>\n      <unit>kg</unit>\n   </grossWeight>\n   <containedItems>\n      <itemTransactionId>ITEM_TEST_1</itemTransactionId>\n      <referenceNumber1>ITEM_TEST_1</referenceNumber1>\n      <quantityValue>10</quantityValue>\n   </containedItems>\n</packages>",
-      "language": "xml"
-    }
-  ]
+   "packageTypeIdentCode":"BOX",
+   "packageNumber":"1",
+   "packageTransactionId":"PACKAGE_TEST_1",
+   "referenceNumber1":"PACKAGE_TEST_1",
+   "grossWeight":{
+      "value":"25",
+      "unit":"kg"
+   },
+   "containedItems":[
+      {
+         "itemTransactionId":"ITEM_TEST_1",
+         "referenceNumber1":"ITEM_TEST_1",
+         "quantityValue":"10"
+      }
+   ]
 }
-[/block]
-##Shipping package by package
-Many of our customers know very early in the shipping process where and with which carrier (and service) they want to ship. However, they may know only very late the details like the number of packages, exact weights, dimensions, etc. Once the package is ready, all necessary documents should be created and available as fast as possible. No problem :).
+```
+```xml
+<packages>
+   <packageTypeIdentCode>BOX</packageTypeIdentCode>
+   <packageNumber>1</packageNumber>
+   <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>
+   <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>
+   <grossWeight>
+      <value>25</value>
+      <unit>kg</unit>
+   </grossWeight>
+   <containedItems>
+      <itemTransactionId>ITEM_TEST_1</itemTransactionId>
+      <referenceNumber1>ITEM_TEST_1</referenceNumber1>
+      <quantityValue>10</quantityValue>
+   </containedItems>
+</packages>
+```
+
+## Shipping package by package
+
+Many of our customers know very early in the shipping process where and with which carrier (and service) they want to ship. However, they may know only very late the details like the number of packages, exact weights, dimensions, etc. Once the package is ready, all necessary documents should be created and available as fast as possible. No problem :).\
 You simply need to create the shipping order with createShipment, add the packages with processShipment, and once you are done send another processShipment to complete the shipping order. If you know when adding the last package that it really is the last one, then you can complete the shipping order directly when adding the package.
 
-###Creating the shipment
-[block:code]
+### Creating the shipment
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"clientSystemId\":\"SOAPUI\",\n   \"clientIdentCode\":\"APITEST\",\n   \"userName\":\"API_TEST\",\n   \"resultLanguageIsoCodes\":[\n      \"EN\"\n   ],\n   \"creationParms\":{\n      \"creationMode\":\"VALIDATION_OK\"\n   },\n   \"shipment\":{\n      \"transactionId\":\"SHIPMENT_TEST_1\",\n      \"transactionLabel\":\"SHIPMENT_TEST_1\",\n      \"isDocumentShipment\":\"false\",\n      \"referenceNumber1\":\"SHIPMENT_TEST_1\",\n      \"shippingDate\":\"2018-01-01\",\n      \"contents\":\"SHIPMENT_CONTENT\",\n      \"shippingPt\":{\n         \"companyNumber\":\"SHIP_COMPANY_1\",\n         \"name\":\"AEB Shipping Point\",\n         \"street\":\"AEB Street 1\",\n         \"postcode\":\"70567\",\n         \"city\":\"Stuttgart\",\n         \"countryISOCode\":\"DE\",\n         \"initFromCompanyMasterFileData\":\"false\"\n      },\n      \"shippingPtContact\":{\n         \"name\":\"Peter Maier\",\n         \"phone\":\"0049711728420\"\n      },\n      \"goodsValue\":{\n         \"value\":\"100\",\n         \"currencyIso\":\"EUR\"\n      },\n      \"consignee\":{\n         \"companyNumber\":\"CONSIGNEE_COMPANY_1\",\n         \"name\":\"Max Muster\",\n         \"street\":\"Muster Street 1\",\n         \"postcode\":\"3001\",\n         \"city\":\"Bern\",\n         \"countryISOCode\":\"CH\",\n         \"initFromCompanyMasterFileData\":\"false\"\n      },\n      \"consigneeContact\":{\n         \"name\":\"Max Muster\",\n         \"phone\":\"0049123456789\"\n      },\n      \"carrierIdentCode\":\"DPD_DE\",\n      \"serviceCode\":\"DPD_EXPR_INT\",\n      \"termsOfDeliveryCode\":\"DDP\"\n   },\n   \"processParms\":{\n      \"processMode\":{\n         \"mode\":\"EXTENDED\"\n      },\n      \"documentPrepareScope\":{\n         \"scope\":\"SHIPMENTONLY\"\n      },\n      \"workstationId\":\"PDF_WORKSTATION\",\n      \"documentOutputScope\":{\n         \"scope\":\"SHIPMENTONLY\"\n      },\n      \"documentOutputMode\":{\n         \"mode\":\"RETURN\"\n      },\n      \"doCompletion\":\"false\"\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<createShipment>\n   <request>\n      <clientSystemId>SOAPUI</clientSystemId>\n      <clientIdentCode>APITEST</clientIdentCode>\n      <userName>API_TEST</userName>\n      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>\n      <creationParms>\n         <creationMode>VALIDATION_OK</creationMode>\n      </creationParms>\n      <shipment>\n         <transactionId>SHIPMENT_TEST_1</transactionId>\n         <transactionLabel>SHIPMENT_TEST_1</transactionLabel>\n         <isDocumentShipment>false</isDocumentShipment>\n         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>\n         <shippingDate>2018-01-01</shippingDate>\n         <contents>SHIPMENT_CONTENT</contents>\n         <shippingPt>\n            <companyNumber>SHIP_COMPANY_1</companyNumber>\n            <name>AEB Shipping Point</name>\n            <street>AEB Street 1</street>\n            <postcode>70567</postcode>\n            <city>Stuttgart</city>\n            <countryISOCode>DE</countryISOCode>\n            <initFromCompanyMasterFileData>false</initFromCompanyMasterFileData>\n         </shippingPt>\n         <shippingPtContact>\n            <name>Peter Maier</name>\n            <phone>0049711728420</phone>\n         </shippingPtContact>\n         <goodsValue>\n            <value>100</value>\n            <currencyIso>EUR</currencyIso>\n         </goodsValue>\n         <consignee>\n            <companyNumber>CONSIGNEE_COMPANY_1</companyNumber>\n            <name>Max Muster</name>\n            <street>Muster Street 1</street>\n            <postcode>3001</postcode>\n            <city>Bern</city>\n            <countryISOCode>CH</countryISOCode>\n            <initFromCompanyMasterFileData>false</initFromCompanyMasterFileData>\n         </consignee>\n         <consigneeContact>\n            <name>Max Muster</name>\n            <phone>0049123456789</phone>\n         </consigneeContact>\n         <carrierIdentCode>DPD_DE</carrierIdentCode>\n         <serviceCode>DPD_EXPR_INT</serviceCode>\n         <termsOfDeliveryCode>DDP</termsOfDeliveryCode>\n      </shipment>\n      <processParms>\n         <processMode>\n            <mode>EXTENDED</mode>\n         </processMode>\n         <documentPrepareScope>\n            <scope>SHIPMENTONLY</scope>\n         </documentPrepareScope>\n         <workstationId>PDF_WORKSTATION</workstationId>\n         <documentOutputScope>\n            <scope>SHIPMENTONLY</scope>\n         </documentOutputScope>\n         <documentOutputMode>\n            <mode>RETURN</mode>\n         </documentOutputMode>\n         <doCompletion>false</doCompletion>\n      </processParms>\n   </request>\n</createShipment>",
-      "language": "xml"
-    }
-  ]
+   "clientSystemId":"SOAPUI",
+   "clientIdentCode":"APITEST",
+   "userName":"API_TEST",
+   "resultLanguageIsoCodes":[
+      "EN"
+   ],
+   "creationParms":{
+      "creationMode":"VALIDATION_OK"
+   },
+   "shipment":{
+      "transactionId":"SHIPMENT_TEST_1",
+      "transactionLabel":"SHIPMENT_TEST_1",
+      "isDocumentShipment":"false",
+      "referenceNumber1":"SHIPMENT_TEST_1",
+      "shippingDate":"2018-01-01",
+      "contents":"SHIPMENT_CONTENT",
+      "shippingPt":{
+         "companyNumber":"SHIP_COMPANY_1",
+         "name":"AEB Shipping Point",
+         "street":"AEB Street 1",
+         "postcode":"70567",
+         "city":"Stuttgart",
+         "countryISOCode":"DE",
+         "initFromCompanyMasterFileData":"false"
+      },
+      "shippingPtContact":{
+         "name":"Peter Maier",
+         "phone":"0049711728420"
+      },
+      "goodsValue":{
+         "value":"100",
+         "currencyIso":"EUR"
+      },
+      "consignee":{
+         "companyNumber":"CONSIGNEE_COMPANY_1",
+         "name":"Max Muster",
+         "street":"Muster Street 1",
+         "postcode":"3001",
+         "city":"Bern",
+         "countryISOCode":"CH",
+         "initFromCompanyMasterFileData":"false"
+      },
+      "consigneeContact":{
+         "name":"Max Muster",
+         "phone":"0049123456789"
+      },
+      "carrierIdentCode":"DPD_DE",
+      "serviceCode":"DPD_EXPR_INT",
+      "termsOfDeliveryCode":"DDP"
+   },
+   "processParms":{
+      "processMode":{
+         "mode":"EXTENDED"
+      },
+      "documentPrepareScope":{
+         "scope":"SHIPMENTONLY"
+      },
+      "workstationId":"PDF_WORKSTATION",
+      "documentOutputScope":{
+         "scope":"SHIPMENTONLY"
+      },
+      "documentOutputMode":{
+         "mode":"RETURN"
+      },
+      "doCompletion":"false"
+   }
 }
-[/block]
+```
+```xml
+<createShipment>
+   <request>
+      <clientSystemId>SOAPUI</clientSystemId>
+      <clientIdentCode>APITEST</clientIdentCode>
+      <userName>API_TEST</userName>
+      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>
+      <creationParms>
+         <creationMode>VALIDATION_OK</creationMode>
+      </creationParms>
+      <shipment>
+         <transactionId>SHIPMENT_TEST_1</transactionId>
+         <transactionLabel>SHIPMENT_TEST_1</transactionLabel>
+         <isDocumentShipment>false</isDocumentShipment>
+         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>
+         <shippingDate>2018-01-01</shippingDate>
+         <contents>SHIPMENT_CONTENT</contents>
+         <shippingPt>
+            <companyNumber>SHIP_COMPANY_1</companyNumber>
+            <name>AEB Shipping Point</name>
+            <street>AEB Street 1</street>
+            <postcode>70567</postcode>
+            <city>Stuttgart</city>
+            <countryISOCode>DE</countryISOCode>
+            <initFromCompanyMasterFileData>false</initFromCompanyMasterFileData>
+         </shippingPt>
+         <shippingPtContact>
+            <name>Peter Maier</name>
+            <phone>0049711728420</phone>
+         </shippingPtContact>
+         <goodsValue>
+            <value>100</value>
+            <currencyIso>EUR</currencyIso>
+         </goodsValue>
+         <consignee>
+            <companyNumber>CONSIGNEE_COMPANY_1</companyNumber>
+            <name>Max Muster</name>
+            <street>Muster Street 1</street>
+            <postcode>3001</postcode>
+            <city>Bern</city>
+            <countryISOCode>CH</countryISOCode>
+            <initFromCompanyMasterFileData>false</initFromCompanyMasterFileData>
+         </consignee>
+         <consigneeContact>
+            <name>Max Muster</name>
+            <phone>0049123456789</phone>
+         </consigneeContact>
+         <carrierIdentCode>DPD_DE</carrierIdentCode>
+         <serviceCode>DPD_EXPR_INT</serviceCode>
+         <termsOfDeliveryCode>DDP</termsOfDeliveryCode>
+      </shipment>
+      <processParms>
+         <processMode>
+            <mode>EXTENDED</mode>
+         </processMode>
+         <documentPrepareScope>
+            <scope>SHIPMENTONLY</scope>
+         </documentPrepareScope>
+         <workstationId>PDF_WORKSTATION</workstationId>
+         <documentOutputScope>
+            <scope>SHIPMENTONLY</scope>
+         </documentOutputScope>
+         <documentOutputMode>
+            <mode>RETURN</mode>
+         </documentOutputMode>
+         <doCompletion>false</doCompletion>
+      </processParms>
+   </request>
+</createShipment>
+```
+
 **API Response to the above call**
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"hasErrors\":\"false\",\n   \"hasOnlyRetryableErrors\":\"false\",\n   \"hasWarnings\":\"false\",\n   \"shipmentNumber\":\"0000011\",\n   \"accountInfo\":{\n      \"customerNumberAtCarrier\":\"1234567890\",\n      \"singlePackageHandlingActivated\":\"false\"\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<createShipmentResponse>\n   <result>\n      <hasErrors>false</hasErrors>\n      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>\n      <hasWarnings>false</hasWarnings>\n      <shipmentNumber>0000011</shipmentNumber>\n      <accountInfo>\n         <customerNumberAtCarrier>1234567890</customerNumberAtCarrier>\n         <singlePackageHandlingActivated>false</singlePackageHandlingActivated>\n      </accountInfo>\n   </result>\n</createShipmentResponse>",
-      "language": "xml"
-    }
-  ]
+   "hasErrors":"false",
+   "hasOnlyRetryableErrors":"false",
+   "hasWarnings":"false",
+   "shipmentNumber":"0000011",
+   "accountInfo":{
+      "customerNumberAtCarrier":"1234567890",
+      "singlePackageHandlingActivated":"false"
+   }
 }
-[/block]
-###Adding the package
-[block:code]
+```
+```xml
+<createShipmentResponse>
+   <result>
+      <hasErrors>false</hasErrors>
+      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>
+      <hasWarnings>false</hasWarnings>
+      <shipmentNumber>0000011</shipmentNumber>
+      <accountInfo>
+         <customerNumberAtCarrier>1234567890</customerNumberAtCarrier>
+         <singlePackageHandlingActivated>false</singlePackageHandlingActivated>
+      </accountInfo>
+   </result>
+</createShipmentResponse>
+```
+
+### Adding the package
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"clientSystemId\":\"SOAPUI\",\n   \"clientIdentCode\":\"APITEST\",\n   \"userName\":\"API_TEST\",\n   \"resultLanguageIsoCodes\":[\n      \"EN\"\n   ],\n   \"creationParms\":{\n      \"creationMode\":\"VALIDATION_OK\"\n   },\n   \"shipmentReference\":{\n      \"transactionId\":\"SHIPMENT_TEST_1\",\n      \"referenceNumber1\":\"SHIPMENT_TEST_1\"\n   },\n   \"packages\":[\n      {\n         \"packageTypeIdentCode\":\"BOX\",\n         \"packageNumber\":\"1\",\n         \"packageTransactionId\":\"PACKAGE_TEST_1\",\n         \"referenceNumber1\":\"PACKAGE_TEST_1\",\n         \"referenceNumber2\":\"PACKAGE_TEST_1\",\n         \"grossWeight\":{\n            \"value\":\"25\",\n            \"unit\":\"kg\"\n         }\n      }\n   ],\n   \"processParms\":{\n      \"processMode\":{\n         \"mode\":\"EXTENDED\"\n      },\n      \"documentPrepareScope\":{\n         \"scope\":\"REQUEST\"\n      },\n      \"workstationId\":\"PDF_WORKSTATION\",\n      \"documentOutputScope\":{\n         \"scope\":\"REQUEST\"\n      },\n      \"documentOutputMode\":{\n         \"mode\":\"RETURN\"\n      },\n      \"doCompletion\":\"false\"\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<processShipment>\n   <request>\n      <clientSystemId>SOAPUI</clientSystemId>\n      <clientIdentCode>APITEST</clientIdentCode>\n      <userName>API_TEST</userName>\n      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>\n      <creationParms>\n         <creationMode>VALIDATION_OK</creationMode>\n      </creationParms>\n      <shipmentReference>\n         <transactionId>SHIPMENT_TEST_1</transactionId>\n         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>\n      </shipmentReference>\n      <packages>\n         <packageTypeIdentCode>BOX</packageTypeIdentCode>\n         <packageNumber>1</packageNumber>\n         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>\n         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>\n         <referenceNumber2>PACKAGE_TEST_1</referenceNumber2>\n         <grossWeight>\n            <value>25</value>\n            <unit>kg</unit>\n         </grossWeight>\n      </packages>\n      <processParms>\n         <processMode>\n            <mode>EXTENDED</mode>\n         </processMode>\n         <documentPrepareScope>\n            <scope>REQUEST</scope>\n         </documentPrepareScope>\n         <workstationId>PDF_WORKSTATION</workstationId>\n         <documentOutputScope>\n            <scope>REQUEST</scope>\n         </documentOutputScope>\n         <documentOutputMode>\n            <mode>RETURN</mode>\n         </documentOutputMode>\n         <doCompletion>false</doCompletion>\n      </processParms>\n   </request>\n</processShipment>",
-      "language": "xml"
-    }
-  ]
+   "clientSystemId":"SOAPUI",
+   "clientIdentCode":"APITEST",
+   "userName":"API_TEST",
+   "resultLanguageIsoCodes":[
+      "EN"
+   ],
+   "creationParms":{
+      "creationMode":"VALIDATION_OK"
+   },
+   "shipmentReference":{
+      "transactionId":"SHIPMENT_TEST_1",
+      "referenceNumber1":"SHIPMENT_TEST_1"
+   },
+   "packages":[
+      {
+         "packageTypeIdentCode":"BOX",
+         "packageNumber":"1",
+         "packageTransactionId":"PACKAGE_TEST_1",
+         "referenceNumber1":"PACKAGE_TEST_1",
+         "referenceNumber2":"PACKAGE_TEST_1",
+         "grossWeight":{
+            "value":"25",
+            "unit":"kg"
+         }
+      }
+   ],
+   "processParms":{
+      "processMode":{
+         "mode":"EXTENDED"
+      },
+      "documentPrepareScope":{
+         "scope":"REQUEST"
+      },
+      "workstationId":"PDF_WORKSTATION",
+      "documentOutputScope":{
+         "scope":"REQUEST"
+      },
+      "documentOutputMode":{
+         "mode":"RETURN"
+      },
+      "doCompletion":"false"
+   }
 }
-[/block]
+```
+```xml
+<processShipment>
+   <request>
+      <clientSystemId>SOAPUI</clientSystemId>
+      <clientIdentCode>APITEST</clientIdentCode>
+      <userName>API_TEST</userName>
+      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>
+      <creationParms>
+         <creationMode>VALIDATION_OK</creationMode>
+      </creationParms>
+      <shipmentReference>
+         <transactionId>SHIPMENT_TEST_1</transactionId>
+         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>
+      </shipmentReference>
+      <packages>
+         <packageTypeIdentCode>BOX</packageTypeIdentCode>
+         <packageNumber>1</packageNumber>
+         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>
+         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>
+         <referenceNumber2>PACKAGE_TEST_1</referenceNumber2>
+         <grossWeight>
+            <value>25</value>
+            <unit>kg</unit>
+         </grossWeight>
+      </packages>
+      <processParms>
+         <processMode>
+            <mode>EXTENDED</mode>
+         </processMode>
+         <documentPrepareScope>
+            <scope>REQUEST</scope>
+         </documentPrepareScope>
+         <workstationId>PDF_WORKSTATION</workstationId>
+         <documentOutputScope>
+            <scope>REQUEST</scope>
+         </documentOutputScope>
+         <documentOutputMode>
+            <mode>RETURN</mode>
+         </documentOutputMode>
+         <doCompletion>false</doCompletion>
+      </processParms>
+   </request>
+</processShipment>
+```
+
 **API Response to the above call**
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"hasErrors\":\"false\",\n   \"hasOnlyRetryableErrors\":\"false\",\n   \"hasWarnings\":\"false\",\n   \"carrierShipmentNumber\":\"00000000000000\",\n   \"packageResults\":{\n      \"packageTransactionId\":\"PACKAGE_TEST_1\",\n      \"referenceNumber1\":\"PACKAGE_TEST_1\",\n      \"carrierPackageNumber\":\"00000000000000\",\n      \"documents\":{\n         \"documentType\":\"DPD Label DE\",\n         \"mimeType\":\"application/pdf\",\n         \"content\":\"PDF Content in Base64 encoded\"\n      }\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<processShipmentResponse>\n   <result>\n      <hasErrors>false</hasErrors>\n      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>\n      <hasWarnings>false</hasWarnings>\n      <carrierShipmentNumber>00000000000000</carrierShipmentNumber>\n      <packageResults>\n         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>\n         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>\n         <carrierPackageNumber>00000000000000</carrierPackageNumber>\n         <documents>\n            <documentType>DPD Label DE</documentType>\n            <mimeType>application/pdf</mimeType>\n            <content>PDF Content in Base64 encoded</content>\n         </documents>\n      </packageResults>\n   </result>\n</processShipmentResponse>",
-      "language": "xml"
-    }
-  ]
+   "hasErrors":"false",
+   "hasOnlyRetryableErrors":"false",
+   "hasWarnings":"false",
+   "carrierShipmentNumber":"00000000000000",
+   "packageResults":{
+      "packageTransactionId":"PACKAGE_TEST_1",
+      "referenceNumber1":"PACKAGE_TEST_1",
+      "carrierPackageNumber":"00000000000000",
+      "documents":{
+         "documentType":"DPD Label DE",
+         "mimeType":"application/pdf",
+         "content":"PDF Content in Base64 encoded"
+      }
+   }
 }
-[/block]
-###Completing the shipment
-[block:code]
+```
+```xml
+<processShipmentResponse>
+   <result>
+      <hasErrors>false</hasErrors>
+      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>
+      <hasWarnings>false</hasWarnings>
+      <carrierShipmentNumber>00000000000000</carrierShipmentNumber>
+      <packageResults>
+         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>
+         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>
+         <carrierPackageNumber>00000000000000</carrierPackageNumber>
+         <documents>
+            <documentType>DPD Label DE</documentType>
+            <mimeType>application/pdf</mimeType>
+            <content>PDF Content in Base64 encoded</content>
+         </documents>
+      </packageResults>
+   </result>
+</processShipmentResponse>
+```
+
+### Completing the shipment
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"clientSystemId\":\"SOAPUI\",\n   \"clientIdentCode\":\"APITEST\",\n   \"userName\":\"API_TEST\",\n   \"resultLanguageIsoCodes\":[\n      \"EN\"\n   ],\n   \"creationParms\":{\n      \"creationMode\":\"VALIDATION_OK\"\n   },\n   \"shipmentReference\":{\n      \"transactionId\":\"SHIPMENT_TEST_1\",\n      \"referenceNumber1\":\"SHIPMENT_TEST_1\"\n   },\n   \"processParms\":{\n      \"processMode\":{\n         \"mode\":\"EXTENDED\"\n      },\n      \"documentPrepareScope\":{\n         \"scope\":\"REMAINING\"\n      },\n      \"workstationId\":\"PDF_WORKSTATION\",\n      \"documentOutputScope\":{\n         \"scope\":\"REMAINING\"\n      },\n      \"documentOutputMode\":{\n         \"mode\":\"RETURN\"\n      },\n      \"doCompletion\":\"true\"\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<processShipment>\n   <request>\n      <clientSystemId>SOAPUI</clientSystemId>\n      <clientIdentCode>APITEST</clientIdentCode>\n      <userName>API_TEST</userName>\n      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>\n      <creationParms>\n         <creationMode>VALIDATION_OK</creationMode>\n      </creationParms>\n      <shipmentReference>\n         <transactionId>SHIPMENT_TEST_1</transactionId>\n         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>\n      </shipmentReference>\n      <processParms>\n         <processMode>\n            <mode>EXTENDED</mode>\n         </processMode>\n         <documentPrepareScope>\n            <scope>REMAINING</scope>\n         </documentPrepareScope>\n         <workstationId>PDF_WORKSTATION</workstationId>\n         <documentOutputScope>\n            <scope>REMAINING</scope>\n         </documentOutputScope>\n         <documentOutputMode>\n            <mode>RETURN</mode>\n         </documentOutputMode>\n         <doCompletion>true</doCompletion>\n      </processParms>\n   </request>\n</processShipment>",
-      "language": "xml"
-    }
-  ]
+   "clientSystemId":"SOAPUI",
+   "clientIdentCode":"APITEST",
+   "userName":"API_TEST",
+   "resultLanguageIsoCodes":[
+      "EN"
+   ],
+   "creationParms":{
+      "creationMode":"VALIDATION_OK"
+   },
+   "shipmentReference":{
+      "transactionId":"SHIPMENT_TEST_1",
+      "referenceNumber1":"SHIPMENT_TEST_1"
+   },
+   "processParms":{
+      "processMode":{
+         "mode":"EXTENDED"
+      },
+      "documentPrepareScope":{
+         "scope":"REMAINING"
+      },
+      "workstationId":"PDF_WORKSTATION",
+      "documentOutputScope":{
+         "scope":"REMAINING"
+      },
+      "documentOutputMode":{
+         "mode":"RETURN"
+      },
+      "doCompletion":"true"
+   }
 }
-[/block]
+```
+```xml
+<processShipment>
+   <request>
+      <clientSystemId>SOAPUI</clientSystemId>
+      <clientIdentCode>APITEST</clientIdentCode>
+      <userName>API_TEST</userName>
+      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>
+      <creationParms>
+         <creationMode>VALIDATION_OK</creationMode>
+      </creationParms>
+      <shipmentReference>
+         <transactionId>SHIPMENT_TEST_1</transactionId>
+         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>
+      </shipmentReference>
+      <processParms>
+         <processMode>
+            <mode>EXTENDED</mode>
+         </processMode>
+         <documentPrepareScope>
+            <scope>REMAINING</scope>
+         </documentPrepareScope>
+         <workstationId>PDF_WORKSTATION</workstationId>
+         <documentOutputScope>
+            <scope>REMAINING</scope>
+         </documentOutputScope>
+         <documentOutputMode>
+            <mode>RETURN</mode>
+         </documentOutputMode>
+         <doCompletion>true</doCompletion>
+      </processParms>
+   </request>
+</processShipment>
+```
+
 **API Response to the above call**
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"hasErrors\":\"false\",\n   \"hasOnlyRetryableErrors\":\"false\",\n   \"hasWarnings\":\"false\",\n   \"carrierShipmentNumber\":\"00000000000000\",\n   \"packageResults\":{\n      \"packageTransactionId\":\"PACKAGE_TEST_1\",\n      \"referenceNumber1\":\"PACKAGE_TEST_1\",\n      \"carrierPackageNumber\":\"00000000000000\"\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<processShipmentResponse>\n   <result>\n      <hasErrors>false</hasErrors>\n      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>\n      <hasWarnings>false</hasWarnings>\n      <carrierShipmentNumber>00000000000000</carrierShipmentNumber>\n      <packageResults>\n         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>\n         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>\n         <carrierPackageNumber>00000000000000</carrierPackageNumber>\n      </packageResults>\n   </result>\n</processShipmentResponse>",
-      "language": "xml"
-    }
-  ]
+   "hasErrors":"false",
+   "hasOnlyRetryableErrors":"false",
+   "hasWarnings":"false",
+   "carrierShipmentNumber":"00000000000000",
+   "packageResults":{
+      "packageTransactionId":"PACKAGE_TEST_1",
+      "referenceNumber1":"PACKAGE_TEST_1",
+      "carrierPackageNumber":"00000000000000"
+   }
 }
-[/block]
-##Adding (more) items
-You need to add another delivery note to an already existing shipment? This is also done by *processShipment*. 
-Note: Sometimes it is necessary to update the shipment. In this example, adding items usually increases the value of the shipment. We are very conservative towards updates. However, the fields available for updates are located in the *shipmentUpdateData* structure.
+```
+```xml
+<processShipmentResponse>
+   <result>
+      <hasErrors>false</hasErrors>
+      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>
+      <hasWarnings>false</hasWarnings>
+      <carrierShipmentNumber>00000000000000</carrierShipmentNumber>
+      <packageResults>
+         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>
+         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>
+         <carrierPackageNumber>00000000000000</carrierPackageNumber>
+      </packageResults>
+   </result>
+</processShipmentResponse>
+```
+
+## Adding (more) items
+
+You need to add another delivery note to an already existing shipment? This is also done by *processShipment*.\
+Note: Sometimes it is necessary to update the shipment. In this example, adding items usually increases the value of the shipment. We are very conservative towards updates. However, the fields available for updates are located in the *shipmentUpdateData* structure.\
 The example shows you how it works:
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"clientSystemId\":\"SOAPUI\",\n   \"clientIdentCode\":\"APITEST\",\n   \"userName\":\"API_TEST\",\n   \"resultLanguageIsoCodes\":[\n      \"EN\"\n   ],\n   \"creationParms\":{\n      \"creationMode\":\"VALIDATION_OK\"\n   },\n   \"shipmentReference\":{\n      \"transactionId\":\"SHIPMENT_TEST_1\",\n      \"referenceNumber1\":\"SHIPMENT_TEST_1\"\n   },\n   \"shipmentTotals\":{\n      \"numberOfPackagesExpected\":\"3\",\n      \"grossWeightExpected\":{\n         \"value\":\"10\",\n         \"unit\":\"kg\"\n      },\n      \"loadingMeters\":\"10\",\n      \"palletPlaces\":\"1\"\n   },\n   \"shipmentUpdateData\":{\n      \"shippingDate\":\"2018-01-01\",\n      \"customsValue\":{\n         \"value\":\"100\",\n         \"currencyIso\":\"EUR\"\n      },\n      \"goodsValue\":{\n         \"value\":\"100\",\n         \"currencyIso\":\"EUR\"\n      }\n   },\n   \"items\":[\n      {\n         \"itemNumber\":\"1\",\n         \"itemTransactionId\":\"ITEM_TEST_1\",\n         \"referenceNumber1\":\"ITEM_TEST_1\",\n         \"description\":\"Pancake\",\n         \"countryOfOriginsISOCode\":\"DE\",\n         \"certificateOfOrigins\":\"DE\",\n         \"quantity\":{\n            \"value\":\"10\",\n            \"unit\":\"kg\"\n         },\n         \"customsValue\":{\n            \"value\":\"100\",\n            \"currencyIso\":\"EUR\"\n         },\n         \"goodsValue\":{\n            \"value\":\"100\",\n            \"currencyIso\":\"EUR\"\n         }\n      }\n   ],\n   \"processParms\":{\n      \"processMode\":{\n         \"mode\":\"EXTENDED\"\n      },\n      \"documentPrepareScope\":{\n         \"scope\":\"REMAINING\"\n      },\n      \"workstationId\":\"PDF_WORKSTATION\",\n      \"documentOutputScope\":{\n         \"scope\":\"REMAINING\"\n      },\n      \"documentOutputMode\":{\n         \"mode\":\"RETURN\"\n      },\n      \"doCompletion\":\"true\"\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<processShipment>\n   <request>\n      <clientSystemId>SOAPUI</clientSystemId>\n      <clientIdentCode>APITEST</clientIdentCode>\n      <userName>API_TEST</userName>\n      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>\n      <creationParms>\n         <creationMode>VALIDATION_OK</creationMode>\n      </creationParms>\n      <shipmentReference>\n         <transactionId>SHIPMENT_TEST_1</transactionId>\n         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>\n      </shipmentReference>\n      <shipmentTotals>\n         <numberOfPackagesExpected>3</numberOfPackagesExpected>\n         <grossWeightExpected>\n            <value>10</value>\n            <unit>kg</unit>\n         </grossWeightExpected>\n         <loadingMeters>10</loadingMeters>\n         <palletPlaces>1</palletPlaces>\n      </shipmentTotals>\n      <shipmentUpdateData>\n         <shippingDate>2018-01-01</shippingDate>\n         <customsValue>\n            <value>100</value>\n            <currencyIso>EUR</currencyIso>\n         </customsValue>\n         <goodsValue>\n            <value>100</value>\n            <currencyIso>EUR</currencyIso>\n         </goodsValue>\n      </shipmentUpdateData>\n      <items>\n         <itemNumber>1</itemNumber>\n         <itemTransactionId>ITEM_TEST_1</itemTransactionId>\n         <referenceNumber1>ITEM_TEST_1</referenceNumber1>\n         <description>Pancake</description>\n         <countryOfOriginsISOCode>DE</countryOfOriginsISOCode>\n         <certificateOfOrigins>DE</certificateOfOrigins>\n         <quantity>\n            <value>10</value>\n            <unit>kg</unit>\n         </quantity>\n         <customsValue>\n            <value>100</value>\n            <currencyIso>EUR</currencyIso>\n         </customsValue>\n         <goodsValue>\n            <value>100</value>\n            <currencyIso>EUR</currencyIso>\n         </goodsValue>\n      </items>\n      <processParms>\n         <processMode>\n            <mode>EXTENDED</mode>\n         </processMode>\n         <documentPrepareScope>\n            <scope>REMAINING</scope>\n         </documentPrepareScope>\n         <workstationId>PDF_WORKSTATION</workstationId>\n         <documentOutputScope>\n            <scope>REMAINING</scope>\n         </documentOutputScope>\n         <documentOutputMode>\n            <mode>RETURN</mode>\n         </documentOutputMode>\n         <doCompletion>true</doCompletion>\n      </processParms>\n   </request>\n</processShipment>",
-      "language": "xml"
-    }
-  ]
+   "clientSystemId":"SOAPUI",
+   "clientIdentCode":"APITEST",
+   "userName":"API_TEST",
+   "resultLanguageIsoCodes":[
+      "EN"
+   ],
+   "creationParms":{
+      "creationMode":"VALIDATION_OK"
+   },
+   "shipmentReference":{
+      "transactionId":"SHIPMENT_TEST_1",
+      "referenceNumber1":"SHIPMENT_TEST_1"
+   },
+   "shipmentTotals":{
+      "numberOfPackagesExpected":"3",
+      "grossWeightExpected":{
+         "value":"10",
+         "unit":"kg"
+      },
+      "loadingMeters":"10",
+      "palletPlaces":"1"
+   },
+   "shipmentUpdateData":{
+      "shippingDate":"2018-01-01",
+      "customsValue":{
+         "value":"100",
+         "currencyIso":"EUR"
+      },
+      "goodsValue":{
+         "value":"100",
+         "currencyIso":"EUR"
+      }
+   },
+   "items":[
+      {
+         "itemNumber":"1",
+         "itemTransactionId":"ITEM_TEST_1",
+         "referenceNumber1":"ITEM_TEST_1",
+         "description":"Pancake",
+         "countryOfOriginsISOCode":"DE",
+         "certificateOfOrigins":"DE",
+         "quantity":{
+            "value":"10",
+            "unit":"kg"
+         },
+         "customsValue":{
+            "value":"100",
+            "currencyIso":"EUR"
+         },
+         "goodsValue":{
+            "value":"100",
+            "currencyIso":"EUR"
+         }
+      }
+   ],
+   "processParms":{
+      "processMode":{
+         "mode":"EXTENDED"
+      },
+      "documentPrepareScope":{
+         "scope":"REMAINING"
+      },
+      "workstationId":"PDF_WORKSTATION",
+      "documentOutputScope":{
+         "scope":"REMAINING"
+      },
+      "documentOutputMode":{
+         "mode":"RETURN"
+      },
+      "doCompletion":"true"
+   }
 }
-[/block]
+```
+```xml
+<processShipment>
+   <request>
+      <clientSystemId>SOAPUI</clientSystemId>
+      <clientIdentCode>APITEST</clientIdentCode>
+      <userName>API_TEST</userName>
+      <resultLanguageIsoCodes>EN</resultLanguageIsoCodes>
+      <creationParms>
+         <creationMode>VALIDATION_OK</creationMode>
+      </creationParms>
+      <shipmentReference>
+         <transactionId>SHIPMENT_TEST_1</transactionId>
+         <referenceNumber1>SHIPMENT_TEST_1</referenceNumber1>
+      </shipmentReference>
+      <shipmentTotals>
+         <numberOfPackagesExpected>3</numberOfPackagesExpected>
+         <grossWeightExpected>
+            <value>10</value>
+            <unit>kg</unit>
+         </grossWeightExpected>
+         <loadingMeters>10</loadingMeters>
+         <palletPlaces>1</palletPlaces>
+      </shipmentTotals>
+      <shipmentUpdateData>
+         <shippingDate>2018-01-01</shippingDate>
+         <customsValue>
+            <value>100</value>
+            <currencyIso>EUR</currencyIso>
+         </customsValue>
+         <goodsValue>
+            <value>100</value>
+            <currencyIso>EUR</currencyIso>
+         </goodsValue>
+      </shipmentUpdateData>
+      <items>
+         <itemNumber>1</itemNumber>
+         <itemTransactionId>ITEM_TEST_1</itemTransactionId>
+         <referenceNumber1>ITEM_TEST_1</referenceNumber1>
+         <description>Pancake</description>
+         <countryOfOriginsISOCode>DE</countryOfOriginsISOCode>
+         <certificateOfOrigins>DE</certificateOfOrigins>
+         <quantity>
+            <value>10</value>
+            <unit>kg</unit>
+         </quantity>
+         <customsValue>
+            <value>100</value>
+            <currencyIso>EUR</currencyIso>
+         </customsValue>
+         <goodsValue>
+            <value>100</value>
+            <currencyIso>EUR</currencyIso>
+         </goodsValue>
+      </items>
+      <processParms>
+         <processMode>
+            <mode>EXTENDED</mode>
+         </processMode>
+         <documentPrepareScope>
+            <scope>REMAINING</scope>
+         </documentPrepareScope>
+         <workstationId>PDF_WORKSTATION</workstationId>
+         <documentOutputScope>
+            <scope>REMAINING</scope>
+         </documentOutputScope>
+         <documentOutputMode>
+            <mode>RETURN</mode>
+         </documentOutputMode>
+         <doCompletion>true</doCompletion>
+      </processParms>
+   </request>
+</processShipment>
+```
+
 **API Response to the above call**
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n   \"hasErrors\":\"false\",\n   \"hasOnlyRetryableErrors\":\"false\",\n   \"hasWarnings\":\"false\",\n   \"carrierShipmentNumber\":\"00000000000000\",\n   \"packageResults\":{\n      \"packageTransactionId\":\"PACKAGE_TEST_1\",\n      \"referenceNumber1\":\"PACKAGE_TEST_1\",\n      \"carrierPackageNumber\":\"00000000000000\"\n   }\n}",
-      "language": "json"
-    },
-    {
-      "code": "<processShipmentResponse>\n   <result>\n      <hasErrors>false</hasErrors>\n      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>\n      <hasWarnings>false</hasWarnings>\n      <carrierShipmentNumber>00000000000000</carrierShipmentNumber>\n      <packageResults>\n         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>\n         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>\n         <carrierPackageNumber>00000000000000</carrierPackageNumber>\n      </packageResults>\n   </result>\n</processShipmentResponse>",
-      "language": "xml"
-    }
-  ]
+   "hasErrors":"false",
+   "hasOnlyRetryableErrors":"false",
+   "hasWarnings":"false",
+   "carrierShipmentNumber":"00000000000000",
+   "packageResults":{
+      "packageTransactionId":"PACKAGE_TEST_1",
+      "referenceNumber1":"PACKAGE_TEST_1",
+      "carrierPackageNumber":"00000000000000"
+   }
 }
-[/block]
+```
+```xml
+<processShipmentResponse>
+   <result>
+      <hasErrors>false</hasErrors>
+      <hasOnlyRetryableErrors>false</hasOnlyRetryableErrors>
+      <hasWarnings>false</hasWarnings>
+      <carrierShipmentNumber>00000000000000</carrierShipmentNumber>
+      <packageResults>
+         <packageTransactionId>PACKAGE_TEST_1</packageTransactionId>
+         <referenceNumber1>PACKAGE_TEST_1</referenceNumber1>
+         <carrierPackageNumber>00000000000000</carrierPackageNumber>
+      </packageResults>
+   </result>
+</processShipmentResponse>
+```
