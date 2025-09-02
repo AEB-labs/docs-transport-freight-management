@@ -28,3 +28,4 @@
 - getduplicateclientprogress
 - getdownloadablefilesrefs
 - getscriptexecutionstate
+- isdebtornumberknown
