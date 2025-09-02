@@ -12,33 +12,35 @@ metadata:
 next:
   description: ''
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 > 📘 What's a customer account number?
-> 
+>
 > A customer account number is a unique identifier assigned to an individual or business entity by the carrier to identify them as a customer. When a carrier wants to bill something to a party, they typically require the party's customer account number to ensure accurate and timely billing.
 
-The _term of delivery_ of a <<glossary:shipping order>> outlines who pays for the freight costs and, in the case of exports, who pays duties and taxes.
+The *term of delivery* of a <Glossary>shipping order</Glossary> outlines who pays for the freight costs and, in the case of exports, who pays duties and taxes.
 
 ![](https://files.readme.io/732aa17-image.png)Options for **freight costs**
 
-- **Free**: The shipper (the party sending the goods) pays.
-- **Chargeable**: The consignee (the party receiving the goods) or a third party pays.
+* **Free**: The shipper (the party sending the goods) pays.
+* **Chargeable**: The consignee (the party receiving the goods) or a third party pays.
 
 Options for **duties and taxes**
 
-- **Duty paid / taxed**: The shipper pays.
-- **Duty unpaid / untaxed**: The consignee or a third party pays.
+* **Duty paid / taxed**: The shipper pays.
+* **Duty unpaid / untaxed**: The consignee or a third party pays.
 
 > 📘 Mandatory fields
-> 
+>
 > The freight costs are always mandatory, as every shipment requires an incoterm and the payer of freight always has to be defined.
-> 
+>
 > The payer of duty is only needed if the shipment is dutiable, it should not be filled if duties are not applicable (e.g. a domestic shipment, or a shipment within the European Union).
 
 To correctly bill the appropriate party, the carriers require the account number of that party.
@@ -73,7 +75,7 @@ Defines which account the carrier charges freight or customs duties to. There ar
    ```
 
    > 🚧 Required data
-   > 
+   >
    > If you're using SHIPPER, don't transmit the **address data** (`payerOfCharg` or `payerOfDut`) and the **account number** (`payerOfChargAccountNo` or `payerOfDutAccountNo`) since this data is already available in the Carrier Connect master data.
 2. If the **Consignee** or a **Third Party** pays the freight/duties, that party's account number is required. 
 
@@ -97,7 +99,7 @@ Defines which account the carrier charges freight or customs duties to. There ar
    ```
 
    > 🚧 Required data
-   > 
+   >
    > If you're using RECEIVER, don't transmit the **address data** (`payerOfCharg` or `payerOfDut`) since you already transmitted this data in the consignee address segment.
 
    There are two ways to fill this **account number** in the specific shipping order:
@@ -147,8 +149,19 @@ Defines which account the carrier charges freight or customs duties to. There ar
 
       ```
 
-[block:html]
-{
-  "html": "<style>\n  details {\n    background-color: #FDF7F7;\n    padding: 10px;\n    margin-left: 90px;\n    border-left: 3px solid #D9534F;\n    /* border-radius: 5px; */\n  }\n</style>\n\n<details>\n  <summary>Click for more info on: How to Configure an Account Number in the Company Master Data</summary>\n  <iframe src=\"https://scribehow.com/embed/How_to_Configure_an_Account_Number_in_the_Company_Master_Data__18KwHeTlRlyX6q9Mbdt6Sw\" width=\"100%\" height=\"640\" allowfullscreen frameborder=\"0\"></iframe>\n</details>"
-}
-[/block]
+<HTMLBlock>{`
+<style>
+  details {
+    background-color: #FDF7F7;
+    padding: 10px;
+    margin-left: 90px;
+    border-left: 3px solid #D9534F;
+    /* border-radius: 5px; */
+  }
+</style>
+
+<details>
+  <summary>Click for more info on: How to Configure an Account Number in the Company Master Data</summary>
+  <iframe src="https://scribehow.com/embed/How_to_Configure_an_Account_Number_in_the_Company_Master_Data__18KwHeTlRlyX6q9Mbdt6Sw" width="100%" height="640" allowfullscreen frameborder="0"></iframe>
+</details>
+`}</HTMLBlock>
