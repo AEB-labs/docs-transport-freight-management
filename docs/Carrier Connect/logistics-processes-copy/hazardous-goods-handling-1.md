@@ -14,13 +14,13 @@ next:
 
 Hazardous goods handling has to be enabled in the carrier configuration for the specific client.
 
-Hazardous goods shipment items can only be added on the shipment item level so far.  
+Hazardous goods shipment items can only be added on the shipment item level so far.\
 For EDIs, the carriers need to receive the data about hazardous goods on the package level. 
 
 Therefore in Carrier Connect, shipment items which include hazardous goods items have to packed in packages. Only then the package knows which hazardous goods are included and the correct data according to the EDI specification is sent to the carrier.
 
-The example below shows a package with the reference number 'SHIPMENT_PACK_TEST1' which contains an item 'SHIPMENT_TEST1'. This item contains a hazardous goods item with UN number '1845' (=dry ice).  
-When the EDI generation is creating the data, the hazardous goods item with UN number '1845' and its data would appear under the related package with the reference number 'SHIPMENT_PACK_TEST1' segment which would satisfy the carrier's requirements.
+The example below shows a package with the reference number 'SHIPMENT\_PACK\_TEST1' which contains an item 'SHIPMENT\_TEST1'. This item contains a hazardous goods item with UN number '1845' (=dry ice).\
+When the EDI generation is creating the data, the hazardous goods item with UN number '1845' and its data would appear under the related package with the reference number 'SHIPMENT\_PACK\_TEST1' segment which would satisfy the carrier's requirements.
 
 ```json
 {
@@ -158,10 +158,10 @@ When the EDI generation is creating the data, the hazardous goods item with UN n
 
 As shown in the example, the package needs a hazardous goods type indication as well.
 
-Available hazardous goods types are:  
-'NONE' (=No hazardous goods) -DEFAULT-  
-'NORMAL' (=Normal hazardous goods)  
-'LQ' (=Limited quantity)  
-'EQ' (=Excepted quantity)  
-'SPECIAL_SUBSTANCE' (=special substance)  
-'US_SMALL_QUANTITY' (=Small Quantity (US relevant))
+Available hazardous goods types are:\
+'NONE' (=No hazardous goods) -DEFAULT-\
+'NORMAL' (=Normal hazardous goods)\
+'LQ' (=Limited quantity)\
+'EQ' (=Excepted quantity)\
+'SPECIAL\_SUBSTANCE' (=special substance)\
+'US\_SMALL\_QUANTITY' (=Small Quantity (US relevant))
