@@ -10,19 +10,14 @@ metadata:
 next:
   description: ''
 ---
-[block:api-header]
-{
-  "title": "Canceling a shipment"
-}
-[/block]
+## Canceling a shipment
+
 If a shipment has to be canceled, <a href="https://carrierconnect.docs.developers.aeb.com/reference#cancelshipment-1" target="_blank">cancelShipment</a> can be used. There is no deleteShipment because shipments cannot be canceled unlike packages or shipment items. The reference for an existing shipment can be e.g. a *shipment number* or the *transaction id*.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "<shipmentReference>\n   <transactionId></transactionId>\n   <referenceNumber1>SHIPMENT_TEST2</referenceNumber1>\n   <shipmentNumber>9009450</shipmentNumber>\n</shipmentReference>",
-      "language": "xml"
-    }
-  ]
-}
-[/block]
+
+```xml
+<shipmentReference>
+   <transactionId></transactionId>
+   <referenceNumber1>SHIPMENT_TEST2</referenceNumber1>
+   <shipmentNumber>9009450</shipmentNumber>
+</shipmentReference>
+```
