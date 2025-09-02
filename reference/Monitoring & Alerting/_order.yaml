@@ -18,3 +18,4 @@
 - getuniqueconsignment
 - getconsignments
 - gettrackingobjectevents
+- geteventdefinitions
