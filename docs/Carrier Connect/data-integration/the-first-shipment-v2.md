@@ -10,37 +10,25 @@ metadata:
 next:
   description: ''
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 To allow you to start quickly, here you will find a complete call to create a shipment and receive a typical response.
 
 # Creating a shipment
 
-You can use the example and copy/paste it into your favorite tool to test SOAP and/or REST API calls. Our test environment is prepared to work with the data in this example.  
+You can use the example and copy/paste it into your favorite tool to test SOAP and/or REST API calls. Our test environment is prepared to work with the data in this example.\
 Why don't you just give it a quick try?
 
 Below is an example `createShipment` call for a domestic shipment. You can find it in your test client with the shipment number 1000001: 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/43bb33ed9aca1981bc4bb644592ae786377dba7cb19c1b3f3ebc8411ac772c81-image.png",
-        null,
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/43bb33ed9aca1981bc4bb644592ae786377dba7cb19c1b3f3ebc8411ac772c81-image.png" />
 
 ![](https://files.readme.io/260eb23dc2b7a39bb75ea5d82b23c0a5fedb6dbc35d64d9cb647437b026685b3-image.png)
 
@@ -62,7 +50,7 @@ And here another example. This time for a third country shipment. You can find i
 
 # Receiving an error
 
-Below is an API response with an error. This will demonstrate the structure of an error response and will allow you to become familiar with the general behavior.  
+Below is an API response with an error. This will demonstrate the structure of an error response and will allow you to become familiar with the general behavior.\
 You will receive this message once you remove `clientSystemId` from the above request.
 
 For more information on errors, see [💀 Error Handling (COPY)](doc:error-handling-copy).
