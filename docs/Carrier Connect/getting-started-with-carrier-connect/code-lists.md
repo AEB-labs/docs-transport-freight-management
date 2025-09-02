@@ -10,77 +10,304 @@ metadata:
 next:
   description: ''
 ---
-[block:api-header]
-{
-  "title": "Quantity units"
-}
-[/block]
+## Quantity units
+
 When transferring quantity units with packages and items, the abbreviations from the following code list must be used. Please also note that codes are case sensitive.
 
 If it is not possible to transfer the predefined quantity units because you use different codes, for example, you can use the Carrier Connect user interface to convert your codes.
-[block:parameters]
-{
-  "data": {
-    "0-0": "cl",
-    "0-1": "Centiliter",
-    "1-1": "Centimeter",
-    "1-0": "cm",
-    "2-1": "Cubic centimeter",
-    "2-0": "ccm",
-    "3-1": "Cubic decimeter",
-    "3-0": "cdm",
-    "4-1": "Cubic meter",
-    "4-0": "m3",
-    "5-1": "Decimeter",
-    "5-0": "dm",
-    "6-1": "Foot",
-    "6-0": "ft",
-    "7-0": "gr",
-    "7-1": "Gram",
-    "8-1": "Gram per cubic centimeter",
-    "8-0": "g/ccm",
-    "9-1": "Hectoliter",
-    "9-0": "hl",
-    "10-1": "Inch",
-    "10-0": "in",
-    "11-1": "Kilogram",
-    "11-0": "kg",
-    "13-1": "Liter",
-    "13-0": "l",
-    "17-1": "Milliliter",
-    "17-0": "ml",
-    "20-1": "Pair",
-    "20-0": "Paar",
-    "21-1": "Piece",
-    "21-0": "St",
-    "22-1": "Pound",
-    "22-0": "lb",
-    "12-0": "km",
-    "12-1": "Kilometer",
-    "14-1": "Meter",
-    "14-0": "m",
-    "15-1": "Micrometer",
-    "15-0": "µm",
-    "16-1": "Mile",
-    "16-0": "mi",
-    "18-1": "Millimeter",
-    "18-0": "mm",
-    "19-1": "Nanometer",
-    "19-0": "nm",
-    "23-1": "Square centimeter",
-    "23-0": "qcm",
-    "24-1": "Square decimeter",
-    "24-0": "qdm",
-    "25-1": "Square meter",
-    "25-0": "qm",
-    "26-1": "Square millimeter",
-    "26-0": "qmm",
-    "27-1": "Ton",
-    "27-0": "t",
-    "h-0": "Abbreviation",
-    "h-1": "Descripion"
-  },
-  "cols": 2,
-  "rows": 28
-}
-[/block]
+
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Abbreviation
+      </th>
+
+      <th>
+        Descripion
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        cl
+      </td>
+
+      <td>
+        Centiliter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        cm
+      </td>
+
+      <td>
+        Centimeter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        ccm
+      </td>
+
+      <td>
+        Cubic centimeter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        cdm
+      </td>
+
+      <td>
+        Cubic decimeter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        m3
+      </td>
+
+      <td>
+        Cubic meter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        dm
+      </td>
+
+      <td>
+        Decimeter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        ft
+      </td>
+
+      <td>
+        Foot
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        gr
+      </td>
+
+      <td>
+        Gram
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        g/ccm
+      </td>
+
+      <td>
+        Gram per cubic centimeter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        hl
+      </td>
+
+      <td>
+        Hectoliter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        in
+      </td>
+
+      <td>
+        Inch
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        kg
+      </td>
+
+      <td>
+        Kilogram
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        km
+      </td>
+
+      <td>
+        Kilometer
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        l
+      </td>
+
+      <td>
+        Liter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        m
+      </td>
+
+      <td>
+        Meter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        µm
+      </td>
+
+      <td>
+        Micrometer
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        mi
+      </td>
+
+      <td>
+        Mile
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        ml
+      </td>
+
+      <td>
+        Milliliter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        mm
+      </td>
+
+      <td>
+        Millimeter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        nm
+      </td>
+
+      <td>
+        Nanometer
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Paar
+      </td>
+
+      <td>
+        Pair
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        St
+      </td>
+
+      <td>
+        Piece
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        lb
+      </td>
+
+      <td>
+        Pound
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        qcm
+      </td>
+
+      <td>
+        Square centimeter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        qdm
+      </td>
+
+      <td>
+        Square decimeter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        qm
+      </td>
+
+      <td>
+        Square meter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        qmm
+      </td>
+
+      <td>
+        Square millimeter
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        t
+      </td>
+
+      <td>
+        Ton
+      </td>
+    </tr>
+  </tbody>
+</Table>
