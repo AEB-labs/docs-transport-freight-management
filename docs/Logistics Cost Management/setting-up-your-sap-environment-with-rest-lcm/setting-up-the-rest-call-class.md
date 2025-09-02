@@ -14,8 +14,8 @@ next:
       slug: programm-to-create-a-service-item
       title: Program to create a service item
 ---
-This class will provide you the possibility to use all methods of the billing API.  
-Use the static NEW_FOR method as constructor. It imports the name of the SM59 connection you created.
+This class will provide you the possibility to use all methods of the billing API.\
+Use the static NEW\_FOR method as constructor. It imports the name of the SM59 connection you created.
 
 ```
 class ZLCM_REST_CALL definition
@@ -149,6 +149,6 @@ CLASS ZLCM_REST_CALL IMPLEMENTATION.
 ENDCLASS.
 ```
 
-The CREATE_CALL method is used to create the actual API call. It requires the name of the method to call and a structure or object that will then be converted into JSON.
+The CREATE\_CALL method is used to create the actual API call. It requires the name of the method to call and a structure or object that will then be converted into JSON.
 
 Feel free to adjust or propose changes!
