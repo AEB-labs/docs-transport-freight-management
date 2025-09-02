@@ -10,35 +10,53 @@ metadata:
 next:
   description: ''
 ---
-[block:api-header]
-{
-  "title": "receiveTrackingEvent"
-}
-[/block]
+## receiveTrackingEvent
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"metaData\": {\n    \"senderID\": \"SwabCloth_ERP\",\n    \"receiverClient\": \"SwabCloth\",\n    \"receiverRole\": \"SUPPLIER\",\n    \"senderRole\": \"SUPPLIER\",\n    \"sendDate\": {\n      \"dateInTimezone\": \"2020-10-12 13:04:20\",\n      \"timezone\": \"Europe/Berlin\"\n    },\n    \"messageReferenceNumber\": \"ERP_2851408\",\n    \"updateMode\": \"STANDARD\",\n    \"idRefScheme\": \"SUPPLIER\"\n  },\n  \"head\": {\n    \"identCode\": \"Shipped\",\n    \"actualDate\": {\n      \"dateInTimezone\": \"2020-10-12 13:04:20\",\n      \"timezone\": \"Europe/Berlin\"\n    },\n    \"actualLocation\": {\n      \"city\": \"Ludwigsburg\",\n      \"countryISOCode\": \"DE\",\n      \"postcodeStreet\": \"71634\",\n      \"timezone\": \"Europe/Berlin\",\n      \"globLocationNo\": \"SW_CLOTH_1\"\n    },\n    \"actualSender\": {\n      \"globalLocationNumber\": \"SW_CLOTH\",\n      \"name\": \"Swabian Clothes\"\n    }\n  },\n  \"references\": [\n    {\n      \"trackingObjectType\": \"CONS\",\n      \"referenceFields\": [\n        {\n          \"referenceField\": \"CONS_NO\",\n          \"referenceNumber\": \"ERP_2851406_1\"\n        }\n      ]\n    }\n  ]\n}",
-      "language": "json"
+  "metaData": {
+    "senderID": "SwabCloth_ERP",
+    "receiverClient": "SwabCloth",
+    "receiverRole": "SUPPLIER",
+    "senderRole": "SUPPLIER",
+    "sendDate": {
+      "dateInTimezone": "2020-10-12 13:04:20",
+      "timezone": "Europe/Berlin"
+    },
+    "messageReferenceNumber": "ERP_2851408",
+    "updateMode": "STANDARD",
+    "idRefScheme": "SUPPLIER"
+  },
+  "head": {
+    "identCode": "Shipped",
+    "actualDate": {
+      "dateInTimezone": "2020-10-12 13:04:20",
+      "timezone": "Europe/Berlin"
+    },
+    "actualLocation": {
+      "city": "Ludwigsburg",
+      "countryISOCode": "DE",
+      "postcodeStreet": "71634",
+      "timezone": "Europe/Berlin",
+      "globLocationNo": "SW_CLOTH_1"
+    },
+    "actualSender": {
+      "globalLocationNumber": "SW_CLOTH",
+      "name": "Swabian Clothes"
     }
-  ]
-}
-[/block]
-
-[block:image]
-{
-  "images": [
+  },
+  "references": [
     {
-      "image": [
-        "https://files.readme.io/477f648-shipment_finished.PNG",
-        "shipment_finished.PNG",
-        751,
-        143,
-        "#ceebd7"
+      "trackingObjectType": "CONS",
+      "referenceFields": [
+        {
+          "referenceField": "CONS_NO",
+          "referenceNumber": "ERP_2851406_1"
+        }
       ]
     }
   ]
 }
-[/block]
+```
+
+![751](https://files.readme.io/477f648-shipment_finished.PNG "shipment_finished.PNG")
