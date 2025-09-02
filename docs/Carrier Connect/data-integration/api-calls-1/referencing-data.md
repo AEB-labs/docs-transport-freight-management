@@ -14,19 +14,21 @@ next:
       slug: create-shipment
       title: Creating a shipment
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 # Referencing shipments
 
-When creating a shipment, the calling system can provide a `transactionId` and a `referenceNumber1` which can be used to identify the shipment in subsequent API calls.  
-Whenever a shipment is successfully created, Carrier Connect assigns a _shipmentNumber_ to it. This number can be used to identfify the shipment as well.
+When creating a shipment, the calling system can provide a `transactionId` and a `referenceNumber1` which can be used to identify the shipment in subsequent API calls.\
+Whenever a shipment is successfully created, Carrier Connect assigns a *shipmentNumber* to it. This number can be used to identfify the shipment as well.
 
-The `transactionId` (the calling system has to ensure this) and the _shipmentNumber_ are always unique within the customer's client setup in Carrier Connect.  
+The `transactionId` (the calling system has to ensure this) and the *shipmentNumber* are always unique within the customer's client setup in Carrier Connect.\
 Any none-unique `transactionId` will be rejected and result in an error.
 
 The `referenceNumber1` does not have to be unique which makes it a weak reference and it is not recommended to use it as the sole reference.
@@ -41,8 +43,8 @@ The `referenceNumber1` does not have to be unique which makes it a weak referenc
 
 # Referencing packages
 
-Referencing packages is based on the same principles as described above.  
-Packages can be identified by the `packageTransactionId` which must be unique within the shipment and/or the package's `referenceNumber1`.  
+Referencing packages is based on the same principles as described above.\
+Packages can be identified by the `packageTransactionId` which must be unique within the shipment and/or the package's `referenceNumber1`.\
 To provide the correct context, the shipment containing the package must be referenced as well.
 
 ```json
@@ -59,7 +61,7 @@ To provide the correct context, the shipment containing the package must be refe
 
 # Referencing items
 
-Items can be identified by the `itemTransactionId` which must be unique within the shipment and/or the item's `referenceNumber1`. These fields are contained in the `shipmentItemReference` structure which also holds a `shipmentReference` to identify the shipment.  
+Items can be identified by the `itemTransactionId` which must be unique within the shipment and/or the item's `referenceNumber1`. These fields are contained in the `shipmentItemReference` structure which also holds a `shipmentReference` to identify the shipment.\
 The `quantityValue` can be ignored. It is only applied when items are packed into different packages.
 
 ```json
