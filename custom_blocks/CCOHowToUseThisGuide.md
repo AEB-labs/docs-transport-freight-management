@@ -5,21 +5,7 @@ Our API Guide has two important sections:
 
 **Guides**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/eb4acd7c396850e206c6c5ec24ad3d43a356fe81f85176487c75e5aaf6622c97-image.png",
-        null,
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/eb4acd7c396850e206c6c5ec24ad3d43a356fe81f85176487c75e5aaf6622c97-image.png" />
 
 The Guides tab contains everything you need to integrate Carrier Connect into your system via API requests. Start with the Getting Started section to learn the basics.
 
