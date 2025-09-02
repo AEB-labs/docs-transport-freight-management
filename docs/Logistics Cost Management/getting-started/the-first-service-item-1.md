@@ -14,20 +14,760 @@ In case you already use your own client: Before you start with your first servic
 
 To allow you to start quickly, you will find here a complete call to create a service item and receive a typical response.
 
-##Creating a service item
-You can use the example and copy/paste it into your favorite tool to test SOAP and/or REST API calls (The XML example below refers to SOAP. For REST XML please see: https://rz3.aeb.de/demo1billing/swagger/). Our test environment is prepared to work with the data in this example. 
+## Creating a service item
+
+You can use the example and copy/paste it into your favorite tool to test SOAP and/or REST API calls (The XML example below refers to SOAP. For REST XML please see: [https://rz3.aeb.de/demo1billing/swagger/](https://rz3.aeb.de/demo1billing/swagger/)). Our test environment is prepared to work with the data in this example.\
 The additional data ("extendedData") used in this example is for the freight use case and uses the standard freight data. A detailed description of the standard freight data can be found [here](doc:freight-data).
-[block:code]
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n\t\"clientSystemId\": \"APITEST\",\n\t\"clientIdentCode\": \"APITEST\",\n\t\"userName\": \"user\",\n\t\"resultLanguageIsoCodes\": [\n\t\t\"de\",\n\t\t\"en\"\n\t],\n\t\"parms\": {\n\t\t\"calculatePriceImmediately\": \"false\",\n\t\t\"createSettlementsImmediately\": \"false\",\n\t\t\"returnTraceInfo\": \"true\"\n\t},\n\t\"items\": [\n\t\t{\n\t\t\t\"itemId\": \"25-11-2022\",\n\t\t\t\"scenarioIdentCode\": \"A01\",\n\t\t\t\"serviceIdentCode\": \"TNTDE_EXP12\",\n\t\t\t\"referenceNumber\": \"25-11-2022\",\n\t\t\t\"orderNumber\": \"25-11-2022\",\n\t\t\t\"serviceProvider\": {\n\t\t\t\t\"companyNumber\": \"TNT\",\n\t\t\t\t\"name\": \"TNT Express Worldwide\",\n\t\t\t\t\"street\": \"Heilbronner Staße 110\",\n\t\t\t\t\"postcode\": \"70334\",\n\t\t\t\t\"city\": \"Stuttgart\",\n\t\t\t\t\"countryISOCode\": \"DE\"\n\t\t\t},\n\t\t\t\"orderer\": {\n\t\t\t\t\"companyNumber\": \"001\",\n\t\t\t\t\"name\": \"AEB SE\",\n\t\t\t\t\"street\": \"Sigmaringer Straße 109\",\n\t\t\t\t\"postcode\": \"70567\",\n\t\t\t\t\"city\": \"Stuttgart\",\n\t\t\t\t\"countryISOCode\": \"DE\"\n\t\t\t},\n\t\t\t\"payer\": {\n\t\t\t\t\"companyNumber\": \"001\",\n\t\t\t\t\"name\": \"AEB SE\",\n\t\t\t\t\"street\": \"Sigmaringer Straße 109\",\n\t\t\t\t\"postcode\": \"70567\",\n\t\t\t\t\"city\": \"Stuttgart\",\n\t\t\t\t\"countryISOCode\": \"DE\"\n\t\t\t},\n\t\t\t\"beneficiary\": {\n\t\t\t\t\"companyNumber\": \"001\",\n\t\t\t\t\"name\": \"AEB SE\",\n\t\t\t\t\"street\": \"Sigmaringer Straße 109\",\n\t\t\t\t\"postcode\": \"70567\",\n\t\t\t\t\"city\": \"Stuttgart\",\n\t\t\t\t\"countryISOCode\": \"DE\"\n\t\t\t},\n\t\t\t\"referenceDate\": {\n\t\t\t\t\"dateInTimezone\": \"2022-11-25 12:00:00\",\n\t\t\t\t\"timezone\": \"Europe/Berlin\"\n\t\t\t},\n\t\t\t\"pricingDate\": {\n\t\t\t\t\"dateInTimezone\": \"2022-11-25 12:00:00\",\n\t\t\t\t\"timezone\": \"Europe/Berlin\"\n\t\t\t},\n\t\t\t\"chargeDate\": {\n\t\t\t\t\"dateInTimezone\": \"2022-11-25 12:00:00\",\n\t\t\t\t\"timezone\": \"Europe/Berlin\"\n\t\t\t},\n\t\t\t\"serviceDate\": {\n\t\t\t\t\"dateInTimezone\": \"2022-11-25 12:00:00\",\n\t\t\t\t\"timezone\": \"Europe/Berlin\"\n\t\t\t},\n\t\t\t\"orderDate\": {\n\t\t\t\t\"dateInTimezone\": \"2022-11-25 12:00:00\",\n\t\t\t\t\"timezone\": \"Europe/Berlin\"\n\t\t\t},\n\t\t\t\"quantity\": {\n\t\t\t\t\"value\": \"1\",\n\t\t\t\t\"unit\": \"St\"\n\t\t\t},\n\t\t\t\"description\": \"Shipment\",\n\t\t\t\"extendedData\": {\n\t\t\t\t\"fields\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"carrierDefinitionIdentCode\",\n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"value\": \"TNT\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"numberOfInvoices\",\n\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\"value\": \"1\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"isDangerousGoods\",\n\t\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\t\"value\": \"false\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"referenceNumber\",\n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"value\": \"referenceNumber\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"incotermIdentCode\",\n\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\"value\": \"incoterm\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"numberOfItems\",\n\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\"value\": \"2\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"palletPlaces\",\n\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\"value\": \"1.000\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"numberOfPackages\",\n\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\"value\": \"2\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"isDocumentShipment\",\n\t\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\t\"value\": \"false\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"numberOfDeliveryNotes\",\n\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\"value\": \"1\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"subrecords\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"volume\",\n\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"unit\",\n\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\"value\": \"ccm\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"value\",\n\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\"value\": \"4500.000\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"grossWeight\",\n\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"unit\",\n\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\"value\": \"kg\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"value\",\n\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\"value\": \"1.900\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"transportStart\",\n\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\"subrecords\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"postalAddress\",\n\t\t\t\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"countryIsoCode\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"DE\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"postcode\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"70597\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"transportEnd\",\n\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\"subrecords\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"postalAddress\",\n\t\t\t\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"countryIsoCode\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"DE\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"postcode\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"94405\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"packages\",\n\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"dangerousGoodsHandlingCode\",\n\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\"value\": \"NONE\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"packageReferenceNumber\",\n\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\"value\": \"package1\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"numberOfPackages\",\n\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\"value\": \"1\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"subrecords\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"volume\",\n\t\t\t\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"unit\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"ccm\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"value\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"1500.000\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"grossWeight\",\n\t\t\t\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"unit\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"kg\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"value\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"0.600\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"dimensions\",\n\t\t\t\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"length\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"30.000\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"width\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"10.000\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"quantityUnit\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"cm\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"height\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"5.000\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"packages\",\n\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"dangerousGoodsHandlingCode\",\n\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\"value\": \"NONE\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"packageTypeIdentCode\",\n\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\"value\": \"packageType\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"packageReferenceNumber\",\n\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\"value\": \"package2\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"numberOfPackages\",\n\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\"value\": \"1\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"subrecords\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"volume\",\n\t\t\t\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"unit\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"ccm\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"value\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"3000.000\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"grossWeight\",\n\t\t\t\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"unit\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"kg\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"value\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"1.300\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"dimensions\",\n\t\t\t\t\t\t\t\t\t\"record\": {\n\t\t\t\t\t\t\t\t\t\t\"fields\": [\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"length\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"30.000\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"width\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"20.000\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"quantityUnit\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"cm\"\n\t\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\"name\": \"height\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"decimal\",\n\t\t\t\t\t\t\t\t\t\t\t\t\"value\": \"5.000\"\n\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}",
-      "language": "json"
-    },
-    {
-      "code": "<createServiceItems>\n\t<request>\n\t\t<clientSystemId>APITEST</clientSystemId>\n\t\t<clientIdentCode>APITEST</clientIdentCode>\n\t\t<userName>user</userName>\n\t\t<resultLanguageIsoCodes>de</resultLanguageIsoCodes>\n\t\t<resultLanguageIsoCodes>en</resultLanguageIsoCodes>\n\t\t<parms>\n\t\t\t<calculatePriceImmediately>true</calculatePriceImmediately>\n\t\t\t<createSettlementsImmediately>false</createSettlementsImmediately>\n\t\t\t<returnTraceInfo>false</returnTraceInfo>\n\t\t</parms>\n\t\t<items>\n\t\t\t<itemId>25-11-2022</itemId>\n\t\t\t<scenarioIdentCode>A01</scenarioIdentCode>\n\t\t\t<serviceIdentCode>TNTDE_EXP12</serviceIdentCode>\n\t\t\t<referenceNumber>25-11-2022</referenceNumber>\n\t\t\t<orderNumber>25-11-2022</orderNumber>\n\t\t\t<serviceProvider>\n\t\t\t\t<companyNumber>TNT</companyNumber>\n\t\t\t\t<name>TNT Express Worldwide</name>\n\t\t\t\t<street>Heilbronner Staße 110</street>\n\t\t\t\t<postcode>70334</postcode>\n\t\t\t\t<city>Stuttgart</city>\n\t\t\t\t<countryISOCode>DE</countryISOCode>\n\t\t\t</serviceProvider>\n\t\t\t<orderer>\n\t\t\t\t<companyNumber>001</companyNumber>\n\t\t\t\t<name>AEB SE</name>\n\t\t\t\t<street>Sigmaringer Straße 109</street>\n\t\t\t\t<postcode>70567</postcode>\n\t\t\t\t<city>Stuttgart</city>\n\t\t\t\t<countryISOCode>DE</countryISOCode>\n\t\t\t</orderer>\n\t\t\t<payer>\n\t\t\t\t<companyNumber>001</companyNumber>\n\t\t\t\t<name>AEB SE</name>\n\t\t\t\t<street>Sigmaringer Straße 109</street>\n\t\t\t\t<postcode>70567</postcode>\n\t\t\t\t<city>Stuttgart</city>\n\t\t\t\t<countryISOCode>DE</countryISOCode>\n\t\t\t</payer>\n\t\t\t<beneficiary>\n\t\t\t\t<companyNumber>001</companyNumber>\n\t\t\t\t<name>AEB SE</name>\n\t\t\t\t<street>Sigmaringer Straße 109</street>\n\t\t\t\t<postcode>70567</postcode>\n\t\t\t\t<city>Stuttgart</city>\n\t\t\t\t<countryISOCode>DE</countryISOCode>\n\t\t\t</beneficiary>\n\t\t\t<referenceDate>\n\t\t\t\t<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>\n\t\t\t\t<timezone>Europe/Berlin</timezone>\n\t\t\t</referenceDate>\n\t\t\t<pricingDate>\n\t\t\t\t<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>\n\t\t\t\t<timezone>Europe/Berlin</timezone>\n\t\t\t</pricingDate>\n\t\t\t<chargeDate>\n\t\t\t\t<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>\n\t\t\t\t<timezone>Europe/Berlin</timezone>\n\t\t\t</chargeDate>\n\t\t\t<serviceDate>\n\t\t\t\t<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>\n\t\t\t\t<timezone>Europe/Berlin</timezone>\n\t\t\t</serviceDate>\n\t\t\t<orderDate>\n\t\t\t\t<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>\n\t\t\t\t<timezone>Europe/Berlin</timezone>\n\t\t\t</orderDate>\n\t\t\t<quantity>\n\t\t\t\t<value>1</value>\n\t\t\t\t<unit>St</unit>\n\t\t\t</quantity>\n\t\t\t<description>Shipment</description>\n\t\t\t<extendedData>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>carrierDefinitionIdentCode</name>\n\t\t\t\t\t<type>string</type>\n\t\t\t\t\t<value>TNT</value>\n\t\t\t\t</fields>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>numberOfInvoices</name>\n\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t<value>1</value>\n\t\t\t\t</fields>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>isDangerousGoods</name>\n\t\t\t\t\t<type>boolean</type>\n\t\t\t\t\t<value>false</value>\n\t\t\t\t</fields>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>referenceNumber</name>\n\t\t\t\t\t<type>string</type>\n\t\t\t\t\t<value>referenceNumber</value>\n\t\t\t\t</fields>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>incotermIdentCode</name>\n\t\t\t\t\t<type>string</type>\n\t\t\t\t\t<value>incoterm</value>\n\t\t\t\t</fields>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>numberOfItems</name>\n\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t<value>2</value>\n\t\t\t\t</fields>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>palletPlaces</name>\n\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t<value>1.000</value>\n\t\t\t\t</fields>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>numberOfPackages</name>\n\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t<value>2</value>\n\t\t\t\t</fields>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>isDocumentShipment</name>\n\t\t\t\t\t<type>boolean</type>\n\t\t\t\t\t<value>false</value>\n\t\t\t\t</fields>\n\t\t\t\t<fields>\n\t\t\t\t\t<name>numberOfDeliveryNotes</name>\n\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t<value>1</value>\n\t\t\t\t</fields>\n\t\t\t\t<subrecords>\n\t\t\t\t\t<name>volume</name>\n\t\t\t\t\t<record>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>unit</name>\n\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t<value>ccm</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>value</name>\n\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t<value>4500.000</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t</record>\n\t\t\t\t</subrecords>\n\t\t\t\t<subrecords>\n\t\t\t\t\t<name>grossWeight</name>\n\t\t\t\t\t<record>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>unit</name>\n\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t<value>kg</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>value</name>\n\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t<value>1.900</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t</record>\n\t\t\t\t</subrecords>\n\t\t\t\t<subrecords>\n\t\t\t\t\t<name>transportStart</name>\n\t\t\t\t\t<record>\n\t\t\t\t\t\t<subrecords>\n\t\t\t\t\t\t\t<name>postalAddress</name>\n\t\t\t\t\t\t\t<record>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>countryIsoCode</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>DE</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>postcode</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>70597</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t</record>\n\t\t\t\t\t\t</subrecords>\n\t\t\t\t\t</record>\n\t\t\t\t</subrecords>\n\t\t\t\t<subrecords>\n\t\t\t\t\t<name>transportEnd</name>\n\t\t\t\t\t<record>\n\t\t\t\t\t\t<subrecords>\n\t\t\t\t\t\t\t<name>postalAddress</name>\n\t\t\t\t\t\t\t<record>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>countryIsoCode</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>DE</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>postcode</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>94405</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t</record>\n\t\t\t\t\t\t</subrecords>\n\t\t\t\t\t</record>\n\t\t\t\t</subrecords>\n\t\t\t\t<subrecords>\n\t\t\t\t\t<name>packages</name>\n\t\t\t\t\t<record>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>dangerousGoodsHandlingCode</name>\n\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t<value>NONE</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>packageReferenceNumber</name>\n\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t<value>package1</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>numberOfPackages</name>\n\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t<value>1</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t<subrecords>\n\t\t\t\t\t\t\t<name>volume</name>\n\t\t\t\t\t\t\t<record>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>unit</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>ccm</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>value</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>1500.000</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t</record>\n\t\t\t\t\t\t</subrecords>\n\t\t\t\t\t\t<subrecords>\n\t\t\t\t\t\t\t<name>grossWeight</name>\n\t\t\t\t\t\t\t<record>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>unit</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>kg</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>value</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>0.600</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t</record>\n\t\t\t\t\t\t</subrecords>\n\t\t\t\t\t\t<subrecords>\n\t\t\t\t\t\t\t<name>dimensions</name>\n\t\t\t\t\t\t\t<record>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>length</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>30.000</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>width</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>10.000</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>quantityUnit</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>cm</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>height</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>5.000</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t</record>\n\t\t\t\t\t\t</subrecords>\n\t\t\t\t\t</record>\n\t\t\t\t</subrecords>\n\t\t\t\t<subrecords>\n\t\t\t\t\t<name>packages</name>\n\t\t\t\t\t<record>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>dangerousGoodsHandlingCode</name>\n\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t<value>NONE</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>packageTypeIdentCode</name>\n\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t<value>packageType</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>packageReferenceNumber</name>\n\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t<value>package2</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t<name>numberOfPackages</name>\n\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t<value>1</value>\n\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t<subrecords>\n\t\t\t\t\t\t\t<name>volume</name>\n\t\t\t\t\t\t\t<record>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>unit</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>ccm</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>value</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>3000.000</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t</record>\n\t\t\t\t\t\t</subrecords>\n\t\t\t\t\t\t<subrecords>\n\t\t\t\t\t\t\t<name>grossWeight</name>\n\t\t\t\t\t\t\t<record>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>unit</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>kg</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>value</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>1.300</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t</record>\n\t\t\t\t\t\t</subrecords>\n\t\t\t\t\t\t<subrecords>\n\t\t\t\t\t\t\t<name>dimensions</name>\n\t\t\t\t\t\t\t<record>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>length</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>30.000</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>width</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>20.000</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>quantityUnit</name>\n\t\t\t\t\t\t\t\t\t<type>string</type>\n\t\t\t\t\t\t\t\t\t<value>cm</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t\t<fields>\n\t\t\t\t\t\t\t\t\t<name>height</name>\n\t\t\t\t\t\t\t\t\t<type>decimal</type>\n\t\t\t\t\t\t\t\t\t<value>5.000</value>\n\t\t\t\t\t\t\t\t</fields>\n\t\t\t\t\t\t\t</record>\n\t\t\t\t\t\t</subrecords>\n\t\t\t\t\t</record>\n\t\t\t\t</subrecords>\n\t\t\t</extendedData>\n\t\t</items>\n\t</request>\n</createServiceItems>",
-      "language": "xml"
-    }
-  ]
+	"clientSystemId": "APITEST",
+	"clientIdentCode": "APITEST",
+	"userName": "user",
+	"resultLanguageIsoCodes": [
+		"de",
+		"en"
+	],
+	"parms": {
+		"calculatePriceImmediately": "false",
+		"createSettlementsImmediately": "false",
+		"returnTraceInfo": "true"
+	},
+	"items": [
+		{
+			"itemId": "25-11-2022",
+			"scenarioIdentCode": "A01",
+			"serviceIdentCode": "TNTDE_EXP12",
+			"referenceNumber": "25-11-2022",
+			"orderNumber": "25-11-2022",
+			"serviceProvider": {
+				"companyNumber": "TNT",
+				"name": "TNT Express Worldwide",
+				"street": "Heilbronner Staße 110",
+				"postcode": "70334",
+				"city": "Stuttgart",
+				"countryISOCode": "DE"
+			},
+			"orderer": {
+				"companyNumber": "001",
+				"name": "AEB SE",
+				"street": "Sigmaringer Straße 109",
+				"postcode": "70567",
+				"city": "Stuttgart",
+				"countryISOCode": "DE"
+			},
+			"payer": {
+				"companyNumber": "001",
+				"name": "AEB SE",
+				"street": "Sigmaringer Straße 109",
+				"postcode": "70567",
+				"city": "Stuttgart",
+				"countryISOCode": "DE"
+			},
+			"beneficiary": {
+				"companyNumber": "001",
+				"name": "AEB SE",
+				"street": "Sigmaringer Straße 109",
+				"postcode": "70567",
+				"city": "Stuttgart",
+				"countryISOCode": "DE"
+			},
+			"referenceDate": {
+				"dateInTimezone": "2022-11-25 12:00:00",
+				"timezone": "Europe/Berlin"
+			},
+			"pricingDate": {
+				"dateInTimezone": "2022-11-25 12:00:00",
+				"timezone": "Europe/Berlin"
+			},
+			"chargeDate": {
+				"dateInTimezone": "2022-11-25 12:00:00",
+				"timezone": "Europe/Berlin"
+			},
+			"serviceDate": {
+				"dateInTimezone": "2022-11-25 12:00:00",
+				"timezone": "Europe/Berlin"
+			},
+			"orderDate": {
+				"dateInTimezone": "2022-11-25 12:00:00",
+				"timezone": "Europe/Berlin"
+			},
+			"quantity": {
+				"value": "1",
+				"unit": "St"
+			},
+			"description": "Shipment",
+			"extendedData": {
+				"fields": [
+					{
+						"name": "carrierDefinitionIdentCode",
+						"type": "string",
+						"value": "TNT"
+					},
+					{
+						"name": "numberOfInvoices",
+						"type": "decimal",
+						"value": "1"
+					},
+					{
+						"name": "isDangerousGoods",
+						"type": "boolean",
+						"value": "false"
+					},
+					{
+						"name": "referenceNumber",
+						"type": "string",
+						"value": "referenceNumber"
+					},
+					{
+						"name": "incotermIdentCode",
+						"type": "string",
+						"value": "incoterm"
+					},
+					{
+						"name": "numberOfItems",
+						"type": "decimal",
+						"value": "2"
+					},
+					{
+						"name": "palletPlaces",
+						"type": "decimal",
+						"value": "1.000"
+					},
+					{
+						"name": "numberOfPackages",
+						"type": "decimal",
+						"value": "2"
+					},
+					{
+						"name": "isDocumentShipment",
+						"type": "boolean",
+						"value": "false"
+					},
+					{
+						"name": "numberOfDeliveryNotes",
+						"type": "decimal",
+						"value": "1"
+					}
+				],
+				"subrecords": [
+					{
+						"name": "volume",
+						"record": {
+							"fields": [
+								{
+									"name": "unit",
+									"type": "string",
+									"value": "ccm"
+								},
+								{
+									"name": "value",
+									"type": "decimal",
+									"value": "4500.000"
+								}
+							]
+						}
+					},
+					{
+						"name": "grossWeight",
+						"record": {
+							"fields": [
+								{
+									"name": "unit",
+									"type": "string",
+									"value": "kg"
+								},
+								{
+									"name": "value",
+									"type": "decimal",
+									"value": "1.900"
+								}
+							]
+						}
+					},
+					{
+						"name": "transportStart",
+						"record": {
+							"subrecords": [
+								{
+									"name": "postalAddress",
+									"record": {
+										"fields": [
+											{
+												"name": "countryIsoCode",
+												"type": "string",
+												"value": "DE"
+											},
+											{
+												"name": "postcode",
+												"type": "string",
+												"value": "70597"
+											}
+										]
+									}
+								}
+							]
+						}
+					},
+					{
+						"name": "transportEnd",
+						"record": {
+							"subrecords": [
+								{
+									"name": "postalAddress",
+									"record": {
+										"fields": [
+											{
+												"name": "countryIsoCode",
+												"type": "string",
+												"value": "DE"
+											},
+											{
+												"name": "postcode",
+												"type": "string",
+												"value": "94405"
+											}
+										]
+									}
+								}
+							]
+						}
+					},
+					{
+						"name": "packages",
+						"record": {
+							"fields": [
+								{
+									"name": "dangerousGoodsHandlingCode",
+									"type": "string",
+									"value": "NONE"
+								},
+								{
+									"name": "packageReferenceNumber",
+									"type": "string",
+									"value": "package1"
+								},
+								{
+									"name": "numberOfPackages",
+									"type": "decimal",
+									"value": "1"
+								}
+							],
+							"subrecords": [
+								{
+									"name": "volume",
+									"record": {
+										"fields": [
+											{
+												"name": "unit",
+												"type": "string",
+												"value": "ccm"
+											},
+											{
+												"name": "value",
+												"type": "decimal",
+												"value": "1500.000"
+											}
+										]
+									}
+								},
+								{
+									"name": "grossWeight",
+									"record": {
+										"fields": [
+											{
+												"name": "unit",
+												"type": "string",
+												"value": "kg"
+											},
+											{
+												"name": "value",
+												"type": "decimal",
+												"value": "0.600"
+											}
+										]
+									}
+								},
+								{
+									"name": "dimensions",
+									"record": {
+										"fields": [
+											{
+												"name": "length",
+												"type": "decimal",
+												"value": "30.000"
+											},
+											{
+												"name": "width",
+												"type": "decimal",
+												"value": "10.000"
+											},
+											{
+												"name": "quantityUnit",
+												"type": "string",
+												"value": "cm"
+											},
+											{
+												"name": "height",
+												"type": "decimal",
+												"value": "5.000"
+											}
+										]
+									}
+								}
+							]
+						}
+					},
+					{
+						"name": "packages",
+						"record": {
+							"fields": [
+								{
+									"name": "dangerousGoodsHandlingCode",
+									"type": "string",
+									"value": "NONE"
+								},
+								{
+									"name": "packageTypeIdentCode",
+									"type": "string",
+									"value": "packageType"
+								},
+								{
+									"name": "packageReferenceNumber",
+									"type": "string",
+									"value": "package2"
+								},
+								{
+									"name": "numberOfPackages",
+									"type": "decimal",
+									"value": "1"
+								}
+							],
+							"subrecords": [
+								{
+									"name": "volume",
+									"record": {
+										"fields": [
+											{
+												"name": "unit",
+												"type": "string",
+												"value": "ccm"
+											},
+											{
+												"name": "value",
+												"type": "decimal",
+												"value": "3000.000"
+											}
+										]
+									}
+								},
+								{
+									"name": "grossWeight",
+									"record": {
+										"fields": [
+											{
+												"name": "unit",
+												"type": "string",
+												"value": "kg"
+											},
+											{
+												"name": "value",
+												"type": "decimal",
+												"value": "1.300"
+											}
+										]
+									}
+								},
+								{
+									"name": "dimensions",
+									"record": {
+										"fields": [
+											{
+												"name": "length",
+												"type": "decimal",
+												"value": "30.000"
+											},
+											{
+												"name": "width",
+												"type": "decimal",
+												"value": "20.000"
+											},
+											{
+												"name": "quantityUnit",
+												"type": "string",
+												"value": "cm"
+											},
+											{
+												"name": "height",
+												"type": "decimal",
+												"value": "5.000"
+											}
+										]
+									}
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	]
 }
-[/block]
+```
+```xml
+<createServiceItems>
+	<request>
+		<clientSystemId>APITEST</clientSystemId>
+		<clientIdentCode>APITEST</clientIdentCode>
+		<userName>user</userName>
+		<resultLanguageIsoCodes>de</resultLanguageIsoCodes>
+		<resultLanguageIsoCodes>en</resultLanguageIsoCodes>
+		<parms>
+			<calculatePriceImmediately>true</calculatePriceImmediately>
+			<createSettlementsImmediately>false</createSettlementsImmediately>
+			<returnTraceInfo>false</returnTraceInfo>
+		</parms>
+		<items>
+			<itemId>25-11-2022</itemId>
+			<scenarioIdentCode>A01</scenarioIdentCode>
+			<serviceIdentCode>TNTDE_EXP12</serviceIdentCode>
+			<referenceNumber>25-11-2022</referenceNumber>
+			<orderNumber>25-11-2022</orderNumber>
+			<serviceProvider>
+				<companyNumber>TNT</companyNumber>
+				<name>TNT Express Worldwide</name>
+				<street>Heilbronner Staße 110</street>
+				<postcode>70334</postcode>
+				<city>Stuttgart</city>
+				<countryISOCode>DE</countryISOCode>
+			</serviceProvider>
+			<orderer>
+				<companyNumber>001</companyNumber>
+				<name>AEB SE</name>
+				<street>Sigmaringer Straße 109</street>
+				<postcode>70567</postcode>
+				<city>Stuttgart</city>
+				<countryISOCode>DE</countryISOCode>
+			</orderer>
+			<payer>
+				<companyNumber>001</companyNumber>
+				<name>AEB SE</name>
+				<street>Sigmaringer Straße 109</street>
+				<postcode>70567</postcode>
+				<city>Stuttgart</city>
+				<countryISOCode>DE</countryISOCode>
+			</payer>
+			<beneficiary>
+				<companyNumber>001</companyNumber>
+				<name>AEB SE</name>
+				<street>Sigmaringer Straße 109</street>
+				<postcode>70567</postcode>
+				<city>Stuttgart</city>
+				<countryISOCode>DE</countryISOCode>
+			</beneficiary>
+			<referenceDate>
+				<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>
+				<timezone>Europe/Berlin</timezone>
+			</referenceDate>
+			<pricingDate>
+				<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>
+				<timezone>Europe/Berlin</timezone>
+			</pricingDate>
+			<chargeDate>
+				<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>
+				<timezone>Europe/Berlin</timezone>
+			</chargeDate>
+			<serviceDate>
+				<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>
+				<timezone>Europe/Berlin</timezone>
+			</serviceDate>
+			<orderDate>
+				<dateInTimezone>2022-11-25 12:00:00</dateInTimezone>
+				<timezone>Europe/Berlin</timezone>
+			</orderDate>
+			<quantity>
+				<value>1</value>
+				<unit>St</unit>
+			</quantity>
+			<description>Shipment</description>
+			<extendedData>
+				<fields>
+					<name>carrierDefinitionIdentCode</name>
+					<type>string</type>
+					<value>TNT</value>
+				</fields>
+				<fields>
+					<name>numberOfInvoices</name>
+					<type>decimal</type>
+					<value>1</value>
+				</fields>
+				<fields>
+					<name>isDangerousGoods</name>
+					<type>boolean</type>
+					<value>false</value>
+				</fields>
+				<fields>
+					<name>referenceNumber</name>
+					<type>string</type>
+					<value>referenceNumber</value>
+				</fields>
+				<fields>
+					<name>incotermIdentCode</name>
+					<type>string</type>
+					<value>incoterm</value>
+				</fields>
+				<fields>
+					<name>numberOfItems</name>
+					<type>decimal</type>
+					<value>2</value>
+				</fields>
+				<fields>
+					<name>palletPlaces</name>
+					<type>decimal</type>
+					<value>1.000</value>
+				</fields>
+				<fields>
+					<name>numberOfPackages</name>
+					<type>decimal</type>
+					<value>2</value>
+				</fields>
+				<fields>
+					<name>isDocumentShipment</name>
+					<type>boolean</type>
+					<value>false</value>
+				</fields>
+				<fields>
+					<name>numberOfDeliveryNotes</name>
+					<type>decimal</type>
+					<value>1</value>
+				</fields>
+				<subrecords>
+					<name>volume</name>
+					<record>
+						<fields>
+							<name>unit</name>
+							<type>string</type>
+							<value>ccm</value>
+						</fields>
+						<fields>
+							<name>value</name>
+							<type>decimal</type>
+							<value>4500.000</value>
+						</fields>
+					</record>
+				</subrecords>
+				<subrecords>
+					<name>grossWeight</name>
+					<record>
+						<fields>
+							<name>unit</name>
+							<type>string</type>
+							<value>kg</value>
+						</fields>
+						<fields>
+							<name>value</name>
+							<type>decimal</type>
+							<value>1.900</value>
+						</fields>
+					</record>
+				</subrecords>
+				<subrecords>
+					<name>transportStart</name>
+					<record>
+						<subrecords>
+							<name>postalAddress</name>
+							<record>
+								<fields>
+									<name>countryIsoCode</name>
+									<type>string</type>
+									<value>DE</value>
+								</fields>
+								<fields>
+									<name>postcode</name>
+									<type>string</type>
+									<value>70597</value>
+								</fields>
+							</record>
+						</subrecords>
+					</record>
+				</subrecords>
+				<subrecords>
+					<name>transportEnd</name>
+					<record>
+						<subrecords>
+							<name>postalAddress</name>
+							<record>
+								<fields>
+									<name>countryIsoCode</name>
+									<type>string</type>
+									<value>DE</value>
+								</fields>
+								<fields>
+									<name>postcode</name>
+									<type>string</type>
+									<value>94405</value>
+								</fields>
+							</record>
+						</subrecords>
+					</record>
+				</subrecords>
+				<subrecords>
+					<name>packages</name>
+					<record>
+						<fields>
+							<name>dangerousGoodsHandlingCode</name>
+							<type>string</type>
+							<value>NONE</value>
+						</fields>
+						<fields>
+							<name>packageReferenceNumber</name>
+							<type>string</type>
+							<value>package1</value>
+						</fields>
+						<fields>
+							<name>numberOfPackages</name>
+							<type>decimal</type>
+							<value>1</value>
+						</fields>
+						<subrecords>
+							<name>volume</name>
+							<record>
+								<fields>
+									<name>unit</name>
+									<type>string</type>
+									<value>ccm</value>
+								</fields>
+								<fields>
+									<name>value</name>
+									<type>decimal</type>
+									<value>1500.000</value>
+								</fields>
+							</record>
+						</subrecords>
+						<subrecords>
+							<name>grossWeight</name>
+							<record>
+								<fields>
+									<name>unit</name>
+									<type>string</type>
+									<value>kg</value>
+								</fields>
+								<fields>
+									<name>value</name>
+									<type>decimal</type>
+									<value>0.600</value>
+								</fields>
+							</record>
+						</subrecords>
+						<subrecords>
+							<name>dimensions</name>
+							<record>
+								<fields>
+									<name>length</name>
+									<type>decimal</type>
+									<value>30.000</value>
+								</fields>
+								<fields>
+									<name>width</name>
+									<type>decimal</type>
+									<value>10.000</value>
+								</fields>
+								<fields>
+									<name>quantityUnit</name>
+									<type>string</type>
+									<value>cm</value>
+								</fields>
+								<fields>
+									<name>height</name>
+									<type>decimal</type>
+									<value>5.000</value>
+								</fields>
+							</record>
+						</subrecords>
+					</record>
+				</subrecords>
+				<subrecords>
+					<name>packages</name>
+					<record>
+						<fields>
+							<name>dangerousGoodsHandlingCode</name>
+							<type>string</type>
+							<value>NONE</value>
+						</fields>
+						<fields>
+							<name>packageTypeIdentCode</name>
+							<type>string</type>
+							<value>packageType</value>
+						</fields>
+						<fields>
+							<name>packageReferenceNumber</name>
+							<type>string</type>
+							<value>package2</value>
+						</fields>
+						<fields>
+							<name>numberOfPackages</name>
+							<type>decimal</type>
+							<value>1</value>
+						</fields>
+						<subrecords>
+							<name>volume</name>
+							<record>
+								<fields>
+									<name>unit</name>
+									<type>string</type>
+									<value>ccm</value>
+								</fields>
+								<fields>
+									<name>value</name>
+									<type>decimal</type>
+									<value>3000.000</value>
+								</fields>
+							</record>
+						</subrecords>
+						<subrecords>
+							<name>grossWeight</name>
+							<record>
+								<fields>
+									<name>unit</name>
+									<type>string</type>
+									<value>kg</value>
+								</fields>
+								<fields>
+									<name>value</name>
+									<type>decimal</type>
+									<value>1.300</value>
+								</fields>
+							</record>
+						</subrecords>
+						<subrecords>
+							<name>dimensions</name>
+							<record>
+								<fields>
+									<name>length</name>
+									<type>decimal</type>
+									<value>30.000</value>
+								</fields>
+								<fields>
+									<name>width</name>
+									<type>decimal</type>
+									<value>20.000</value>
+								</fields>
+								<fields>
+									<name>quantityUnit</name>
+									<type>string</type>
+									<value>cm</value>
+								</fields>
+								<fields>
+									<name>height</name>
+									<type>decimal</type>
+									<value>5.000</value>
+								</fields>
+							</record>
+						</subrecords>
+					</record>
+				</subrecords>
+			</extendedData>
+		</items>
+	</request>
+</createServiceItems>
+```
