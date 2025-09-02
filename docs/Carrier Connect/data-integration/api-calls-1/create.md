@@ -21,16 +21,18 @@ next:
       slug: additional-values-reference-fields
       title: 📑 Transmitting references & additional information
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 # createShipment: Create a new shipping order
 
-The <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank">createShipment</a> call enables you to generate a new <<glossary:shipping order>> using the data provided in the shipment request. 
+The <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank">createShipment</a> call enables you to generate a new <Glossary>shipping order</Glossary> using the data provided in the shipment request. 
 
 > 📘 Be aware, that if the shipment already exists, an error will be returned.
 
@@ -46,11 +48,13 @@ Furthermore, you can choose to apply various operations to the shipment, such as
 
 # createPickup: Create a new pickup
 
-The <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createpickup" target="_blank">createPickup</a> call allows you to generate a new <<glossary:pickup>> for the shipments specified in your request. 
+The <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createpickup" target="_blank">createPickup</a> call allows you to generate a new <Glossary>pickup</Glossary> for the shipments specified in your request. 
 
-> 💡 Certain conditions result in error
-> 
-> Please note, that certain conditions may result in an error, for example, when the shipments cannot be combined into a single pickup due to different carriers being involved.
+<Callout icon="💡" theme="default">
+  ### Certain conditions result in error
+
+  Please note, that certain conditions may result in an error, for example, when the shipments cannot be combined into a single pickup due to different carriers being involved.
+</Callout>
 
 Additionally, you have the option to manifest the new pickup. This process involves sending the necessary EDI to the carrier and subsequently closing the pickup. If specified in the request, manifest documents will be printed.
 
