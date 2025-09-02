@@ -10,16 +10,18 @@ metadata:
 next:
   description: ''
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 # syncShipments
 
-The <a href="https://transport-freight-management.docs.developers.aeb.com/reference/syncshipments" target="_blank">syncShipments</a> call returns all shipping orders that have changed since the last `syncShipments` call. To utilize this feature, you must provide either a <<glossary:syncID>> or fill in the <<glossary:ageInDays>> parameter.
+The <a href="https://transport-freight-management.docs.developers.aeb.com/reference/syncshipments" target="_blank">syncShipments</a> call returns all shipping orders that have changed since the last `syncShipments` call. To utilize this feature, you must provide either a <Glossary>syncID</Glossary> or fill in the <Glossary>ageInDays</Glossary> parameter.
 
 ## Using `syncId`
 
@@ -30,21 +32,7 @@ Here’s how it works:
 1. **Initial Call**: When making the first synchronization call, the `syncId` should be empty or set to a specific initial value (e.g., 0). This call will return all relevant data up to the current point.
 2. **Subsequent Calls**: The response from the initial call will include a new syncId. For subsequent synchronization calls, this syncId should be used. This ensures that only the data that has changed since the last call is returned.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/be72956-Sync.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/be72956-Sync.png" />
 
 ### Handling Large Data Sets
 
@@ -54,9 +42,9 @@ This limit is built in so that a single call does not request an indefinite numb
 
 If the number returned equals 100, then further `syncShipment` calls could follow directly with the last `syncId` transmitted until less than 100 shipments are synced back.
 
-- The value for the next syncShipment call is transferred in the response to the syncShipment call in the field syncId.
-- Initially you can start the syncShipment call with syncId = 0 or 1.
-- With syncID = -1 you can query <<glossary:shipping order>>s  that do not have a completed status.
+* The value for the next syncShipment call is transferred in the response to the syncShipment call in the field syncId.
+* Initially you can start the syncShipment call with syncId = 0 or 1.
+* With syncID = -1 you can query <Glossary>shipping order</Glossary>s  that do not have a completed status.
 
 ## Using `ageInDays`
 
@@ -93,7 +81,7 @@ To use <a href="https://transport-freight-management.docs.developers.aeb.com/ref
 
 ## Reference numbers
 
-The getShipments call can be used to request the data of one or more <<glossary:shipping order>>s using reference numbers. To reference a specific shipment, you can use either the transaction ID, reference number 1, or the shipment number.
+The getShipments call can be used to request the data of one or more <Glossary>shipping order</Glossary>s using reference numbers. To reference a specific shipment, you can use either the transaction ID, reference number 1, or the shipment number.
 
 A complete request using reference numbers looks like below:
 
@@ -134,7 +122,7 @@ A complete request using reference numbers looks like below:
 
 Instead of using reference numbers you can use filters. For more details about what filter options are available go to the <a href="https://transport-freight-management.docs.developers.aeb.com/reference/getshipments" target="_blank">getShipments</a> documentation.
 
-A request using the _shippingDateFrom_ and _shippingDateTo_ of the filter section:
+A request using the *shippingDateFrom* and *shippingDateTo* of the filter section:
 
 ```xml
 <request>
