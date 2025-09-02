@@ -17,13 +17,15 @@ The call is identical to "getShipments", with the difference that the returned s
 For the request, a sync ID or a parameter named 'ageInDays' have to be filled in to get the corresponding shipments from Carrier Connect.
 
 The following is an example for the syncShipments request:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "<request>\n   <clientSystemId>SOAPUI</clientSystemId>\n   <clientIdentCode>ADMIN</clientIdentCode>\n   <userName>ADMIN</userName>\n   <resultLanguageIsoCodes>DE</resultLanguageIsoCodes>\n   <syncId></syncId>\n   <ageInDays>2</ageInDays>\n   <includeDocuments>false</includeDocuments>\n</request>",
-      "language": "xml"
-    }
-  ]
-}
-[/block]
+
+```xml
+<request>
+   <clientSystemId>SOAPUI</clientSystemId>
+   <clientIdentCode>ADMIN</clientIdentCode>
+   <userName>ADMIN</userName>
+   <resultLanguageIsoCodes>DE</resultLanguageIsoCodes>
+   <syncId></syncId>
+   <ageInDays>2</ageInDays>
+   <includeDocuments>false</includeDocuments>
+</request>
+```
