@@ -3,9 +3,9 @@ name: Hinweistexte
 ---
 # Info texts
 
-> 💡 
-> 
-> German: Hinweistexte
+<Callout icon="💡" theme="default">
+  ### German: Hinweistexte
+</Callout>
 
 ![](https://files.readme.io/f6cf6c1-image.png)
 
@@ -38,7 +38,7 @@ The type of available info texts varies for each carrier. The available info tex
 
 To use the info texts there are two fields to be filled:
 
-- `identCode`: Code of the info text field - see abbreviation in front of the name in the <a href="https://rz3.aeb.de/docudata/system-descriptions/carrier-connect/sd-carrierconnect-carrieroverview/en-US/index.html#index_content" target="_blank">System Description</a> of Carrier Connect.  
-- `parameter`: Value of the info text field.
+* `identCode`: Code of the info text field - see abbreviation in front of the name in the <a href="https://rz3.aeb.de/docudata/system-descriptions/carrier-connect/sd-carrierconnect-carrieroverview/en-US/index.html#index_content" target="_blank">System Description</a> of Carrier Connect.  
+* `parameter`: Value of the info text field.
 
 ![](https://files.readme.io/17a9b37-image.png)
