@@ -10,12 +10,14 @@ metadata:
 next:
   description: ''
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    \n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 # Packed items
 
@@ -66,7 +68,7 @@ The following example shows how to pack items using the <a href="https://transpo
 </packages>
 ```
 
-If you're using XML, you can repeat _n_ times:
+If you're using XML, you can repeat *n* times:
 
 ```xml
 <packages>
@@ -80,6 +82,6 @@ If you're using XML, you can repeat _n_ times:
 
 <br />
 
-> ❗️ 
-> 
+> ❗️
+>
 > You can't pack items into packages with the `processPackage` call!
