@@ -12,16 +12,18 @@ metadata:
 next:
   description: ''
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 # processShipment: Update a shipping order
 
-The <a href="https://transport-freight-management.docs.developers.aeb.com/reference/processshipment" target="_blank">processShipment</a> call allows you to make updates to an existing <<glossary:shipping order>>. 
+The <a href="https://transport-freight-management.docs.developers.aeb.com/reference/processshipment" target="_blank">processShipment</a> call allows you to make updates to an existing <Glossary>shipping order</Glossary>. 
 
 This includes adding packages or performing various operations, such as updating the shipping date or customs value. Moreover, you can easily trigger document (label) preparation and document output as needed.
 
@@ -77,7 +79,7 @@ A package is described within the `packages` section. It has its own references 
 
 ## Adding items
 
-Items can be added using either <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank">createShipment</a> or <a href="https://transport-freight-management.docs.developers.aeb.com/reference/processshipment" target="_blank">processShipment</a>.  
+Items can be added using either <a href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment" target="_blank">createShipment</a> or <a href="https://transport-freight-management.docs.developers.aeb.com/reference/processshipment" target="_blank">processShipment</a>.\
 Of course, a combination of both is also possible. Here's an example:
 
 ```json
@@ -260,14 +262,14 @@ And the response:
 </processShipmentResponse>
 ```
 
-When adding items using _processShipment_, it could be necessary to <a href="https://carrierconnect.docs.developers.aeb.com/docs/update-shipment-data-1" target="_blank">update</a> some other shipment values e.g. customs value or goods value.
+When adding items using *processShipment*, it could be necessary to <a href="https://carrierconnect.docs.developers.aeb.com/docs/update-shipment-data-1" target="_blank">update</a> some other shipment values e.g. customs value or goods value.
 
 ## Updating shipment data
 
-With a _processShipment_ call you can update specific fields of an existing shipment. You can update:
+With a *processShipment* call you can update specific fields of an existing shipment. You can update:
 
-- **Shipment totals** (`shipmentTotals`) like number of packages, weights of the shipment, or total number of pallet places
-- **Specific fields** (`shipmentUpdateData`) such as shipping date or values concerning insurance and goods
+* **Shipment totals** (`shipmentTotals`) like number of packages, weights of the shipment, or total number of pallet places
+* **Specific fields** (`shipmentUpdateData`) such as shipping date or values concerning insurance and goods
 
 ```json
 {
@@ -352,6 +354,6 @@ By utilizing the <a href="https://transport-freight-management.docs.developers.a
 
 Additionally, this API call allows you to print or reprint manifest documents for a pickup. 
 
-> 💡 
-> 
-> This functionality proves beneficial, especially in scenarios, where manifest documents were not printed during the "createPickup" call or when a reprint of these documents becomes necessary.
+<Callout icon="💡" theme="default">
+  ### This functionality proves beneficial, especially in scenarios, where manifest documents were not printed during the "createPickup" call or when a reprint of these documents becomes necessary.
+</Callout>
