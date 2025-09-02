@@ -10,8 +10,8 @@ metadata:
 next:
   description: ''
 ---
-The document consists out of two parts. The template and the document data. The template is stored in the Document service and will only be referenced in our ABAP program. The document data has to be transferred as JSON converted from an ABAP structure.  
-We will maintain our template name as constant in the code. This example uses the template “DeliveryNote10.pdf”.  
+The document consists out of two parts. The template and the document data. The template is stored in the Document service and will only be referenced in our ABAP program. The document data has to be transferred as JSON converted from an ABAP structure.\
+We will maintain our template name as constant in the code. This example uses the template “DeliveryNote10.pdf”.\
 To create the JSON content you have to know the data structure of the template. You can either get it from the XSD file or directly in the Document Service.
 
 ![](https://files.readme.io/15a102d-fd8d189-Bild1.png "fd8d189-Bild1.png")
@@ -173,8 +173,8 @@ IF lo_http_client IS BOUND AND lo_rest_client IS BOUND.
 ENDIF.
 ```
 
-Process result  
-The result of the web service call is the PDF document in a binary stream. This stream can be converted back into PDF and for example stored on the local system. This will only work if processed in a user context as it uses the GUI_DOWNLOAD function. The binary can be obtained in above described example using lo_response->get_binary_data( ).
+Process result\
+The result of the web service call is the PDF document in a binary stream. This stream can be converted back into PDF and for example stored on the local system. This will only work if processed in a user context as it uses the GUI\_DOWNLOAD function. The binary can be obtained in above described example using lo\_response->get\_binary\_data( ).
 
 ```text
 *&---------------------------------------------------------------------*
