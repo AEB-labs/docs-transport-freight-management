@@ -14,12 +14,14 @@ next:
       slug: pickup
       title: 🚚 Pickup processing
 ---
-[block:html]
-{
-  "html": "<style>\n  span.cm-s-neo {\n    background-color: #f2f2f2;\n    color: red;\n  }\n</style>"
-}
-[/block]
-
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
 
 # Creation Modes
 
@@ -27,7 +29,7 @@ Sometimes sending data to Carrier Connect doesn't work out as expected: e.g. the
 
 These and many more validations are performed every time new shipments, packages, items, etc. are to be created.
 
-Carrier Connect allows you to choose between various _creation modes_, which determine the behavior for data creation and error handling.
+Carrier Connect allows you to choose between various *creation modes*, which determine the behavior for data creation and error handling.
 
 ## Creation mode "ALWAYS": Shipment and packages are created, even if validation fails
 
@@ -37,8 +39,8 @@ It is possible to configure Carrier Connect to respond with an "error label", wh
 
 The errors can then be corrected 
 
-- either manually using the Carrier Connect UI (attention: there will probably be a system inconsistency between Carrier Connect and the sending ERP / WMS system)
-- in the sending system (ERP / WMS system). Then the shipment has to be canceled via the _cancelShipment_ API call and retransmitted with a _createShipment_ call. The cancellation step is necessary because a direct retransmission of existing shipments and packages is not allowed.
+* either manually using the Carrier Connect UI (attention: there will probably be a system inconsistency between Carrier Connect and the sending ERP / WMS system)
+* in the sending system (ERP / WMS system). Then the shipment has to be canceled via the *cancelShipment* API call and retransmitted with a *createShipment* call. The cancellation step is necessary because a direct retransmission of existing shipments and packages is not allowed.
 
 ```json
 ... 
@@ -53,7 +55,7 @@ The errors can then be corrected
 </creationParms>
 ```
 
-## Creation mode "VALIDATION_OK": Shipments and packages are only created, if the shipment could be successfully validated
+## Creation mode "VALIDATION\_OK": Shipments and packages are only created, if the shipment could be successfully validated
 
 The shipments, packages, or items are only created if the shipment could be successfully validated. Otherwise, validation warnings will be returned in the response. A direct retransmission, after reviewing the data, is possible since no data has been created by the initial call.
 
@@ -71,5 +73,5 @@ The shipments, packages, or items are only created if the shipment could be succ
 ```
 
 > 📘 What is common use?
-> 
-> Most customers prefer the "VALIDATION_OK" mode.
+>
+> Most customers prefer the "VALIDATION\_OK" mode.
