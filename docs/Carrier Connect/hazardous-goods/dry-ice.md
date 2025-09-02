@@ -12,8 +12,8 @@ next:
 ---
 Es gibt zwei Möglichkeiten, Trockeneis in CCO darzustellen:
 
-1. Eigene Positition, die Trockeneis darstellt. extra Dummy Position in CCO für Trockeneis  
-   Das kann man in einer eigenen Position tun, die dann auch in CCO verpackt sein muss - also auch eine erfundene verpackte Position.  
+1. Eigene Positition, die Trockeneis darstellt. extra Dummy Position in CCO für Trockeneis\
+   Das kann man in einer eigenen Position tun, die dann auch in CCO verpackt sein muss - also auch eine erfundene verpackte Position.\
    Beispiel: Wenn der Versandauftrag drei Packstücke hat, bei denen Trockeneis als Kühlmittel verwendet wird, dann hat die Dummy Position als Menge 3 St. und in jedem der drei Packstücke ist ein Stück des Trockeneis verpackt.
 2. Oder man hängt sie einer bereits bestehenden Position an, z.B. der ersten verpackten Position des Packstücks mit Trockeneis. 
 
@@ -22,8 +22,6 @@ Es gibt zwei Möglichkeiten, Trockeneis in CCO darzustellen:
 Ich würde momentan das Trockeneis als Gewicht an ein Packstück hängen und abhängig von den Erfordernissen, Daten für die Schnittstelle an CCO oder für den GG-Dokumentendruck im Hintergrund dazuerfinden. Das würde dann zumindest Exportprozesse nicht berühren.
 
 ***
-
-
 
 Ist die folgende Unterscheidung überhaupt relevant?
 
