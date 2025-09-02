@@ -51,7 +51,7 @@ CLASS ZLCM_SUBRECORDS IMPLEMENTATION.
 ENDCLASS.
 ```
 
-## Create service item 
+## Create service item
 
 ```Text Create service item
 CLASS zlcm_create_item_request DEFINITION
