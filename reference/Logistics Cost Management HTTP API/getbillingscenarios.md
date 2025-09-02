@@ -1,0 +1,15 @@
+---
+title: getBillingScenarios
+excerpt: Returns all billing scenarios for the given client
+api:
+  file: logistics-cost-management-http-api.json
+  operationId: getBillingScenarios
+deprecated: false
+hidden: false
+metadata:
+  title: ''
+  description: ''
+  robots: noindex
+next:
+  description: ''
+---
