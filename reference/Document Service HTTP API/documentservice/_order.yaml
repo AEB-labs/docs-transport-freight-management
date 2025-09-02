@@ -25,3 +25,4 @@
 - getprintrequest
 - updateprintrequest
 - deleteprintrequest
+- getdocumentinstances
