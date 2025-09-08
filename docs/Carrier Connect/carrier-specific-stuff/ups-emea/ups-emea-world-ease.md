@@ -58,39 +58,39 @@ There are specific requirements that shipments must meet to be consolidated:
 :x: UPS package types: Letter, 10KG BOX and 25KG BOX are not allowed in child shipments.
 :x: Document shipments are not allowed for child shipments
 
-# Possible variants for World Ease shipments
+# Possible options for World Ease shipments
 
-## Variant 1: UPS World Ease – with DocBox
+## Option 1: UPS World Ease – with DocBox
 
 Master-shipment contains shipment documents.
 
-* Master-shipment specification:  1 package with dimensions L/W/H each 1 cm, weight 1 kg must be created. Set UPS "02 - customer's own packaging" for package conversion  . This package represents the green document box containing the transport documents for World Ease shipments.
+* Master-shipment specification:   1 package with dimensions L/W/H each 1 cm, weight 1 kg must be created. Set UPS "02 - customer's own packaging" for package conversion  . This package represents the green document box containing the transport documents for World Ease shipments.
 * A label is printed for each package in the child-shipment and for the package in the master-shipment
 * For the master-shipment, the MasterInvoice document and the CID are also printed.
 * Value added service "Paperless Invoice" and "Paperless Invoice (additional documents) are in Master- and Child-Shipment not allowed
 
-❌Please note "Trade document upload" not possible with this variant!
+❌ Please note "Trade document upload" not possible with this variant!
 
 ![](https://files.readme.io/ad9209cd53495faf4c6998f4629b7d049771f6d27e0cc017dc37f1dcacca6424-image.png)
 
 <br />
 
-## Variant 2: UPS World Ease – Paperless Invoice with DocBox
+## Option 2: UPS World Ease – Paperless Invoice with DocBox
 
 Master-shipment with Paperless Invoice and shipment documents.
 
-* Master shipment specification:   1 package with dimensions L/W/H 1 cm each, weight 1 kg must be created
+* Master shipment specification:  1 package with dimensions L/W/H 1 cm each, weight 1 kg must be created
   This package represents the green document box containing the transport documents for World Ease shipments
-* Child-shipment specification:   Paperless Invoice (additional documents) must be activated in each child shipment
+* Child-shipment specification:  Paperless Invoice (additional documents) must be activated in each child shipment
 * A label is printed for each package in the child-shipment and for the package in the master-shipment
 * For the master-shipment the document MasterInvoice and the CID will be printed additionally
 
-## Variant 3: UPS World Ease – Paperless Invoice without DocBox
+## Option 3: UPS World Ease – Paperless Invoice without DocBox
 
 Master shipment with Paperless Invoice without shipment documents.
 
 * Master-Shipment specification:  : There is no package, a virtual package is generated in the shipment
-* Child shipment specification:   Paperless Invoice must be activated in each child shipment
+* Child shipment specification:  Paperless Invoice must be activated in each child shipment
 * A label is printed for each package in the child-shipment
 * For the master-shipment the SummaryLabel is printed, which should be stuck on the last package
 * Neither MasterInvoice nor CID are printed for the master-shipment
