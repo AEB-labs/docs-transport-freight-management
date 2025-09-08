@@ -1,5 +1,5 @@
 ---
-title: Carrier specific stuff
+title: Carrier specific information
 excerpt: ''
 deprecated: false
 hidden: false
