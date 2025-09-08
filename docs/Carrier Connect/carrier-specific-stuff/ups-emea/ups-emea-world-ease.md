@@ -32,6 +32,7 @@ There are specific requirements that shipments must meet to be consolidated:
 ## Requirements all shipments
 
 :white_check_mark: All shipments (master and child) must have the same shipping date
+
 :white_check_mark: All shipments must have the same billing option
 
 ## Requirements master shipment
@@ -64,7 +65,7 @@ There are specific requirements that shipments must meet to be consolidated:
 
 Master-shipment contains shipment documents.
 
-* Master-shipment specification:   1 package with dimensions L/W/H each 1 cm, weight 1 kg must be created. Set UPS "02 - customer's own packaging" for package conversion  . This package represents the green document box containing the transport documents for World Ease shipments.
+* Master-shipment specification:  1 package with dimensions L/W/H each 1 cm, weight 1 kg must be created. Set UPS "02 - customer's own packaging" for package conversion  . This package represents the green document box containing the transport documents for World Ease shipments.
 * A label is printed for each package in the child-shipment and for the package in the master-shipment
 * For the master-shipment, the MasterInvoice document and the CID are also printed.
 * Value added service "Paperless Invoice" and "Paperless Invoice (additional documents) are in Master- and Child-Shipment not allowed
