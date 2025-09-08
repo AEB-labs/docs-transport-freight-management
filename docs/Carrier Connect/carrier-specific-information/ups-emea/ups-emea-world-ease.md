@@ -77,11 +77,6 @@ The value added service "Trade document upload" can be used in combination with 
 
 The upload of documents for collective customs clearance is not provided by UPS in combination with World Ease or as an exception only in a special process which requires an internal approval procedure. UPS assumes that the customs relevant data will normally be uploaded via EDI and that the customer will provide a blank letterhead on which (upon request) a printout can be made as a customs invoice. As a rule, however, this is all handled electronically.
 
-POE File
-
-
-In the World Ease application process, UPS agrees with the individual customer which destinations with which service types the customer requires. From this, the so-called Point of Entry (POE) table is created and sent to the customer as a CSV file. In this way, each customer receives their own POE file. When the label is printed, a POE address is determined from the POE table based on the data (UPS customer number, country, postal code and service type). For each row of the POE table used for the World Ease shipment, a separate master-shipment must be created - all associated child-shipments must be subordinate under this one. The address of the consignee is relevant for the POE table. The POE file is imported into the customer's "Carrier configurations" in Carrier Connect.
-
 # Possible options for World Ease shipments
 
 ## Option 1: UPS World Ease – with DocBox
@@ -118,5 +113,9 @@ Master shipment with Paperless Invoice without shipment documents.
 * A label is printed for each package in the child-shipment
 * For the master-shipment the SummaryLabel is printed, which should be stuck on the last package
 * Neither MasterInvoice nor CID are printed for the master-shipment
+
+![](https://files.readme.io/360e75b7f9d1b46b173aceb6d2bd6a1964e24e758f83c13a1313a0a59140bd87-image.png)
+
+<br />
 
 <br />
