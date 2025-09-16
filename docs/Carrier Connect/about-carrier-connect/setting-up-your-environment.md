@@ -27,10 +27,14 @@ The login data must be base 64–encoded. The password is written out, so this i
 
 **Example:**
 
-The string "API\_TEST\@APITEST:API\_TEST2024", when encoded in base 64, yields “QVBJX1RFU1RAQVBJVEVTVDpBUElfVEVTVDIwMjQ=". 
+The string "API_TEST@APITEST:API_TEST2024", when encoded in base 64, yields “QVBJX1RFU1RAQVBJVEVTVDpBUElfVEVTVDIwMjQ=".
 
-The following line would therefore be added to the HTTP header:\
+The following line would therefore be added to the HTTP header:
 Authorization: Basic QVBJX1RFU1RAQVBJVEVTVDpBUElfVEVTVDIwMjQ
+
+## IP of the AEB data center
+
+194.175.186.2
 
 ## Port
 
@@ -40,11 +44,11 @@ HTTPS URLs use port **443** by default.
 
 You have to replace `<carrier_connect_system>` with the system you want to connect (e.g. demo1cai, test2cai, prod1cai).
 
-| \<carrier\_connect\_system> | Description                             |
-| :-------------------------- | :-------------------------------------- |
-| test2cai                    | Test environment                        |
-| prod1cai                    | Productive environment                  |
-| prod2cai                    | Productive environment (First Customer) |
+| \<carrier_connect_system> | Description                             |
+| :------------------------ | :-------------------------------------- |
+| test2cai                  | Test environment                        |
+| prod1cai                  | Productive environment                  |
+| prod2cai                  | Productive environment (First Customer) |
 
 <br />
 
@@ -54,8 +58,8 @@ You have to replace `<carrier_connect_system>` with the system you want to conne
 
 ## SOAP
 
-[https://rz3.aeb.de/`<carrier_connect_system>`/servlet/bf/DLCarrierBF?WSDL]()\
-[https://rz3.aeb.de/`<carrier_connect_system>`/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html]() 
+[https://rz3.aeb.de/`<carrier_connect_system>`/servlet/bf/DLCarrierBF?WSDL]()
+[https://rz3.aeb.de/`<carrier_connect_system>`/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html]()
 
 <br />
 
@@ -65,17 +69,17 @@ You have to replace `<carrier_connect_system>` with the system you want to conne
 
 # Test Credentials
 
-Before you can start using the Carrier Connect API, you need a user and a password. AEB will provide them to you. 
+Before you can start using the Carrier Connect API, you need a user and a password. AEB will provide them to you.
 
 **If you do not have your own client yet, you can use the following credentials to test the API:**
 
-| Parameter              | Value         |
-| :--------------------- | :------------ |
-| Carrier Connect System | demo1cai      |
-| Client                 | APITEST       |
-| User                   | API\_TEST     |
-| Password               | API\_TEST2024 |
+| Parameter              | Value        |
+| :--------------------- | :----------- |
+| Carrier Connect System | demo1cai     |
+| Client                 | APITEST      |
+| User                   | API_TEST     |
+| Password               | API_TEST2024 |
 
-> ❗️
->
-> The client "APITEST" is intended for basic connectivity testing and is used by different users. Don't use it with sensitive data.
+<Callout icon="❗️" theme="error">
+  The client "APITEST" is intended for basic connectivity testing and is used by different users. Don't use it with sensitive data.
+</Callout>
