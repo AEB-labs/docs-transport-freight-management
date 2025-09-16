@@ -37,13 +37,13 @@ There are specific requirements that shipments must meet to be consolidated:
 
 ## Requirements master shipment
 
-:white_check_mark: The importer must be entered in the master shipment as the recipient. This is done automatically when creating the master shipment from the first child shipment, provided that the importer is filled in the child.
+:white_check_mark: The importer must be entered in the master shipment as the recipient. This is done automatically when Carrier Connect is creating the master shipment from the first child shipment, provided that the importer is filled in the child.
 
-:white_check_mark: The master shipment must be a document shipment (is done automatically by Carrier Connect)
+:white_check_mark: The master shipment must be a document shipment (is done/set automatically by Carrier Connect)
 
 :white_check_mark: A maximum of one package is allowed in the master shipment
 
-:white_check_mark: The value added service _World Ease® Master_ must be set in the master shipment
+:white_check_mark: The value added service _World Ease® Master_ must be set in the master shipment (is done/set automatically by Carrier Connect)
 
 ## Requirements child shipment
 
