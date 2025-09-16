@@ -63,8 +63,6 @@ There are specific requirements that shipments must meet to be consolidated:
 
 ## Not allowed for World Ease
 
-:x: Dangerous Goods
-
 :x: All UPS Return Services
 
 :x: UPS package types: Letter, 10KG BOX and 25KG BOX are not allowed in child shipments.
@@ -114,7 +112,7 @@ Master shipment with Paperless Invoice without shipment documents.
 * For the master-shipment the SummaryLabel is printed, which should be stuck on the last package
 * Neither MasterInvoice nor CID are printed for the master-shipment
 
-![](https://files.readme.io/360e75b7f9d1b46b173aceb6d2bd6a1964e24e758f83c13a1313a0a59140bd87-image.png)
+![](https://files.readme.io/a06acb83d8bd1f6d43bee5802504cca1a02f2dc8b0502e15228f487bb1610e22-image.png)
 
 <br />
 
