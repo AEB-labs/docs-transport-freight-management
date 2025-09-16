@@ -39,7 +39,7 @@ There are specific requirements that shipments must meet to be consolidated:
 
 :white_check_mark: The importer must be entered in the master shipment as the recipient. This is done automatically when creating the master shipment from the first child shipment, provided that the importer is filled in the child.
 
-:white_check_mark: The master shipment must be a document shipment (is done auomatically by Carrier Connect)
+:white_check_mark: The master shipment must be a document shipment (is done automatically by Carrier Connect)
 
 :white_check_mark: A maximum of one package is allowed in the master shipment
 
