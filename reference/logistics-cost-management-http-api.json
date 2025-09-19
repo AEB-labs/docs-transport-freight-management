@@ -4018,6 +4018,15 @@
       "IAdditionalUserInfo": {
         "type": "object",
         "properties": {
+          "externalUser": {
+            "type": "boolean"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
           "email": {
             "type": "string"
           },
@@ -4026,42 +4035,12 @@
           },
           "aebUserId": {
             "type": "string"
-          },
-          "externalUser": {
-            "type": "boolean"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "firstName": {
-            "type": "string"
           }
         }
       },
       "JWT": {
         "type": "object",
         "properties": {
-          "jsonString": {
-            "type": "string"
-          },
-          "tokenStringForLog": {
-            "type": "string"
-          },
-          "keyId": {
-            "type": "string"
-          },
-          "audiences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "audience": {
-            "type": "string"
-          },
-          "rawString": {
-            "type": "string"
-          },
           "signature": {
             "type": "array",
             "items": {
@@ -4080,6 +4059,27 @@
             "format": "int64"
           },
           "issuer": {
+            "type": "string"
+          },
+          "tokenStringForLog": {
+            "type": "string"
+          },
+          "audience": {
+            "type": "string"
+          },
+          "rawString": {
+            "type": "string"
+          },
+          "audiences": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "keyId": {
+            "type": "string"
+          },
+          "jsonString": {
             "type": "string"
           }
         }
