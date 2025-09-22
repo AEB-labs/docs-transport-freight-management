@@ -4021,19 +4021,19 @@
           "email": {
             "type": "string"
           },
-          "authToken": {
-            "$ref": "#/components/schemas/JWT"
+          "firstName": {
+            "type": "string"
           },
-          "aebUserId": {
+          "lastName": {
             "type": "string"
           },
           "externalUser": {
             "type": "boolean"
           },
-          "lastName": {
-            "type": "string"
+          "authToken": {
+            "$ref": "#/components/schemas/JWT"
           },
-          "firstName": {
+          "aebUserId": {
             "type": "string"
           }
         }
@@ -4041,27 +4041,6 @@
       "JWT": {
         "type": "object",
         "properties": {
-          "jsonString": {
-            "type": "string"
-          },
-          "tokenStringForLog": {
-            "type": "string"
-          },
-          "keyId": {
-            "type": "string"
-          },
-          "audiences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "audience": {
-            "type": "string"
-          },
-          "rawString": {
-            "type": "string"
-          },
           "signature": {
             "type": "array",
             "items": {
@@ -4075,11 +4054,32 @@
           "algorithm": {
             "type": "string"
           },
+          "issuer": {
+            "type": "string"
+          },
           "expirationTime": {
             "type": "integer",
             "format": "int64"
           },
-          "issuer": {
+          "tokenStringForLog": {
+            "type": "string"
+          },
+          "keyId": {
+            "type": "string"
+          },
+          "audience": {
+            "type": "string"
+          },
+          "rawString": {
+            "type": "string"
+          },
+          "audiences": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "jsonString": {
             "type": "string"
           }
         }
