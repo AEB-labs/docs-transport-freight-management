@@ -7569,16 +7569,16 @@
       "IAdditionalUserInfo": {
         "type": "object",
         "properties": {
-          "email": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
             "type": "string"
           },
           "externalUser": {
             "type": "boolean"
           },
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
+          "email": {
             "type": "string"
           },
           "authToken": {
@@ -7618,9 +7618,6 @@
           "tokenStringForLog": {
             "type": "string"
           },
-          "audience": {
-            "type": "string"
-          },
           "rawString": {
             "type": "string"
           },
@@ -7629,6 +7626,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "audience": {
+            "type": "string"
           },
           "jsonString": {
             "type": "string"
@@ -8482,15 +8482,6 @@
           "outputStream": {
             "type": "object"
           },
-          "allCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
-          },
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap"
-          },
           "preferredCommands": {
             "type": "array",
             "items": {
@@ -8502,6 +8493,15 @@
             "items": {
               "$ref": "#/components/schemas/ActivationDataFlavor"
             }
+          },
+          "allCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
+            }
+          },
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap"
           }
         }
       },
