@@ -1527,10 +1527,10 @@
           "externalUser": {
             "type": "boolean"
           },
-          "firstName": {
+          "lastName": {
             "type": "string"
           },
-          "lastName": {
+          "firstName": {
             "type": "string"
           },
           "authToken": {
@@ -1544,9 +1544,15 @@
       "JWT": {
         "type": "object",
         "properties": {
-          "expirationTime": {
-            "type": "integer",
-            "format": "int64"
+          "signature": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "type": {
+            "type": "string"
           },
           "algorithm": {
             "type": "string"
@@ -1554,10 +1560,14 @@
           "issuer": {
             "type": "string"
           },
-          "keyId": {
-            "type": "string"
+          "expirationTime": {
+            "type": "integer",
+            "format": "int64"
           },
           "tokenStringForLog": {
+            "type": "string"
+          },
+          "keyId": {
             "type": "string"
           },
           "rawString": {
@@ -1573,16 +1583,6 @@
             }
           },
           "jsonString": {
-            "type": "string"
-          },
-          "signature": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
-          },
-          "type": {
             "type": "string"
           }
         }
