@@ -4018,8 +4018,8 @@
       "IAdditionalUserInfo": {
         "type": "object",
         "properties": {
-          "email": {
-            "type": "string"
+          "externalUser": {
+            "type": "boolean"
           },
           "firstName": {
             "type": "string"
@@ -4027,8 +4027,8 @@
           "lastName": {
             "type": "string"
           },
-          "externalUser": {
-            "type": "boolean"
+          "email": {
+            "type": "string"
           },
           "authToken": {
             "$ref": "#/components/schemas/JWT"
@@ -4041,6 +4041,31 @@
       "JWT": {
         "type": "object",
         "properties": {
+          "expirationTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "keyId": {
+            "type": "string"
+          },
+          "tokenStringForLog": {
+            "type": "string"
+          },
+          "audiences": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rawString": {
+            "type": "string"
+          },
+          "audience": {
+            "type": "string"
+          },
+          "jsonString": {
+            "type": "string"
+          },
           "signature": {
             "type": "array",
             "items": {
@@ -4055,31 +4080,6 @@
             "type": "string"
           },
           "issuer": {
-            "type": "string"
-          },
-          "expirationTime": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "tokenStringForLog": {
-            "type": "string"
-          },
-          "keyId": {
-            "type": "string"
-          },
-          "audience": {
-            "type": "string"
-          },
-          "rawString": {
-            "type": "string"
-          },
-          "audiences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "jsonString": {
             "type": "string"
           }
         }
