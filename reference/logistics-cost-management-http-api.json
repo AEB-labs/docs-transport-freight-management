@@ -2544,13 +2544,13 @@
             "type": "string",
             "description": "<p>Name of this field, i.e. the role the field plays in the enclosing record.</p>  <p>When the same name is repeated in the context of the same parent record,  it is assumed that the parent defines this element as a repeatable (array) element.</p>"
           },
-          "type": {
-            "type": "string",
-            "description": "<p>Data type of the field.</p> <p>This is not strictly necessary since the receiving entity should be able to infer the structure  with its own meta data; it may be used however for sanity checks.</p> <p>The format follows the conventions of xml schema encoding, see <a href=\\\"http://www.w3.org/TR/xmlschema-2/\\\">http://www.w3.org/TR/xmlschema-2/</a>.</p> <h3>Currently implemented formats:</h3>  <ul>  <li>string</li> <li>int</li> <li>long</li> <li>decimal</li> <li>boolean</li> <li>dateTime</li> <li>base64Binary</li> </ul>"
-          },
           "value": {
             "type": "string",
             "description": "<p>Value of the field.</p>  <p>The format follows the conventions of xml schema encoding, see <a href=\"http://www.w3.org/TR/xmlschema-2/\">http://www.w3.org/TR/xmlschema-2/</a>.</p> <h3>Currently implemented formats:</h3>  <ul>  <li>string - the plain string</li> <li>int - digits base10, +-2^31</li> <li>long - digits base10, +-2^63</li> <li>decimal - +-123456.789</li> <li>boolean - the literals 'true' and 'false'</li> <li>dateTime - yyyy-MM-ddTHH:mm:ss</li> <li>base64Binary - binary data in base64 encoding</li> </ul>"
+          },
+          "type": {
+            "type": "string",
+            "description": "<p>Data type of the field.</p> <p>This is not strictly necessary since the receiving entity should be able to infer the structure  with its own meta data; it may be used however for sanity checks.</p> <p>The format follows the conventions of xml schema encoding, see <a href=\\\"http://www.w3.org/TR/xmlschema-2/\\\">http://www.w3.org/TR/xmlschema-2/</a>.</p> <h3>Currently implemented formats:</h3>  <ul>  <li>string</li> <li>int</li> <li>long</li> <li>decimal</li> <li>boolean</li> <li>dateTime</li> <li>base64Binary</li> </ul>"
           }
         }
       },
@@ -4018,17 +4018,17 @@
       "IAdditionalUserInfo": {
         "type": "object",
         "properties": {
-          "externalUser": {
-            "type": "boolean"
-          },
-          "firstName": {
+          "email": {
             "type": "string"
           },
           "lastName": {
             "type": "string"
           },
-          "email": {
+          "firstName": {
             "type": "string"
+          },
+          "externalUser": {
+            "type": "boolean"
           },
           "authToken": {
             "$ref": "#/components/schemas/JWT"
@@ -4041,31 +4041,6 @@
       "JWT": {
         "type": "object",
         "properties": {
-          "expirationTime": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "keyId": {
-            "type": "string"
-          },
-          "tokenStringForLog": {
-            "type": "string"
-          },
-          "audiences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "rawString": {
-            "type": "string"
-          },
-          "audience": {
-            "type": "string"
-          },
-          "jsonString": {
-            "type": "string"
-          },
           "signature": {
             "type": "array",
             "items": {
@@ -4079,7 +4054,32 @@
           "algorithm": {
             "type": "string"
           },
+          "expirationTime": {
+            "type": "integer",
+            "format": "int64"
+          },
           "issuer": {
+            "type": "string"
+          },
+          "tokenStringForLog": {
+            "type": "string"
+          },
+          "keyId": {
+            "type": "string"
+          },
+          "audiences": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "audience": {
+            "type": "string"
+          },
+          "rawString": {
+            "type": "string"
+          },
+          "jsonString": {
             "type": "string"
           }
         }
@@ -4726,12 +4726,12 @@
             "format": "int64"
           },
           "oldestTime": {
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "date-time"
           },
           "newestTime": {
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
