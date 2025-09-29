@@ -37,12 +37,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/addShipmentAttachmentsRequestDTO"
+                "$ref": "#/components/schemas/DLAddShipmentAttachmentsRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/addShipmentAttachmentsRequestDTO"
+                "$ref": "#/components/schemas/DLAddShipmentAttachmentsRequestDTO"
               }
             }
           }
@@ -53,12 +53,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/addShipmentAttachmentsResponseDTO"
+                  "$ref": "#/components/schemas/DLAddShipmentAttachmentsResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/addShipmentAttachmentsResponseDTO"
+                  "$ref": "#/components/schemas/DLAddShipmentAttachmentsResponseDTO"
                 }
               }
             }
@@ -83,12 +83,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/cancelShipmentRequestDTO"
+                "$ref": "#/components/schemas/DLCancelShipmentRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/cancelShipmentRequestDTO"
+                "$ref": "#/components/schemas/DLCancelShipmentRequestDTO"
               }
             }
           }
@@ -99,12 +99,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/cancelShipmentResponseDTO"
+                  "$ref": "#/components/schemas/DLCancelShipmentResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/cancelShipmentResponseDTO"
+                  "$ref": "#/components/schemas/DLCancelShipmentResponseDTO"
                 }
               }
             }
@@ -129,12 +129,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/createPickupRequestDTO"
+                "$ref": "#/components/schemas/DLCreatePickupRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/createPickupRequestDTO"
+                "$ref": "#/components/schemas/DLCreatePickupRequestDTO"
               }
             }
           }
@@ -145,12 +145,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/createPickupResponseDTO"
+                  "$ref": "#/components/schemas/DLCreatePickupResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/createPickupResponseDTO"
+                  "$ref": "#/components/schemas/DLCreatePickupResponseDTO"
                 }
               }
             }
@@ -175,12 +175,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/createShipmentRequestDTO"
+                "$ref": "#/components/schemas/DLCreateShipmentRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/createShipmentRequestDTO"
+                "$ref": "#/components/schemas/DLCreateShipmentRequestDTO"
               }
             }
           }
@@ -191,12 +191,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/createShipmentResponseDTO"
+                  "$ref": "#/components/schemas/DLCreateShipmentResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/createShipmentResponseDTO"
+                  "$ref": "#/components/schemas/DLCreateShipmentResponseDTO"
                 }
               }
             }
@@ -221,12 +221,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/deleteItemRequestDTO"
+                "$ref": "#/components/schemas/DLDeleteItemRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/deleteItemRequestDTO"
+                "$ref": "#/components/schemas/DLDeleteItemRequestDTO"
               }
             }
           }
@@ -237,12 +237,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/deleteItemResponseDTO"
+                  "$ref": "#/components/schemas/DLDeleteItemResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/deleteItemResponseDTO"
+                  "$ref": "#/components/schemas/DLDeleteItemResponseDTO"
                 }
               }
             }
@@ -267,12 +267,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/deletePackageRequestDTO"
+                "$ref": "#/components/schemas/DLDeletePackageRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/deletePackageRequestDTO"
+                "$ref": "#/components/schemas/DLDeletePackageRequestDTO"
               }
             }
           }
@@ -283,12 +283,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/deletePackageResponseDTO"
+                  "$ref": "#/components/schemas/DLDeletePackageResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/deletePackageResponseDTO"
+                  "$ref": "#/components/schemas/DLDeletePackageResponseDTO"
                 }
               }
             }
@@ -313,12 +313,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/deletePickupRequestDTO"
+                "$ref": "#/components/schemas/DLDeletePickupRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/deletePickupRequestDTO"
+                "$ref": "#/components/schemas/DLDeletePickupRequestDTO"
               }
             }
           }
@@ -329,12 +329,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/deletePickupResponseDTO"
+                  "$ref": "#/components/schemas/DLDeletePickupResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/deletePickupResponseDTO"
+                  "$ref": "#/components/schemas/DLDeletePickupResponseDTO"
                 }
               }
             }
@@ -359,12 +359,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/getAllCarriersRequestDTO"
+                "$ref": "#/components/schemas/DLGetAllCarriersRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/getAllCarriersRequestDTO"
+                "$ref": "#/components/schemas/DLGetAllCarriersRequestDTO"
               }
             }
           }
@@ -375,12 +375,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/getAllCarriersResponseDTO"
+                  "$ref": "#/components/schemas/DLGetAllCarriersResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/getAllCarriersResponseDTO"
+                  "$ref": "#/components/schemas/DLGetAllCarriersResponseDTO"
                 }
               }
             }
@@ -405,12 +405,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/getCarrierPortfolioDetailsRequestDTO"
+                "$ref": "#/components/schemas/DLGetCarrierPortfolioDetailsRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/getCarrierPortfolioDetailsRequestDTO"
+                "$ref": "#/components/schemas/DLGetCarrierPortfolioDetailsRequestDTO"
               }
             }
           }
@@ -421,12 +421,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/getCarrierPortfolioDetailsResponseDTO"
+                  "$ref": "#/components/schemas/DLGetCarrierPortfolioDetailsResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/getCarrierPortfolioDetailsResponseDTO"
+                  "$ref": "#/components/schemas/DLGetCarrierPortfolioDetailsResponseDTO"
                 }
               }
             }
@@ -451,12 +451,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/getCarrierPortfolioNamesRequestDTO"
+                "$ref": "#/components/schemas/DLGetCarrierPortfolioNamesRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/getCarrierPortfolioNamesRequestDTO"
+                "$ref": "#/components/schemas/DLGetCarrierPortfolioNamesRequestDTO"
               }
             }
           }
@@ -467,12 +467,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/getCarrierPortfolioNamesResponseDTO"
+                  "$ref": "#/components/schemas/DLGetCarrierPortfolioNamesResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/getCarrierPortfolioNamesResponseDTO"
+                  "$ref": "#/components/schemas/DLGetCarrierPortfolioNamesResponseDTO"
                 }
               }
             }
@@ -497,12 +497,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/getCarrierPropertiesRequestDTO"
+                "$ref": "#/components/schemas/DLGetCarrierPropertiesRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/getCarrierPropertiesRequestDTO"
+                "$ref": "#/components/schemas/DLGetCarrierPropertiesRequestDTO"
               }
             }
           }
@@ -513,12 +513,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/getCarrierPropertiesResponseDTO"
+                  "$ref": "#/components/schemas/DLGetCarrierPropertiesResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/getCarrierPropertiesResponseDTO"
+                  "$ref": "#/components/schemas/DLGetCarrierPropertiesResponseDTO"
                 }
               }
             }
@@ -543,12 +543,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/getPickupsRequestDTO"
+                "$ref": "#/components/schemas/DLGetPickupsRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/getPickupsRequestDTO"
+                "$ref": "#/components/schemas/DLGetPickupsRequestDTO"
               }
             }
           }
@@ -559,12 +559,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/getPickupsResponseDTO"
+                  "$ref": "#/components/schemas/DLGetPickupsResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/getPickupsResponseDTO"
+                  "$ref": "#/components/schemas/DLGetPickupsResponseDTO"
                 }
               }
             }
@@ -589,12 +589,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/getShipmentsRequestDTO"
+                "$ref": "#/components/schemas/DLGetShipmentsRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/getShipmentsRequestDTO"
+                "$ref": "#/components/schemas/DLGetShipmentsRequestDTO"
               }
             }
           }
@@ -605,12 +605,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/getShipmentsResponseDTO"
+                  "$ref": "#/components/schemas/DLGetShipmentsResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/getShipmentsResponseDTO"
+                  "$ref": "#/components/schemas/DLGetShipmentsResponseDTO"
                 }
               }
             }
@@ -635,12 +635,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/processPackageRequestDTO"
+                "$ref": "#/components/schemas/DLProcessPackageRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/processPackageRequestDTO"
+                "$ref": "#/components/schemas/DLProcessPackageRequestDTO"
               }
             }
           }
@@ -651,12 +651,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/processPackageResponseDTO"
+                  "$ref": "#/components/schemas/DLProcessPackageResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/processPackageResponseDTO"
+                  "$ref": "#/components/schemas/DLProcessPackageResponseDTO"
                 }
               }
             }
@@ -681,12 +681,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/processPickupRequestDTO"
+                "$ref": "#/components/schemas/DLProcessPickupRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/processPickupRequestDTO"
+                "$ref": "#/components/schemas/DLProcessPickupRequestDTO"
               }
             }
           }
@@ -697,12 +697,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/processPickupResponseDTO"
+                  "$ref": "#/components/schemas/DLProcessPickupResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/processPickupResponseDTO"
+                  "$ref": "#/components/schemas/DLProcessPickupResponseDTO"
                 }
               }
             }
@@ -727,12 +727,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/processShipmentRequestDTO"
+                "$ref": "#/components/schemas/DLProcessShipmentRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/processShipmentRequestDTO"
+                "$ref": "#/components/schemas/DLProcessShipmentRequestDTO"
               }
             }
           }
@@ -743,12 +743,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/processShipmentResponseDTO"
+                  "$ref": "#/components/schemas/DLProcessShipmentResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/processShipmentResponseDTO"
+                  "$ref": "#/components/schemas/DLProcessShipmentResponseDTO"
                 }
               }
             }
@@ -773,12 +773,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/syncPickupsRequestDTO"
+                "$ref": "#/components/schemas/DLSyncPickupsRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/syncPickupsRequestDTO"
+                "$ref": "#/components/schemas/DLSyncPickupsRequestDTO"
               }
             }
           }
@@ -789,12 +789,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/syncPickupsResponseDTO"
+                  "$ref": "#/components/schemas/DLSyncPickupsResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/syncPickupsResponseDTO"
+                  "$ref": "#/components/schemas/DLSyncPickupsResponseDTO"
                 }
               }
             }
@@ -819,12 +819,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/syncShipmentsRequestDTO"
+                "$ref": "#/components/schemas/DLSyncShipmentsRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/syncShipmentsRequestDTO"
+                "$ref": "#/components/schemas/DLSyncShipmentsRequestDTO"
               }
             }
           }
@@ -835,12 +835,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/syncShipmentsResponseDTO"
+                  "$ref": "#/components/schemas/DLSyncShipmentsResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/syncShipmentsResponseDTO"
+                  "$ref": "#/components/schemas/DLSyncShipmentsResponseDTO"
                 }
               }
             }
@@ -865,12 +865,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/updateCustomsDataRequestDTO"
+                "$ref": "#/components/schemas/DLUpdateCustomsDataRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/updateCustomsDataRequestDTO"
+                "$ref": "#/components/schemas/DLUpdateCustomsDataRequestDTO"
               }
             }
           }
@@ -881,12 +881,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/updateCustomsDataResponseDTO"
+                  "$ref": "#/components/schemas/DLUpdateCustomsDataResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/updateCustomsDataResponseDTO"
+                  "$ref": "#/components/schemas/DLUpdateCustomsDataResponseDTO"
                 }
               }
             }
@@ -911,12 +911,12 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/validateShipmentRequestDTO"
+                "$ref": "#/components/schemas/DLValidateShipmentRequestDTO"
               }
             },
             "application/xml": {
               "schema": {
-                "$ref": "#/components/schemas/validateShipmentRequestDTO"
+                "$ref": "#/components/schemas/DLValidateShipmentRequestDTO"
               }
             }
           }
@@ -927,12 +927,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/validateShipmentReponseDTO"
+                  "$ref": "#/components/schemas/DLValidateShipmentResponseDTO"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/validateShipmentReponseDTO"
+                  "$ref": "#/components/schemas/DLValidateShipmentResponseDTO"
                 }
               }
             }
@@ -2024,6 +2024,104 @@
           "content"
         ]
       },
+      "DLClientTermsOfDeliveryRestDTO": {
+        "type": "object",
+        "description": "List of terms of deliveries.",
+        "properties": {
+          "identCode": {
+            "type": "string",
+            "description": "The identCode of the MO.",
+            "maxLength": 20,
+            "minLength": 1
+          },
+          "isDefault": {
+            "type": "boolean",
+            "description": "Indicates that this terms of delivery is set by default in the shipping order.",
+            "example": false,
+            "readOnly": true
+          },
+          "costType": {
+            "type": "string",
+            "description": "The type of costs of the terms of delivery.",
+            "enum": [
+              "CHARGEABLE",
+              "FREEDELIVERY"
+            ]
+          },
+          "customsDutyTaxesType": {
+            "type": "string",
+            "description": "The type of duties and taxes of the terms of delivery.",
+            "enum": [
+              "PAIDTAXED",
+              "PAIDUNTAXED",
+              "TAXESUNDEFINED",
+              "UNPAIDTAXED",
+              "UNPAIDUNTAXED"
+            ]
+          },
+          "incotermIdentCode": {
+            "type": "string",
+            "description": "The ID of the incoterm of the terms of delivery."
+          },
+          "translations": {
+            "type": "array",
+            "description": "The name of the terms of delivery in multiple languages.",
+            "items": {
+              "$ref": "#/components/schemas/TermsOfDeliveryTextTranslation"
+            }
+          }
+        },
+        "required": [
+          "costType",
+          "identCode",
+          "translations"
+        ]
+      },
+      "TermsOfDeliveryTextTranslation": {
+        "type": "object",
+        "description": "Description of the terms of delivery in a certain language.",
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "2-letter ISO code of the language.",
+            "example": "DE",
+            "maxLength": 2,
+            "minLength": 2,
+            "pattern": "[A-Z]{2}"
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the terms of delivery.",
+            "maxLength": 250,
+            "minLength": 0
+          }
+        },
+        "required": [
+          "language"
+        ]
+      },
+      "DLClientTermsOfDeliveryListRestDTO": {
+        "type": "object",
+        "properties": {
+          "totalElements": {
+            "type": "integer",
+            "description": "The total number of elements available to return.",
+            "example": 100,
+            "readOnly": true
+          },
+          "content": {
+            "type": "array",
+            "description": "List of terms of deliveries.",
+            "items": {
+              "$ref": "#/components/schemas/DLClientTermsOfDeliveryRestDTO"
+            }
+          }
+        },
+        "required": [
+          "content",
+          "totalElements"
+        ]
+      },
       "ComboboxEntryDTO": {
         "type": "object",
         "description": "For common use in BF methods which return combobox entries, e.g. for a list of master file data.",
@@ -2680,7 +2778,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p> The type of the reference number or text. Valid values are: <li>RECEIVER_GLN - Receiver/Consignee Global Location Number(GLN). <li>DELNOTE_NUMBER - Delivery note number. <li>INVOICE_NUMBER - Invoice number. <li>PO_NUMBER - Purchase order number. <li>TRANSORDER_NUMBER - Transport order number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>PICKUP_INSTRUCTION - Pickup instruction/notice. <li>DELIVERY_INSTRUCTION - Delivery instruction/notice. <li>GENERAL_INSTRUCTION - General instruction/notice. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number.<li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER - Shipper Employee Identification Number. <li>ENDCUSTOMER_REFERENCE - End-customer reference. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent DUTY DEFERMENT number. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver DUTY DEFERMENT number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer DUTY DEFERMENT number. <li>EKAER_NUMBER - EKAER number. <li>SENT_NUMBER - SENT number. <li>UIT_NUMBER - UIT number.  <li>RECEIVER_CPF_TAX_ID_NUMBER - Receiver CPF tax ID number for Brasil. <li>SHIPPER_CPF_TAX_ID_NUMBER - Shipper CPF tax ID number for Brasil. <li>RECEIVER_CNPJ_TAX_ID_NUMBER - Receiver CNPJ tax ID number for Brasil. <li>SHIPPER_CNPJ_TAX_ID_NUMBER - Shipper CNPJ tax ID number for Brasil. <li>IMPORTER_CNPJ_TAX_ID_NUMBER - Importer CNPJ tax ID number for Brasil. <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER - Customs agent CNPJ tax ID number for Brasil. </P> <p> length=15 </p>"
+            "description": "<p> The type of the reference number or text. Valid values are: <li>DELNOTE_NUMBER - Delivery note number. <li>INVOICE_NUMBER - Invoice number. <li>PO_NUMBER - Purchase order number. <li>TRANSORDER_NUMBER - Transport order number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>PICKUP_INSTRUCTION - Pickup instruction/notice. <li>DELIVERY_INSTRUCTION - Delivery instruction/notice. <li>GENERAL_INSTRUCTION - General instruction/notice. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number.<li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER - Shipper Employee Identification Number. <li>ENDCUSTOMER_REFERENCE - End-customer reference. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent DUTY DEFERMENT number. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver DUTY DEFERMENT number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer DUTY DEFERMENT number. <li>EKAER_NUMBER - EKAER number. <li>SENT_NUMBER - SENT number. <li>UIT_NUMBER - UIT number.  <li>RECEIVER_CPF_TAX_ID_NUMBER - Receiver CPF tax ID number for Brasil. <li>SHIPPER_CPF_TAX_ID_NUMBER - Shipper CPF tax ID number for Brasil. <li>RECEIVER_CNPJ_TAX_ID_NUMBER - Receiver CNPJ tax ID number for Brasil. <li>SHIPPER_CNPJ_TAX_ID_NUMBER - Shipper CNPJ tax ID number for Brasil. <li>IMPORTER_CNPJ_TAX_ID_NUMBER - Importer CNPJ tax ID number for Brasil. <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER - Customs agent CNPJ tax ID number for Brasil. </P> <p> length=15 </p>"
           },
           "value": {
             "type": "string",
@@ -3298,13 +3396,13 @@
             "type": "string",
             "description": "<p>Name of this field, i.e. the role the field plays in the enclosing record.</p>  <p>When the same name is repeated in the context of the same parent record,  it is assumed that the parent defines this element as a repeatable (array) element.</p>"
           },
-          "type": {
-            "type": "string",
-            "description": "<p>Data type of the field.</p> <p>This is not strictly necessary since the receiving entity should be able to infer the structure  with its own meta data; it may be used however for sanity checks.</p> <p>The format follows the conventions of xml schema encoding, see <a href=\\\"http://www.w3.org/TR/xmlschema-2/\\\">http://www.w3.org/TR/xmlschema-2/</a>.</p> <h3>Currently implemented formats:</h3>  <ul>  <li>string</li> <li>int</li> <li>long</li> <li>decimal</li> <li>boolean</li> <li>dateTime</li> <li>base64Binary</li> </ul>"
-          },
           "value": {
             "type": "string",
             "description": "<p>Value of the field.</p>  <p>The format follows the conventions of xml schema encoding, see <a href=\"http://www.w3.org/TR/xmlschema-2/\">http://www.w3.org/TR/xmlschema-2/</a>.</p> <h3>Currently implemented formats:</h3>  <ul>  <li>string - the plain string</li> <li>int - digits base10, +-2^31</li> <li>long - digits base10, +-2^63</li> <li>decimal - +-123456.789</li> <li>boolean - the literals 'true' and 'false'</li> <li>dateTime - yyyy-MM-ddTHH:mm:ss</li> <li>base64Binary - binary data in base64 encoding</li> </ul>"
+          },
+          "type": {
+            "type": "string",
+            "description": "<p>Data type of the field.</p> <p>This is not strictly necessary since the receiving entity should be able to infer the structure  with its own meta data; it may be used however for sanity checks.</p> <p>The format follows the conventions of xml schema encoding, see <a href=\\\"http://www.w3.org/TR/xmlschema-2/\\\">http://www.w3.org/TR/xmlschema-2/</a>.</p> <h3>Currently implemented formats:</h3>  <ul>  <li>string</li> <li>int</li> <li>long</li> <li>decimal</li> <li>boolean</li> <li>dateTime</li> <li>base64Binary</li> </ul>"
           }
         }
       },
@@ -3398,36 +3496,7 @@
           }
         }
       },
-      "ResponseMessageDTO": {
-        "type": "object",
-        "description": "Result messages like errors or warnings.",
-        "properties": {
-          "messageType": {
-            "type": "string",
-            "description": "<p>Message type</p><p>If not stated otherwise, the possible types are:</p><ul><li>ERROR</li><li>WARNING</li><li>INFO</li></ul><p>Maximum length: 50</p>",
-            "example": "WARNING"
-          },
-          "messageIdentCode": {
-            "type": "string",
-            "description": "<p>Optional identification code for further classification of the message type.</p><p>Maximum length: 50</p>",
-            "example": "5627"
-          },
-          "messageTexts": {
-            "type": "array",
-            "description": "<p>Detailed message texts in the requested languages.</p>",
-            "items": {
-              "$ref": "#/components/schemas/TextInLanguageDTO"
-            }
-          },
-          "indentationLevel": {
-            "type": "integer",
-            "format": "int32",
-            "description": "<p>The indentation level of the message.</p><p>'0' indicates a top level message.</p>",
-            "example": 0
-          }
-        }
-      },
-      "addShipmentAttachmentsResponseDTO": {
+      "DLAddShipmentAttachmentsResponseDTO": {
         "type": "object",
         "description": " Response DTO for the addShipmentAttachments business facade method",
         "properties": {
@@ -3458,34 +3527,36 @@
           "name": "addShipmentAttachmentsResponseDTO"
         }
       },
-      "DLAttachmentDTO": {
+      "ResponseMessageDTO": {
         "type": "object",
-        "description": "DTO to hold attachment data.",
+        "description": "Result messages like errors or warnings.",
         "properties": {
-          "filename": {
+          "messageType": {
             "type": "string",
-            "description": "File name including a file extension <p>lenght = 250 </p>."
+            "description": "<p>Message type</p><p>If not stated otherwise, the possible types are:</p><ul><li>ERROR</li><li>WARNING</li><li>INFO</li></ul><p>Maximum length: 50</p>",
+            "example": "WARNING"
           },
-          "mimeType": {
+          "messageIdentCode": {
             "type": "string",
-            "description": "The MIME type of the document. Possible values: <ol> <li>\"application/pdf\" document is in PDF format <li>\"printer/raw\" document is in printer language (e.g. ZPL or EPL) and can be directly sent to a printer <li>\"image/<code>format</code>\" document is a printable image. <code>format</code> can be \"png\", \"jpeg\", etc. </ol> <p> length = 30 </p>"
+            "description": "<p>Optional identification code for further classification of the message type.</p><p>Maximum length: 50</p>",
+            "example": "5627"
           },
-          "data": {
+          "messageTexts": {
             "type": "array",
-            "description": "Attachment data/content.",
+            "description": "<p>Detailed message texts in the requested languages.</p>",
             "items": {
-              "type": "string",
-              "format": "byte",
-              "description": "Attachment data/content."
+              "$ref": "#/components/schemas/TextInLanguageDTO"
             }
           },
-          "contentType": {
-            "type": "string",
-            "description": "Attachment type.<br> Indicates the business content of the document towards the carrier. If empty, the carrier's default is used. <p> Possible values: <ul> <li> COMMERCIAL_INVOICE</li> <li> PRO_FORMA_INVOICE</li> <li> CERTIFICATE_OF_ORIGIN</li> <li> NAFTA_CERTIFICATE_OF_ORIGIN</li> <li> EXPORT_ACCOMPANYING_DOCUMENT</li><li> PACKING_LIST</li><li> WEIGHT_DECLARATION</li><li> SHIPPERS_DECLARATION</li><li> DELIVERY_NOTE</li><li> MOVEMENT_CERTIFICATE_ATR</li><li> MOVEMENT_CERTIFICATE_EUR1</li><li> LETTER_OF_CREDIT</li><li> CERTIFICATE_OF_COMPLIANCE</li><li> CERTIFICATE_OF_MANUFACTURER</li><li> CERTIFICATE_OF_WARRANTY</li><li> CERTIFICATE_OF_WEIGHTANDQUANTITY</li><li> NONWOOD_PACKING_DECLARATION</li><li> OTHER</li> </ul> </p> <p> length=30 </p>"
+          "indentationLevel": {
+            "type": "integer",
+            "format": "int32",
+            "description": "<p>The indentation level of the message.</p><p>'0' indicates a top level message.</p>",
+            "example": 0
           }
         }
       },
-      "addShipmentAttachmentsRequestDTO": {
+      "DLAddShipmentAttachmentsRequestDTO": {
         "type": "object",
         "description": "Request DTO for the addShipmentAttachments business facade method",
         "properties": {
@@ -3539,7 +3610,34 @@
           "name": "addShipmentAttachmentsRequestDTO"
         }
       },
-      "cancelShipmentResponseDTO": {
+      "DLAttachmentDTO": {
+        "type": "object",
+        "description": "DTO to hold attachment data.",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "File name including a file extension <p>lenght = 250 </p>."
+          },
+          "mimeType": {
+            "type": "string",
+            "description": "The MIME type of the document. Possible values: <ol> <li>\"application/pdf\" document is in PDF format <li>\"printer/raw\" document is in printer language (e.g. ZPL or EPL) and can be directly sent to a printer <li>\"image/<code>format</code>\" document is a printable image. <code>format</code> can be \"png\", \"jpeg\", etc. </ol> <p> length = 30 </p>"
+          },
+          "data": {
+            "type": "array",
+            "description": "Attachment data/content.",
+            "items": {
+              "type": "string",
+              "format": "byte",
+              "description": "Attachment data/content."
+            }
+          },
+          "contentType": {
+            "type": "string",
+            "description": "Attachment type.<br> Indicates the business content of the document towards the carrier. If empty, the carrier's default is used. <p> Possible values: <ul> <li> COMMERCIAL_INVOICE</li> <li> PRO_FORMA_INVOICE</li> <li> CERTIFICATE_OF_ORIGIN</li> <li> NAFTA_CERTIFICATE_OF_ORIGIN</li> <li> EXPORT_ACCOMPANYING_DOCUMENT</li><li> PACKING_LIST</li><li> WEIGHT_DECLARATION</li><li> SHIPPERS_DECLARATION</li><li> DELIVERY_NOTE</li><li> MOVEMENT_CERTIFICATE_ATR</li><li> MOVEMENT_CERTIFICATE_EUR1</li><li> LETTER_OF_CREDIT</li><li> CERTIFICATE_OF_COMPLIANCE</li><li> CERTIFICATE_OF_MANUFACTURER</li><li> CERTIFICATE_OF_WARRANTY</li><li> CERTIFICATE_OF_WEIGHTANDQUANTITY</li><li> NONWOOD_PACKING_DECLARATION</li><li> OTHER</li> </ul> </p> <p> length=30 </p>"
+          }
+        }
+      },
+      "DLCancelShipmentResponseDTO": {
         "type": "object",
         "description": "Response DTO for the cancelShipment business facade method",
         "properties": {
@@ -3570,32 +3668,7 @@
           "name": "cancelShipmentResponseDTO"
         }
       },
-      "DLProcessModeDTO": {
-        "type": "object",
-        "description": "DTO specifying the mode in which an operation is processed.",
-        "properties": {
-          "mode": {
-            "type": "string",
-            "description": "<p> The mode in which the operation is processed. Valid values are: <li>BASIC the operation is processed in an asynchronous job. <li>EXTENDED the operation is executed directly within the webservice request transaction and no response is returned until the process is finished. </p> <br> <p> length=10 </p>"
-          }
-        },
-        "required": [
-          "mode"
-        ]
-      },
-      "DLShipmentCancelParmsDTO": {
-        "type": "object",
-        "description": "Parameters for the cancle operation for a shipment.",
-        "properties": {
-          "processMode": {
-            "$ref": "#/components/schemas/DLProcessModeDTO"
-          }
-        },
-        "required": [
-          "processMode"
-        ]
-      },
-      "cancelShipmentRequestDTO": {
+      "DLCancelShipmentRequestDTO": {
         "type": "object",
         "description": "Request DTO for the cancelShipment business facade method",
         "properties": {
@@ -3642,43 +3715,32 @@
           "name": "cancelShipmentRequestDTO"
         }
       },
-      "DLDocumentDTO": {
+      "DLProcessModeDTO": {
         "type": "object",
-        "description": "DTO for a document to be printed out by the client system.",
+        "description": "DTO specifying the mode in which an operation is processed.",
         "properties": {
-          "documentId": {
+          "mode": {
             "type": "string",
-            "description": "Unique identification of the document.<br> <p> length = 50 </p>"
-          },
-          "documentType": {
-            "type": "string",
-            "description": "The ident code of the document type the document belongs to.<br> The document type can be used to identify a specific document within a list of documents. Example: when more than one document is returned for a package, each one has a different document type (e.g. the normal label and the dangerous goods label).<br> <p> length = 50 </p>"
-          },
-          "mimeType": {
-            "type": "string",
-            "description": "The MIME type of the document. Possible values: <ol> <li>\"application/pdf\" document is in PDF format <li>\"printer/raw\" document is in printer language (e.g. ZPL or EPL) and can be directly sent to a printer <li>\"image/<code>format</code>\" document is a printable image. <code>format</code> can be \"png\", \"jpeg\", etc. </ol> <p> length = 30 </p>"
-          },
-          "printerModel": {
-            "type": "string",
-            "description": "Only filled for \"printer/raw\" mime type. Specifies the printer model the content is usable for. <p> length = 80 </p>"
-          },
-          "printerId": {
-            "type": "string",
-            "description": "Only filled for \"printer/raw\" mime type. The ID can be used to identify a special printer by the ERP system. <p> length = 80 </p>"
-          },
-          "resolution": {
-            "type": "integer",
-            "format": "int32",
-            "description": "Only filled for \"image\" mime types. Specifies resolution of the image. <p> length = 8 </p>"
-          },
-          "content": {
-            "type": "string",
-            "format": "byte",
-            "description": "The document content"
+            "description": "<p> The mode in which the operation is processed. Valid values are: <li>BASIC the operation is processed in an asynchronous job. <li>EXTENDED the operation is executed directly within the webservice request transaction and no response is returned until the process is finished. </p> <br> <p> length=10 </p>"
           }
-        }
+        },
+        "required": [
+          "mode"
+        ]
       },
-      "createPickupResponseDTO": {
+      "DLShipmentCancelParmsDTO": {
+        "type": "object",
+        "description": "Parameters for the cancle operation for a shipment.",
+        "properties": {
+          "processMode": {
+            "$ref": "#/components/schemas/DLProcessModeDTO"
+          }
+        },
+        "required": [
+          "processMode"
+        ]
+      },
+      "DLCreatePickupResponseDTO": {
         "type": "object",
         "description": "Response DTO for the processPickup business facade method",
         "properties": {
@@ -3718,6 +3780,93 @@
         },
         "xml": {
           "name": "createPickupResponseDTO"
+        }
+      },
+      "DLDocumentDTO": {
+        "type": "object",
+        "description": "DTO for a document to be printed out by the client system.",
+        "properties": {
+          "documentId": {
+            "type": "string",
+            "description": "Unique identification of the document.<br> <p> length = 50 </p>"
+          },
+          "documentType": {
+            "type": "string",
+            "description": "The ident code of the document type the document belongs to.<br> The document type can be used to identify a specific document within a list of documents. Example: when more than one document is returned for a package, each one has a different document type (e.g. the normal label and the dangerous goods label).<br> <p> length = 50 </p>"
+          },
+          "mimeType": {
+            "type": "string",
+            "description": "The MIME type of the document. Possible values: <ol> <li>\"application/pdf\" document is in PDF format <li>\"printer/raw\" document is in printer language (e.g. ZPL or EPL) and can be directly sent to a printer <li>\"image/<code>format</code>\" document is a printable image. <code>format</code> can be \"png\", \"jpeg\", etc. </ol> <p> length = 30 </p>"
+          },
+          "printerModel": {
+            "type": "string",
+            "description": "Only filled for \"printer/raw\" mime type. Specifies the printer model the content is usable for. <p> length = 80 </p>"
+          },
+          "printerId": {
+            "type": "string",
+            "description": "Only filled for \"printer/raw\" mime type. The ID can be used to identify a special printer by the ERP system. <p> length = 80 </p>"
+          },
+          "resolution": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Only filled for \"image\" mime types. Specifies resolution of the image. <p> length = 8 </p>"
+          },
+          "content": {
+            "type": "string",
+            "format": "byte",
+            "description": "The document content"
+          }
+        }
+      },
+      "DLCreatePickupRequestDTO": {
+        "type": "object",
+        "description": "Request DTO for the processPickup business facade method",
+        "properties": {
+          "clientSystemId": {
+            "type": "string",
+            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
+            "example": "TEST_ID"
+          },
+          "clientIdentCode": {
+            "type": "string",
+            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
+            "example": "APITEST"
+          },
+          "userName": {
+            "type": "string",
+            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
+            "example": "API_TEST"
+          },
+          "resultLanguageIsoCodes": {
+            "type": "array",
+            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+            "example": [
+              "en",
+              "de"
+            ],
+            "items": {
+              "type": "string",
+              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+              "example": "[\"en\",\"de\"]"
+            }
+          },
+          "creationParms": {
+            "$ref": "#/components/schemas/DLPickupCreationParmsDTO"
+          },
+          "pickup": {
+            "$ref": "#/components/schemas/DLPickupRequestDataDTO"
+          },
+          "processParms": {
+            "$ref": "#/components/schemas/DLPickupProcessParmsDTO"
+          }
+        },
+        "required": [
+          "creationParms",
+          "pickup",
+          "processParms"
+        ],
+        "xml": {
+          "name": "createPickupRequestDTO"
         }
       },
       "DLDocumentOutputModeDTO": {
@@ -3860,128 +4009,7 @@
           }
         }
       },
-      "createPickupRequestDTO": {
-        "type": "object",
-        "description": "Request DTO for the processPickup business facade method",
-        "properties": {
-          "clientSystemId": {
-            "type": "string",
-            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
-            "example": "TEST_ID"
-          },
-          "clientIdentCode": {
-            "type": "string",
-            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
-            "example": "APITEST"
-          },
-          "userName": {
-            "type": "string",
-            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
-            "example": "API_TEST"
-          },
-          "resultLanguageIsoCodes": {
-            "type": "array",
-            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-            "example": [
-              "en",
-              "de"
-            ],
-            "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
-            }
-          },
-          "creationParms": {
-            "$ref": "#/components/schemas/DLPickupCreationParmsDTO"
-          },
-          "pickup": {
-            "$ref": "#/components/schemas/DLPickupRequestDataDTO"
-          },
-          "processParms": {
-            "$ref": "#/components/schemas/DLPickupProcessParmsDTO"
-          }
-        },
-        "required": [
-          "creationParms",
-          "pickup",
-          "processParms"
-        ],
-        "xml": {
-          "name": "createPickupRequestDTO"
-        }
-      },
-      "DLPackageProcessingResultDTO": {
-        "type": "object",
-        "description": "DTO holding result information of a package processing.<br> The package is created and basic validation checks are performed synchronously.<br> The carrier data preparation for EDI and label generation will be performed asynchronously, so the preparation results (e.g. labels and tracking number) are not part of the response. This information can be retrieved with a <code>syncShipments</code> call.",
-        "properties": {
-          "hasErrors": {
-            "type": "boolean",
-            "description": "True, if there are any error messages. If an error has occured the messages contain more details about the errors."
-          },
-          "hasWarnings": {
-            "type": "boolean",
-            "description": "True, if there are any warning messages."
-          },
-          "messages": {
-            "type": "array",
-            "description": "Messages for the whole request, e.g. for errors or warnings.<br>",
-            "items": {
-              "$ref": "#/components/schemas/ResponseMessageDTO"
-            }
-          },
-          "packageTransactionId": {
-            "type": "string",
-            "description": "<p> The shipment wide unique id for the package (as specified in the request) the result is for. </p> <p> length=50 </p>"
-          },
-          "referenceNumber1": {
-            "type": "string",
-            "description": "Another package reference number (as specified in the request) the result is for. <p> length=50 </p>"
-          },
-          "carrierPackageNumber": {
-            "type": "string",
-            "description": "The package number given by the carrier. Usually the tracking number. <p> length=50 </p>"
-          },
-          "carrierPackageNumberReturn": {
-            "type": "string",
-            "description": "The additional return tracking number given by the carrier, if the data for the possible return shipment are to be generated with the initial shipping data.  <p> length=50 </p>"
-          },
-          "carrierTrackingURL": {
-            "type": "string",
-            "description": "The tracking URL of the package.<p> length=512 </p>"
-          },
-          "carrierTrackingURLReturn": {
-            "type": "string",
-            "description": "The additional return tracking URL of the package.<p> length=512 </p>"
-          },
-          "carrierPackageIdentBarcode": {
-            "type": "string",
-            "description": "The content of the barcode identifying the package as defined by the carrier. The carrierPackageNumber is most likely part of the carrierPackageIdentBarcode and for same carrier it is identical. However, this depends solely on the carriers' specification. NOTE: this is currently in BETA phase and only supported for a very small number of carriers. <p> length=50 </p>"
-          },
-          "documents": {
-            "type": "array",
-            "description": "The documents for the package. Only filled when asked for in request (documentOutputMode).",
-            "items": {
-              "$ref": "#/components/schemas/DLDocumentDTO"
-            }
-          }
-        }
-      },
-      "DLShipmentAccountInfoResponseDataDTO": {
-        "type": "object",
-        "description": "Holds information from the account used for the shipment",
-        "properties": {
-          "customerNumberAtCarrier": {
-            "type": "string",
-            "description": "Account number of the shipper assigned from the carrier.  <p>length=25</p>"
-          },
-          "singlePackageHandlingActivated": {
-            "type": "boolean",
-            "description": "Indicates whether package by package printing is possible for the carrier."
-          }
-        }
-      },
-      "createShipmentResponseDTO": {
+      "DLCreateShipmentResponseDTO": {
         "type": "object",
         "description": "Response DTO for the createShipment business facade method",
         "properties": {
@@ -4057,6 +4085,127 @@
           "name": "createShipmentResponseDTO"
         }
       },
+      "DLPackageProcessingResultDTO": {
+        "type": "object",
+        "description": "DTO holding result information of a package processing.<br> The package is created and basic validation checks are performed synchronously.<br> The carrier data preparation for EDI and label generation will be performed asynchronously, so the preparation results (e.g. labels and tracking number) are not part of the response. This information can be retrieved with a <code>syncShipments</code> call.",
+        "properties": {
+          "hasErrors": {
+            "type": "boolean",
+            "description": "True, if there are any error messages. If an error has occured the messages contain more details about the errors."
+          },
+          "hasWarnings": {
+            "type": "boolean",
+            "description": "True, if there are any warning messages."
+          },
+          "messages": {
+            "type": "array",
+            "description": "Messages for the whole request, e.g. for errors or warnings.<br>",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessageDTO"
+            }
+          },
+          "packageTransactionId": {
+            "type": "string",
+            "description": "<p> The shipment wide unique id for the package (as specified in the request) the result is for. </p> <p> length=50 </p>"
+          },
+          "referenceNumber1": {
+            "type": "string",
+            "description": "Another package reference number (as specified in the request) the result is for. <p> length=50 </p>"
+          },
+          "carrierPackageNumber": {
+            "type": "string",
+            "description": "The package number given by the carrier. Usually the tracking number. <p> length=50 </p>"
+          },
+          "carrierPackageNumberReturn": {
+            "type": "string",
+            "description": "The additional return tracking number given by the carrier, if the data for the possible return shipment are to be generated with the initial shipping data.  <p> length=50 </p>"
+          },
+          "carrierTrackingURL": {
+            "type": "string",
+            "description": "The tracking URL of the package.<p> length=512 </p>"
+          },
+          "carrierTrackingURLReturn": {
+            "type": "string",
+            "description": "The additional return tracking URL of the package.<p> length=512 </p>"
+          },
+          "carrierPackageIdentBarcode": {
+            "type": "string",
+            "description": "The content of the barcode identifying the package as defined by the carrier. The carrierPackageNumber is most likely part of the carrierPackageIdentBarcode and for same carrier it is identical. However, this depends solely on the carriers' specification. NOTE: this is currently in BETA phase and only supported for a very small number of carriers. <p> length=50 </p>"
+          },
+          "documents": {
+            "type": "array",
+            "description": "The documents for the package. Only filled when asked for in request (documentOutputMode).",
+            "items": {
+              "$ref": "#/components/schemas/DLDocumentDTO"
+            }
+          }
+        }
+      },
+      "DLShipmentAccountInfoResponseDataDTO": {
+        "type": "object",
+        "description": "Holds information from the account used for the shipment",
+        "properties": {
+          "customerNumberAtCarrier": {
+            "type": "string",
+            "description": "Account number of the shipper assigned from the carrier.  <p>length=25</p>"
+          },
+          "singlePackageHandlingActivated": {
+            "type": "boolean",
+            "description": "Indicates whether package by package printing is possible for the carrier."
+          }
+        }
+      },
+      "DLCreateShipmentRequestDTO": {
+        "type": "object",
+        "description": "Request DTO for the createShipment business facade method",
+        "properties": {
+          "clientSystemId": {
+            "type": "string",
+            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
+            "example": "TEST_ID"
+          },
+          "clientIdentCode": {
+            "type": "string",
+            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
+            "example": "APITEST"
+          },
+          "userName": {
+            "type": "string",
+            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
+            "example": "API_TEST"
+          },
+          "resultLanguageIsoCodes": {
+            "type": "array",
+            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+            "example": [
+              "en",
+              "de"
+            ],
+            "items": {
+              "type": "string",
+              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+              "example": "[\"en\",\"de\"]"
+            }
+          },
+          "creationParms": {
+            "$ref": "#/components/schemas/DLShipmentCreationParmsDTO"
+          },
+          "shipment": {
+            "$ref": "#/components/schemas/DLShipmentRequestDataDTO"
+          },
+          "processParms": {
+            "$ref": "#/components/schemas/DLShipmentProcessParmsDTO"
+          }
+        },
+        "required": [
+          "creationParms",
+          "processParms",
+          "shipment"
+        ],
+        "xml": {
+          "name": "createShipmentRequestDTO"
+        }
+      },
       "DLDocumentScopeDTO": {
         "type": "object",
         "description": "DTO specifying the scope of documents to be processed.",
@@ -4117,58 +4266,7 @@
           "workstationId"
         ]
       },
-      "createShipmentRequestDTO": {
-        "type": "object",
-        "description": "Request DTO for the createShipment business facade method",
-        "properties": {
-          "clientSystemId": {
-            "type": "string",
-            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
-            "example": "TEST_ID"
-          },
-          "clientIdentCode": {
-            "type": "string",
-            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
-            "example": "APITEST"
-          },
-          "userName": {
-            "type": "string",
-            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
-            "example": "API_TEST"
-          },
-          "resultLanguageIsoCodes": {
-            "type": "array",
-            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-            "example": [
-              "en",
-              "de"
-            ],
-            "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
-            }
-          },
-          "creationParms": {
-            "$ref": "#/components/schemas/DLShipmentCreationParmsDTO"
-          },
-          "shipment": {
-            "$ref": "#/components/schemas/DLShipmentRequestDataDTO"
-          },
-          "processParms": {
-            "$ref": "#/components/schemas/DLShipmentProcessParmsDTO"
-          }
-        },
-        "required": [
-          "creationParms",
-          "processParms",
-          "shipment"
-        ],
-        "xml": {
-          "name": "createShipmentRequestDTO"
-        }
-      },
-      "deleteItemResponseDTO": {
+      "DLDeleteItemResponseDTO": {
         "type": "object",
         "description": "Response DTO for the deleteItem business facade method",
         "properties": {
@@ -4199,7 +4297,7 @@
           "name": "deleteItemResponseDTO"
         }
       },
-      "deleteItemRequestDTO": {
+      "DLDeleteItemRequestDTO": {
         "type": "object",
         "description": "Request DTO for the deleteItem business facade method",
         "properties": {
@@ -4242,7 +4340,7 @@
           "name": "deleteItemRequestDTO"
         }
       },
-      "deletePackageResponseDTO": {
+      "DLDeletePackageResponseDTO": {
         "type": "object",
         "description": "Response DTO for the deletePackage business facade method",
         "properties": {
@@ -4273,28 +4371,7 @@
           "name": "deletePackageResponseDTO"
         }
       },
-      "DLPackageReferenceDTO": {
-        "type": "object",
-        "description": "DTO for uniquely identifying a package. The context settings <code>clientIdentCode</code> and <code>clientSystemId</code> are also applied when filled.",
-        "properties": {
-          "shipmentReference": {
-            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
-          },
-          "packageTransactionId": {
-            "type": "string",
-            "description": "The number of the client system uniquely referencing a package in a shipment. <p> length=50 </p>"
-          },
-          "referenceNumber1": {
-            "type": "string",
-            "description": "Another package reference number. May be used, when a package was not created by the client system and therefore has no <code>packageTransactionId</code>. If both fields are filled, they both must match the package. <p> length=50 </p>"
-          }
-        },
-        "required": [
-          "packageTransactionId",
-          "shipmentReference"
-        ]
-      },
-      "deletePackageRequestDTO": {
+      "DLDeletePackageRequestDTO": {
         "type": "object",
         "description": "Request DTO for the deletePackage business facade method",
         "properties": {
@@ -4337,7 +4414,28 @@
           "name": "deletePackageRequestDTO"
         }
       },
-      "deletePickupResponseDTO": {
+      "DLPackageReferenceDTO": {
+        "type": "object",
+        "description": "DTO for uniquely identifying a package. The context settings <code>clientIdentCode</code> and <code>clientSystemId</code> are also applied when filled.",
+        "properties": {
+          "shipmentReference": {
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
+          },
+          "packageTransactionId": {
+            "type": "string",
+            "description": "The number of the client system uniquely referencing a package in a shipment. <p> length=50 </p>"
+          },
+          "referenceNumber1": {
+            "type": "string",
+            "description": "Another package reference number. May be used, when a package was not created by the client system and therefore has no <code>packageTransactionId</code>. If both fields are filled, they both must match the package. <p> length=50 </p>"
+          }
+        },
+        "required": [
+          "packageTransactionId",
+          "shipmentReference"
+        ]
+      },
+      "DLDeletePickupResponseDTO": {
         "type": "object",
         "description": "Response DTO for the cancelPickup business facade method",
         "properties": {
@@ -4368,25 +4466,7 @@
           "name": "deletePickupResponseDTO"
         }
       },
-      "DLPickupReferenceDTO": {
-        "type": "object",
-        "description": "DTO for uniquely identifying a shipment pickup within a client.",
-        "properties": {
-          "transactionId": {
-            "type": "string",
-            "description": "The transaction id of the pickup given by the client system.<br> May be null, when the referenced pickup was not initially created by the client system. <p> length=250 </p>"
-          },
-          "referenceNumber1": {
-            "type": "string",
-            "description": "Another client system system reference number for the pickup. <p> length=50 </p>"
-          },
-          "pickupNumber": {
-            "type": "string",
-            "description": "The number of the pickup given by the carrier engine.<br> May be null, when the referenced pickup was not initially created by the carrier engine. <p> length=20 </p>"
-          }
-        }
-      },
-      "deletePickupRequestDTO": {
+      "DLDeletePickupRequestDTO": {
         "type": "object",
         "description": "Request DTO for the cancelShipment business facade method",
         "properties": {
@@ -4429,6 +4509,24 @@
           "name": "deletePickupRequestDTO"
         }
       },
+      "DLPickupReferenceDTO": {
+        "type": "object",
+        "description": "DTO for uniquely identifying a shipment pickup within a client.",
+        "properties": {
+          "transactionId": {
+            "type": "string",
+            "description": "The transaction id of the pickup given by the client system.<br> May be null, when the referenced pickup was not initially created by the client system. <p> length=250 </p>"
+          },
+          "referenceNumber1": {
+            "type": "string",
+            "description": "Another client system system reference number for the pickup. <p> length=50 </p>"
+          },
+          "pickupNumber": {
+            "type": "string",
+            "description": "The number of the pickup given by the carrier engine.<br> May be null, when the referenced pickup was not initially created by the carrier engine. <p> length=20 </p>"
+          }
+        }
+      },
       "DLCarrierListItemDTO": {
         "type": "object",
         "description": "Minimum carrier info to use in lists.",
@@ -4458,7 +4556,7 @@
           }
         }
       },
-      "getAllCarriersResponseDTO": {
+      "DLGetAllCarriersResponseDTO": {
         "type": "object",
         "description": "Response DTO containing a list of available carrier for a client.",
         "properties": {
@@ -4496,7 +4594,7 @@
           "name": "getAllCarriersResponseDTO"
         }
       },
-      "getAllCarriersRequestDTO": {
+      "DLGetAllCarriersRequestDTO": {
         "type": "object",
         "description": "Request DTO to retrieve the codes and names of all available carriers for a client.",
         "properties": {
@@ -4664,69 +4762,7 @@
           }
         }
       },
-      "DLServiceDTO": {
-        "type": "object",
-        "description": "Information about a service a carrier offers.",
-        "properties": {
-          "identCode": {
-            "type": "string",
-            "description": "The identCode of the entry. <p>length=50</p>"
-          },
-          "descriptions": {
-            "type": "array",
-            "description": "The description of the entry in the requested result languages.",
-            "items": {
-              "$ref": "#/components/schemas/TextInLanguageDTO"
-            }
-          },
-          "isInternationalAllowed": {
-            "type": "boolean",
-            "description": "Returns true when service is available for international transports."
-          },
-          "isDomesticAllowed": {
-            "type": "boolean",
-            "description": "Returns true when service is available for domestic transports."
-          },
-          "isPackageOriented": {
-            "type": "boolean",
-            "description": "Returns true when service is package oriented."
-          },
-          "isDocumentService": {
-            "type": "boolean",
-            "description": "Returns true when service is used for the transport of documents."
-          },
-          "isGoodsService": {
-            "type": "boolean",
-            "description": "Returns true when service is used for the transport of goods."
-          },
-          "isFixedDateService": {
-            "type": "boolean",
-            "description": "Returns true when service allows a fixed date delivery."
-          }
-        }
-      },
-      "DLValueAddedServiceDTO": {
-        "type": "object",
-        "description": "Response information about a value added service.",
-        "properties": {
-          "identCode": {
-            "type": "string",
-            "description": "The identCode of the entry. <p>length=50</p>"
-          },
-          "descriptions": {
-            "type": "array",
-            "description": "The description of the entry in the requested result languages.",
-            "items": {
-              "$ref": "#/components/schemas/TextInLanguageDTO"
-            }
-          },
-          "valueAddedServiceType": {
-            "type": "string",
-            "description": "The type of the value added service. Possible values: <p> <li>COD cash on delivery <li>NONE no special type <li>DEL_CONF delivery confirmation <li>COLL_BOOKING collection booking <li>IRR_PICKUP irregular pickup <li>REQ_DELDATE requested delivery date <li>ADD_INS additional (extra) insurance <li>SAT_DEL Saturday delivery <li>UPL_DOCS Upload Documents <li>NOTIFY Notification <li>RETURN_DEMAND Return (on demand) <li>RETURN_ENCL Return (enclosed)</p> <p> length=20 </p>"
-          }
-        }
-      },
-      "getCarrierPortfolioDetailsResponseDTO": {
+      "DLGetCarrierPortfolioDetailsResponseDTO": {
         "type": "object",
         "description": "Response DTO for all available carriers with their detail information.",
         "properties": {
@@ -4756,7 +4792,7 @@
             "type": "array",
             "description": "The list of all requested carriers with their detail information.",
             "items": {
-              "$ref": "#/components/schemas/getCarrierPropertiesResponseDTO"
+              "$ref": "#/components/schemas/DLGetCarrierPropertiesResponseDTO"
             }
           }
         },
@@ -4764,7 +4800,7 @@
           "name": "getCarrierPortfolioDetailsResponseDTO"
         }
       },
-      "getCarrierPropertiesResponseDTO": {
+      "DLGetCarrierPropertiesResponseDTO": {
         "type": "object",
         "description": "Response DTO containing the properties of a specific carrier.",
         "properties": {
@@ -4878,7 +4914,69 @@
           "name": "getCarrierPropertiesResponseDTO"
         }
       },
-      "getCarrierPortfolioDetailsRequestDTO": {
+      "DLServiceDTO": {
+        "type": "object",
+        "description": "Information about a service a carrier offers.",
+        "properties": {
+          "identCode": {
+            "type": "string",
+            "description": "The identCode of the entry. <p>length=50</p>"
+          },
+          "descriptions": {
+            "type": "array",
+            "description": "The description of the entry in the requested result languages.",
+            "items": {
+              "$ref": "#/components/schemas/TextInLanguageDTO"
+            }
+          },
+          "isInternationalAllowed": {
+            "type": "boolean",
+            "description": "Returns true when service is available for international transports."
+          },
+          "isDomesticAllowed": {
+            "type": "boolean",
+            "description": "Returns true when service is available for domestic transports."
+          },
+          "isPackageOriented": {
+            "type": "boolean",
+            "description": "Returns true when service is package oriented."
+          },
+          "isDocumentService": {
+            "type": "boolean",
+            "description": "Returns true when service is used for the transport of documents."
+          },
+          "isGoodsService": {
+            "type": "boolean",
+            "description": "Returns true when service is used for the transport of goods."
+          },
+          "isFixedDateService": {
+            "type": "boolean",
+            "description": "Returns true when service allows a fixed date delivery."
+          }
+        }
+      },
+      "DLValueAddedServiceDTO": {
+        "type": "object",
+        "description": "Response information about a value added service.",
+        "properties": {
+          "identCode": {
+            "type": "string",
+            "description": "The identCode of the entry. <p>length=50</p>"
+          },
+          "descriptions": {
+            "type": "array",
+            "description": "The description of the entry in the requested result languages.",
+            "items": {
+              "$ref": "#/components/schemas/TextInLanguageDTO"
+            }
+          },
+          "valueAddedServiceType": {
+            "type": "string",
+            "description": "The type of the value added service. Possible values: <p> <li>COD cash on delivery <li>NONE no special type <li>DEL_CONF delivery confirmation <li>COLL_BOOKING collection booking <li>IRR_PICKUP irregular pickup <li>REQ_DELDATE requested delivery date <li>ADD_INS additional (extra) insurance <li>SAT_DEL Saturday delivery <li>UPL_DOCS Upload Documents <li>NOTIFY Notification <li>RETURN_DEMAND Return (on demand) <li>RETURN_ENCL Return (enclosed) <li>MINIMUM_VALIDATION Minimum validation</p> <p> length=20 </p>"
+          }
+        }
+      },
+      "DLGetCarrierPortfolioDetailsRequestDTO": {
         "type": "object",
         "description": "Response DTO for carrier properties for all carriers",
         "properties": {
@@ -4970,7 +5068,7 @@
           }
         }
       },
-      "getCarrierPortfolioNamesResponseDTO": {
+      "DLGetCarrierPortfolioNamesResponseDTO": {
         "type": "object",
         "description": "Response DTO containing the codes and names of all available carriers.",
         "properties": {
@@ -5008,7 +5106,7 @@
           "name": "getCarrierPortfolioNamesResponseDTO"
         }
       },
-      "getCarrierPortfolioNamesRequestDTO": {
+      "DLGetCarrierPortfolioNamesRequestDTO": {
         "type": "object",
         "description": "Request DTO to retrieve the codes and names of all available carriers.",
         "properties": {
@@ -5053,7 +5151,7 @@
           "name": "getCarrierPortfolioNamesRequestDTO"
         }
       },
-      "getCarrierPropertiesRequestDTO": {
+      "DLGetCarrierPropertiesRequestDTO": {
         "type": "object",
         "description": "Request DTO to retrieve various properties for a specific carrier.",
         "properties": {
@@ -5095,6 +5193,44 @@
         ],
         "xml": {
           "name": "getCarrierPropertiesRequestDTO"
+        }
+      },
+      "DLGetPickupsResponseDTO": {
+        "type": "object",
+        "description": "Data Transfer Object for pickup search result.",
+        "properties": {
+          "hasErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>An error usually means that the request could not be performed.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": false
+          },
+          "hasOnlyRetryableErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
+          },
+          "hasWarnings": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
+          },
+          "messages": {
+            "type": "array",
+            "description": "<p>Error or warning messages at the request level.</p><p>There may be additional messages[] arrays at lower data levels as specified in the documentation.</p>",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessageDTO"
+            }
+          },
+          "pickups": {
+            "type": "array",
+            "description": "The resulting pickups.",
+            "items": {
+              "$ref": "#/components/schemas/DLPickupResponseDataDTO"
+            }
+          }
+        },
+        "xml": {
+          "name": "getPickupsResponseDTO"
         }
       },
       "DLPickupResponseDataDTO": {
@@ -5302,42 +5438,59 @@
           }
         }
       },
-      "getPickupsResponseDTO": {
+      "DLGetPickupsRequestDTO": {
         "type": "object",
-        "description": "Data Transfer Object for pickup search result.",
+        "description": "DTO to search for pickups and request detail information about them.",
         "properties": {
-          "hasErrors": {
-            "type": "boolean",
-            "description": "<p>True, if there are any error messages.</p><p>An error usually means that the request could not be performed.</p><p>Error details are provided in the messages[] array.</p>",
-            "example": false
+          "clientSystemId": {
+            "type": "string",
+            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
+            "example": "TEST_ID"
           },
-          "hasOnlyRetryableErrors": {
-            "type": "boolean",
-            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
-            "example": true
+          "clientIdentCode": {
+            "type": "string",
+            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
+            "example": "APITEST"
           },
-          "hasWarnings": {
-            "type": "boolean",
-            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
-            "example": true
+          "userName": {
+            "type": "string",
+            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
+            "example": "API_TEST"
           },
-          "messages": {
+          "resultLanguageIsoCodes": {
             "type": "array",
-            "description": "<p>Error or warning messages at the request level.</p><p>There may be additional messages[] arrays at lower data levels as specified in the documentation.</p>",
+            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+            "example": [
+              "en",
+              "de"
+            ],
             "items": {
-              "$ref": "#/components/schemas/ResponseMessageDTO"
+              "type": "string",
+              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+              "example": "[\"en\",\"de\"]"
             }
           },
-          "pickups": {
+          "pickupReferences": {
             "type": "array",
-            "description": "The resulting pickups.",
+            "description": "<p> The list of pickups references for which detail information is requested. Cannot be used with the filter at the same time. </p>",
             "items": {
-              "$ref": "#/components/schemas/DLPickupResponseDataDTO"
+              "$ref": "#/components/schemas/DLPickupReferenceDTO"
             }
+          },
+          "includeDocuments": {
+            "type": "boolean",
+            "description": "Controls, if the documents should be included in the response of each pickup. Default is 'false'."
+          },
+          "includeDriverSignature": {
+            "type": "boolean",
+            "description": "Controls, if the signature of the driver should be included in the response of each pickup. Default is 'false'."
+          },
+          "filter": {
+            "$ref": "#/components/schemas/DLPickupFilterDTO"
           }
         },
         "xml": {
-          "name": "getPickupsResponseDTO"
+          "name": "getPickupsRequestDTO"
         }
       },
       "DLPickupFilterDTO": {
@@ -5405,59 +5558,42 @@
           }
         }
       },
-      "getPickupsRequestDTO": {
+      "DLGetShipmentsResponseDTO": {
         "type": "object",
-        "description": "DTO to search for pickups and request detail information about them.",
+        "description": "Data Transfer Object for shipment search result.",
         "properties": {
-          "clientSystemId": {
-            "type": "string",
-            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
-            "example": "TEST_ID"
+          "hasErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>An error usually means that the request could not be performed.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": false
           },
-          "clientIdentCode": {
-            "type": "string",
-            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
-            "example": "APITEST"
+          "hasOnlyRetryableErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
           },
-          "userName": {
-            "type": "string",
-            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
-            "example": "API_TEST"
+          "hasWarnings": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
           },
-          "resultLanguageIsoCodes": {
+          "messages": {
             "type": "array",
-            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-            "example": [
-              "en",
-              "de"
-            ],
+            "description": "<p>Error or warning messages at the request level.</p><p>There may be additional messages[] arrays at lower data levels as specified in the documentation.</p>",
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "$ref": "#/components/schemas/ResponseMessageDTO"
             }
           },
-          "pickupReferences": {
+          "shipments": {
             "type": "array",
-            "description": "<p> The list of pickups references for which detail information is requested. Cannot be used with the filter at the same time. </p>",
+            "description": "The resulting shipments.",
             "items": {
-              "$ref": "#/components/schemas/DLPickupReferenceDTO"
+              "$ref": "#/components/schemas/DLShipmentResponseDataDTO"
             }
-          },
-          "includeDocuments": {
-            "type": "boolean",
-            "description": "Controls, if the documents should be included in the response of each pickup. Default is 'false'."
-          },
-          "includeDriverSignature": {
-            "type": "boolean",
-            "description": "Controls, if the signature of the driver should be included in the response of each pickup. Default is 'false'."
-          },
-          "filter": {
-            "$ref": "#/components/schemas/DLPickupFilterDTO"
           }
         },
         "xml": {
-          "name": "getPickupsRequestDTO"
+          "name": "getShipmentsResponseDTO"
         }
       },
       "DLHazardousGoodsItemResponseDataDTO": {
@@ -6245,42 +6381,59 @@
           }
         }
       },
-      "getShipmentsResponseDTO": {
+      "DLGetShipmentsRequestDTO": {
         "type": "object",
-        "description": "Data Transfer Object for shipment search result.",
+        "description": "DTO to search for shipments and request detail information about them.",
         "properties": {
-          "hasErrors": {
-            "type": "boolean",
-            "description": "<p>True, if there are any error messages.</p><p>An error usually means that the request could not be performed.</p><p>Error details are provided in the messages[] array.</p>",
-            "example": false
+          "clientSystemId": {
+            "type": "string",
+            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
+            "example": "TEST_ID"
           },
-          "hasOnlyRetryableErrors": {
-            "type": "boolean",
-            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
-            "example": true
+          "clientIdentCode": {
+            "type": "string",
+            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
+            "example": "APITEST"
           },
-          "hasWarnings": {
-            "type": "boolean",
-            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
-            "example": true
+          "userName": {
+            "type": "string",
+            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
+            "example": "API_TEST"
           },
-          "messages": {
+          "resultLanguageIsoCodes": {
             "type": "array",
-            "description": "<p>Error or warning messages at the request level.</p><p>There may be additional messages[] arrays at lower data levels as specified in the documentation.</p>",
+            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+            "example": [
+              "en",
+              "de"
+            ],
             "items": {
-              "$ref": "#/components/schemas/ResponseMessageDTO"
+              "type": "string",
+              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+              "example": "[\"en\",\"de\"]"
             }
           },
-          "shipments": {
+          "shipmentReferences": {
             "type": "array",
-            "description": "The resulting shipments.",
+            "description": "<p> The list of shipment references for which detail information is requested. Cannot be used with the filter at the same time.  </p>",
             "items": {
-              "$ref": "#/components/schemas/DLShipmentResponseDataDTO"
+              "$ref": "#/components/schemas/DLShipmentReferenceDTO"
             }
+          },
+          "includeDocuments": {
+            "type": "boolean",
+            "description": "Controls, if the (label) documents should be included in the response of each shipment. Default is 'false'."
+          },
+          "withCanceledShipments": {
+            "type": "boolean",
+            "description": "Controls, if canceled shipments should also be returned. Default is 'true'."
+          },
+          "filter": {
+            "$ref": "#/components/schemas/DLShipmentFilterDTO"
           }
         },
         "xml": {
-          "name": "getShipmentsResponseDTO"
+          "name": "getShipmentsRequestDTO"
         }
       },
       "DLShipmentFilterDTO": {
@@ -6336,62 +6489,7 @@
           }
         }
       },
-      "getShipmentsRequestDTO": {
-        "type": "object",
-        "description": "DTO to search for shipments and request detail information about them.",
-        "properties": {
-          "clientSystemId": {
-            "type": "string",
-            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
-            "example": "TEST_ID"
-          },
-          "clientIdentCode": {
-            "type": "string",
-            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
-            "example": "APITEST"
-          },
-          "userName": {
-            "type": "string",
-            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
-            "example": "API_TEST"
-          },
-          "resultLanguageIsoCodes": {
-            "type": "array",
-            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-            "example": [
-              "en",
-              "de"
-            ],
-            "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
-            }
-          },
-          "shipmentReferences": {
-            "type": "array",
-            "description": "<p> The list of shipment references for which detail information is requested. Cannot be used with the filter at the same time.  </p>",
-            "items": {
-              "$ref": "#/components/schemas/DLShipmentReferenceDTO"
-            }
-          },
-          "includeDocuments": {
-            "type": "boolean",
-            "description": "Controls, if the (label) documents should be included in the response of each shipment. Default is 'false'."
-          },
-          "withCanceledShipments": {
-            "type": "boolean",
-            "description": "Controls, if canceled shipments should also be returned. Default is 'true'."
-          },
-          "filter": {
-            "$ref": "#/components/schemas/DLShipmentFilterDTO"
-          }
-        },
-        "xml": {
-          "name": "getShipmentsRequestDTO"
-        }
-      },
-      "processPackageResponseDTO": {
+      "DLProcessPackageResponseDTO": {
         "type": "object",
         "description": "Response DTO for the getPackageDocuments business facade method",
         "properties": {
@@ -6508,7 +6606,7 @@
           "workstationId"
         ]
       },
-      "processPackageRequestDTO": {
+      "DLProcessPackageRequestDTO": {
         "type": "object",
         "description": "Request DTO for the getPackageDocuments business facade method.",
         "properties": {
@@ -6568,7 +6666,7 @@
           "name": "processPackageRequestDTO"
         }
       },
-      "processPickupResponseDTO": {
+      "DLProcessPickupResponseDTO": {
         "type": "object",
         "description": "Response DTO for the printDocumentsForPickup business facade method",
         "properties": {
@@ -6615,7 +6713,7 @@
           }
         }
       },
-      "processPickupRequestDTO": {
+      "DLProcessPickupRequestDTO": {
         "type": "object",
         "description": "Request DTO for the printDocumentsForPickup business facade method",
         "properties": {
@@ -6675,7 +6773,7 @@
           "name": "processPickupRequestDTO"
         }
       },
-      "processShipmentResponseDTO": {
+      "DLProcessShipmentResponseDTO": {
         "type": "object",
         "description": "Response DTO for the processShipment business facade method.<br> For possible validation and preparation warnings and errors see DLCreateShipmentResponseDTO",
         "properties": {
@@ -6734,6 +6832,104 @@
         },
         "xml": {
           "name": "processShipmentResponseDTO"
+        }
+      },
+      "DLProcessShipmentRequestDTO": {
+        "type": "object",
+        "description": "Request DTO for the processShipment business facade method",
+        "properties": {
+          "clientSystemId": {
+            "type": "string",
+            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
+            "example": "TEST_ID"
+          },
+          "clientIdentCode": {
+            "type": "string",
+            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
+            "example": "APITEST"
+          },
+          "userName": {
+            "type": "string",
+            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
+            "example": "API_TEST"
+          },
+          "resultLanguageIsoCodes": {
+            "type": "array",
+            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+            "example": [
+              "en",
+              "de"
+            ],
+            "items": {
+              "type": "string",
+              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+              "example": "[\"en\",\"de\"]"
+            }
+          },
+          "creationParms": {
+            "$ref": "#/components/schemas/DLShipmentCreationParmsDTO"
+          },
+          "shipmentReference": {
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
+          },
+          "shipmentTotals": {
+            "$ref": "#/components/schemas/DLShipmentTotalsRequestDataDTO"
+          },
+          "shipmentUpdateData": {
+            "$ref": "#/components/schemas/DLShipmentUpdateRequestDataDTO"
+          },
+          "packages": {
+            "type": "array",
+            "description": "The packages to be added to the shipment. The field may be empty when only processing is required and no new packages are to be added to the shipment.",
+            "items": {
+              "$ref": "#/components/schemas/DLPackageRequestDataDTO"
+            }
+          },
+          "packageCumulations": {
+            "type": "array",
+            "description": "The package cumulations to be added to the shipment. The field may be empty  when only processing is required and no new package cumulations are to be  added to the shipment.",
+            "items": {
+              "$ref": "#/components/schemas/DLPackageCumulationRequestDataDTO"
+            }
+          },
+          "items": {
+            "type": "array",
+            "description": "The items to be added to the shipment. The field may be empty when only processing is required and no new items are to be added to the shipment.",
+            "items": {
+              "$ref": "#/components/schemas/DLShipmentItemRequestDataDTO"
+            }
+          },
+          "referencesTexts": {
+            "type": "array",
+            "description": "Further references and texts for the shipment. Multiple references or texts with same type are allowed (e.g. to specify all different delivery note numbers contained in the shipment).",
+            "items": {
+              "$ref": "#/components/schemas/DLReferenceTextDTO"
+            }
+          },
+          "transportEquipments": {
+            "type": "array",
+            "description": "The transport equipments to be added to the shipment. The field may be empty when only processing is required and no new transport equipments are to be added to the shipment.",
+            "items": {
+              "$ref": "#/components/schemas/DLTransportEquipmentDTO"
+            }
+          },
+          "processParms": {
+            "$ref": "#/components/schemas/DLShipmentProcessParmsDTO"
+          },
+          "carrierInfoTexts": {
+            "type": "array",
+            "description": "Carrier info texts for the shipment.",
+            "items": {
+              "$ref": "#/components/schemas/DLShipmentCarrierInfoTextDTO"
+            }
+          }
+        },
+        "required": [
+          "processParms",
+          "shipmentReference"
+        ],
+        "xml": {
+          "name": "processShipmentRequestDTO"
         }
       },
       "DLShipmentUpdateRequestDataDTO": {
@@ -6835,105 +7031,7 @@
           }
         }
       },
-      "processShipmentRequestDTO": {
-        "type": "object",
-        "description": "Request DTO for the processShipment business facade method",
-        "properties": {
-          "clientSystemId": {
-            "type": "string",
-            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
-            "example": "TEST_ID"
-          },
-          "clientIdentCode": {
-            "type": "string",
-            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
-            "example": "APITEST"
-          },
-          "userName": {
-            "type": "string",
-            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
-            "example": "API_TEST"
-          },
-          "resultLanguageIsoCodes": {
-            "type": "array",
-            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-            "example": [
-              "en",
-              "de"
-            ],
-            "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
-            }
-          },
-          "creationParms": {
-            "$ref": "#/components/schemas/DLShipmentCreationParmsDTO"
-          },
-          "shipmentReference": {
-            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
-          },
-          "shipmentTotals": {
-            "$ref": "#/components/schemas/DLShipmentTotalsRequestDataDTO"
-          },
-          "shipmentUpdateData": {
-            "$ref": "#/components/schemas/DLShipmentUpdateRequestDataDTO"
-          },
-          "packages": {
-            "type": "array",
-            "description": "The packages to be added to the shipment. The field may be empty when only processing is required and no new packages are to be added to the shipment.",
-            "items": {
-              "$ref": "#/components/schemas/DLPackageRequestDataDTO"
-            }
-          },
-          "packageCumulations": {
-            "type": "array",
-            "description": "The package cumulations to be added to the shipment. The field may be empty  when only processing is required and no new package cumulations are to be  added to the shipment.",
-            "items": {
-              "$ref": "#/components/schemas/DLPackageCumulationRequestDataDTO"
-            }
-          },
-          "items": {
-            "type": "array",
-            "description": "The items to be added to the shipment. The field may be empty when only processing is required and no new items are to be added to the shipment.",
-            "items": {
-              "$ref": "#/components/schemas/DLShipmentItemRequestDataDTO"
-            }
-          },
-          "referencesTexts": {
-            "type": "array",
-            "description": "Further references and texts for the shipment. Multiple references or texts with same type are allowed (e.g. to specify all different delivery note numbers contained in the shipment).",
-            "items": {
-              "$ref": "#/components/schemas/DLReferenceTextDTO"
-            }
-          },
-          "transportEquipments": {
-            "type": "array",
-            "description": "The transport equipments to be added to the shipment. The field may be empty when only processing is required and no new transport equipments are to be added to the shipment.",
-            "items": {
-              "$ref": "#/components/schemas/DLTransportEquipmentDTO"
-            }
-          },
-          "processParms": {
-            "$ref": "#/components/schemas/DLShipmentProcessParmsDTO"
-          },
-          "carrierInfoTexts": {
-            "type": "array",
-            "description": "Carrier info texts for the shipment.",
-            "items": {
-              "$ref": "#/components/schemas/DLShipmentCarrierInfoTextDTO"
-            }
-          }
-        },
-        "required": [
-          "processParms",
-          "shipmentReference"
-        ],
-        "xml": {
-          "name": "processShipmentRequestDTO"
-        }
-      },
-      "syncPickupsResponseDTO": {
+      "DLSyncPickupsResponseDTO": {
         "type": "object",
         "description": "Data Transfer Object for a pickup synchronize result.",
         "properties": {
@@ -6979,7 +7077,7 @@
           "name": "syncPickupsResponseDTO"
         }
       },
-      "syncPickupsRequestDTO": {
+      "DLSyncPickupsRequestDTO": {
         "type": "object",
         "description": "Request DTO for pickup synchronization.",
         "properties": {
@@ -7033,7 +7131,7 @@
           "name": "syncPickupsRequestDTO"
         }
       },
-      "syncShipmentsResponseDTO": {
+      "DLSyncShipmentsResponseDTO": {
         "type": "object",
         "description": "Data Transfer Object for a shipment synchronize result.",
         "properties": {
@@ -7079,7 +7177,7 @@
           "name": "syncShipmentsResponseDTO"
         }
       },
-      "syncShipmentsRequestDTO": {
+      "DLSyncShipmentsRequestDTO": {
         "type": "object",
         "description": "Request DTO for shipment synchronization.",
         "properties": {
@@ -7129,7 +7227,7 @@
           "name": "syncShipmentsRequestDTO"
         }
       },
-      "updateCustomsDataResponseDTO": {
+      "DLUpdateCustomsDataResponseDTO": {
         "type": "object",
         "description": "Response DTO for the updateCustomsData business facade method",
         "properties": {
@@ -7188,59 +7286,7 @@
           }
         }
       },
-      "DLUpdateCustomsItemRequestDataDTO": {
-        "type": "object",
-        "description": "DTO for a few shipment item fields which can be updated after the initial creation of the shipment. This DTO includes customs data ONLY. No item net / gross weight or quantity is included, because this causes problems with packed items and is in most cases incompatible with the default shipping process. E.g. gross weight is often printed onto the label, updating weight after label printing is too late.",
-        "properties": {
-          "shipmentItemReference": {
-            "$ref": "#/components/schemas/DLShipmentItemReferenceUCDDTO"
-          },
-          "customsTariffNumber": {
-            "type": "string",
-            "description": "The customs tariff number of the shipping item's contents. <p> length=11 </p>"
-          },
-          "description": {
-            "type": "string",
-            "description": "The shipping item's description. <p> length=250 </p>"
-          },
-          "countryOfOriginsISOCode": {
-            "type": "string",
-            "description": "Country of origins. <p> length=2 </p>"
-          },
-          "certificateOfOrigins": {
-            "type": "string",
-            "description": "Certificate of origins. <p> length=50 </p>"
-          },
-          "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
-          },
-          "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
-          },
-          "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
-          }
-        },
-        "required": [
-          "shipmentItemReference"
-        ]
-      },
-      "DLUpdateCustomsShipmentRequestDataDTO": {
-        "type": "object",
-        "description": "Request DTO for a few shipment fields which can be updated after the initial creation of the shipment.",
-        "properties": {
-          "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
-          },
-          "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
-          },
-          "invoiceValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
-          }
-        }
-      },
-      "updateCustomsDataRequestDTO": {
+      "DLUpdateCustomsDataRequestDTO": {
         "type": "object",
         "description": "Request DTO for the updateCustomsData business facade method",
         "properties": {
@@ -7303,7 +7349,59 @@
           "name": "updateCustomsDataRequestDTO"
         }
       },
-      "validateShipmentReponseDTO": {
+      "DLUpdateCustomsItemRequestDataDTO": {
+        "type": "object",
+        "description": "DTO for a few shipment item fields which can be updated after the initial creation of the shipment. This DTO includes customs data ONLY. No item net / gross weight or quantity is included, because this causes problems with packed items and is in most cases incompatible with the default shipping process. E.g. gross weight is often printed onto the label, updating weight after label printing is too late.",
+        "properties": {
+          "shipmentItemReference": {
+            "$ref": "#/components/schemas/DLShipmentItemReferenceUCDDTO"
+          },
+          "customsTariffNumber": {
+            "type": "string",
+            "description": "The customs tariff number of the shipping item's contents. <p> length=11 </p>"
+          },
+          "description": {
+            "type": "string",
+            "description": "The shipping item's description. <p> length=250 </p>"
+          },
+          "countryOfOriginsISOCode": {
+            "type": "string",
+            "description": "Country of origins. <p> length=2 </p>"
+          },
+          "certificateOfOrigins": {
+            "type": "string",
+            "description": "Certificate of origins. <p> length=50 </p>"
+          },
+          "customsValue": {
+            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+          },
+          "goodsValue": {
+            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+          },
+          "additionalValues": {
+            "$ref": "#/components/schemas/GenericDataRecordDTO"
+          }
+        },
+        "required": [
+          "shipmentItemReference"
+        ]
+      },
+      "DLUpdateCustomsShipmentRequestDataDTO": {
+        "type": "object",
+        "description": "Request DTO for a few shipment fields which can be updated after the initial creation of the shipment.",
+        "properties": {
+          "customsValue": {
+            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+          },
+          "goodsValue": {
+            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+          },
+          "invoiceValue": {
+            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+          }
+        }
+      },
+      "DLValidateShipmentResponseDTO": {
         "type": "object",
         "description": "Possible Result Values: VALIDATION_FAILED VALIDATION_OK VALIDATION_REQUEST_NOT_SUPPORTED VALIDATION_MISSING_DATA VALIDATION_NO_CHECK_SELECTED VALIDATION_EXECUTION_ERROR",
         "properties": {
@@ -7351,7 +7449,7 @@
           "validationMode"
         ]
       },
-      "validateShipmentRequestDTO": {
+      "DLValidateShipmentRequestDTO": {
         "type": "object",
         "description": "DTO class for shipment validation request data.",
         "properties": {
@@ -7435,17 +7533,17 @@
           }
         }
       },
-      "ApplicationFacade": {
+      "ApplicationFacadeDTO": {
         "type": "object",
         "description": "A data transfer object which describes an UI API. There are various techniques possible how to \"open\" the \"application\" on the client; typically only one of the fields is filled, but when more than one possibility is not null the client may choose the type most suitable. Supported types include <ul><li>HTTP</li> - use when field 'httpUrl' is not null. Open a browser and navigate to the url given. When urlCloseToken is given, you can monitor the browsers pages and when you find that it navigates to an url equal to urlCloseToken, the browser can be closed by the application. <li>Start executable</li> - use when field 'executeProcess' is not null. Create a process as defined in the field 'executable', with the current directory as workDir (if specified). <li>Shell execute</li> - use when field 'shellExecute' is not null. Create a file in a temporary directory with name equal to that given in 'fileName', and fill it with the bytes given in 'contents', and then invoke \"ShellExecute\" to let the shell open the application corresponding to the file type. </ul>",
         "properties": {
-          "httpUrl": {
-            "type": "string",
-            "description": "Used when the UI API is to be opened in a browser an http:// or https:// URL which is a web side to display the UI API."
-          },
           "sessionid": {
             "type": "string",
             "description": "The session id of the UI API which may be used as a parameter to read results from the application facade. (Currently not supported.)"
+          },
+          "httpUrl": {
+            "type": "string",
+            "description": "Used when the UI API is to be opened in a browser an http:// or https:// URL which is a web side to display the UI API."
           },
           "urlCloseToken": {
             "type": "string",
@@ -7466,40 +7564,10 @@
         "type": "object",
         "description": "A data transfer object to be the parameter of the method IFoundationBF.getNewApplicationFacade()",
         "properties": {
-          "acceptTechnology": {
-            "type": "string",
-            "description": "Specify which technology the clients wants to access the application; one token (or several, separated by semicolon) - the server may chose to ignore this possible tokens are specific for each server technology, XNSG-Servers currently honor strings from the GUIInvocationTechnology enum (e.g.: VAADIN) if <code>null</code> a default technology is chosen.",
-            "example": "VAADIN"
-          },
           "client": {
             "type": "string",
             "description": "The client of the new session. This should be a legal identCode of a client in the system.<br> If it is NOT a legal identCode of a client in the system, the user will see a login prompt before he is able to see the UI API. (See IFoundationBF.getAllClients()). <br>When the UI API web service call is authenticated, this value will be checked against the authentication data and the call is rejected if it does not match.",
             "example": "APITEST"
-          },
-          "displayFullWorkplace": {
-            "type": "boolean",
-            "description": "<code>true</code> to display the complete workspace (central, user and info panel). Use false or null to display only the single ac.",
-            "example": true
-          },
-          "isACEmbedded": {
-            "type": "boolean",
-            "description": "<code>true</code> to display header and statusbar, false if ac should be embedded in another",
-            "example": true
-          },
-          "displayTitlebar": {
-            "type": "boolean",
-            "description": "<code>true</code> to display header, <code>false</code> if ac should not show header",
-            "example": true
-          },
-          "displayStatusbar": {
-            "type": "boolean",
-            "description": "<code>true</code> to display statusbar, <code>false</code>",
-            "example": true
-          },
-          "language": {
-            "type": "string",
-            "description": "The two letter ISO code of the language of the new session.",
-            "example": "en"
           },
           "user": {
             "type": "string",
@@ -7514,10 +7582,40 @@
             "type": "string",
             "description": "The unique workstation agent session identifier of the new session.<br>It defines a concrete and already established session agent bound to the local workstation e.g. locally started service agent.<br>The workstation agent is used for accessing local peripheries (e.g. local printers).<p><b>The caller must ensure that the corresponding session has been established</b></p>"
           },
+          "language": {
+            "type": "string",
+            "description": "The two letter ISO code of the language of the new session.",
+            "example": "en"
+          },
+          "displayFullWorkplace": {
+            "type": "boolean",
+            "description": "<code>true</code> to display the complete workspace (central, user and info panel). Use false or null to display only the single ac.",
+            "example": true
+          },
+          "isACEmbedded": {
+            "type": "boolean",
+            "description": "<code>true</code> to display header and statusbar, false if ac should be embedded in another",
+            "example": true
+          },
+          "displayStatusbar": {
+            "type": "boolean",
+            "description": "<code>true</code> to display statusbar, <code>false</code>",
+            "example": true
+          },
+          "displayTitlebar": {
+            "type": "boolean",
+            "description": "<code>true</code> to display header, <code>false</code> if ac should not show header",
+            "example": true
+          },
           "stylevariant": {
             "type": "string",
             "description": "Deprecated.",
             "example": "NEUTRAL"
+          },
+          "acceptTechnology": {
+            "type": "string",
+            "description": "Specify which technology the clients wants to access the application; one token (or several, separated by semicolon) - the server may chose to ignore this possible tokens are specific for each server technology, XNSG-Servers currently honor strings from the GUIInvocationTechnology enum (e.g.: VAADIN) if <code>null</code> a default technology is chosen.",
+            "example": "VAADIN"
           },
           "productname": {
             "type": "string",
@@ -7569,16 +7667,16 @@
       "IAdditionalUserInfo": {
         "type": "object",
         "properties": {
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
+          "email": {
             "type": "string"
           },
           "externalUser": {
             "type": "boolean"
           },
-          "email": {
+          "lastName": {
+            "type": "string"
+          },
+          "firstName": {
             "type": "string"
           },
           "authToken": {
@@ -7612,9 +7710,6 @@
             "type": "integer",
             "format": "int64"
           },
-          "keyId": {
-            "type": "string"
-          },
           "tokenStringForLog": {
             "type": "string"
           },
@@ -7628,6 +7723,9 @@
             }
           },
           "audience": {
+            "type": "string"
+          },
+          "keyId": {
             "type": "string"
           },
           "jsonString": {
@@ -8441,10 +8539,10 @@
       "CommandInfo": {
         "type": "object",
         "properties": {
-          "commandClass": {
+          "commandName": {
             "type": "string"
           },
-          "commandName": {
+          "commandClass": {
             "type": "string"
           }
         }
@@ -8482,16 +8580,16 @@
           "outputStream": {
             "type": "object"
           },
-          "preferredCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
-          },
           "transferDataFlavors": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ActivationDataFlavor"
+            }
+          },
+          "preferredCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
             }
           },
           "allCommands": {
@@ -8752,6 +8850,10 @@
         "type": "object",
         "description": "This class holds version information about a solution or product in a server.",
         "properties": {
+          "version": {
+            "type": "string",
+            "description": "The version string of the solution/product. This String is typically of the form \"integer.integer.integer\"."
+          },
           "binaryVersion": {
             "type": "array",
             "description": "The version of the solution/product as numeric value. The main version is the first entry in the integer array.",
@@ -8760,10 +8862,6 @@
               "format": "int32",
               "description": "The version of the solution/product as numeric value. The main version is the first entry in the integer array."
             }
-          },
-          "version": {
-            "type": "string",
-            "description": "The version string of the solution/product. This String is typically of the form \"integer.integer.integer\"."
           }
         }
       },
@@ -9161,31 +9259,31 @@
             "type": "string",
             "description": "search category where this result belongs to"
           },
-          "depth": {
-            "type": "integer",
-            "format": "int32",
-            "description": "an integer >= 0 describing the hierarchical level of the result; it can be used to format the textual output"
+          "type": {
+            "type": "string",
+            "description": "type of result, e.g. class name of model object - defined within the category"
+          },
+          "state": {
+            "type": "string",
+            "description": "state of the item described by this result - possible values are defined within the category"
           },
           "key": {
             "type": "string",
             "description": "key of the object described by this item. - format defined within the category for each type"
+          },
+          "text": {
+            "type": "string",
+            "description": "explanation of this search result"
           },
           "relevance": {
             "type": "integer",
             "format": "int32",
             "description": "relevance of the result; an indication (in percent, ranging from 0 .. 100) of how much the result matches the query"
           },
-          "state": {
-            "type": "string",
-            "description": "state of the item described by this result - possible values are defined within the category"
-          },
-          "text": {
-            "type": "string",
-            "description": "explanation of this search result"
-          },
-          "type": {
-            "type": "string",
-            "description": "type of result, e.g. class name of model object - defined within the category"
+          "depth": {
+            "type": "integer",
+            "format": "int32",
+            "description": "an integer >= 0 describing the hierarchical level of the result; it can be used to format the textual output"
           }
         }
       },
@@ -9287,7 +9385,7 @@
           }
         }
       },
-      "getRolesResponseDTO": {
+      "GetRolesResponseDTO": {
         "type": "object",
         "description": "DTO for GetRoles response",
         "properties": {
@@ -10134,12 +10232,12 @@
             "format": "int64"
           },
           "oldestTime": {
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "date-time"
           },
           "newestTime": {
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
