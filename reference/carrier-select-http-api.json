@@ -1387,17 +1387,17 @@
           }
         }
       },
-      "ApplicationFacade": {
+      "ApplicationFacadeDTO": {
         "type": "object",
         "description": "A data transfer object which describes an UI API. There are various techniques possible how to \"open\" the \"application\" on the client; typically only one of the fields is filled, but when more than one possibility is not null the client may choose the type most suitable. Supported types include <ul><li>HTTP</li> - use when field 'httpUrl' is not null. Open a browser and navigate to the url given. When urlCloseToken is given, you can monitor the browsers pages and when you find that it navigates to an url equal to urlCloseToken, the browser can be closed by the application. <li>Start executable</li> - use when field 'executeProcess' is not null. Create a process as defined in the field 'executable', with the current directory as workDir (if specified). <li>Shell execute</li> - use when field 'shellExecute' is not null. Create a file in a temporary directory with name equal to that given in 'fileName', and fill it with the bytes given in 'contents', and then invoke \"ShellExecute\" to let the shell open the application corresponding to the file type. </ul>",
         "properties": {
-          "httpUrl": {
-            "type": "string",
-            "description": "Used when the UI API is to be opened in a browser an http:// or https:// URL which is a web side to display the UI API."
-          },
           "sessionid": {
             "type": "string",
             "description": "The session id of the UI API which may be used as a parameter to read results from the application facade. (Currently not supported.)"
+          },
+          "httpUrl": {
+            "type": "string",
+            "description": "Used when the UI API is to be opened in a browser an http:// or https:// URL which is a web side to display the UI API."
           },
           "urlCloseToken": {
             "type": "string",
@@ -1418,40 +1418,10 @@
         "type": "object",
         "description": "A data transfer object to be the parameter of the method IFoundationBF.getNewApplicationFacade()",
         "properties": {
-          "acceptTechnology": {
-            "type": "string",
-            "description": "Specify which technology the clients wants to access the application; one token (or several, separated by semicolon) - the server may chose to ignore this possible tokens are specific for each server technology, XNSG-Servers currently honor strings from the GUIInvocationTechnology enum (e.g.: VAADIN) if <code>null</code> a default technology is chosen.",
-            "example": "VAADIN"
-          },
           "client": {
             "type": "string",
             "description": "The client of the new session. This should be a legal identCode of a client in the system.<br> If it is NOT a legal identCode of a client in the system, the user will see a login prompt before he is able to see the UI API. (See IFoundationBF.getAllClients()). <br>When the UI API web service call is authenticated, this value will be checked against the authentication data and the call is rejected if it does not match.",
             "example": "APITEST"
-          },
-          "displayFullWorkplace": {
-            "type": "boolean",
-            "description": "<code>true</code> to display the complete workspace (central, user and info panel). Use false or null to display only the single ac.",
-            "example": true
-          },
-          "isACEmbedded": {
-            "type": "boolean",
-            "description": "<code>true</code> to display header and statusbar, false if ac should be embedded in another",
-            "example": true
-          },
-          "displayTitlebar": {
-            "type": "boolean",
-            "description": "<code>true</code> to display header, <code>false</code> if ac should not show header",
-            "example": true
-          },
-          "displayStatusbar": {
-            "type": "boolean",
-            "description": "<code>true</code> to display statusbar, <code>false</code>",
-            "example": true
-          },
-          "language": {
-            "type": "string",
-            "description": "The two letter ISO code of the language of the new session.",
-            "example": "en"
           },
           "user": {
             "type": "string",
@@ -1466,10 +1436,40 @@
             "type": "string",
             "description": "The unique workstation agent session identifier of the new session.<br>It defines a concrete and already established session agent bound to the local workstation e.g. locally started service agent.<br>The workstation agent is used for accessing local peripheries (e.g. local printers).<p><b>The caller must ensure that the corresponding session has been established</b></p>"
           },
+          "language": {
+            "type": "string",
+            "description": "The two letter ISO code of the language of the new session.",
+            "example": "en"
+          },
+          "displayFullWorkplace": {
+            "type": "boolean",
+            "description": "<code>true</code> to display the complete workspace (central, user and info panel). Use false or null to display only the single ac.",
+            "example": true
+          },
+          "isACEmbedded": {
+            "type": "boolean",
+            "description": "<code>true</code> to display header and statusbar, false if ac should be embedded in another",
+            "example": true
+          },
+          "displayStatusbar": {
+            "type": "boolean",
+            "description": "<code>true</code> to display statusbar, <code>false</code>",
+            "example": true
+          },
+          "displayTitlebar": {
+            "type": "boolean",
+            "description": "<code>true</code> to display header, <code>false</code> if ac should not show header",
+            "example": true
+          },
           "stylevariant": {
             "type": "string",
             "description": "Deprecated.",
             "example": "NEUTRAL"
+          },
+          "acceptTechnology": {
+            "type": "string",
+            "description": "Specify which technology the clients wants to access the application; one token (or several, separated by semicolon) - the server may chose to ignore this possible tokens are specific for each server technology, XNSG-Servers currently honor strings from the GUIInvocationTechnology enum (e.g.: VAADIN) if <code>null</code> a default technology is chosen.",
+            "example": "VAADIN"
           },
           "productname": {
             "type": "string",
@@ -1554,10 +1554,10 @@
           "type": {
             "type": "string"
           },
-          "algorithm": {
+          "issuer": {
             "type": "string"
           },
-          "issuer": {
+          "algorithm": {
             "type": "string"
           },
           "expirationTime": {
@@ -1570,10 +1570,10 @@
           "keyId": {
             "type": "string"
           },
-          "rawString": {
+          "audience": {
             "type": "string"
           },
-          "audience": {
+          "rawString": {
             "type": "string"
           },
           "audiences": {
@@ -2636,12 +2636,12 @@
             "format": "int64"
           },
           "oldestTime": {
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "date-time"
           },
           "newestTime": {
-            "type": "integer",
-            "format": "int64"
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -3175,21 +3175,14 @@
         ]
       },
       "HopReferenceDTO": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/HopDTO"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "identCode": {
-                "type": "string",
-                "description": "IdentCode of the hand over point <br> length = 50 "
-              }
-            }
-          }
-        ],
+        "type": "object",
         "description": "Representation of a handover point as a defined entity",
+        "properties": {
+          "identCode": {
+            "type": "string",
+            "description": "IdentCode of the hand over point <br> length = 50 "
+          }
+        },
         "required": [
           "identCode"
         ]
@@ -3958,22 +3951,6 @@
       "HopDTO": {
         "type": "object",
         "description": "Representation of an handover point"
-      },
-      "HopEndDTO": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/HopDTO"
-          }
-        ],
-        "description": "Representation of an undefined handover point representing the last legs end"
-      },
-      "HopStartDTO": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/HopDTO"
-          }
-        ],
-        "description": "Representation of an undefined handover point representing the first legs start"
       },
       "PricingSupplementDataDTO": {
         "type": "object",
