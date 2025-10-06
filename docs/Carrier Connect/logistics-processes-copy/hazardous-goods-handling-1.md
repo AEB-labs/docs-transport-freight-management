@@ -73,7 +73,9 @@ Available hazardous goods types are:
 
 ## Item level
 
-On item level there are a lot of different hazardous goods related fields available (for a comprehensive <Anchor label="createShipment" target="_blank" href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment#/">createShipment</Anchor> . Depending on your hazardous goods scenario and the carrier you are using, the fields needed will differ. Please get in touch with your contact at the carrier in order to find out what fields you have to transmit.
+The item level of the API call contains multiple fields for hazardous goods data. Refer to the comprehensive documentation for the <Anchor label="createShipment" target="_blank" href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment#/">createShipment</Anchor> to view all available fields. 
+
+The required fields vary based on the specific hazardous goods scenario and the carrier you use. Consult your carrier contact to determine the exact fields required for transmission.
 
 Here is an example of the structure of the API call:
 
