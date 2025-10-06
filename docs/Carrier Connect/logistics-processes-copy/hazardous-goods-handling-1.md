@@ -86,20 +86,14 @@ Item level:
             "hazardRegulation": "IATA",
             "technicalName": "Dry Ice",
             "hazardClass": 2,
-            "classificationCode": "3T",
-            "hazardCharacteristics": "ätzend",
             "tunnelCode": "1A1",
-            "hazardInducer": "H2O",
             "hazardWeight": {
               "value": 20,
               "unit": "kg"
             },
             "numberOfPackages": 1,
-            "hazardLabel": "LABEL",
-            "hazardPoints": 100,
-            "specialSubstanceType": "DRY_ICE",
-            "isOuterPackage": true,
-            "isEnvironmentallyHazardous": true
+            "packageTypeIdentCode": "CARTON",
+            "specialSubstanceType": "DRY_ICE"
           }
         ]
       }
@@ -107,73 +101,25 @@ Item level:
   }
 }
 ```
-
 ```xml
-<packages>
-   <packageTypeIdentCode>KRT</packageTypeIdentCode>
-   <packageNumber>1</packageNumber>
-   <packageTransactionId>1</packageTransactionId>
-   <referenceNumber1>SHIPMENT_PACK_TEST1</referenceNumber1>
-   <referenceNumber2>SHIPMENT_PACK_TEST1</referenceNumber2>
-   <grossWeight>
-      <value>25</value>
-      <unit>kg</unit>
-   </grossWeight>
-   <containedItems>
-      <itemTransactionId>SHIPMENT_TEST</itemTransactionId>
-      <referenceNumber1>SHIPMENT_TEST1</referenceNumber1>
-      <quantityValue>10</quantityValue>
-   </containedItems>
-   <hazardousGoodsData>
-      <hazardousGoodsType>NORMAL</hazardousGoodsType>
-   </hazardousGoodsData>
-</packages>
-
-<items>
-   <itemNumber>1</itemNumber>
-	 <itemTransactionId>SHIPMENT_TEST</itemTransactionId>
-	 <referenceNumber1>SHIPMENT_TEST1</referenceNumber1>
-	 <description>Schrauben</description>
-	 <countryOfOriginsISOCode>DE</countryOfOriginsISOCode>
-	 <certificateOfOrigins>DE</certificateOfOrigins>
-	 <quantity>
-	    <value>10</value>
-	    <unit>St</unit>
-	 </quantity>
-	 <customsValue>
-	    <value>100</value>
-	    <currencyIso>EUR</currencyIso>
-	 </customsValue>
-	 <goodsValue>
-	    <value>100</value>
-	    <currencyIso>EUR</currencyIso>
-	 </goodsValue>
-   <hazardousGoodsItems>
-      <unNumber>1845</unNumber>
-      <hazardRegulation>IATA</hazardRegulation>
-      <technicalName>Dry Ice</technicalName>
-      <hazardClass>2</hazardClass>
-      <subriskClass1></subriskClass1>
-      <subriskClass2></subriskClass2>
-      <classificationCode>3T</classificationCode>
-      <hazardCharacteristics>ätzend</hazardCharacteristics>
-      <tunnelCode>1A1</tunnelCode>
-      <hazardInducer>H2O</hazardInducer>
-      <packagingGroup></packagingGroup>
-      <packageTypeIdentCode></packageTypeIdentCode>
-      <hazardWeight>
-         <value>20</value>
-         <unit>kg</unit>
-      </hazardWeight>
-      <numberOfPackages>1</numberOfPackages>
-      <hazardLabel>LABEL</hazardLabel>
-      <hazardPoints>100</hazardPoints>
-      <flashPoint>115</flashPoint>
-      <specialSubstanceType>DRY_ICE</specialSubstanceType>
-      <isOuterPackage>true</isOuterPackage>
-      <isEnvironmentallyHazardous>true</isEnvironmentallyHazardous>
-   </hazardousGoodsItems>
-</items>
+<shipment>
+    <items>
+        <hazardousGoodsItems>
+            <unNumber>1845</unNumber>
+            <hazardRegulation>IATA</hazardRegulation>
+            <technicalName>Dry Ice</technicalName>
+            <hazardClass>2</hazardClass>
+            <tunnelCode>1A1</tunnelCode>
+            <hazardWeight>
+                <value>20</value>
+                <unit>kg</unit>
+            </hazardWeight>
+            <numberOfPackages>1</numberOfPackages>
+            <packageTypeIdentCode>CARTON</packageTypeIdentCode>
+            <specialSubstanceType>DRY_ICE</specialSubstanceType>
+        </hazardousGoodsItems>
+    </items>
+</shipment>
 ```
 
 <br />
