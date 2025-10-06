@@ -30,12 +30,11 @@ Hazardous goods handling has to be enabled in the carrier configuration:
 
 <Image border={false} src="https://files.readme.io/3c5357f6983bbcd0a697953378b201b8d28eacd4b8e233debf33f042bf89f03e-image.png" />
 
-Hazardous goods shipment items can only be added on the shipment item level so far. For EDIs, the carriers need to receive the data about hazardous goods on the package level. **Therefore, in Carrier Connect, shipment items which include hazardous goods items have to packed in packages.** Only then the package knows which hazardous goods are included and the correct data according to the EDI specification is sent to the carrier.
+Hazardous goods shipment items can only be added on the shipment item level so far. For EDIs, the carriers need to receive the data about hazardous goods on the package level. **Therefore, in Carrier Connect, shipment items which include hazardous goods items have to packed in packages.** Only then the package knows which hazardous goods are included and the correct data according to the EDI specification is sent to the carrier. For more information about how to pack items see [Packing Items](doc:cma-shipping-scenarios).
 
-The example below shows a package with the reference number 'SHIPMENT_PACK_TEST1' which contains an item 'SHIPMENT_TEST1'. This item contains a hazardous goods item with UN number '1845' (=dry ice).
-When the EDI generation is creating the data, the hazardous goods item with UN number '1845' and its data would appear under the related package with the reference number 'SHIPMENT_PACK_TEST1' segment which would satisfy the carrier's requirements.
+## Package level
 
-Package level:
+On package level each package containing hazardous goods need a hazardous goods type indication:
 
 ```json
 {
@@ -62,8 +61,6 @@ Package level:
 </shipment>
 ```
 
-As shown in the example, each package containing hazardous goods need a hazardous goods type indication as well.
-
 Available hazardous goods types are:
 
 * NONE (no hazardous goods)
@@ -74,7 +71,9 @@ Available hazardous goods types are:
 * ORMD (other regulated materials for domestic transport only) - Since 2021 this code is not used anymore
 * US_SMALL_QUANTITY (small quantity regulated materials) - only relevant for US
 
-Item level:
+## Item level
+
+On item level there are 
 
 ```json
 {
