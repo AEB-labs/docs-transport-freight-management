@@ -10,7 +10,21 @@ metadata:
 next:
   description: ''
 ---
-## How to handle hazardous goods shipments
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
+
+# How to handle hazardous goods shipments
+
+For general information about how hazardous goods are handled by Carrier Connect go to:
+
+* <Anchor label="Understanding and enabling hazardous goods handling with Carrier Connect" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-en-US/t-801708043-667083787-en-US">Understanding and enabling hazardous goods handling with Carrier Connect</Anchor> [<Anchor label="German version" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-667083787-de-DE">German version</Anchor>]
+* <Anchor label="Marking hazardous goods packages and creating new hazardous goods items in Carrier Connect" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-en-US/t-801708043-673169163-en-US">Marking hazardous goods packages and creating new hazardous goods items in Carrier Connect</Anchor> [<Anchor label="German version" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-673169163-de-DE">German version</Anchor>]
 
 Hazardous goods handling has to be enabled in the carrier configuration for the specific client.
 
@@ -26,204 +40,71 @@ Package level:
 
 ```json
 {
-    "packages": [{
-            "packageTypeIdentCode": "KRT",
-            "packageNumber": 1,
-            "packageTransactionId": 1,
-            "referenceNumber1": "SHIPMENT_PACK_TEST1",
-            "referenceNumber2": "SHIPMENT_PACK_TEST1",
-            "grossWeight": {
-                "value": 25,
-                "unit": "kg"
-            },
-            "containedItems": {
-                "itemTransactionId": "SHIPMENT_TEST",
-                "referenceNumber1": "SHIPMENT_TEST1",
-                "quantityValue": 10
-            },
-            "hazardousGoodsData": {
-                "hazardousGoodsType": "NORMAL"
-            }
+  "shipment": {
+    "packages": [
+      {
+        "hazardousGoodsData": {
+          "hazardousGoodsType": "NORMAL"
         }
-    ],
-    "items": [{
-            "itemNumber": 1,
-            "itemTransactionId": "SHIPMENT_TEST",
-            "referenceNumber1": "SHIPMENT_TEST1",
-            "description": "Schrauben",
-            "countryOfOriginsISOCode": "DE",
-            "certificateOfOrigins": "DE",
-            "quantity": {
-                "value": 10,
-                "unit": "St"
-            },
-            "customsValue": {
-                "value": 100,
-                "currencyIso": "EUR"
-            },
-            "goodsValue": {
-                "value": 100,
-                "currencyIso": "EUR"
-            },
-            "hazardousGoodsItems": [{
-                "unNumber": 1845,
-                "hazardRegulation": "IATA",
-                "technicalName": "Dry Ice",
-                "hazardClass": 2,
-                "classificationCode": "3T",
-                "hazardCharacteristics": "ätzend",
-                "tunnelCode": "1A1",
-                "hazardInducer": "H2O",
-                "hazardWeight": {
-                    "value": 20,
-                    "unit": "kg"
-                },
-                "numberOfPackages": 1,
-                "hazardLabel": "LABEL",
-                "hazardPoints": 100,
-                "flashPoint": 115,
-                "specialSubstanceType": "DRY_ICE",
-                "isOuterPackage": true,
-                "isEnvironmentallyHazardous": true
-            }]
-        }
+      }
     ]
+  }
 }
 ```
 ```xml
-<packages>
-   <packageTypeIdentCode>KRT</packageTypeIdentCode>
-   <packageNumber>1</packageNumber>
-   <packageTransactionId>1</packageTransactionId>
-   <referenceNumber1>SHIPMENT_PACK_TEST1</referenceNumber1>
-   <referenceNumber2>SHIPMENT_PACK_TEST1</referenceNumber2>
-   <grossWeight>
-      <value>25</value>
-      <unit>kg</unit>
-   </grossWeight>
-   <containedItems>
-      <itemTransactionId>SHIPMENT_TEST</itemTransactionId>
-      <referenceNumber1>SHIPMENT_TEST1</referenceNumber1>
-      <quantityValue>10</quantityValue>
-   </containedItems>
-   <hazardousGoodsData>
-      <hazardousGoodsType>NORMAL</hazardousGoodsType>
-   </hazardousGoodsData>
-</packages>
-
-<items>
-   <itemNumber>1</itemNumber>
-	 <itemTransactionId>SHIPMENT_TEST</itemTransactionId>
-	 <referenceNumber1>SHIPMENT_TEST1</referenceNumber1>
-	 <description>Schrauben</description>
-	 <countryOfOriginsISOCode>DE</countryOfOriginsISOCode>
-	 <certificateOfOrigins>DE</certificateOfOrigins>
-	 <quantity>
-	    <value>10</value>
-	    <unit>St</unit>
-	 </quantity>
-	 <customsValue>
-	    <value>100</value>
-	    <currencyIso>EUR</currencyIso>
-	 </customsValue>
-	 <goodsValue>
-	    <value>100</value>
-	    <currencyIso>EUR</currencyIso>
-	 </goodsValue>
-   <hazardousGoodsItems>
-      <unNumber>1845</unNumber>
-      <hazardRegulation>IATA</hazardRegulation>
-      <technicalName>Dry Ice</technicalName>
-      <hazardClass>2</hazardClass>
-      <subriskClass1></subriskClass1>
-      <subriskClass2></subriskClass2>
-      <classificationCode>3T</classificationCode>
-      <hazardCharacteristics>ätzend</hazardCharacteristics>
-      <tunnelCode>1A1</tunnelCode>
-      <hazardInducer>H2O</hazardInducer>
-      <packagingGroup></packagingGroup>
-      <packageTypeIdentCode></packageTypeIdentCode>
-      <hazardWeight>
-         <value>20</value>
-         <unit>kg</unit>
-      </hazardWeight>
-      <numberOfPackages>1</numberOfPackages>
-      <hazardLabel>LABEL</hazardLabel>
-      <hazardPoints>100</hazardPoints>
-      <flashPoint>115</flashPoint>
-      <specialSubstanceType>DRY_ICE</specialSubstanceType>
-      <isOuterPackage>true</isOuterPackage>
-      <isEnvironmentallyHazardous>true</isEnvironmentallyHazardous>
-   </hazardousGoodsItems>
-</items>
+<shipment>
+    <packages>
+        <hazardousGoodsData>
+            <hazardousGoodsType>NORMAL</hazardousGoodsType>
+        </hazardousGoodsData>
+    </packages>
+</shipment>
 ```
+
+As shown in the example, each package containing hazardous goods need a hazardous goods type indication as well.
+
+Available hazardous goods types are:
+
+* NONE (no hazardous goods)
+* NORMAL (hazardous goods)
+* EQ (excepted quantities)
+* LQ (limited quantities)
+* SPECIAL_SUBSTANCE (special substance)
+* ORMD (other regulated materials for domestic transport only) - Since 2021 this code is not used anymore
+* US_SMALL_QUANTITY (small quantity regulated materials) - only relevant for US
 
 Item level:
 
 ```json
 {
-    "packages": [{
-            "packageTypeIdentCode": "KRT",
-            "packageNumber": 1,
-            "packageTransactionId": 1,
-            "referenceNumber1": "SHIPMENT_PACK_TEST1",
-            "referenceNumber2": "SHIPMENT_PACK_TEST1",
-            "grossWeight": {
-                "value": 25,
-                "unit": "kg"
+  "shipment": {
+    "items": [
+      {
+        "hazardousGoodsItems": [
+          {
+            "unNumber": 1845,
+            "hazardRegulation": "IATA",
+            "technicalName": "Dry Ice",
+            "hazardClass": 2,
+            "classificationCode": "3T",
+            "hazardCharacteristics": "ätzend",
+            "tunnelCode": "1A1",
+            "hazardInducer": "H2O",
+            "hazardWeight": {
+              "value": 20,
+              "unit": "kg"
             },
-            "containedItems": {
-                "itemTransactionId": "SHIPMENT_TEST",
-                "referenceNumber1": "SHIPMENT_TEST1",
-                "quantityValue": 10
-            },
-            "hazardousGoodsData": {
-                "hazardousGoodsType": "NORMAL"
-            }
-        }
-    ],
-    "items": [{
-            "itemNumber": 1,
-            "itemTransactionId": "SHIPMENT_TEST",
-            "referenceNumber1": "SHIPMENT_TEST1",
-            "description": "Schrauben",
-            "countryOfOriginsISOCode": "DE",
-            "certificateOfOrigins": "DE",
-            "quantity": {
-                "value": 10,
-                "unit": "St"
-            },
-            "customsValue": {
-                "value": 100,
-                "currencyIso": "EUR"
-            },
-            "goodsValue": {
-                "value": 100,
-                "currencyIso": "EUR"
-            },
-            "hazardousGoodsItems": [{
-                "unNumber": 1845,
-                "hazardRegulation": "IATA",
-                "technicalName": "Dry Ice",
-                "hazardClass": 2,
-                "classificationCode": "3T",
-                "hazardCharacteristics": "ätzend",
-                "tunnelCode": "1A1",
-                "hazardInducer": "H2O",
-                "hazardWeight": {
-                    "value": 20,
-                    "unit": "kg"
-                },
-                "numberOfPackages": 1,
-                "hazardLabel": "LABEL",
-                "hazardPoints": 100,
-                "flashPoint": 115,
-                "specialSubstanceType": "DRY_ICE",
-                "isOuterPackage": true,
-                "isEnvironmentallyHazardous": true
-            }]
-        }
+            "numberOfPackages": 1,
+            "hazardLabel": "LABEL",
+            "hazardPoints": 100,
+            "specialSubstanceType": "DRY_ICE",
+            "isOuterPackage": true,
+            "isEnvironmentallyHazardous": true
+          }
+        ]
+      }
     ]
+  }
 }
 ```
 
@@ -295,12 +176,4 @@ Item level:
 </items>
 ```
 
-As shown in the example, the package needs a hazardous goods type indication as well.
-
-Available hazardous goods types are:
-'NONE' (=No hazardous goods) -DEFAULT-
-'NORMAL' (=Normal hazardous goods)
-'LQ' (=Limited quantity)
-'EQ' (=Excepted quantity)
-'SPECIAL_SUBSTANCE' (=special substance)
-'US_SMALL_QUANTITY' (=Small Quantity (US relevant))
+<br />
