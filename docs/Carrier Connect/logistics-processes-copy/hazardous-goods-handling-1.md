@@ -43,6 +43,7 @@ Package level:
   "shipment": {
     "packages": [
       {
+        "packageNumber": "1",
         "hazardousGoodsData": {
           "hazardousGoodsType": "NORMAL"
         }
