@@ -73,7 +73,9 @@ Available hazardous goods types are:
 
 ## Item level
 
-On item level there are 
+On item level there are a lot of different hazardous goods related fields available. Depending on your hazardous goods scenario and the carrier you are using, the fields needed will differ. Please get in touch with your contact at the carrier in order to find out what fields you have to transmit.
+
+Here is an example of the structure of the API call:
 
 ```json
 {
