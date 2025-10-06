@@ -55,6 +55,7 @@ Package level:
 ```xml
 <shipment>
     <packages>
+        <packageNumber>1</packageNumber>
         <hazardousGoodsData>
             <hazardousGoodsType>NORMAL</hazardousGoodsType>
         </hazardousGoodsData>
