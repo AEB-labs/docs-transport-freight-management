@@ -4021,14 +4021,14 @@
           "email": {
             "type": "string"
           },
+          "externalUser": {
+            "type": "boolean"
+          },
           "lastName": {
             "type": "string"
           },
           "firstName": {
             "type": "string"
-          },
-          "externalUser": {
-            "type": "boolean"
           },
           "authToken": {
             "$ref": "#/components/schemas/JWT"
