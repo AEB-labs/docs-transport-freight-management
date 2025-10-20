@@ -1521,16 +1521,16 @@
       "IAdditionalUserInfo": {
         "type": "object",
         "properties": {
-          "email": {
-            "type": "string"
-          },
           "externalUser": {
             "type": "boolean"
+          },
+          "firstName": {
+            "type": "string"
           },
           "lastName": {
             "type": "string"
           },
-          "firstName": {
+          "email": {
             "type": "string"
           },
           "authToken": {
@@ -1554,9 +1554,6 @@
           "type": {
             "type": "string"
           },
-          "issuer": {
-            "type": "string"
-          },
           "algorithm": {
             "type": "string"
           },
@@ -1564,10 +1561,13 @@
             "type": "integer",
             "format": "int64"
           },
-          "tokenStringForLog": {
+          "issuer": {
             "type": "string"
           },
           "keyId": {
+            "type": "string"
+          },
+          "tokenStringForLog": {
             "type": "string"
           },
           "audience": {
