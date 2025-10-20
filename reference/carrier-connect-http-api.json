@@ -7667,16 +7667,16 @@
       "IAdditionalUserInfo": {
         "type": "object",
         "properties": {
-          "email": {
-            "type": "string"
-          },
           "externalUser": {
             "type": "boolean"
+          },
+          "firstName": {
+            "type": "string"
           },
           "lastName": {
             "type": "string"
           },
-          "firstName": {
+          "email": {
             "type": "string"
           },
           "authToken": {
@@ -7703,17 +7703,20 @@
           "algorithm": {
             "type": "string"
           },
-          "issuer": {
-            "type": "string"
-          },
           "expirationTime": {
             "type": "integer",
             "format": "int64"
           },
+          "issuer": {
+            "type": "string"
+          },
+          "keyId": {
+            "type": "string"
+          },
           "tokenStringForLog": {
             "type": "string"
           },
-          "rawString": {
+          "audience": {
             "type": "string"
           },
           "audiences": {
@@ -7722,10 +7725,7 @@
               "type": "string"
             }
           },
-          "audience": {
-            "type": "string"
-          },
-          "keyId": {
+          "rawString": {
             "type": "string"
           },
           "jsonString": {
@@ -8539,10 +8539,10 @@
       "CommandInfo": {
         "type": "object",
         "properties": {
-          "commandName": {
+          "commandClass": {
             "type": "string"
           },
-          "commandClass": {
+          "commandName": {
             "type": "string"
           }
         }
@@ -8580,6 +8580,15 @@
           "outputStream": {
             "type": "object"
           },
+          "allCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
+            }
+          },
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap"
+          },
           "transferDataFlavors": {
             "type": "array",
             "items": {
@@ -8591,15 +8600,6 @@
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
             }
-          },
-          "allCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
-          },
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap"
           }
         }
       },
