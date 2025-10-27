@@ -7710,13 +7710,10 @@
           "issuer": {
             "type": "string"
           },
-          "keyId": {
-            "type": "string"
-          },
           "tokenStringForLog": {
             "type": "string"
           },
-          "audience": {
+          "keyId": {
             "type": "string"
           },
           "audiences": {
@@ -7724,6 +7721,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "audience": {
+            "type": "string"
           },
           "rawString": {
             "type": "string"
@@ -8580,14 +8580,11 @@
           "outputStream": {
             "type": "object"
           },
-          "allCommands": {
+          "preferredCommands": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
             }
-          },
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap"
           },
           "transferDataFlavors": {
             "type": "array",
@@ -8595,7 +8592,10 @@
               "$ref": "#/components/schemas/ActivationDataFlavor"
             }
           },
-          "preferredCommands": {
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap"
+          },
+          "allCommands": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
