@@ -3468,7 +3468,7 @@
             "description": "The name of this record, i.e. the role the record plays in the enclosing record.<br> When the same name is repeated in the context of the same parent record,  it is assumed that the parent defines this element as a repeatable (array) element."
           },
           "record": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTORef"
           }
         }
       },
@@ -10279,6 +10279,34 @@
           "userActivityTimeoutMS": {
             "type": "integer",
             "format": "int64"
+          }
+        }
+      },
+      "GenericDataRecordDTORef": {
+        "type": "object",
+        "properties": {
+          "fields": {
+            "type": "array",
+            "description": "The fields of the record.",
+            "items": {
+              "$ref": "#/components/schemas/GenericDataFieldDTO"
+            }
+          },
+          "subrecords": {
+            "type": "array",
+            "description": "Subrecords of the record.",
+            "example": [
+              {
+                "name": "child",
+                "record": {
+                  "fields": [],
+                  "subrecords": []
+                }
+              }
+            ],
+            "items": {
+              "type": "object"
+            }
           }
         }
       }
