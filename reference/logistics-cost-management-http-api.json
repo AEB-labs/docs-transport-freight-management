@@ -4018,50 +4018,29 @@
       "IAdditionalUserInfo": {
         "type": "object",
         "properties": {
-          "aebUserId": {
+          "email": {
             "type": "string"
           },
           "externalUser": {
             "type": "boolean"
           },
-          "firstName": {
-            "type": "string"
-          },
           "lastName": {
             "type": "string"
           },
-          "email": {
+          "firstName": {
             "type": "string"
           },
           "authToken": {
             "$ref": "#/components/schemas/JWT"
+          },
+          "aebUserId": {
+            "type": "string"
           }
         }
       },
       "JWT": {
         "type": "object",
         "properties": {
-          "tokenStringForLog": {
-            "type": "string"
-          },
-          "keyId": {
-            "type": "string"
-          },
-          "audiences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "audience": {
-            "type": "string"
-          },
-          "rawString": {
-            "type": "string"
-          },
-          "jsonString": {
-            "type": "string"
-          },
           "signature": {
             "type": "array",
             "items": {
@@ -4081,6 +4060,27 @@
           "expirationTime": {
             "type": "integer",
             "format": "int64"
+          },
+          "audiences": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "audience": {
+            "type": "string"
+          },
+          "tokenStringForLog": {
+            "type": "string"
+          },
+          "keyId": {
+            "type": "string"
+          },
+          "rawString": {
+            "type": "string"
+          },
+          "jsonString": {
+            "type": "string"
           }
         }
       },
