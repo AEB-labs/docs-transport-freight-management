@@ -1544,16 +1544,6 @@
       "JWT": {
         "type": "object",
         "properties": {
-          "signature": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
-          },
-          "type": {
-            "type": "string"
-          },
           "algorithm": {
             "type": "string"
           },
@@ -1564,16 +1554,16 @@
           "issuer": {
             "type": "string"
           },
-          "keyId": {
-            "type": "string"
-          },
           "tokenStringForLog": {
             "type": "string"
           },
-          "audience": {
+          "keyId": {
             "type": "string"
           },
           "rawString": {
+            "type": "string"
+          },
+          "audience": {
             "type": "string"
           },
           "audiences": {
@@ -1583,6 +1573,16 @@
             }
           },
           "jsonString": {
+            "type": "string"
+          },
+          "signature": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "type": {
             "type": "string"
           }
         }
