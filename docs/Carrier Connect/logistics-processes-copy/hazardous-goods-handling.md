@@ -73,7 +73,7 @@ Available hazardous goods types are:
 
 ## Item level
 
-The item level of the API call contains multiple fields for hazardous goods data. Refer to the comprehensive documentation for the <Anchor label="createShipment" target="_blank" href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment#/">createShipment</Anchor> to view all available fields. 
+The item level of the API call contains multiple fields for hazardous goods data. Refer to the comprehensive documentation for the <Anchor label="createShipment" target="_blank" href="https://transport-freight-management.docs.developers.aeb.com/reference/createshipment#/">createShipment</Anchor> to view all available fields.
 
 The required fields vary based on the specific hazardous goods scenario and the carrier you use. Consult your carrier contact to determine the exact fields required for transmission.
 
@@ -89,14 +89,13 @@ Here is an example of the structure of the API call:
             "unNumber": 1845,
             "hazardRegulation": "IATA",
             "technicalName": "Dry Ice",
-            "hazardClass": 2,
-            "tunnelCode": "1A1",
+            "hazardClass": 9,
             "hazardWeight": {
               "value": 20,
               "unit": "kg"
             },
             "numberOfPackages": 1,
-            "packageTypeIdentCode": "CARTON",
+            "packageTypeIdentCode": "4G",
             "specialSubstanceType": "DRY_ICE"
           }
         ]
@@ -112,14 +111,13 @@ Here is an example of the structure of the API call:
             <unNumber>1845</unNumber>
             <hazardRegulation>IATA</hazardRegulation>
             <technicalName>Dry Ice</technicalName>
-            <hazardClass>2</hazardClass>
-            <tunnelCode>1A1</tunnelCode>
+            <hazardClass>9</hazardClass>
             <hazardWeight>
                 <value>20</value>
                 <unit>kg</unit>
             </hazardWeight>
             <numberOfPackages>1</numberOfPackages>
-            <packageTypeIdentCode>CARTON</packageTypeIdentCode>
+            <packageTypeIdentCode>4G</packageTypeIdentCode>
             <specialSubstanceType>DRY_ICE</specialSubstanceType>
         </hazardousGoodsItems>
     </items>
