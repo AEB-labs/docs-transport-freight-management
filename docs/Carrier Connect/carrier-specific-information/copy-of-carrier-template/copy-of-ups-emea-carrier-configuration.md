@@ -11,29 +11,140 @@ metadata:
 
 To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-## Customer data
+## Tab: DHL Freight account
 
 <Image border={false} src="https://files.readme.io/a73f400873e88050390ab874a243744feb53246f5cf9d3fcd086c99f65b10f32-image.png" />
 
+<Image border={false} src="https://files.readme.io/901975d59003b80e956aaa21237004bf160eb59f7607201b5d23a24e43423632-image.png" />
+
 <br />
 
-| Number | Field             | Comment                                                                                                                                     |
-| :----- | :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1      | Shipper           | The address of the shipper                                                                                                                  |
-| 2      | Carrier address   |                                                                                                                                             |
-| 3      | Customer number   | Assigned by the carrier                                                                                                                     |
-| 4      | Depot number      | Assigned by the carrier                                                                                                                     |
-| 5      | Package no. range | see [number ranges](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#number-ranges) |
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Number
+      </th>
+
+      <th>
+        Field
+      </th>
+
+      <th>
+        Comment
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        1
+      </td>
+
+      <td>
+        Shipper
+      </td>
+
+      <td>
+        The address of the shipper
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        2
+      </td>
+
+      <td>
+        Carrier address
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        3
+      </td>
+
+      <td>
+        Customer number
+      </td>
+
+      <td>
+        Assigned by the carrier
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        4
+      </td>
+
+      <td>
+        Depot number
+      </td>
+
+      <td>
+        Assigned by the carrier
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        5
+      </td>
+
+      <td>
+        Package no. range
+      </td>
+
+      <td>
+        see [Number ranges](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#number-ranges)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        6
+      </td>
+
+      <td>
+        EDI transmission
+      </td>
+
+      <td>
+        Set to _Send and log_
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        7
+      </td>
+
+      <td>
+        Tracking no. type
+      </td>
+
+      <td>
+        Assigned by the carrier. There are two options:  
+
+        * ANSIFact ASC MH 10
+        * GS1 EAN 128 Licenseplate
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Number ranges
 
 <CCONumberRanges />
 
 ### Package number range
-
-<Image border={false} src="https://files.readme.io/3e4184a50459e8686cbb74751e61605a8494f877c993943d3eae0ffeab36a616-image.png" />
-
-<Image border={false} src="https://files.readme.io/960d508e7eb5dd4ab7800a006ebc2704b67c83b3cae3f7b01736278d51040e3c-image.png" />
 
 <br />
 
@@ -53,10 +164,9 @@ For the EDI number range, you will need the UPS book numbers, which you will get
 
 Example:
 
-* Book-Nr. 1: 1234567 -> Start value: 123456701
-* Book-Nr. 2: 1234568 -> Max. value: 123456899
+* <br />
 
-## PLD upload
+## EDI upload
 
 In this section the EDI upload parameters are configured.
 
