@@ -140,7 +140,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
   </tbody>
 </Table>
 
-## Number ranges
+### Number ranges
 
 <CCONumberRanges />
 
@@ -165,6 +165,8 @@ For the EDI number range, you will need the UPS book numbers, which you will get
 Example:
 
 * <br />
+
+### Tracking no. type
 
 ## EDI upload
 
