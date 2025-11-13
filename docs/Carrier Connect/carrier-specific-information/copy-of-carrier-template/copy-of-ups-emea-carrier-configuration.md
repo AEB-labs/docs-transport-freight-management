@@ -9,161 +9,29 @@ metadata:
 
 To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-<Tabs>
-  <Tab title="First Tab">
-    Welcome to the content that you can only see inside the first Tab.
-# DHL Freight account
+<Cards columns={4}>
+  <Card title="First Card" href="https://readme.com" icon="fa-home" target="_blank">
+    Neque porro quisquam est qui dolorem ipsum quia
+  </Card>
 
-<Image border={false} src="https://files.readme.io/a73f400873e88050390ab874a243744feb53246f5cf9d3fcd086c99f65b10f32-image.png" />
+  <Card title="Second Card" icon="fa-user">
+    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+  </Card>
 
-<Image border={false} src="https://files.readme.io/901975d59003b80e956aaa21237004bf160eb59f7607201b5d23a24e43423632-image.png" />
+  <Card title="Third Card" icon="fa-star">
+    > Ut enim ad minim veniam, quis nostrud ullamco
+  </Card>
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Number
-      </th>
+  <Card title="Fourth Card" icon="fa-question">
+    **Excepteur sint occaecat cupidatat non proident**
+  </Card>
+</Cards>
 
-      <th>
-        Field
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        1
-      </td>
-
-      <td>
-        Shipper
-      </td>
-
-      <td>
-        The address of the shipper
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        2
-      </td>
-
-      <td>
-        Carrier address
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        3
-      </td>
-
-      <td>
-        Customer number
-      </td>
-
-      <td>
-        Assigned by the carrier
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        4
-      </td>
-
-      <td>
-        Depot number
-      </td>
-
-      <td>
-        Assigned by the carrier
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        5
-      </td>
-
-      <td>
-        Package no. range
-      </td>
-
-      <td>
-        see [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        6
-      </td>
-
-      <td>
-        EDI transmission
-      </td>
-
-      <td>
-        Set to _Send and log_
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        7
-      </td>
-
-      <td>
-        Tracking no. type
-      </td>
-
-      <td>
-        Assigned by the carrier. There are two options:
-
-        * ANSIFact ASC MH 10
-        * GS1 EAN 128 Licenseplate
-      </td>
-    </tr>
-  </tbody>
-</Table>
-
-## Number ranges
-
-<CCONumberRanges />
-
-### Package number range
-
-<Image border={false} src="https://files.readme.io/16f7817577364f09f3094a13e3c935ebb407545b025a0a0ae4c8a2080b775eda-image.png" />
-
-| Field             | Comment                 | Start value | Max. value | Char. length | Leading zeros | Auto. re-start |
-| :---------------- | :---------------------- | :---------- | :--------- | :----------- | :------------ | :------------- |
-| Package no. range | Assigned by the carrier | 1           | 999999999  | 9            | Activated     | Activated      |
-
-## Tracking no. type
-
-### ANSIFact ASC MH 10
-  </Tab>
-
-  <Tab title="Second Tab">
-    Here's content that's only inside the second Tab.
-  </Tab>
-
-  <Tab title="Third Tab">
-    Here's content that's only inside the third Tab.
-  </Tab>
-</Tabs>
+<Accordion title="My Accordion Title" icon="fa-info-circle">
+  Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Ut enim
+  ad minim veniam, quis nostrud exercitation ullamco. Excepteur sint
+  occaecat cupidatat non proident!
+</Accordion>
 
 # DHL Freight account
 
