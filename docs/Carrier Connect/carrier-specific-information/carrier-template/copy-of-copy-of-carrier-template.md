@@ -1,5 +1,5 @@
 ---
-title: Copy of Copy of Carrier Template
+title: '[Carrier Name] General Information'
 deprecated: false
 hidden: true
 metadata:
