@@ -1,5 +1,5 @@
 ---
-title: Hazardous Goods
+title: '[Carrier Name] Hazardous Goods'
 excerpt: ''
 deprecated: false
 hidden: true
