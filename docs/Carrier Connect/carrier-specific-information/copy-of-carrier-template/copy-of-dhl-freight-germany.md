@@ -18,3 +18,7 @@ metadata:
 # Acceptance Process
 
 # Error Messages
+
+<CCOSinglePackageHandling />
+
+<br />
