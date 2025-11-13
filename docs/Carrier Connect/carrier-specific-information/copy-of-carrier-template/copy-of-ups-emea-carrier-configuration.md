@@ -103,7 +103,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
       </td>
 
       <td>
-        see [Number ranges](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#number-ranges)
+        see [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range)
       </td>
     </tr>
 
@@ -146,25 +146,11 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 ### Package number range
 
-<br />
+<Image border={false} src="https://files.readme.io/16f7817577364f09f3094a13e3c935ebb407545b025a0a0ae4c8a2080b775eda-image.png" />
 
-|                   |                         | Start value | Max. value | Char. length | Leading zeros | Auto. re-start |
+| Field             | Comment                 | Start value | Max. value | Char. length | Leading zeros | Auto. re-start |
 | :---------------- | :---------------------- | :---------- | :--------- | :----------- | :------------ | :------------- |
-| Package no. range | Assigned by the carrier | 4.000.000   | 7.999.999  | 7            | Activated     | Activated      |
-
-<br />
-
-### EDI number range
-
-For the EDI number range, you will need the UPS book numbers, which you will get from UPS.
-
-|               |                         | Start value          | Max. value           | Char. length | Leading zeros | Auto. re-start |
-| :------------ | :---------------------- | :------------------- | :------------------- | :----------- | :------------ | :------------- |
-| EDI no. range | Assigned by the carrier | book number 1 + "01" | book number 2 + "99" | 9            | Activated     | Activate       |
-
-Example:
-
-* <br />
+| Package no. range | Assigned by the carrier | 1           | 999999999  | 9            | Activated     | Activated      |
 
 ### Tracking no. type
 
@@ -189,6 +175,18 @@ Example:
 ## EDI setups
 
 In this section the EDI upload parameters are configured.
+
+### EDI number range
+
+For the EDI number range, you will need the UPS book numbers, which you will get from UPS.
+
+|               |                         | Start value          | Max. value           | Char. length | Leading zeros | Auto. re-start |
+| :------------ | :---------------------- | :------------------- | :------------------- | :----------- | :------------ | :------------- |
+| EDI no. range | Assigned by the carrier | book number 1 + "01" | book number 2 + "99" | 9            | Activated     | Activate       |
+
+Example:
+
+* <br />
 
 ### Test environment
 
