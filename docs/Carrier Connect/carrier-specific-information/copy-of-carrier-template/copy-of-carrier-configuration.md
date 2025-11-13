@@ -1,5 +1,5 @@
 ---
-title: Copy of Carrier Configuration
+title: 'DHL Freight (Germany): Carrier Configuration'
 deprecated: false
 hidden: true
 metadata:
