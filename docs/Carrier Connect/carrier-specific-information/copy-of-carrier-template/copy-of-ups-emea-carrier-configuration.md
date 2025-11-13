@@ -11,7 +11,7 @@ metadata:
 
 To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-## Tab: DHL Freight account
+## DHL Freight account
 
 <Image border={false} src="https://files.readme.io/a73f400873e88050390ab874a243744feb53246f5cf9d3fcd086c99f65b10f32-image.png" />
 
@@ -168,7 +168,25 @@ Example:
 
 ### Tracking no. type
 
-## EDI upload
+#### ANSIFact ASC MH 10
+
+<Image border={false} src="https://files.readme.io/16cbe88a7f6174ba37b1b0eee61030233af0cdd094517732b35ca91d7b2906d7-image.png" />
+
+| Number | Field        | Comment                 |
+| :----- | :----------- | :---------------------- |
+| 1      | Dispose area | Assigned by the carrier |
+
+#### GS1 EAN 128 Licenseplate
+
+<Image border={false} src="https://files.readme.io/dcf87f87eac2a3cacdd22cc337059d6c133c523d32fe6babdeb1977cb9036ce1-image.png" />
+
+| Number | Field | Comment                                          |
+| :----- | :---- | :----------------------------------------------- |
+| 1      | GLN   | The GS1 base number of your company (7-9 digits) |
+
+<br />
+
+## EDI setups
 
 In this section the EDI upload parameters are configured.
 
