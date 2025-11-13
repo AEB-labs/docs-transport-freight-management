@@ -1,5 +1,5 @@
 ---
-title: 'DHL Freight (Germany): Carrier Configuration'
+title: 'DHL Freight (Germany): Account Configuration'
 deprecated: false
 hidden: false
 metadata:
@@ -7,11 +7,9 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-# Account configuration
-
 To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-## DHL Freight account
+# DHL Freight account
 
 <Image border={false} src="https://files.readme.io/a73f400873e88050390ab874a243744feb53246f5cf9d3fcd086c99f65b10f32-image.png" />
 
@@ -131,7 +129,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
       </td>
 
       <td>
-        Assigned by the carrier. There are two options:  
+        Assigned by the carrier. There are two options:
 
         * ANSIFact ASC MH 10
         * GS1 EAN 128 Licenseplate
@@ -140,11 +138,11 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
   </tbody>
 </Table>
 
-### Number ranges
+## Number ranges
 
 <CCONumberRanges />
 
-### Package number range
+## Package number range
 
 <Image border={false} src="https://files.readme.io/16f7817577364f09f3094a13e3c935ebb407545b025a0a0ae4c8a2080b775eda-image.png" />
 
@@ -152,9 +150,9 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 | :---------------- | :---------------------- | :---------- | :--------- | :----------- | :------------ | :------------- |
 | Package no. range | Assigned by the carrier | 1           | 999999999  | 9            | Activated     | Activated      |
 
-### Tracking no. type
+## Tracking no. type
 
-#### ANSIFact ASC MH 10
+### ANSIFact ASC MH 10
 
 <Image border={false} src="https://files.readme.io/16cbe88a7f6174ba37b1b0eee61030233af0cdd094517732b35ca91d7b2906d7-image.png" />
 
@@ -162,7 +160,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 | :----- | :----------- | :---------------------- |
 | 1      | Dispose area | Assigned by the carrier |
 
-#### GS1 EAN 128 Licenseplate
+### GS1 EAN 128 Licenseplate
 
 <Image border={false} src="https://files.readme.io/dcf87f87eac2a3cacdd22cc337059d6c133c523d32fe6babdeb1977cb9036ce1-image.png" />
 
@@ -172,11 +170,11 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 <br />
 
-## EDI setups
+# EDI setups
 
 In this section the EDI upload parameters are configured.
 
-### EDI number range
+## EDI number range
 
 For the EDI number range, you will need the UPS book numbers, which you will get from UPS.
 
@@ -188,13 +186,13 @@ Example:
 
 * <br />
 
-### Test environment
+## Test environment
 
 In the **test environment** you don't have to change anything:
 
 <Image border={false} src="https://files.readme.io/966342c2689ad6275a6b2a2f347072978e3028a8e59c86b495bd040e77c1b39f-image.png" />
 
-### Productive environment
+## Productive environment
 
 In the **productive environment** you have to use your customer specific user and password, which you receive from UPS. You also need to use a different URL:
 
@@ -206,16 +204,6 @@ https://www.ha.ups.com/hapld/tos/kdwhapltos
 
 <br />
 
-## Web service parameter
-
-If you're shipping dangerous goods or use the value added service _Access Points_ or _Trade document upload_, you need to configure the section _Web service parameter_. For more infos see [here](https://transport-freight-management.docs.developers.aeb.com/docs/ups-emea#webservice-for-dangerous-goods-access-points-or-trade-document-upload).
-
-<br />
-
-<Image border={false} src="https://files.readme.io/d350d32707368134ea374256a41a7419e32ef41484c030bf2101c1367a6c78a6-image.png" />
-
-<br />
-
 <br />
 
 ## Mapping: Terms of Delivery & Packages
@@ -223,7 +211,4 @@ If you're shipping dangerous goods or use the value added service _Access Points
 * [Converting terms of delivery](https://rz3.aeb.de/docudata/OnlineHelp/cai/en-US/index.html#338067211620280459)
 * [Converting package types](https://rz3.aeb.de/docudata/OnlineHelp/cai/en-US/index.html#338084491620282891)
 
-## Single Package Handling
-
-* The package number and the total number of packages are usually printed on the package label, e.g. 1 OF 2 for the first package, 2 OF 2 for the second package. Exception is the UPS service "Standard Package". With this service, 1 OF 1 is always printed on each package label, regardless of how many packages there are in total.
-* If single package handling is activated, 1 OF _, 2 OF _, etc. will be printed on the label for all services except "UPS Standard Package".
+<SinglePackageHandling />
