@@ -1,5 +1,5 @@
 ---
-title: Copy of Carrier Template
+title: DHL Freight (Germany)
 deprecated: false
 hidden: true
 metadata:
