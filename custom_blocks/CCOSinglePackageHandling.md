@@ -1,7 +1,7 @@
 ---
 name: CCOSinglePackageHandling
 ---
-## Single Package Handling
+# Single Package Handling
 
 <Image align="center" border={false} src="https://files.readme.io/30038147b597ac609ceeb2d34aa2b4d432d5c2a7906e4007725f04daf6dd979c-2025-11-13_154507.png" />
 
