@@ -1,5 +1,5 @@
 ---
-name: SinglePackageHandling
+name: CCOSinglePackageHandling
 ---
 ## Single Package Handling
 
