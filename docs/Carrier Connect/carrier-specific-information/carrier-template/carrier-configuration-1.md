@@ -1,5 +1,5 @@
 ---
-title: '[Carrier Name] Carrier Configuration'
+title: '[Carrier Name] Account Configuration'
 excerpt: ''
 deprecated: false
 hidden: true
