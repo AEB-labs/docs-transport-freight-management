@@ -9,13 +9,25 @@ metadata:
 
 To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
+<Tabs>
+  <Tab title="First Tab">
+    Welcome to the content that you can only see inside the first Tab.
+  </Tab>
+
+  <Tab title="Second Tab">
+    Here's content that's only inside the second Tab.
+  </Tab>
+
+  <Tab title="Third Tab">
+    Here's content that's only inside the third Tab.
+  </Tab>
+</Tabs>
+
 # DHL Freight account
 
 <Image border={false} src="https://files.readme.io/a73f400873e88050390ab874a243744feb53246f5cf9d3fcd086c99f65b10f32-image.png" />
 
 <Image border={false} src="https://files.readme.io/901975d59003b80e956aaa21237004bf160eb59f7607201b5d23a24e43423632-image.png" />
-
-<br />
 
 <Table align={["left","left","left"]}>
   <thead>
@@ -142,7 +154,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 <CCONumberRanges />
 
-## Package number range
+### Package number range
 
 <Image border={false} src="https://files.readme.io/16f7817577364f09f3094a13e3c935ebb407545b025a0a0ae4c8a2080b775eda-image.png" />
 
