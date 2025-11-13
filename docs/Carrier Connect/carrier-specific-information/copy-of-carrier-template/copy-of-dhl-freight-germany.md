@@ -1,5 +1,5 @@
 ---
-title: Copy of DHL Freight (Germany)
+title: 'DHL Freight (Germany): General Information'
 deprecated: false
 hidden: true
 metadata:
