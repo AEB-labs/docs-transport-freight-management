@@ -69,9 +69,9 @@ For electronic transmission of documents to a carrier, it is imperative to have 
 
 ## Things to Keep in Mind
 
-* When you attach a document please ensure that the relevant shipping order is not marked as completed. A shipment can be completed in two ways:
-  * Transmitting the field `doCompletion = true` in either the _createShipment_or a _processShipment_ call.
-  * Printing labels within the Carrier Connect application by clicking _Print labels_:  
+* When attaching a document, make sure that the related shipping order is **not already completed**. A shipping order can be completed in two ways:
+  * By sending the field `doCompletion = true` in either the _createShipment_ or _processShipment_ call.
+  * By printing the labels in the Carrier Connect application using _Print labels_:
 
     <Image border={false} src="https://files.readme.io/5eeb4022af9e802305c0ffaf3b93eb57f539be86eeeeb6b88063b2de3077f51a-image.png" />
 * You must base64 encode the document content and put it in `attachments > data`.
