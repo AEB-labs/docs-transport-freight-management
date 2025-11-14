@@ -19,7 +19,7 @@ next:
 </style>
 `}</HTMLBlock>
 
-At times, it becomes necessary to electronically transmit documents, such as export accompanying documents, to a carrier. Our [addShipmentAttachments](https://transport-freight-management.docs.developers.aeb.com/reference/addshipmentattachments) API call offers a convenient solution for attaching documents to an existing shipping order. Alternatively, you can manually attach a document via the Carrier Connect GUI. 
+At times, it becomes necessary to electronically transmit documents, such as export accompanying documents, to a carrier. Our [addShipmentAttachments](https://transport-freight-management.docs.developers.aeb.com/reference/addshipmentattachments) API call offers a convenient solution for attaching documents to an existing shipping order. Alternatively, you can manually attach a document via the Carrier Connect GUI.
 
 For electronic transmission of documents to a carrier, it is imperative to have an appropriate value-added service, such as "DHL Express Paperless Trade", implemented in Carrier Connect. By selecting this service in the shipping order, you can seamlessly transmit the required documents to the carrier. For further details, please refer to our <a href="https://docs.aeb.com/doc/cm-408620299-881238923-en-US/t-881238923-408620299-en-US" target="_blank">system description</a>.
 
@@ -69,5 +69,5 @@ For electronic transmission of documents to a carrier, it is imperative to have 
 
 ## Things to Keep in Mind
 
-* When you attach a document please ensure that the relevant shipping order is not marked as completed (`doCompletion = false`).
+* When you attach a document please ensure that the relevant shipping order is not marked as completed. This means you haven't transmitted the field `doCompletion = true` in either the createShipment or a processShipment call.
 * You must base64 encode the document content and put it in `attachments > data`.
