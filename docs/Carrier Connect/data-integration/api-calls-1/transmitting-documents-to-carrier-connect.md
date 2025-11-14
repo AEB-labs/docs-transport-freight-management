@@ -69,5 +69,5 @@ For electronic transmission of documents to a carrier, it is imperative to have 
 
 ## Things to Keep in Mind
 
-* When you attach a document please ensure that the relevant shipping order is not marked as completed. This means you haven't transmitted the field `doCompletion = true` in either the createShipment or a processShipment call.
+* When you attach a document please ensure that the relevant shipping order is not marked as completed. This means you haven't transmitted the field `doCompletion = true` in either the _createShipment_or a _processShipment_ call.
 * You must base64 encode the document content and put it in `attachments > data`.
