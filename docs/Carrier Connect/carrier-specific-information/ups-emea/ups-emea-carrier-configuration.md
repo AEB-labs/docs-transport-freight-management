@@ -99,8 +99,8 @@ If you're shipping dangerous goods or use the value added service _Access Points
 
 <br />
 
-<CCOCodeConversions />
-
 <CCOSinglePackageHandling />
 
 <br />
+
+<CCOCodeConversions />
