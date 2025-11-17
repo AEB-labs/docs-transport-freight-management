@@ -99,7 +99,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
       </td>
 
       <td>
-        see [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range)
+        See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range)
       </td>
     </tr>
 
@@ -131,6 +131,8 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
         * ANSIFact ASC MH 10
         * GS1 EAN 128 Licenseplate
+
+        See [Tracking no. type](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#tracking-no-type)
       </td>
     </tr>
   </tbody>
