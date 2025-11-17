@@ -11,9 +11,9 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 # DHL Freight account
 
-<Image border={false} src="https://files.readme.io/a73f400873e88050390ab874a243744feb53246f5cf9d3fcd086c99f65b10f32-image.png" />
+<Image align="center" border={false} src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
 
-<Image border={false} src="https://files.readme.io/901975d59003b80e956aaa21237004bf160eb59f7607201b5d23a24e43423632-image.png" />
+<Image align="center" border={false} src="https://files.readme.io/6aaf090c3171d81ef4947d6421c2b9b1fb2c61f15bd9c8c7fb9c643394ea9c63-dhlfreight_account2.png" />
 
 <Table align={["left","left","left"]}>
   <thead>
@@ -67,6 +67,34 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
       </td>
 
       <td>
+        Condition
+      </td>
+
+      <td>
+        See our user guide
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        4
+      </td>
+
+      <td>
+        Single pkg. handling
+      </td>
+
+      <td>
+        See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/dhlfreight-account-configuration#single-package-handling) 
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        5
+      </td>
+
+      <td>
         Customer number
       </td>
 
@@ -77,7 +105,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
     <tr>
       <td>
-        4
+        6
       </td>
 
       <td>
@@ -91,7 +119,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
     <tr>
       <td>
-        5
+        7
       </td>
 
       <td>
@@ -105,7 +133,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
     <tr>
       <td>
-        6
+        8
       </td>
 
       <td>
@@ -119,7 +147,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
     <tr>
       <td>
-        7
+        9
       </td>
 
       <td>
@@ -137,6 +165,8 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
     </tr>
   </tbody>
 </Table>
+
+<CCOSinglePackageHandling />
 
 <br />
 
