@@ -140,13 +140,19 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 <CCONumberRanges />
 
-### Package number range
+<CCOPackageNumberRange />
 
-<Image border={false} src="https://files.readme.io/16f7817577364f09f3094a13e3c935ebb407545b025a0a0ae4c8a2080b775eda-image.png" />
+<br />
 
-| Field             | Comment                 | Start value | Max. value | Char. length | Leading zeros | Auto. re-start |
-| :---------------- | :---------------------- | :---------- | :--------- | :----------- | :------------ | :------------- |
-| Package no. range | Assigned by the carrier | 1           | 999999999  | 9            | Activated     | Activated      |
+| Number | Field          | Comment                                                          |
+| :----- | :------------- | :--------------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLFREIGHT_PCK           |
+| 2      | Name           | Choose a descriptive name. E.g. DHL Freight package number range |
+| 3      | Start value    | 1                                                                |
+| 4      | Max. value     | 999999999                                                        |
+| 5      | Auto. re-start | Activated                                                        |
+| 6      | Leading zeros  | Activated                                                        |
+| 7      | Char. length   | 9                                                                |
 
 ## Tracking no. type
 
@@ -205,8 +211,8 @@ Select the EDI ID you want to configure and click on _Open_.
 | 2      | Name           | Choose a descriptive name. E.g. DHL Freight EDI number range |
 | 3      | Start value    | 1                                                            |
 | 4      | Max. value     | 999                                                          |
-| 5      | Auto. re-start | Activate                                                     |
-| 6      | Leading zeros  | Activate                                                     |
+| 5      | Auto. re-start | Activated                                                    |
+| 6      | Leading zeros  | Activated                                                    |
 | 7      | Char. length   | 3                                                            |
 
 ## EDI connection
