@@ -5,17 +5,15 @@ hidden: true
 metadata:
   robots: index
 ---
-# General Infos
+# Data transmission
 
-## Data transmission
+## Shipping data
 
-### Shipping data
-
-### Document upload
+## Document upload
 
 <br />
 
-# Acceptance Process
+<CCOAcceptanceProcess />
 
 <br />
 
