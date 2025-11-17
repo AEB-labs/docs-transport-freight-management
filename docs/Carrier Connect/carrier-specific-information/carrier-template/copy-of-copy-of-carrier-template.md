@@ -15,7 +15,11 @@ metadata:
 
 <br />
 
-# Acceptance Process
+<br />
+
+<CCOAcceptanceProcess />
+
+<br />
 
 # Error Messages
 
