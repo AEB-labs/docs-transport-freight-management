@@ -11,10 +11,6 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 # DHL Freight account
 
-## test
-
-### testtest
-
 <Image border={false} src="https://files.readme.io/a73f400873e88050390ab874a243744feb53246f5cf9d3fcd086c99f65b10f32-image.png" />
 
 <Image border={false} src="https://files.readme.io/901975d59003b80e956aaa21237004bf160eb59f7607201b5d23a24e43423632-image.png" />
@@ -142,9 +138,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
   </tbody>
 </Table>
 
-## Number ranges
-
-<CCONumberRanges />
+<br />
 
 <CCOPackageNumberRange />
 
@@ -205,8 +199,6 @@ Select the EDI ID you want to configure and click on _Open_.
 
 <br />
 
-## EDI number range
-
 <CCOEDINumberRange />
 
 <br />
@@ -221,15 +213,4 @@ Select the EDI ID you want to configure and click on _Open_.
 | 6      | Leading zeros  | Activated                                                    |
 | 7      | Char. length   | 3                                                            |
 
-## EDI connection
-
 <br />
-
-<br />
-
-<br />
-
-## Mapping: Terms of Delivery & Packages
-
-* [Converting terms of delivery](https://rz3.aeb.de/docudata/OnlineHelp/cai/en-US/index.html#338067211620280459)
-* [Converting package types](https://rz3.aeb.de/docudata/OnlineHelp/cai/en-US/index.html#338084491620282891)
