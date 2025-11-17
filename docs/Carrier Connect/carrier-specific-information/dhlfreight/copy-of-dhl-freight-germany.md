@@ -1,7 +1,7 @@
 ---
 title: 'DHL Freight (Germany): General Information'
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
@@ -9,11 +9,11 @@ metadata:
 
 ## Shipping data
 
-<br />
+<CCOShippingDataViaEDI />
 
 ## Document upload
 
-<Callout icon="❗️">
+<Callout icon="❗️" theme="error">
   Document upload is not available for DHL Freight.
 </Callout>
 
