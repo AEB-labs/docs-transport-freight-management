@@ -57,7 +57,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
       </td>
 
       <td>
-
+        The address of the carrier (depot)
       </td>
     </tr>
 
