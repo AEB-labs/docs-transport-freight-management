@@ -9,7 +9,13 @@ metadata:
 
 ## Shipping data
 
+<br />
+
 ## Document upload
+
+<Callout icon="❗️">
+  Document upload is not available for DHL Freight.
+</Callout>
 
 <br />
 
