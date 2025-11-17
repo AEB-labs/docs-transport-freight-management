@@ -172,33 +172,46 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 In this section the EDI upload parameters are configured.
 
+<Image border={false} src="https://files.readme.io/6614a386d5cd2caeb0efbf299999ed3f26ffb6e9e724de9b678adb30948265e1-image.png" />
+
+<br />
+
+| Number | ID       | Comment                                                                                |
+| :----- | :------- | :------------------------------------------------------------------------------------- |
+| 1      | PICKUP   | Only needed if you use the value added service **Pickup booking (DHLFREIGHTPICKBOOK)** |
+| 2      | STANDARD | This will send the standard EDI (when closing the pickup)                              |
+| 3      | RETURN   | Only needed if you use the value added service **Return booking (DHLFREIGHTRETBOOK)**  |
+
+Select the EDI ID you want to configure and click on _Open_.
+
+<Image border={false} src="https://files.readme.io/a4c145eec2a59f415d2db6a0c15752fa9136d5198eb9b9f158b1cf0d3f0eb1ef-image.png" />
+
+| Number | Field          | Comment                                                                                                                                                                 |
+| :----- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | EDI no. range  | The EDI number range. See [EDI number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#edi-number-range) |
+| 2      | EDI connection | The SFTP-Parameters used for the EDI upload. See                                                                                                                        |
+
+<br />
+
 ## EDI number range
 
-For the EDI number range, you will need the UPS book numbers, which you will get from UPS.
+<CCOEDINumberRange />
 
-|               |                         | Start value          | Max. value           | Char. length | Leading zeros | Auto. re-start |
-| :------------ | :---------------------- | :------------------- | :------------------- | :----------- | :------------ | :------------- |
-| EDI no. range | Assigned by the carrier | book number 1 + "01" | book number 2 + "99" | 9            | Activated     | Activate       |
+<br />
 
-Example:
+| Number | Field          | Comment                                                      |
+| :----- | :------------- | :----------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLFREIGHT_EDI       |
+| 2      | Name           | Choose a descriptive name. E.g. DHL Freight EDI number range |
+| 3      | Start value    | 1                                                            |
+| 4      | Max. value     | 999                                                          |
+| 5      | Auto. re-start | Activate                                                     |
+| 6      | Leading zeros  | Activate                                                     |
+| 7      | Char. length   | 3                                                            |
 
-* <br />
+## EDI connection
 
-## Test environment
-
-In the **test environment** you don't have to change anything:
-
-<Image border={false} src="https://files.readme.io/966342c2689ad6275a6b2a2f347072978e3028a8e59c86b495bd040e77c1b39f-image.png" />
-
-## Productive environment
-
-In the **productive environment** you have to use your customer specific user and password, which you receive from UPS. You also need to use a different URL:
-
-```Text URL
-https://www.ha.ups.com/hapld/tos/kdwhapltos
-```
-
-<Image border={false} src="https://files.readme.io/f5ad378362f9da8647a4eb88e1d4e31d43634c5863cd3f7e61fc393703df1ac2-image.png" />
+<br />
 
 <br />
 
