@@ -23,6 +23,4 @@ metadata:
 
 # Error Messages
 
-<CCOSinglePackageHandling />
-
 <br />
