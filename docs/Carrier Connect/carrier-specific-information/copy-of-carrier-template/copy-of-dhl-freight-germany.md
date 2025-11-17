@@ -22,7 +22,3 @@ metadata:
 <CCOCodeConversions />
 
 <br />
-
-<CCOSinglePackageHandling />
-
-<br />
