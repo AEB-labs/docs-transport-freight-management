@@ -4024,17 +4024,17 @@
           "externalUser": {
             "type": "boolean"
           },
+          "firstName": {
+            "type": "string"
+          },
           "lastName": {
             "type": "string"
           },
-          "firstName": {
+          "aebUserId": {
             "type": "string"
           },
           "authToken": {
             "$ref": "#/components/schemas/JWT"
-          },
-          "aebUserId": {
-            "type": "string"
           }
         }
       },
@@ -4061,22 +4061,22 @@
             "type": "integer",
             "format": "int64"
           },
+          "audience": {
+            "type": "string"
+          },
+          "rawString": {
+            "type": "string"
+          },
           "audiences": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "audience": {
-            "type": "string"
-          },
           "tokenStringForLog": {
             "type": "string"
           },
           "keyId": {
-            "type": "string"
-          },
-          "rawString": {
             "type": "string"
           },
           "jsonString": {
