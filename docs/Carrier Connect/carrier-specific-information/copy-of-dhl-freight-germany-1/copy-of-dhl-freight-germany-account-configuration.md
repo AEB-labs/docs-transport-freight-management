@@ -1,5 +1,5 @@
 ---
-title: 'Copy of DHL Freight (Germany): Account Configuration'
+title: 'DSV Air Freight (Europa): Account Configuration'
 deprecated: false
 hidden: true
 metadata:
@@ -7,9 +7,9 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
+To create a new DSV Air Freight (Europa) account in Carrier Connect, open DSV Air Freight (Europa) in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-# DHL Freight account
+# DSV Air Freight (Europa) account
 
 <Image align="center" border={false} src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
 
@@ -85,7 +85,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
       </td>
 
       <td>
-        See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/dhlfreight-account-configuration#single-package-handling) 
+        See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/dhlfreight-account-configuration#single-package-handling)
       </td>
     </tr>
 
