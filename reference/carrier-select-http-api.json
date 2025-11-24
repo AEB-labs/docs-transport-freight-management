@@ -1381,8 +1381,7 @@
             "description": "This is the contents that has to be written to the file",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "This is the contents that has to be written to the file"
+              "format": "byte"
             }
           }
         }
@@ -1404,10 +1403,12 @@
             "description": "URL token to check on the remote system (for example SAP) if the browser was closed."
           },
           "executeProcess": {
-            "$ref": "#/components/schemas/AFExecuteProcessParmsDTO"
+            "$ref": "#/components/schemas/AFExecuteProcessParmsDTO",
+            "description": "Parameters when application is to be invoked via create process."
           },
           "shellExecute": {
-            "$ref": "#/components/schemas/AFShellExecuteParmsDTO"
+            "$ref": "#/components/schemas/AFShellExecuteParmsDTO",
+            "description": "Parameters when the application is to be invoked via shellExecute."
           }
         },
         "xml": {
@@ -1518,76 +1519,7 @@
           }
         }
       },
-      "IAdditionalUserInfo": {
-        "type": "object",
-        "properties": {
-          "externalUser": {
-            "type": "boolean"
-          },
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "authToken": {
-            "$ref": "#/components/schemas/JWT"
-          },
-          "aebUserId": {
-            "type": "string"
-          }
-        }
-      },
-      "JWT": {
-        "type": "object",
-        "properties": {
-          "algorithm": {
-            "type": "string"
-          },
-          "expirationTime": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "issuer": {
-            "type": "string"
-          },
-          "tokenStringForLog": {
-            "type": "string"
-          },
-          "keyId": {
-            "type": "string"
-          },
-          "rawString": {
-            "type": "string"
-          },
-          "audience": {
-            "type": "string"
-          },
-          "audiences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "jsonString": {
-            "type": "string"
-          },
-          "signature": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
-          },
-          "type": {
-            "type": "string"
-          }
-        }
-      },
-      "UserClientLoginDTO": {
+      "LogonArgument": {
         "type": "object",
         "properties": {
           "userName": {
@@ -1601,100 +1533,6 @@
           },
           "localeName": {
             "type": "string"
-          },
-          "createUser": {
-            "type": "boolean"
-          },
-          "sessionAuthDataKey": {
-            "type": "string"
-          },
-          "loginContext": {
-            "$ref": "#/components/schemas/XNSGLoginDiagnosticContext"
-          },
-          "isExternalLogon": {
-            "type": "boolean"
-          },
-          "isApplicationFacadeAuthentication": {
-            "type": "boolean"
-          },
-          "additionalInfo": {
-            "$ref": "#/components/schemas/IAdditionalUserInfo"
-          }
-        }
-      },
-      "XNSGLoginDiagnosticContext": {
-        "type": "object",
-        "properties": {
-          "loginType": {
-            "type": "string",
-            "enum": [
-              "GUI",
-              "AF",
-              "BF",
-              "REST",
-              "GRAPQHL",
-              "INTERNAL",
-              "GUI_REDIRECT_GET_WEBTOKEN_XNSG",
-              "ATC",
-              "UNKNOWN"
-            ]
-          },
-          "credentialType": {
-            "type": "string",
-            "enum": [
-              "ADMIN",
-              "DBUSER",
-              "LDAP",
-              "RFC",
-              "ENGINE",
-              "LOCAL_ACCESS",
-              "ANONYMOUS",
-              "WEBTOKEN_XNSG",
-              "WEBTOKEN_EXTERNAL_DBUSER",
-              "WEBTOKEN_EXTERNAL",
-              "HTTP_BASIC",
-              "HTTP_BEARER",
-              "K8S_SESSION_RESTORE",
-              "UNKNOWN"
-            ]
-          },
-          "originalCredentialType": {
-            "type": "string",
-            "enum": [
-              "ADMIN",
-              "DBUSER",
-              "LDAP",
-              "RFC",
-              "ENGINE",
-              "LOCAL_ACCESS",
-              "ANONYMOUS",
-              "WEBTOKEN_XNSG",
-              "WEBTOKEN_EXTERNAL_DBUSER",
-              "WEBTOKEN_EXTERNAL",
-              "HTTP_BASIC",
-              "HTTP_BEARER",
-              "K8S_SESSION_RESTORE",
-              "UNKNOWN"
-            ]
-          },
-          "language": {
-            "type": "string"
-          },
-          "wrongPasswordCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "locked": {
-            "type": "boolean"
-          },
-          "errorMsg": {
-            "type": "string"
-          },
-          "tokenInfo": {
-            "type": "string"
-          },
-          "fromRoleCache": {
-            "type": "boolean"
           }
         }
       },
@@ -1738,7 +1576,7 @@
           "messageIdentCode": {
             "type": "string",
             "description": "<p>Optional identification code for further classification of the message type.</p><p>Maximum length: 50</p>",
-            "example": "5627"
+            "example": 5627
           },
           "messageTexts": {
             "type": "array",
@@ -1798,9 +1636,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "syncId": {
@@ -1925,9 +1761,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         }
@@ -2003,9 +1837,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "reportClientIdentCode": {
@@ -2067,7 +1899,8 @@
             "description": "ident code for an XNSG client to file external telemetry reports for.<p>Maximum length: 10</p>"
           },
           "lastUpdate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "last date an external report has been filed"
           },
           "lastUpdateComment": {
             "type": "string",
@@ -2096,7 +1929,8 @@
             "description": "category for the value (see TMDataCategory enum for valid values)"
           },
           "value": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "data for the entry to report"
           }
         }
       },
@@ -2173,8 +2007,7 @@
             "type": "array",
             "description": "data for the entry to report",
             "items": {
-              "type": "string",
-              "description": "data for the entry to report"
+              "type": "string"
             }
           }
         }
@@ -2224,9 +2057,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "reportClientIdentCode": {
@@ -2238,7 +2069,8 @@
             "description": "unique id of the external system"
           },
           "reportData": {
-            "$ref": "#/components/schemas/ExternalTelemetryReportDTO"
+            "$ref": "#/components/schemas/ExternalTelemetryReportDTO",
+            "description": "the telemetry data to file"
           },
           "updateComment": {
             "type": "string",
@@ -2301,7 +2133,7 @@
           "companyNumber": {
             "type": "string",
             "description": "Company number. The company number is in some AEB services not unique.",
-            "example": "12345",
+            "example": 12345,
             "maxLength": 20,
             "minLength": 1,
             "readOnly": true
@@ -2347,7 +2179,7 @@
           "postcode": {
             "type": "string",
             "description": "Postcode of the street address.",
-            "example": "70567",
+            "example": 70567,
             "maxLength": 10,
             "minLength": 0
           },
@@ -2434,6 +2266,7 @@
             "type": "string",
             "format": "date-time",
             "description": "Date at wich the company was set as disabled. Empty if the company is not disabled. This date is always UTC time zone and has the RFC-3339 date format.",
+            "example": "2000-01-01T00:00:00.000",
             "readOnly": true
           },
           "homepage": {
@@ -2725,7 +2558,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "format": "uri",
+            "format": "uri-reference",
             "description": "A URI reference that uniquely identifies the problem type in the\ncontext of the provided API. Opposed to the specification in RFC-7807,\nit neither points to a human-readable documentation nor globally\nunique for the problem type."
           },
           "status": {
@@ -2766,15 +2599,11 @@
             "items": {
               "$ref": "#/components/schemas/AebProblemError"
             }
-          },
-          "logMessage": {
-            "type": "string"
           }
         }
       },
       "AebProblemError": {
         "type": "object",
-        "description": "Array of related errors",
         "properties": {
           "code": {
             "type": "string",
@@ -3042,13 +2871,16 @@
             "description": "Identifier for the mode of transport. Can be empty, if not needed or if it is not known."
           },
           "distance": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Distance of the transport relation, precalculated by the client system. Can be empty."
           },
           "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "goods value."
           },
           "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "customs value."
           },
           "numberOfDeliveryNotes": {
             "type": "integer",
@@ -3096,13 +2928,12 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "routingTask": {
-            "$ref": "#/components/schemas/RoutingTaskDTO"
+            "$ref": "#/components/schemas/RoutingTaskDTO",
+            "description": "The single routing task which should be routed."
           }
         },
         "required": [
@@ -3267,7 +3098,8 @@
         "description": "A party contains a company with information on the address of the given party. Furthermore, the company fulfills one or more certain roles within the routing context, which are also stored in this DTO.",
         "properties": {
           "address": {
-            "$ref": "#/components/schemas/RoutingAddressDTO"
+            "$ref": "#/components/schemas/RoutingAddressDTO",
+            "description": "Address data of the party."
           },
           "partyRole": {
             "type": "string",
@@ -3311,7 +3143,8 @@
             "description": "The clients reference number for the task. <p>length=50</p>"
           },
           "routingParms": {
-            "$ref": "#/components/schemas/RoutingParmsDTO"
+            "$ref": "#/components/schemas/RoutingParmsDTO",
+            "description": "The parms for routing."
           },
           "handlingUnits": {
             "type": "array",
@@ -3328,20 +3161,24 @@
             }
           },
           "startLocation": {
-            "$ref": "#/components/schemas/RoutingTaskLocationDTO"
+            "$ref": "#/components/schemas/RoutingTaskLocationDTO",
+            "description": "The start location of the routing task"
           },
           "endLocation": {
-            "$ref": "#/components/schemas/RoutingTaskLocationDTO"
+            "$ref": "#/components/schemas/RoutingTaskLocationDTO",
+            "description": "The end location of the routing task"
           },
           "decisiveDate": {
             "type": "string",
             "description": "The string representation of the Date  in the format yyyy-MM-dd. The date is used when it comes to exclude configuration elements that have a validity date. <p>length=10</p>"
           },
           "readyForShippingDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "Ready for shipping date as timestamp and zone. If provided, a timestamp (yyyy-MM-dd HH:mm:ss) and  timezone (valid timezone id) have to be supplied. There is no fallback and if a zone should be assumed, UTC can be provided."
           },
           "confirmedDeliveryDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "Confirmed delivery date of the routing task as timestamp and zone. If provided, a timestamp (yyyy-MM-dd HH:mm:ss) and  timezone (valid timezone id) have to be supplied. There is no fallback and if a zone should be assumed, UTC can be provided."
           },
           "termsOfDeliveryCode": {
             "type": "string",
@@ -3367,7 +3204,8 @@
             "description": "The pallet places of the routing task. <p>length=15, scale = 3</p>"
           },
           "addFreightCalculationData": {
-            "$ref": "#/components/schemas/BillingAdditionalFreightCalculationDataDTO"
+            "$ref": "#/components/schemas/BillingAdditionalFreightCalculationDataDTO",
+            "description": "Additional and custom fields for Logistics Cost Management. You do not need to fill this DTO if no freight costs are calculated by Carrier Select. The BillingAdditionalFreightCalculationData provides data to send to Logistics Costs Management. It fills some fields BFreightTransportExtendedDataDTO, but not all. In addition it provides a simple list of custom fields which must be also customized with the same field name  in Logistics Costs Management."
           },
           "procedureIndicator": {
             "type": "string",
@@ -3399,17 +3237,20 @@
             "description": "Number of handling units. Maximum value is 999. <p>length=3</p>"
           },
           "singleGrossWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The gross weight of a single handling unit."
           },
           "singleDimensions": {
-            "$ref": "#/components/schemas/CuboidDimensionsDTO"
+            "$ref": "#/components/schemas/CuboidDimensionsDTO",
+            "description": "The dimensions of the package."
           },
           "handlingUnitType": {
             "type": "string",
             "description": "The identCode of the handling unit type. length=35"
           },
           "dangerousGoodsCode": {
-            "$ref": "#/components/schemas/DangerousGoodsCodeDTO"
+            "$ref": "#/components/schemas/DangerousGoodsCodeDTO",
+            "description": "Dangerous goods data concerning the handling unit. Only relevant when shipping dangerous goods. If the dangerous goods code depends on the mode of transport, and the mode of transport is not fix probably two separate routing tasks should be transmitted. In this case the requirements should be used to ensure that only proposals for the mode of transport will be calculated that match with the dangerous goods code"
           }
         },
         "required": [
@@ -3424,10 +3265,12 @@
         "description": "Class for location based routing task data for BF. Contains data of a complete address or a reference to a hand over point and its location/address in the master data. Either the address or the hopRef is required, the other value must be null.",
         "properties": {
           "address": {
-            "$ref": "#/components/schemas/RoutingAddressDTO"
+            "$ref": "#/components/schemas/RoutingAddressDTO",
+            "description": "The address data."
           },
           "hopRef": {
-            "$ref": "#/components/schemas/HopReferenceDTO"
+            "$ref": "#/components/schemas/HopReferenceDTO",
+            "description": "Reference to a handover point."
           }
         }
       },
@@ -3490,13 +3333,12 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "supplementTask": {
-            "$ref": "#/components/schemas/SupplementTaskDTO"
+            "$ref": "#/components/schemas/SupplementTaskDTO",
+            "description": "The single supplement task which should be calculated."
           }
         },
         "required": [
@@ -3519,8 +3361,7 @@
             "type": "array",
             "description": "The IDs of the value added services.",
             "items": {
-              "type": "string",
-              "description": "The IDs of the value added services."
+              "type": "string"
             }
           }
         },
@@ -3538,7 +3379,8 @@
             "description": "The clients reference number for the task. <p>length=50</p>"
           },
           "routingParms": {
-            "$ref": "#/components/schemas/RoutingParmsDTO"
+            "$ref": "#/components/schemas/RoutingParmsDTO",
+            "description": "The parms for routing."
           },
           "handlingUnits": {
             "type": "array",
@@ -3555,20 +3397,24 @@
             }
           },
           "startLocation": {
-            "$ref": "#/components/schemas/RoutingTaskLocationDTO"
+            "$ref": "#/components/schemas/RoutingTaskLocationDTO",
+            "description": "The start location of the supplement task"
           },
           "endLocation": {
-            "$ref": "#/components/schemas/RoutingTaskLocationDTO"
+            "$ref": "#/components/schemas/RoutingTaskLocationDTO",
+            "description": "The end location of the supplement task"
           },
           "decisiveDate": {
             "type": "string",
             "description": "The string representation of the Date  in the format yyyy-MM-dd. The date is used when it comes to exclude configuration elements that have a validity date. <p>length=10</p>"
           },
           "readyForShippingDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "Ready for shipping date as timestamp and zone. If provided, a timestamp (yyyy-MM-dd HH:mm:ss) and  timezone (valid timezone id) have to be supplied. There is no fallback and if a zone should be assumed, UTC can be provided."
           },
           "confirmedDeliveryDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "Confirmed delivery date of the supplement task as timestamp and zone. If provided, a timestamp (yyyy-MM-dd HH:mm:ss) and  timezone (valid timezone id) have to be supplied. There is no fallback and if a zone should be assumed, UTC can be provided."
           },
           "termsOfDeliveryCode": {
             "type": "string",
@@ -3587,10 +3433,12 @@
             "description": "The pallet places of the supplement task. <p>length=15, scale = 3</p>"
           },
           "addFreightCalculationData": {
-            "$ref": "#/components/schemas/BillingAdditionalFreightCalculationDataDTO"
+            "$ref": "#/components/schemas/BillingAdditionalFreightCalculationDataDTO",
+            "description": "Additional and custom fields for Logistics Cost Management. You do not need to fill this DTO if no freight costs are calculated by Carrier Select. The BillingAdditionalFreightCalculationData provides data to send to Logistics Costs Management. It fills some fields BFreightTransportExtendedDataDTO, but not all. In addition it provides a simple list of custom fields which must be also customized with the same field name  in Logistics Costs Management."
           },
           "service": {
-            "$ref": "#/components/schemas/ServiceDTO"
+            "$ref": "#/components/schemas/ServiceDTO",
+            "description": "The concrete service for which supplements need to be calculated. It consists of the service identcode, provider identcode and value added services."
           },
           "procedureIndicator": {
             "type": "string",
@@ -3728,9 +3576,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         }
@@ -3786,7 +3632,8 @@
             }
           },
           "address": {
-            "$ref": "#/components/schemas/RoutingAddressDTO"
+            "$ref": "#/components/schemas/RoutingAddressDTO",
+            "description": "The address of a handover point"
           }
         },
         "required": [
@@ -3821,9 +3668,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         }
@@ -3910,9 +3755,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         }
@@ -3944,7 +3787,8 @@
             }
           },
           "routingTaskResult": {
-            "$ref": "#/components/schemas/RoutingTaskResultDTO"
+            "$ref": "#/components/schemas/RoutingTaskResultDTO",
+            "description": "Contains a list of ranked proposals and information on the current calculation status for the requested routing task."
           }
         }
       },
@@ -3983,16 +3827,20 @@
         "description": "DTO to provide a leg of a route schedule calculation. It's values are filled depending on the calculation state and the calculation mode.",
         "properties": {
           "earliestShippingDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "The calculated earliest shipping date. Filled when the schedule calculation state is PROCESSED and there was a forward calculation."
           },
           "latestShippingDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "The calculated latest shipping date. Filled when the schedule calculation state is PROCESSED and there was a backwards calculation."
           },
           "earliestDeliveryDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "The calculated earliest delivery date. Filled when the schedule calculation state is PROCESSED and there was a forward calculation."
           },
           "latestDeliveryDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "The calculated latest delivery date. Filled when the schedule calculation state is PROCESSED and there was a backwards calculation."
           }
         }
       },
@@ -4016,16 +3864,20 @@
             }
           },
           "earliestShippingDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "The calculated earliest shipping date. Filled when the schedule calculation state is PROCESSED and there was a forward calculation."
           },
           "latestShippingDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "The calculated latest shipping date. Filled when the schedule calculation state is PROCESSED and there was a backwards calculation."
           },
           "earliestDeliveryDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "The calculated earliest delivery date. Filled when the schedule calculation state is PROCESSED and there was a forward calculation."
           },
           "latestDeliveryDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "The calculated latest delivery date. Filled when the schedule calculation state is PROCESSED and there was a backwards calculation."
           },
           "internalId": {
             "type": "string",
@@ -4053,16 +3905,14 @@
             "type": "array",
             "description": "Array of identCodes of value added services. <p> length = 20 <\\p> per ident code",
             "items": {
-              "type": "string",
-              "description": "Array of identCodes of value added services. <p> length = 20 <\\p> per ident code"
+              "type": "string"
             }
           },
           "serviceInfoTextIdentCodes": {
             "type": "array",
             "description": "Array of identCodes of info texts <p> length = 20 <\\p> per ident code",
             "items": {
-              "type": "string",
-              "description": "Array of identCodes of info texts <p> length = 20 <\\p> per ident code"
+              "type": "string"
             }
           },
           "supplements": {
@@ -4073,13 +3923,16 @@
             }
           },
           "startHop": {
-            "$ref": "#/components/schemas/HopDTO"
+            "$ref": "#/components/schemas/HopDTO",
+            "description": "The handover point where at the leg starts. This could be a HopStartDTO or a HopReferenceDTO"
           },
           "endHop": {
-            "$ref": "#/components/schemas/HopDTO"
+            "$ref": "#/components/schemas/HopDTO",
+            "description": "The handover point where the leg ends. This could be a HopEndDTO or a HopReferenceDTO"
           },
           "legSchedule": {
-            "$ref": "#/components/schemas/RouteLegScheduleDTO"
+            "$ref": "#/components/schemas/RouteLegScheduleDTO",
+            "description": "Schedule calculation information of the individual proposal legs.  Is provided when a route schedule calculation has been done for the routing proposal."
           },
           "internalId": {
             "type": "string",
@@ -4121,7 +3974,8 @@
             }
           },
           "routeSchedule": {
-            "$ref": "#/components/schemas/RouteScheduleDTO"
+            "$ref": "#/components/schemas/RouteScheduleDTO",
+            "description": "Schedule calculation information of the proposal. If not provided, no schedule calculation has been done for the route."
           }
         },
         "required": [
@@ -4164,7 +4018,8 @@
             }
           },
           "data": {
-            "$ref": "#/components/schemas/RoutingSupplementDataDTO"
+            "$ref": "#/components/schemas/RoutingSupplementDataDTO",
+            "description": "Holds three fields where each field contains individual data depending on its type. Only one data field is filled at the same for each RoutingSupplementDataDTO. The field dataType of RoutingSupplementDTO determines which data can be expectedto be filled. Expected data can be for example: <ul> <li> ServiceVasValidationSupplementDataDTO</li> <li> PricingSupplementDataDTO</li> <li> StarRatingSupplementDataDTO</li> </ul>"
           }
         },
         "required": [
@@ -4178,16 +4033,20 @@
         "description": "Container class for all supplement dependent data for BF. Contains additional data calculated by respective adapters based on a proposal for a routing task. Depending on the type of individual supplements, the data is hold in its respective field. Only one field may be filled at the same time.",
         "properties": {
           "validationData": {
-            "$ref": "#/components/schemas/ServiceVasValidationSupplementDataDTO"
+            "$ref": "#/components/schemas/ServiceVasValidationSupplementDataDTO",
+            "description": "Result on validation"
           },
           "pricingData": {
-            "$ref": "#/components/schemas/PricingSupplementDataDTO"
+            "$ref": "#/components/schemas/PricingSupplementDataDTO",
+            "description": "Price information."
           },
           "starRatingData": {
-            "$ref": "#/components/schemas/StarRatingSupplementDataDTO"
+            "$ref": "#/components/schemas/StarRatingSupplementDataDTO",
+            "description": "Star rating"
           },
           "valueRatingData": {
-            "$ref": "#/components/schemas/ValueRatingSupplementDataDTO"
+            "$ref": "#/components/schemas/ValueRatingSupplementDataDTO",
+            "description": "Value rating"
           }
         }
       },
@@ -4233,7 +4092,8 @@
             }
           },
           "supportedScheduleType": {
-            "$ref": "#/components/schemas/RoutingScheduleTypeDTO"
+            "$ref": "#/components/schemas/RoutingScheduleTypeDTO",
+            "description": "Information on schedule that is calculated for this routing task."
           },
           "proposals": {
             "type": "array",
@@ -4316,9 +4176,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "taskId": {
@@ -4440,9 +4298,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         }
@@ -4474,7 +4330,8 @@
             }
           },
           "supplementTaskResult": {
-            "$ref": "#/components/schemas/SupplementTaskResultDTO"
+            "$ref": "#/components/schemas/SupplementTaskResultDTO",
+            "description": "Contains information on the current calculation status for the requested supplement task."
           }
         }
       },
@@ -4495,10 +4352,12 @@
             "description": "The reference number for the supplement task. <p>length=50</p>"
           },
           "service": {
-            "$ref": "#/components/schemas/ServiceDTO"
+            "$ref": "#/components/schemas/ServiceDTO",
+            "description": "The service of the task."
           },
           "routeSchedule": {
-            "$ref": "#/components/schemas/RouteScheduleDTO"
+            "$ref": "#/components/schemas/RouteScheduleDTO",
+            "description": "Schedule calculation information of the route. If not provided, no schedule calculation has been done for the route."
           },
           "supplements": {
             "type": "array",
@@ -4549,9 +4408,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "taskId": {
@@ -4590,9 +4447,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "taskId": {
