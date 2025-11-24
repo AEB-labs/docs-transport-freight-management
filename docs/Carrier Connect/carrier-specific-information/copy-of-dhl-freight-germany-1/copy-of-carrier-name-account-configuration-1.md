@@ -41,8 +41,6 @@ Select account type DSVAIR_API2.
 | 10     | Test subscription key (Document upload)  | Assigned by the carrier                                                                                                                                              |
 | 11     | Test auth sub. key (Authentication)      | Assigned by the carrier                                                                                                                                              |
 
-<CCOSinglePackageHandling />
-
 <br />
 
 <CCOPackageNumberRange />
