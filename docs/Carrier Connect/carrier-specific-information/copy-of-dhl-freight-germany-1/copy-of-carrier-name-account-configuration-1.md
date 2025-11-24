@@ -57,7 +57,6 @@ When prompted to select an account type, choose **DSVAIR_API2 (DSV Luftfracht AP
       <td>Set to <i>Send and log</i>.</td>
     </tr>
 
-```
 {/* Screenshot-extracted fields */}
 <tr>
   <td>1</td>
@@ -99,7 +98,6 @@ When prompted to select an account type, choose **DSVAIR_API2 (DSV Luftfracht AP
   <td>Test auth sub. key</td>
   <td>Enter the authentication subscription key for the DSV test environment in section <i>Authentication</i>.</td>
 </tr>
-```
 
   </tbody>
 </Table>
