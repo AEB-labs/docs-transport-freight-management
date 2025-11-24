@@ -22,8 +22,6 @@ To create a new UPS account in Carrier Connect, open UPS in _Master data > Carri
 
 <CCOAccountTransfer />
 
-<Image border={false} src="https://files.readme.io/0352f252b0ddb590fe0e7cb01f1d6f3ebe5f868df745e2758b6b8e6d27f11a13-image.png" />
-
 <br />
 
 ## Customer data
