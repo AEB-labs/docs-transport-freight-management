@@ -7,11 +7,13 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-To create a new DSV Air Freight (Europe) account in Carrier Connect, open DSV Air Freight (Europe) in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_. 
+To create a new DSV Air Freight (Europe) account in Carrier Connect, open DSV Air Freight (Europe) in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
 Select account type DSVAIR_API2.
 
-<Image border={false} src="https://files.readme.io/f0a3064e7921f5903a7d4ca79c93fcfb6a2c2bfb98745883238ae98f8721f632-image.png" />
+<Image align="center" border={false} src="https://files.readme.io/0b2dd5954313fb70b6b5534ba6c0a4141f2b27a9812b89ad95aca70e03959b87-AccountType.png" />
+
+<CCOAccountTransfer />
 
 <br />
 
