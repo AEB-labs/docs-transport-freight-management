@@ -49,10 +49,10 @@ Select account type DSVAIR_API2.
 
 | Number | Field          | Comment                                                                       |
 | :----- | :------------- | :---------------------------------------------------------------------------- |
-| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DSV Air Freight (Europe)_PCK          |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DSVAIR_PCK                            |
 | 2      | Name           | Choose a descriptive name. E.g. DSV Air Freight (Europe) package number range |
-| 3      | Start value    | _Ask the user for this value_                                                 |
-| 4      | Max. value     | _Ask the user for this value_                                                 |
-| 5      | Auto. re-start | Activated or Deactivated                                                      |
-| 6      | Leading zeros  | Activated or Deactivated                                                      |
-| 7      | Char. length   | _Ask the user for this value_                                                 |
+| 3      | Start value    | 1                                                                             |
+| 4      | Max. value     | 999.999.999                                                                   |
+| 5      | Auto. re-start | Activated                                                                     |
+| 6      | Leading zeros  | Activated                                                                     |
+| 7      | Char. length   | 9                                                                             |
