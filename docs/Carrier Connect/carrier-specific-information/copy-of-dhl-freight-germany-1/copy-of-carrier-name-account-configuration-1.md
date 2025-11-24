@@ -7,7 +7,7 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-To create a new DSV Air Freight (Europe) account in Carrier Connect, open DSV Air Freight (Europe) in *Master data > Carrier configurations*. In the tab *Accounts* click on *New*.
+To create a new DSV Air Freight (Europe) account in Carrier Connect, open DSV Air Freight (Europe) in *Master data > Carrier configurations*. In the tab *Accounts* click on *New*. Select account type DSVAIR_API2 (standard to be used). The type DSVAIR_APITRACK2 is deprecated.
 
 # DSV Air Freight (Europe) account
 
@@ -53,53 +53,46 @@ To create a new DSV Air Freight (Europe) account in Carrier Connect, open DSV Ai
       <td>EDI transmission</td>
       <td>Set to <em>Send and log</em></td>
     </tr>
-
-<tr>
-  <td>7</td>
-  <td>Account type DSVAIR_API2</td>
-  <td>Standard API account type. Always use this type for new DSV Air Freight (Europe) configurations.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td>Account type DSVAIR_APITRACK2</td>
-  <td>Deprecated account type. Do not use for new configurations.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td>Customer no.</td>
-  <td>Assigned by the carrier</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td>GS1 base no.</td>
-  <td>Your company's GS1 base number</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td>Test user name</td>
-  <td>Assigned by the carrier</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td>Test password</td>
-  <td>Assigned by the carrier</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td>Test subscription key</td>
-  <td>Assigned by the carrier</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td>Document upload – Test subscription key</td>
-  <td>Assigned by the carrier</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td>Authentication – Test auth sub. key</td>
-  <td>Assigned by the carrier</td>
-</tr>
-
+    <tr>
+      <td>7</td>
+      <td>Customer no.</td>
+      <td>Assigned by the carrier</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>GS1 base no.</td>
+      <td>Your company's GS1 base number</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Package no. range</td>
+      <td>Assigned by the carrier</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Test user name</td>
+      <td>Assigned by the carrier</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Test password</td>
+      <td>Assigned by the carrier</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Test subscription key (Web service data)</td>
+      <td>Assigned by the carrier</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Test subscription key (Document upload)</td>
+      <td>Assigned by the carrier</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Test auth sub. key</td>
+      <td>Assigned by the carrier</td>
+    </tr>
   </tbody>
 </Table>
 
@@ -120,7 +113,3 @@ To create a new DSV Air Freight (Europe) account in Carrier Connect, open DSV Ai
 | 5      | Auto. re-start | Activated or Deactivated                                                      |
 | 6      | Leading zeros  | Activated or Deactivated                                                      |
 | 7      | Char. length   | *Ask the user for this value*                                                 |
-
-## Tracking no. type
-
-*No tracking number types are required for this carrier.*
