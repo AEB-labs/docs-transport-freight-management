@@ -15,6 +15,10 @@ To create a new DSV Air Freight (Europe) account in Carrier Connect, open DSV Ai
 
 <Image align="center" border={false} src="https://files.readme.io/03332821970dfa7ed0732881224aeb457c9a64c56152bfaa7ecbc28beaf21c12-DSV_AIR2.png" />
 
+<Image align="center" border={false} src="https://files.readme.io/e3041664162029e43e5f090b6828ed9caeb68a03f4ba8fed031b40a5c7940e33-DSV_AIR3.png" />
+
+<Image align="center" border={false} src="https://files.readme.io/1a861bfa23863c2ac676be47d0803791d6d204394fd6852db44501e193b2cf09-DSV_AIR4.png" />
+
 | Number | Field                                    | Comment                                                                                                                                                              |
 | :----- | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1      | Shipper                                  | The address of the shipper                                                                                                                                           |
@@ -23,13 +27,11 @@ To create a new DSV Air Freight (Europe) account in Carrier Connect, open DSV Ai
 | 4      | Customer no.                             | Assigned by the carrier                                                                                                                                              |
 | 5      | GS1 base no.                             | Your company's GS1 base number                                                                                                                                       |
 | 6      | Package no. range                        | See <a href="https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range">Package number range</a> |
-| 6      | EDI transmission                         | Set to <em>Send and log</em>                                                                                                                                         |
-| 9      | Package no. range                        | Assigned by the carrier                                                                                                                                              |
-| 10     | Test user name                           | Assigned by the carrier                                                                                                                                              |
-| 11     | Test password                            | Assigned by the carrier                                                                                                                                              |
-| 12     | Test subscription key (Web service data) | Assigned by the carrier                                                                                                                                              |
-| 13     | Test subscription key (Document upload)  | Assigned by the carrier                                                                                                                                              |
-| 14     | Test auth sub. key                       | Assigned by the carrier                                                                                                                                              |
+| 7      | Test user name (Web service data)        | Assigned by the carrier                                                                                                                                              |
+| 8      | Test password (Web service data)         | Assigned by the carrier                                                                                                                                              |
+| 9      | Test subscription key (Web service data) | Assigned by the carrier                                                                                                                                              |
+| 10     | Test subscription key (Document upload)  | Assigned by the carrier                                                                                                                                              |
+| 11     | Test auth sub. key (Authentication)      | Assigned by the carrier                                                                                                                                              |
 
 <CCOSinglePackageHandling />
 
