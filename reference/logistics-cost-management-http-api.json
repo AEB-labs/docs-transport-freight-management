@@ -1600,7 +1600,6 @@
     "schemas": {
       "BillingScenario": {
         "type": "object",
-        "description": "List of billing scenarios.",
         "properties": {
           "identCode": {
             "type": "string",
@@ -1664,7 +1663,6 @@
       },
       "Service": {
         "type": "object",
-        "description": "List of services.",
         "properties": {
           "identCode": {
             "type": "string",
@@ -1728,7 +1726,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "format": "uri",
+            "format": "uri-reference",
             "description": "A URI reference that uniquely identifies the problem type in the\ncontext of the provided API. Opposed to the specification in RFC-7807,\nit neither points to a human-readable documentation nor globally\nunique for the problem type."
           },
           "status": {
@@ -1769,15 +1767,11 @@
             "items": {
               "$ref": "#/components/schemas/AebProblemError"
             }
-          },
-          "logMessage": {
-            "type": "string"
           }
         }
       },
       "AebProblemError": {
         "type": "object",
-        "description": "Array of related errors",
         "properties": {
           "code": {
             "type": "string",
@@ -1863,7 +1857,7 @@
           "messageIdentCode": {
             "type": "string",
             "description": "<p>Optional identification code for further classification of the message type.</p><p>Maximum length: 50</p>",
-            "example": "5627"
+            "example": 5627
           },
           "messageTexts": {
             "type": "array",
@@ -1923,9 +1917,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "syncId": {
@@ -2022,9 +2014,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "reasonOfReversal": {
@@ -2246,7 +2236,8 @@
             "description": "<p>Status of the item after save and optional operations</p> <p>length=10</p>"
           },
           "clientPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "The price of the service item in client currency. The sum of the prices in client currency of the settlement items."
           },
           "vatRatePercent": {
             "type": "number",
@@ -2281,13 +2272,16 @@
             "description": "Description of service item."
           },
           "orderer": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "Orderer of the service item. The orderer is the contract partner, for which the services are done. Price calculation depends on the orderer.<br>"
           },
           "serviceProvider": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "Service provider of the item. The service provider is the contract partner, which receives the money.<br>"
           },
           "payer": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "The payer of the settlement item"
           }
         }
       },
@@ -2315,16 +2309,20 @@
             }
           },
           "priceType": {
-            "$ref": "#/components/schemas/BPriceTypeResultDTO"
+            "$ref": "#/components/schemas/BPriceTypeResultDTO",
+            "description": "The price type for this settlement item."
           },
           "price": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "The calculated price in input currency. This field is filled for pricing settlement items and is empty for manual settlement items. Use settlement or client price if possible."
           },
           "settlementPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "The price in settlement currency."
           },
           "clientPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "The price in client currency."
           },
           "numberInServiceItem": {
             "type": "integer",
@@ -2332,7 +2330,8 @@
             "description": "Settlement item number<br> Sequential settlement item number within a service item usually starting with 1 for the first settlement item of  a service item."
           },
           "chargeableQuantity": {
-            "$ref": "#/components/schemas/BQuantityDTO"
+            "$ref": "#/components/schemas/BQuantityDTO",
+            "description": "Chargeable quantity used for price calculation of the item."
           },
           "calcGenericIdentCode": {
             "type": "string",
@@ -2415,13 +2414,12 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "parms": {
-            "$ref": "#/components/schemas/BCreateServiceItemParmsDTO"
+            "$ref": "#/components/schemas/BCreateServiceItemParmsDTO",
+            "description": "Processing parameters."
           },
           "items": {
             "type": "array",
@@ -2459,7 +2457,8 @@
             "description": "<p>Human readable id which identifies a client organization</p> <p>The organization ID can be used for splitting and assigning settlement items to build up settlements. Therefore, if the import data doesn't provide for an organization ID, the import process will set a default organization ID into the service item.</p> <p>length=20</p>"
           },
           "clientSystemUser": {
-            "$ref": "#/components/schemas/BContactDTO"
+            "$ref": "#/components/schemas/BContactDTO",
+            "description": "client system user of the item"
           },
           "clientSystemCostCenter": {
             "type": "string",
@@ -2486,49 +2485,64 @@
             "description": "Main order number for the service item<br>  <p>length=50</p>"
           },
           "serviceProvider": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "Service provider of the item. The service provider is the contract partner, which receives the money.<br>"
           },
           "serviceProviderContact": {
-            "$ref": "#/components/schemas/BContactDTO"
+            "$ref": "#/components/schemas/BContactDTO",
+            "description": "Service provider contact person of the item. <br>"
           },
           "orderer": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "Orderer of the service item. The orderer is the contract partner, for which the services are done. Price calculation depends on the orderer.<br>"
           },
           "ordererContact": {
-            "$ref": "#/components/schemas/BContactDTO"
+            "$ref": "#/components/schemas/BContactDTO",
+            "description": "Orderer contact person of the item. <br>"
           },
           "payer": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "Party that has to pay for the service.  The business partner, which pays never the less the document is a invoice or credit note.  The price calculation does not depend on this party (unless identical with the orderer).<br>"
           },
           "payerContact": {
-            "$ref": "#/components/schemas/BContactDTO"
+            "$ref": "#/components/schemas/BContactDTO",
+            "description": "Payer contact person of the item. <br>"
           },
           "beneficiary": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "Party that has the benefit for the service.  Especially to determine the VAT rate it is necessary to know the  beneficiary party, city and country.<br>"
           },
           "referenceDate": {
-            "$ref": "#/components/schemas/BDateAndZoneDTO"
+            "$ref": "#/components/schemas/BDateAndZoneDTO",
+            "description": "Main timestamp for referencing the service item in the format 'yyyy-MM-dd hh:mm:ss'.<br> This timestamp is intended for communication purposes."
           },
           "pricingDate": {
-            "$ref": "#/components/schemas/BDateAndZoneDTO"
+            "$ref": "#/components/schemas/BDateAndZoneDTO",
+            "description": "Timestamp relevant for pricing in the format 'yyyy-MM-dd hh:mm:ss'. This timestamp will be used for checking against validity dates in contracts, assigned price schemes and price components."
           },
           "chargeDate": {
-            "$ref": "#/components/schemas/BDateAndZoneDTO"
+            "$ref": "#/components/schemas/BDateAndZoneDTO",
+            "description": "TimeStamp relevant for charging the customer in the format 'yyyy-MM-dd hh:mm:ss'. This timestamp will be used in settlement item period calculation and decides in which period a settlement item for this item will fall."
           },
           "serviceDate": {
-            "$ref": "#/components/schemas/BDateAndZoneDTO"
+            "$ref": "#/components/schemas/BDateAndZoneDTO",
+            "description": "Fulfillment date of the service item in the format 'yyyy-MM-dd hh:mm:ss'.<br> Normally the same as the pricingDate. Only for informational purposes."
           },
           "orderDate": {
-            "$ref": "#/components/schemas/BDateAndZoneDTO"
+            "$ref": "#/components/schemas/BDateAndZoneDTO",
+            "description": "Order date of the service item in the format 'yyyy-MM-dd hh:mm:ss'.<br> Only for informational purposes."
           },
           "quantity": {
-            "$ref": "#/components/schemas/BQuantityDTO"
+            "$ref": "#/components/schemas/BQuantityDTO",
+            "description": "Measurable quantity usable for price calculation of the item."
           },
           "precalculatedNetPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Pre calculated price for the item for a price unit."
           },
           "extendedData": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "A generic data structure which contains domain specific data of the item. The customizing of the Logistics Cost Management specifies what types of fields and records this data may or must contain."
           },
           "description": {
             "type": "string",
@@ -2586,22 +2600,13 @@
       "NamedGenericDataRecordDTO": {
         "type": "object",
         "description": "A generic data record with a name.<br> Wrapper class to encapsulate subrecords with their name and with the ability to have explicit null records.",
-        "example": [
-          {
-            "name": "child",
-            "record": {
-              "fields": [],
-              "subrecords": []
-            }
-          }
-        ],
         "properties": {
           "name": {
             "type": "string",
             "description": "The name of this record, i.e. the role the record plays in the enclosing record.<br> When the same name is repeated in the context of the same parent record,  it is assumed that the parent defines this element as a repeatable (array) element."
           },
           "record": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "description": "The record associated with the name.<br> Especially in case, where the name is repeated in the context of the same parent record, this field may be null to indicate a null in a list of records."
           }
         }
       },
@@ -2684,9 +2689,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         }
@@ -2753,9 +2756,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "scenarioIdentCode": {
@@ -2773,13 +2774,16 @@
             "description": "Cost center of this item. <br> <p>length=50</p>"
           },
           "vatInfo": {
-            "$ref": "#/components/schemas/BVatInfoResultDTO"
+            "$ref": "#/components/schemas/BVatInfoResultDTO",
+            "description": "Details about the VAT calculation."
           },
           "settlementNetPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Net price of this item in settlement currency."
           },
           "settlementVatPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "VAT price of this item in settlement currency."
           }
         }
       },
@@ -2866,31 +2870,40 @@
             "description": "Main reference number for the settlement. <br> <p>length=50</p>"
           },
           "settlementType": {
-            "$ref": "#/components/schemas/BSettlementTypeResultDTO"
+            "$ref": "#/components/schemas/BSettlementTypeResultDTO",
+            "description": "Type of settlement."
           },
           "settlementDate": {
-            "$ref": "#/components/schemas/BDateAndZoneDTO"
+            "$ref": "#/components/schemas/BDateAndZoneDTO",
+            "description": "Issue date of the settlement."
           },
           "provider": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "The party that provided the service."
           },
           "orderer": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "The party for which the services are done."
           },
           "payer": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "The party that has to pay for the service."
           },
           "settlementGrossPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "The total gross price of the settlement."
           },
           "settlementNetPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "The total net price of the settlement."
           },
           "settlementVatPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "The vat price of the settlement."
           },
           "accountingScenario": {
-            "$ref": "#/components/schemas/BAccountingScenarioResultDTO"
+            "$ref": "#/components/schemas/BAccountingScenarioResultDTO",
+            "description": "Accounting scenario of the settlement."
           },
           "accountingItems": {
             "type": "array",
@@ -2952,9 +2965,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "includeAccountingItems": {
@@ -3025,9 +3036,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "getSettlementItems": {
@@ -3205,9 +3214,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "services": {
@@ -3231,7 +3238,7 @@
           "value": {
             "type": "string",
             "description": "Value of the field. If this field contains a decimal value it must be formatted with a point as decimal separator and without any other dividers.",
-            "example": "1234.56"
+            "example": 1234.56
           }
         },
         "required": [
@@ -3275,12 +3282,11 @@
       },
       "BUpdateRateSheetOmittedEntryResponseDTO": {
         "type": "object",
-        "description": "Entries that were obmited because of duplication",
         "properties": {
           "id": {
             "type": "string",
             "description": "(External) ID to identify the entry (for delete or update). This field can be omitted; note that in this case the entry can not be deleted or updated via this API.",
-            "example": "7411",
+            "example": 7411,
             "maxLength": 32
           },
           "validFrom": {
@@ -3320,7 +3326,7 @@
           "id": {
             "type": "string",
             "description": "(External) ID to identify the entry (for delete or update). This field can be omitted; note that in this case the entry can not be deleted or updated via this API.",
-            "example": "7411",
+            "example": 7411,
             "maxLength": 32
           },
           "validFrom": {
@@ -3342,7 +3348,7 @@
           },
           "delete": {
             "type": "boolean",
-            "default": false,
+            "default": "false",
             "description": "If true, the rate sheet entry with the given #id will be deleted (if it exists). If set, #id must be filled. All other values can be omitted."
           }
         },
@@ -3380,9 +3386,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "rateSheetIdentCode": {
@@ -3461,9 +3465,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "syncId": {
@@ -3554,8 +3556,7 @@
             "description": "A byte stream which is added as new document (attachment) in the documents list of the invoice.<br> You have to fill fileExtension also, so that the attachment will be opened with the correct editor.<br> It is highly recommended to upload only smaller files/data, smaller than 10MB. <br> Otherwise a timeout may appear while sending the request.",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "A byte stream which is added as new document (attachment) in the documents list of the invoice.<br> You have to fill fileExtension also, so that the attachment will be opened with the correct editor.<br> It is highly recommended to upload only smaller files/data, smaller than 10MB. <br> Otherwise a timeout may appear while sending the request."
+              "format": "byte"
             }
           },
           "fileExtension": {
@@ -3623,9 +3624,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "billingScenarioIdentCode": {
@@ -3633,10 +3632,12 @@
             "description": "Ident code of the billing scenario.<br> <p>length=50</p>"
           },
           "clientSystemUser": {
-            "$ref": "#/components/schemas/BContactDTO"
+            "$ref": "#/components/schemas/BContactDTO",
+            "description": "Client system user of the request, who sends the request.<br> Can also be a number or logon name of a gateway / automated system user"
           },
           "parms": {
-            "$ref": "#/components/schemas/BCreateExternalInvoicesParmsDTO"
+            "$ref": "#/components/schemas/BCreateExternalInvoicesParmsDTO",
+            "description": "Parameter or flags for this request."
           },
           "invoices": {
             "type": "array",
@@ -3656,7 +3657,8 @@
             "description": "<p>Human readable id which identifies a client organization</p> <p>length=20</p>"
           },
           "clientUser": {
-            "$ref": "#/components/schemas/BContactDTO"
+            "$ref": "#/components/schemas/BContactDTO",
+            "description": "client user of the invoice"
           },
           "originCode": {
             "type": "string",
@@ -3671,24 +3673,28 @@
             "description": "Additional reference number 1. <br> <p>length=50</p>"
           },
           "invoiceDate": {
-            "$ref": "#/components/schemas/BDateAndZoneDTO"
+            "$ref": "#/components/schemas/BDateAndZoneDTO",
+            "description": "Price relevant time stamp in the format 'yyyy-MM-dd hh:mm:ss'. <br>"
           },
           "dueDate": {
-            "$ref": "#/components/schemas/BDateAndZoneDTO"
+            "$ref": "#/components/schemas/BDateAndZoneDTO",
+            "description": "Due time stamp in the format 'yyyy-MM-dd hh:mm:ss'. <br>"
           },
           "providerCompanyNumber": {
             "type": "string",
             "description": "Company number of the provider. <p>length=20</p>"
           },
           "providerContact": {
-            "$ref": "#/components/schemas/BContactDTO"
+            "$ref": "#/components/schemas/BContactDTO",
+            "description": "Service provider contact person of the invoice."
           },
           "payerCompanyNumber": {
             "type": "string",
             "description": "Company number of the payer. <p>length=20</p>"
           },
           "payerContact": {
-            "$ref": "#/components/schemas/BContactDTO"
+            "$ref": "#/components/schemas/BContactDTO",
+            "description": "Payer contact person of the invoice."
           },
           "currencyIsoCode": {
             "type": "string",
@@ -3715,10 +3721,12 @@
             "description": "Additional large text of the invoice.<br>  <p>length=1000</p>"
           },
           "attachmentFileInfo": {
-            "$ref": "#/components/schemas/BAttachmentFileInfoDTO"
+            "$ref": "#/components/schemas/BAttachmentFileInfoDTO",
+            "description": "One of two ways to add an attachment document to this invoice. If both filled, attachmentBytesInfo & attachmentFileInfo - the byte stream is preferred.<br>"
           },
           "attachmentBytesInfo": {
-            "$ref": "#/components/schemas/BAttachmentBytesInfoDTO"
+            "$ref": "#/components/schemas/BAttachmentBytesInfoDTO",
+            "description": "One of two ways to add an attachment document to this invoice.  If both filled, attachmentBytesInfo & attachmentFileInfo - the byte stream is preferred.<br>"
           },
           "invoiceUri": {
             "type": "string",
@@ -3746,7 +3754,8 @@
             "description": "Service provider reference number for the invoice item<br>  <p>length=50</p>"
           },
           "referenceDate": {
-            "$ref": "#/components/schemas/BDateAndZoneDTO"
+            "$ref": "#/components/schemas/BDateAndZoneDTO",
+            "description": "Main time stamp for referencing the invoice item in the format 'yyyy-MM-dd hh:mm:ss'.<br>"
           },
           "netPriceValue": {
             "type": "number",
@@ -3761,14 +3770,16 @@
             "description": "The VAT amount of the item. <p>length=15, scale=2</p>"
           },
           "inputPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "The price of the item in input currency."
           },
           "inputCurrencyRate": {
             "type": "number",
             "description": "The rate of of the input currency. <p>length=15, scale=8</p>"
           },
           "chargeableWeight": {
-            "$ref": "#/components/schemas/BQuantityDTO"
+            "$ref": "#/components/schemas/BQuantityDTO",
+            "description": "The chargeable weight of the item."
           },
           "chargeCode": {
             "type": "string",
@@ -3816,13 +3827,16 @@
             "description": "Settlement date of the invoice."
           },
           "settlementNetPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Net price of the settlement."
           },
           "settlementVatPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "VAT price of the settlement."
           },
           "settlementGrossPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Gross price of the settlement."
           },
           "settlementLastModifiedBy": {
             "type": "string",
@@ -3880,10 +3894,12 @@
             "description": "Due date of the invoice."
           },
           "payer": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "Payer of the invoice."
           },
           "provider": {
-            "$ref": "#/components/schemas/BCompanyDTO"
+            "$ref": "#/components/schemas/BCompanyDTO",
+            "description": "Provider of the invoice."
           },
           "attribute": {
             "type": "string",
@@ -3901,16 +3917,20 @@
             "maxLength": 250
           },
           "invoiceNetPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Net price of the invoice."
           },
           "invoiceVatPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "VAT price of the invoice."
           },
           "invoiceGrossPrice": {
-            "$ref": "#/components/schemas/BAmountOfMoneyDTO"
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Gross price of the invoice."
           },
           "settlement": {
-            "$ref": "#/components/schemas/BExternalInvoiceSettlementSyncDTO"
+            "$ref": "#/components/schemas/BExternalInvoiceSettlementSyncDTO",
+            "description": "Settlement of the invoice. Only filled if the invoice is associated with a settlement."
           }
         }
       },
@@ -3985,9 +4005,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         }
@@ -4015,76 +4033,7 @@
           }
         }
       },
-      "IAdditionalUserInfo": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string"
-          },
-          "externalUser": {
-            "type": "boolean"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "firstName": {
-            "type": "string"
-          },
-          "authToken": {
-            "$ref": "#/components/schemas/JWT"
-          },
-          "aebUserId": {
-            "type": "string"
-          }
-        }
-      },
-      "JWT": {
-        "type": "object",
-        "properties": {
-          "signature": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
-          },
-          "type": {
-            "type": "string"
-          },
-          "algorithm": {
-            "type": "string"
-          },
-          "issuer": {
-            "type": "string"
-          },
-          "expirationTime": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "audiences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "audience": {
-            "type": "string"
-          },
-          "tokenStringForLog": {
-            "type": "string"
-          },
-          "keyId": {
-            "type": "string"
-          },
-          "rawString": {
-            "type": "string"
-          },
-          "jsonString": {
-            "type": "string"
-          }
-        }
-      },
-      "UserClientLoginDTO": {
+      "LogonArgument": {
         "type": "object",
         "properties": {
           "userName": {
@@ -4098,100 +4047,6 @@
           },
           "localeName": {
             "type": "string"
-          },
-          "createUser": {
-            "type": "boolean"
-          },
-          "sessionAuthDataKey": {
-            "type": "string"
-          },
-          "loginContext": {
-            "$ref": "#/components/schemas/XNSGLoginDiagnosticContext"
-          },
-          "isExternalLogon": {
-            "type": "boolean"
-          },
-          "isApplicationFacadeAuthentication": {
-            "type": "boolean"
-          },
-          "additionalInfo": {
-            "$ref": "#/components/schemas/IAdditionalUserInfo"
-          }
-        }
-      },
-      "XNSGLoginDiagnosticContext": {
-        "type": "object",
-        "properties": {
-          "loginType": {
-            "type": "string",
-            "enum": [
-              "GUI",
-              "AF",
-              "BF",
-              "REST",
-              "GRAPQHL",
-              "INTERNAL",
-              "GUI_REDIRECT_GET_WEBTOKEN_XNSG",
-              "ATC",
-              "UNKNOWN"
-            ]
-          },
-          "credentialType": {
-            "type": "string",
-            "enum": [
-              "ADMIN",
-              "DBUSER",
-              "LDAP",
-              "RFC",
-              "ENGINE",
-              "LOCAL_ACCESS",
-              "ANONYMOUS",
-              "WEBTOKEN_XNSG",
-              "WEBTOKEN_EXTERNAL_DBUSER",
-              "WEBTOKEN_EXTERNAL",
-              "HTTP_BASIC",
-              "HTTP_BEARER",
-              "K8S_SESSION_RESTORE",
-              "UNKNOWN"
-            ]
-          },
-          "originalCredentialType": {
-            "type": "string",
-            "enum": [
-              "ADMIN",
-              "DBUSER",
-              "LDAP",
-              "RFC",
-              "ENGINE",
-              "LOCAL_ACCESS",
-              "ANONYMOUS",
-              "WEBTOKEN_XNSG",
-              "WEBTOKEN_EXTERNAL_DBUSER",
-              "WEBTOKEN_EXTERNAL",
-              "HTTP_BASIC",
-              "HTTP_BEARER",
-              "K8S_SESSION_RESTORE",
-              "UNKNOWN"
-            ]
-          },
-          "language": {
-            "type": "string"
-          },
-          "wrongPasswordCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "locked": {
-            "type": "boolean"
-          },
-          "errorMsg": {
-            "type": "string"
-          },
-          "tokenInfo": {
-            "type": "string"
-          },
-          "fromRoleCache": {
-            "type": "boolean"
           }
         }
       },
@@ -4250,9 +4105,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "syncId": {
@@ -4377,9 +4230,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         }
@@ -4391,7 +4242,7 @@
           "companyNumber": {
             "type": "string",
             "description": "Company number. The company number is in some AEB services not unique.",
-            "example": "12345",
+            "example": 12345,
             "maxLength": 20,
             "minLength": 1,
             "readOnly": true
@@ -4437,7 +4288,7 @@
           "postcode": {
             "type": "string",
             "description": "Postcode of the street address.",
-            "example": "70567",
+            "example": 70567,
             "maxLength": 10,
             "minLength": 0
           },
@@ -4524,6 +4375,7 @@
             "type": "string",
             "format": "date-time",
             "description": "Date at wich the company was set as disabled. Empty if the company is not disabled. This date is always UTC time zone and has the RFC-3339 date format.",
+            "example": "2000-01-01T00:00:00.000",
             "readOnly": true
           },
           "homepage": {
