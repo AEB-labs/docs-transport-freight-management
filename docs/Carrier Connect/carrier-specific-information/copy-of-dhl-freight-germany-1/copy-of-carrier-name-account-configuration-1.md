@@ -1,5 +1,5 @@
 ---
-title: Copy of [Carrier Name] Account Configuration
+title: 'DSV Air Freight (Europe): Account Configuration'
 deprecated: false
 hidden: true
 metadata:
