@@ -11,6 +11,24 @@ To create a new Dachser Road Freight account in Carrier Connect, open Dachser Ro
 
 # Dachser account
 
+When creating a new Dachser account, you can choose between two account types:
+
+<Image border={false} src="https://files.readme.io/911a9dac0c2326d7168ecf08b068b1c15eb4e24361d720a63f62ec6276312090-image.png" />
+
+<Tabs>
+  <Tab title="First Tab">
+    Welcome to the content that you can only see inside the first Tab.
+  </Tab>
+
+  <Tab title="Second Tab">
+    Here's content that's only inside the second Tab.
+  </Tab>
+
+  <Tab title="Third Tab">
+    Here's content that's only inside the third Tab.
+  </Tab>
+</Tabs>
+
 <Image align="center" border={false} src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
 
 <Image align="center" border={false} src="https://files.readme.io/6aaf090c3171d81ef4947d6421c2b9b1fb2c61f15bd9c8c7fb9c643394ea9c63-dhlfreight_account2.png" />
