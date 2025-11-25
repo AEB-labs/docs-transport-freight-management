@@ -83,10 +83,10 @@ Select the EDI ID you want to configure and click on _Open_.
 
 <Image align="center" border={false} src="https://files.readme.io/054d4b61509c4bcea291e4b8088d98a8af5536d127b2c526a956f670a0618a57-DACHSER3.png" />
 
-| Number | Field          | Comment                                                                                                                                                                 |
-| :----- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1      | EDI no. range  | The EDI number range. See [EDI number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#edi-number-range) |
-| 2      | EDI connection | The SFTP-Parameters used for the EDI upload. See                                                                                                                        |
+| Number | Field          | Comment                                                                                                                                                                                  |
+| :----- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | EDI no. range  | The EDI number range. See [EDI number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#edi-number-range)                  |
+| 2      | EDI connection | The SFTP-Parameters used for the EDI upload. See [EDI connection](https://transport-freight-management.docs.developers.aeb.com/docs/dachser-europe-account-configuration#edi-connection) |
 
 <br />
 
@@ -105,17 +105,5 @@ Select the EDI ID you want to configure and click on _Open_.
 | 7      | Char. length   | 5                                                        |
 
 <CCOEDIConnection />
-
-| Number | Field                 | Desciption                                                                                                                    |
-| :----- | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| 1      | Operating mode        | You can configure both test and productive parameters. This depends on your carriers setup (does he offer a test EDI-upload?) |
-| 2      | Server                | Assigned by the carrier                                                                                                       |
-| 3      | Port                  | Assigned by the carrier                                                                                                       |
-| 4      | Target directory      | Assigned by the carrier                                                                                                       |
-| 5      | User                  | Assigned by the carrier                                                                                                       |
-| 6      | Password              | Assigned by the carrier                                                                                                       |
-| 7      | Check SFTP parameters | After you set up your credentials you can test the connection                                                                 |
-
-<Image border={false} src="https://files.readme.io/9cb14942f9163b202fa05a5cfe7babcb54d7e14cceb84e077061e58c41eb0847-image.png" />
 
 <br />
