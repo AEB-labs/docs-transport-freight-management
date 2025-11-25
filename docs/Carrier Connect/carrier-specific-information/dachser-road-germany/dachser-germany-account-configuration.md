@@ -81,7 +81,7 @@ In this section the EDI upload parameters are configured. Dachser offers several
 
 Select the EDI ID you want to configure and click on _Open_.
 
-<Image border={false} src="https://files.readme.io/a4c145eec2a59f415d2db6a0c15752fa9136d5198eb9b9f158b1cf0d3f0eb1ef-image.png" />
+<Image align="center" border={false} src="https://files.readme.io/054d4b61509c4bcea291e4b8088d98a8af5536d127b2c526a956f670a0618a57-DACHSER3.png" />
 
 | Number | Field          | Comment                                                                                                                                                                 |
 | :----- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
