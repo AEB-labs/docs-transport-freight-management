@@ -65,17 +65,19 @@ When creating a new Dachser account, you can choose between two account types:
 
 # EDI setups
 
-In this section the EDI upload parameters are configured.
+In this section the EDI upload parameters are configured. Dachser offers several different EDI types:
 
-<Image border={false} src="https://files.readme.io/6614a386d5cd2caeb0efbf299999ed3f26ffb6e9e724de9b678adb30948265e1-image.png" />
+<Image border={false} src="https://files.readme.io/b505ae673fc1a99862aaad1ff8490e8257d496d36e9c89cf8e16c316f25eaca0-image.png" />
 
 <br />
 
-| Number | ID       | Comment                                                                                |
-| :----- | :------- | :------------------------------------------------------------------------------------- |
-| 1      | PICKUP   | Only needed if you use the value added service **Pickup booking (DHLFREIGHTPICKBOOK)** |
-| 2      | STANDARD | This will send the standard EDI (when closing the pickup)                              |
-| 3      | RETURN   | Only needed if you use the value added service **Return booking (DHLFREIGHTRETBOOK)**  |
+| ID                | Comment |
+| :---------------- | :------ |
+| AVIS_CANCEL       |         |
+| AVIS_COMPLETE     |         |
+| AVIS_PACK_PREPARE |         |
+| AVIS_SHIP_PREPARE |         |
+| STANDARD          |         |
 
 Select the EDI ID you want to configure and click on _Open_.
 
