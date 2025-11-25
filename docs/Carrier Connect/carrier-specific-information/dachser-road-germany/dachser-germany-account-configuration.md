@@ -58,7 +58,7 @@ When creating a new Dachser account, you can choose between two account types:
 | 3      | Start value    | Assigned by the carrier                                                                                |
 | 4      | Max. value     | Assigned by the carrier                                                                                |
 | 5      | Auto. re-start | Activated                                                                                              |
-| 6      | Leading zeros  | Activated or deactivated, depending on the length of                                                   |
+| 6      | Leading zeros  | Activated                                                                                              |
 | 7      | Char. length   | Between 7 and 9, depending on the length of your GS1 base number (in total both numbers must equal 16) |
 
 <br />
