@@ -94,14 +94,28 @@ Select the EDI ID you want to configure and click on _Open_.
 
 <br />
 
-| Number | Field          | Comment                                                      |
-| :----- | :------------- | :----------------------------------------------------------- |
-| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLFREIGHT_EDI       |
-| 2      | Name           | Choose a descriptive name. E.g. DHL Freight EDI number range |
-| 3      | Start value    | 1                                                            |
-| 4      | Max. value     | 999                                                          |
-| 5      | Auto. re-start | Activated                                                    |
-| 6      | Leading zeros  | Activated                                                    |
-| 7      | Char. length   | 3                                                            |
+| Number | Field          | Comment                                                  |
+| :----- | :------------- | :------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DACHSER_EDI      |
+| 2      | Name           | Choose a descriptive name. E.g. Dachser EDI number range |
+| 3      | Start value    | 1                                                        |
+| 4      | Max. value     | 99.999                                                   |
+| 5      | Auto. re-start | Activated                                                |
+| 6      | Leading zeros  | Activated                                                |
+| 7      | Char. length   | 5                                                        |
+
+<CCOEDIConnection />
+
+| Number | Field                 | Desciption                                                                                                                    |
+| :----- | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| 1      | Operating mode        | You can configure both test and productive parameters. This depends on your carriers setup (does he offer a test EDI-upload?) |
+| 2      | Server                | Assigned by the carrier                                                                                                       |
+| 3      | Port                  | Assigned by the carrier                                                                                                       |
+| 4      | Target directory      | Assigned by the carrier                                                                                                       |
+| 5      | User                  | Assigned by the carrier                                                                                                       |
+| 6      | Password              | Assigned by the carrier                                                                                                       |
+| 7      | Check SFTP parameters | After you set up your credentials you can test the connection                                                                 |
+
+<Image border={false} src="https://files.readme.io/9cb14942f9163b202fa05a5cfe7babcb54d7e14cceb84e077061e58c41eb0847-image.png" />
 
 <br />
