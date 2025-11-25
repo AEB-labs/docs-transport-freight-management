@@ -15,174 +15,33 @@ When creating a new Dachser account, you can choose between two account types:
 
 <Image border={false} src="https://files.readme.io/911a9dac0c2326d7168ecf08b068b1c15eb4e24361d720a63f62ec6276312090-image.png" />
 
-<Tabs>
-  <Tab title="First Tab">
-    Welcome to the content that you can only see inside the first Tab.
-  </Tab>
+| Account Type          | Description                                                                                                                 |
+| :-------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| DACHSER_STD           | The standard account type for outbound shipments                                                                            |
+| DACHSER_PICKUPBOOKING | When using the value-added service **Collection booking (PICKUPBOOKING)** you have to create this account type additionally |
 
-  <Tab title="Second Tab">
-    Here's content that's only inside the second Tab.
-  </Tab>
+<CCOAccountTransfer />
 
-  <Tab title="Third Tab">
-    Here's content that's only inside the third Tab.
-  </Tab>
-</Tabs>
+<Image align="center" border={false} src="https://files.readme.io/85fa1b3f45eb08f572b9dcb8d61c8c761a1c3585dc0c475680df7616cb484f18-DACHSER1.png" />
 
-<Image align="center" border={false} src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
+<Image align="center" border={false} src="https://files.readme.io/1b506e0a81318ec948fa1778146897f813799b8f4b8225db82e441b69b2137ec-DACHSER2.png" />
 
-<Image align="center" border={false} src="https://files.readme.io/6aaf090c3171d81ef4947d6421c2b9b1fb2c61f15bd9c8c7fb9c643394ea9c63-dhlfreight_account2.png" />
+<br />
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Number
-      </th>
-
-      <th>
-        Field
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        1
-      </td>
-
-      <td>
-        Shipper
-      </td>
-
-      <td>
-        The address of the shipper
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        2
-      </td>
-
-      <td>
-        Carrier address
-      </td>
-
-      <td>
-        The address of the carrier (depot)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        3
-      </td>
-
-      <td>
-        Condition
-      </td>
-
-      <td>
-        See our <Anchor label="user guide" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-709043211-de-DE">user guide</Anchor>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        4
-      </td>
-
-      <td>
-        Single pkg. handling
-      </td>
-
-      <td>
-        See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/dhlfreight-account-configuration#single-package-handling)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        5
-      </td>
-
-      <td>
-        Customer number
-      </td>
-
-      <td>
-        Assigned by the carrier
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        6
-      </td>
-
-      <td>
-        Depot number
-      </td>
-
-      <td>
-        Assigned by the carrier
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        7
-      </td>
-
-      <td>
-        Package no. range
-      </td>
-
-      <td>
-        See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range)
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        8
-      </td>
-
-      <td>
-        EDI transmission
-      </td>
-
-      <td>
-        Set to _Send and log_
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        9
-      </td>
-
-      <td>
-        Tracking no. type
-      </td>
-
-      <td>
-        Assigned by the carrier. There are two options:
-
-        * ANSIFact ASC MH 10
-        * GS1 EAN 128 Licenseplate
-
-        See [Tracking no. type](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#tracking-no-type)
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Number | Field                | Comment                                                                                                                                                         |
+| :----- | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | Shipper              | The address of the shipper                                                                                                                                      |
+| 2      | Carrier address      | The address of the carrier (depot)                                                                                                                              |
+| 3      | Condition            | See our <Anchor label="user guide" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-709043211-de-DE">user guide</Anchor> |
+| 4      | Single pkg. handling | See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/dhlfreight-account-configuration#single-package-handling)       |
+| 5      | Customer number      | Assigned by the carrier                                                                                                                                         |
+| 6      | Depot number         | Assigned by the carrier                                                                                                                                         |
+| 7      | GS1 base no.         | Your company's GS1 base number                                                                                                                                  |
+| 8      | Package no. range    | See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range)       |
+| 9      | EDI transmission     | Set to _Send and log_                                                                                                                                           |
+| 10     | Document upload      | If you want to transmit documents to Dachser electronically, set to _Send and log_                                                                              |
+| 11     | Doc. upl. connection | From the dropdown choose _DOCUPLOAD_                                                                                                                            |
+| 12     | API key              | Assigned by the carrier                                                                                                                                         |
 
 <CCOSinglePackageHandling />
 
