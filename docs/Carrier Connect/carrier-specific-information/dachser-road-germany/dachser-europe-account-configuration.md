@@ -1,7 +1,7 @@
 ---
 title: 'Dachser Road Freight (Europe): Account Configuration'
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
