@@ -1,5 +1,5 @@
 ---
-title: 'Dachser Road (Germany): Account Configuration'
+title: 'Dachser Road Freight (Europe): Account Configuration'
 deprecated: false
 hidden: true
 metadata:
@@ -7,9 +7,9 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
+To create a new Dachser Road Freight account in Carrier Connect, open Dachser Road Freight (Dachser Landverkehr Europa) in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-# DHL Freight account
+# Dachser account
 
 <Image align="center" border={false} src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
 
