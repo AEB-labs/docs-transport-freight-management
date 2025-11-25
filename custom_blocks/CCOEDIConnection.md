@@ -17,4 +17,4 @@ name: CCOEDIConnection
 | 6      | Password              | Assigned by the carrier                                                                                                       |
 | 7      | Check SFTP parameters | After you set up your credentials you can test the connection                                                                 |
 
-<br />
+<Image align="center" border={false} src="https://files.readme.io/5e528b5d4bedf487a8b7e6e4cdcad18a9c08c9a54d62e0f7ca035c29e451480e-test_sftp_parameters.png" />
