@@ -51,33 +51,15 @@ When creating a new Dachser account, you can choose between two account types:
 
 <br />
 
-| Number | Field          | Comment                                                          |
-| :----- | :------------- | :--------------------------------------------------------------- |
-| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLFREIGHT_PCK           |
-| 2      | Name           | Choose a descriptive name. E.g. DHL Freight package number range |
-| 3      | Start value    | 1                                                                |
-| 4      | Max. value     | 999999999                                                        |
-| 5      | Auto. re-start | Activated                                                        |
-| 6      | Leading zeros  | Activated                                                        |
-| 7      | Char. length   | 9                                                                |
-
-## Tracking no. type
-
-### ANSIFact ASC MH 10
-
-<Image border={false} src="https://files.readme.io/16cbe88a7f6174ba37b1b0eee61030233af0cdd094517732b35ca91d7b2906d7-image.png" />
-
-| Number | Field        | Comment                 |
-| :----- | :----------- | :---------------------- |
-| 1      | Dispose area | Assigned by the carrier |
-
-### GS1 EAN 128 Licenseplate
-
-<Image border={false} src="https://files.readme.io/dcf87f87eac2a3cacdd22cc337059d6c133c523d32fe6babdeb1977cb9036ce1-image.png" />
-
-| Number | Field | Comment                                          |
-| :----- | :---- | :----------------------------------------------- |
-| 1      | GLN   | The GS1 base number of your company (7-9 digits) |
+| Number | Field          | Comment                                                                                                |
+| :----- | :------------- | :----------------------------------------------------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DACHSER_PCK                                                    |
+| 2      | Name           | Choose a descriptive name. E.g. DACHSER package number range                                           |
+| 3      | Start value    | Assigned by the carrier                                                                                |
+| 4      | Max. value     | Assigned by the carrier                                                                                |
+| 5      | Auto. re-start | Activated                                                                                              |
+| 6      | Leading zeros  | Activated                                                                                              |
+| 7      | Char. length   | Between 7 and 9, depending on the length of your GS1 base number (in total both numbers must equal 16) |
 
 <br />
 
