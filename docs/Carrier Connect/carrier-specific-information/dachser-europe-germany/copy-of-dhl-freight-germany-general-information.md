@@ -13,10 +13,6 @@ metadata:
 
 ## Document upload
 
-<Callout icon="❗️" theme="error">
-  Document upload is not available for DHL Freight.
-</Callout>
-
 <br />
 
 <CCOAcceptanceProcess />
