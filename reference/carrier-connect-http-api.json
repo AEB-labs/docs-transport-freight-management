@@ -981,7 +981,8 @@
             }
           },
           "extendedInfo": {
-            "$ref": "#/components/schemas/CarrierExtendedInfo"
+            "$ref": "#/components/schemas/CarrierExtendedInfo",
+            "description": "Extended information for the carrier."
           }
         },
         "required": [
@@ -1279,8 +1280,7 @@
             "description": "The logo of the requested carrier.",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "The logo of the requested carrier."
+              "format": "byte"
             }
           },
           "smallLogo": {
@@ -1288,8 +1288,7 @@
             "description": "The small logo of the requested carrier.",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "The small logo of the requested carrier."
+              "format": "byte"
             }
           },
           "webLogo": {
@@ -1297,8 +1296,7 @@
             "description": "The web logo of the requested carrier.",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "The web logo of the requested carrier."
+              "format": "byte"
             }
           }
         }
@@ -1603,7 +1601,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "format": "uri",
+            "format": "uri-reference",
             "description": "A URI reference that uniquely identifies the problem type in the\ncontext of the provided API. Opposed to the specification in RFC-7807,\nit neither points to a human-readable documentation nor globally\nunique for the problem type."
           },
           "status": {
@@ -1644,15 +1642,11 @@
             "items": {
               "$ref": "#/components/schemas/AebProblemError"
             }
-          },
-          "logMessage": {
-            "type": "string"
           }
         }
       },
       "AebProblemError": {
         "type": "object",
-        "description": "Array of related errors",
         "properties": {
           "code": {
             "type": "string",
@@ -1822,7 +1816,8 @@
             ]
           },
           "attributes": {
-            "$ref": "#/components/schemas/AdditionalValueSetupAttributes"
+            "$ref": "#/components/schemas/AdditionalValueSetupAttributes",
+            "description": "The attributes of the additional value. Will be ignored for type definition based"
           }
         },
         "required": [
@@ -1903,7 +1898,6 @@
       },
       "CarrierInfoTextSetup": {
         "type": "object",
-        "description": "List of carrier info text setups.",
         "properties": {
           "identCode": {
             "type": "string",
@@ -1944,7 +1938,6 @@
       },
       "ServiceSetup": {
         "type": "object",
-        "description": "List of service setups.",
         "properties": {
           "identCode": {
             "type": "string",
@@ -2026,7 +2019,6 @@
       },
       "DLClientTermsOfDeliveryRestDTO": {
         "type": "object",
-        "description": "List of terms of deliveries.",
         "properties": {
           "identCode": {
             "type": "string",
@@ -2141,7 +2133,6 @@
       },
       "DLInvalidValueDTO": {
         "type": "object",
-        "description": "The data for fields with invalid values.",
         "properties": {
           "possibleValues": {
             "type": "array",
@@ -2163,7 +2154,6 @@
       },
       "DLMustBeFilledDTO": {
         "type": "object",
-        "description": "The data for fields that must be filled.",
         "properties": {
           "possibleValues": {
             "type": "array",
@@ -2181,7 +2171,6 @@
       },
       "DLObjectiveTextsDTO": {
         "type": "object",
-        "description": "Info texts of the objective.",
         "properties": {
           "languageISOCode": {
             "type": "string",
@@ -2204,7 +2193,6 @@
       },
       "DLPossibleValuesDTO": {
         "type": "object",
-        "description": "A possible value for the interface.",
         "properties": {
           "value": {
             "type": "string",
@@ -2214,7 +2202,6 @@
       },
       "DLShipmentObjectivePathSegmentDTO": {
         "type": "object",
-        "description": "The path of the objective.",
         "properties": {
           "id": {
             "type": "string",
@@ -2232,7 +2219,8 @@
         "description": "The determined objectives of a shipment.",
         "properties": {
           "reachedBoStatus": {
-            "$ref": "#/components/schemas/ComboboxEntryDTO"
+            "$ref": "#/components/schemas/ComboboxEntryDTO",
+            "description": "The actual status of the shipment."
           },
           "objectives": {
             "type": "array",
@@ -2253,7 +2241,8 @@
             "example": "MUST_BE_FILLED"
           },
           "objectiveTexts": {
-            "$ref": "#/components/schemas/DLObjectiveTextsDTO"
+            "$ref": "#/components/schemas/DLObjectiveTextsDTO",
+            "description": "Info texts of the objective."
           },
           "path": {
             "type": "array",
@@ -2263,10 +2252,12 @@
             }
           },
           "invalidValue": {
-            "$ref": "#/components/schemas/DLInvalidValueDTO"
+            "$ref": "#/components/schemas/DLInvalidValueDTO",
+            "description": "The data for fields with invalid values."
           },
           "mustBeFilled": {
-            "$ref": "#/components/schemas/DLMustBeFilledDTO"
+            "$ref": "#/components/schemas/DLMustBeFilledDTO",
+            "description": "The data for fields that must be filled."
           }
         }
       },
@@ -2305,7 +2296,8 @@
         "description": "DTO containing data for container package types.",
         "properties": {
           "verifiedGrossMass": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Total gross mass from the tare weight of a container and the (individual) weights of all packages and cargo items, including pallets, stowage material and other packaging and securing materials loaded into a container. "
           },
           "verificationMethod": {
             "type": "string",
@@ -2359,7 +2351,7 @@
           },
           "hazardRegulation": {
             "type": "string",
-            "description": "Hazardous regulation to be applied. Valid values are: <ul> <li>ADR</li> <li>IATA</li> <li>IMDG</li> <li>TDG</li> <li>CFR</li> </ul> <p> length=10 <p>"
+            "description": "Hazardous regulation to be applied. Valid values are: <ul> <li>ADR</li> <li>ADG</li> <li>NZDG</li> <li>IATA</li> <li>IMDG</li> <li>TDG</li> <li>CFR</li> </ul> <p> length=10 <p>"
           },
           "technicalName": {
             "type": "string",
@@ -2414,13 +2406,16 @@
             "description": "IdentCode of the package type. Valid values are depending on the client's package types in the master file data. <p> length=20 </p>"
           },
           "hazardWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The specific weight of the hazardous material."
           },
           "hazardNetQuantity": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The net quantity of the hazardous material. Can be net weight or volume like liter."
           },
           "netExplosiveWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The net explosive weight value of the hazardous material."
           },
           "numberOfPackages": {
             "type": "integer",
@@ -2453,7 +2448,8 @@
             "description": "Indicates if the special provision has to be marked. Valid Values are: <ul> <li>REQUIRED</li> <li>NOT_REQUIRED</li> </ul> <p> length=20 <p>"
           },
           "emergencyContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Emergency contact person."
           },
           "transportAuthorization": {
             "type": "string",
@@ -2492,7 +2488,8 @@
             "description": "Indicates if no hazardous goods exist in accordance with the regulations."
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "Additional values for the hazardous goods item. The definition of the included fields depends on the carrier. Only field names defined in the carrier customizing are allowed here.<br> Use the <code>getCarrierProperties</code> business facade call to retrieve all valid field names for a specific carrier."
           }
         },
         "required": [
@@ -2517,10 +2514,12 @@
             "description": "The content description of the package. If left empty, the content description supplied in field 'contents' on shipment level will be used for this package. <p> length=250 </p>"
           },
           "weight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Weight"
           },
           "volume": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Volume"
           },
           "loadingMeters": {
             "type": "number",
@@ -2603,22 +2602,28 @@
             "description": "The basic external return carrier tracking number of the package <p> length=50 </p>"
           },
           "grossWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Gross weight"
           },
           "dimensions": {
-            "$ref": "#/components/schemas/DLCuboidDimensionsDTO"
+            "$ref": "#/components/schemas/DLCuboidDimensionsDTO",
+            "description": "Dimensions"
           },
           "alternativeVolume": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The alternative volume of the package. When filled, this field overwrites the volume which is computed from the dimensions of the package."
           },
           "codValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "The cash on delivery value."
           },
           "insuranceValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Insurance value of the package"
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "Additional values for the package. The definition of the included fields depends on the carrier. Only field names defined in the carrier customizing are allowed here.<br> Use the <code>getCarrierProperties</code> business facade call to retrieve all valid field names for a specific carrier."
           },
           "containedItems": {
             "type": "array",
@@ -2628,10 +2633,12 @@
             }
           },
           "hazardousGoodsData": {
-            "$ref": "#/components/schemas/DLPackageHazardousGoodsDataRequestDTO"
+            "$ref": "#/components/schemas/DLPackageHazardousGoodsDataRequestDTO",
+            "description": "Hazardous goods data concerning the package. Only relevant when shipping hazardous goods."
           },
           "transportEquipment": {
-            "$ref": "#/components/schemas/DLTransportEquipmentReferenceDTO"
+            "$ref": "#/components/schemas/DLTransportEquipmentReferenceDTO",
+            "description": "The transport equipment (container, pallet etc.) where the package is loaded on. Only the equipment reference is used here, the transport equipment itself must already exist. An error will be returned, when the referenced equipment does not exist.<br> May be null in case the assignment of packages to transport equipments is not relevant for the carrier or the shipment contains no transport equipment information at all."
           },
           "marks": {
             "type": "string",
@@ -2812,7 +2819,8 @@
             "description": "<p> The shipment wide unique id for the packed shipment item. </p> <p> length=50 </p>"
           },
           "shipmentReference": {
-            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO",
+            "description": "The shipment containing the item."
           },
           "itemTransactionId": {
             "type": "string",
@@ -2873,26 +2881,32 @@
             "description": "Certificate of origins. <p> length=50 </p>"
           },
           "quantity": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Quantity."
           },
           "netWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Net weight"
           },
           "grossWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Gross weight"
           },
           "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Total customs value of all item articles."
           },
           "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Total goods value of all item articles."
           },
           "despatchProcedureIdentCode": {
             "type": "string",
             "description": "<p> The despatch procedure. Possible values are: <ul> <li>NONE</li> <li>T1</li> <li>T2</li> </ul> </p> <p> length=10 </p>"
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "Additional values for the shipping item. The definition of the included fields depends on the carrier. Only field names defined in the carrier customizing are allowed here.<br> Use the <code>getCarrierProperties</code> business facade call to retrieve all valid field names for a specific carrier."
           },
           "hazardousGoodsItems": {
             "type": "array",
@@ -3021,25 +3035,32 @@
             "description": "The basic external carrier return tracking number of the shipment. <p> length=50 </p>"
           },
           "shippingPt": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "Shipping point of the shipment. If no value is supplied, the shipping point is initialized by the user's default setting in the engine."
           },
           "shippingPtContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "The contact of the shipment's shipping point."
           },
           "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Customs value of the shipment."
           },
           "consignee": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "Consignee of the shipment."
           },
           "consigneeContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "The contact of the shipment's consignee."
           },
           "altInvoiceRecipient": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "If the consignee is not the recipient of the commercial invoice, an alternative invoice recipient can be supplied here."
           },
           "altInvoiceRecipientContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "The contact of the alternative invoice recipient. This field is only relevant, if a value in field 'altInvoiceRecipient' is supplied."
           },
           "carrierIdentCode": {
             "type": "string",
@@ -3079,7 +3100,7 @@
           },
           "fixedDate": {
             "type": "string",
-            "description": "Fixed delivery date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in timezone 'UTC'. <p> length=19 </p>"
+            "description": "Fixed delivery date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in timezone 'UTC'. <p> <b>Important:</b> Only the date portion is transmitted to the carrier interfaces. The time portion is ignored, so it does not matter which time is passed. </p> <p> length=19 </p>"
           },
           "earliestCollectionBookingDate": {
             "type": "string",
@@ -3114,56 +3135,80 @@
             "description": "The master airwaybill number identifies the cargo of a complete aircraft. <p> length=35 </p>"
           },
           "pickupAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The pick up address of the shipment. Required in case of return shipments because otherwise it's equal to the shipping point."
           },
           "pickupAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the pick up address of the shipment."
+          },
+          "altReturnAddress": {
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The alt. return address of the shipment. Only to be used with a value-added service of type returns (enclosed)."
+          },
+          "altReturnAddressContact": {
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the alt. return address of the shipment. Only to be used with a value-added service of type returns (enclosed)."
           },
           "notifyAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The notify address of the shipment."
           },
           "notifyAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the notify address of the shipment."
           },
           "coverAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The cover address of the shipment."
           },
           "coverAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the cover address of the shipment."
           },
           "customsAgent": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The customs agent of the shipment."
           },
           "customsAgentContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the customs agent of the shipment."
           },
           "alternativeCarrierAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "Alternative carrier address to be printed on the label and the paper manifest. The address is only used (and required) if the carrier is configured accordingly. Note that in most configurations however the address stored in the carrier’s account is used."
           },
           "alternativeCarrierAddrContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Alternative contact of the carrier of the shipment. Used together with the alternative carrier address. The contact is optional. The contact is only used if the carrier is configured accordingly. Note that in most configurations however the address stored in the carrier’s account is used."
           },
           "importerAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The importer of the shipment."
           },
           "importerAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the importer of the shipment."
           },
           "exporterAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The exporter of the shipment."
           },
           "exporterAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the exporter of the shipment."
           },
           "payerOfChargRole": {
             "type": "string",
             "description": "<p> The payer of charges. Valid values are: <li>SHIPPER <li>RECEIVER <li>THIRDPARTY </p> <br> <p> length=10 </p>"
           },
           "payerOfCharg": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The payer of charges address. Only required if payerOfChargRole is \"THIRDPARTY\"."
           },
           "payerOfChargContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the payer of charges."
           },
           "payerOfChargAccountNo": {
             "type": "string",
@@ -3178,10 +3223,12 @@
             "description": "<p> The payer of duties and taxes. Valid values are: <li>SHIPPER <li>RECEIVER <li>THIRDPARTY </p> <br> <p> length=10 </p>"
           },
           "payerOfDut": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The payer of duties and taxes address. Only required if payerOfDutRole is \"THIRDPARTY\"."
           },
           "payerOfDutContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the payer of duties and taxes."
           },
           "payerOfDutAccountNo": {
             "type": "string",
@@ -3196,10 +3243,12 @@
             "description": "<p> The alternative payer of taxes. Valid values are: <li>SHIPPER <li>RECEIVER <li>THIRDPARTY </p> <br> <p> length=10 </p>"
           },
           "altPayerOfTax": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The alternative payer of taxes address."
           },
           "altPayerOfTaxContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the alternative payer of taxes."
           },
           "altPayerOfTaxAccountNo": {
             "type": "string",
@@ -3210,19 +3259,24 @@
             "description": "Flag controlling how the 'altPayerOfTaxAccountNo' field will be filled.<br> If true, the account number will be filled with the appropriate number in the company master data referenced by the 'altPayerOfTax.name' field or (if filled) the 'altPayerOfTax.companyNumber' field.<br> If false, the party will be filled with the 'altPayerOfTaxAccountNo' field.<br> This is also the default when no value is supplied."
           },
           "codValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "The cash on delivery value."
           },
           "insuranceValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Insurance value of the shipment"
           },
           "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Goods value of the shipment"
           },
           "invoiceValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Invoice value of the shipment."
           },
           "shipmentTotals": {
-            "$ref": "#/components/schemas/DLShipmentTotalsRequestDataDTO"
+            "$ref": "#/components/schemas/DLShipmentTotalsRequestDataDTO",
+            "description": "Shipment totals."
           },
           "loadingMeters": {
             "type": "number",
@@ -3282,7 +3336,8 @@
             }
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "Additional values for the shipment. The definition of the included fields depends on the carrier. Only field names defined in the carrier customizing are allowed here.<br> Use the <code>getCarrierProperties</code> business facade call to retrieve all valid field names for a specific carrier."
           }
         },
         "required": [
@@ -3307,7 +3362,8 @@
             "description": "The expected number of packages. Used to print the total number of packages on the label when documents are printed before all packages are available.<br> Note: Should not be changed after the first label is printed. Otherwise the data on the label will be inconsistent. <p> length=5 </p>"
           },
           "grossWeightExpected": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The expected shipment gross weight. Used to print the gross weight on the label when documents are printed before all packages with their gross weights are available.<br> Note: Should not be changed after the first label is printed. Otherwise the data on the label will be inconsistent."
           },
           "loadingMeters": {
             "type": "number",
@@ -3336,20 +3392,22 @@
             "description": "IdentCode of the equipment type (Container, pallet etc.). All entries in the client's package type master file data are allowed. So the valid values are depending on the configured entries there. <p> length=20 </p>"
           },
           "grossWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Gross weight"
           },
           "dimensions": {
-            "$ref": "#/components/schemas/DLCuboidDimensionsDTO"
+            "$ref": "#/components/schemas/DLCuboidDimensionsDTO",
+            "description": "Dimensions"
           },
           "containerData": {
-            "$ref": "#/components/schemas/DLContainerDataDTO"
+            "$ref": "#/components/schemas/DLContainerDataDTO",
+            "description": "Container detail data. May only be used for container equipment types."
           },
           "sealNumbers": {
             "type": "array",
             "description": "Seal (serial numbers and/or barcodes) of the transport equipment. <p> length = 35 </p>",
             "items": {
-              "type": "string",
-              "description": "Seal (serial numbers and/or barcodes) of the transport equipment. <p> length = 35 </p>"
+              "type": "string"
             }
           }
         },
@@ -3440,10 +3498,12 @@
         "description": "Determine the objectives of a shipment.",
         "properties": {
           "desiredBoStatus": {
-            "$ref": "#/components/schemas/ComboboxEntryDTO"
+            "$ref": "#/components/schemas/ComboboxEntryDTO",
+            "description": "Show only objectives which are needed to reach this status. (Default = READY)"
           },
           "shipment": {
-            "$ref": "#/components/schemas/DLShipmentRequestDataDTO"
+            "$ref": "#/components/schemas/DLShipmentRequestDataDTO",
+            "description": "The shipment from which the objectives are to be determined."
           }
         },
         "required": [
@@ -3453,22 +3513,13 @@
       "NamedGenericDataRecordDTO": {
         "type": "object",
         "description": "A generic data record with a name.<br> Wrapper class to encapsulate subrecords with their name and with the ability to have explicit null records.",
-        "example": [
-          {
-            "name": "child",
-            "record": {
-              "fields": [],
-              "subrecords": []
-            }
-          }
-        ],
         "properties": {
           "name": {
             "type": "string",
             "description": "The name of this record, i.e. the role the record plays in the enclosing record.<br> When the same name is repeated in the context of the same parent record,  it is assumed that the parent defines this element as a repeatable (array) element."
           },
           "record": {
-            "$ref": "#/components/schemas/GenericDataRecordDTORef"
+            "description": "The record associated with the name.<br> Especially in case, where the name is repeated in the context of the same parent record, this field may be null to indicate a null in a list of records."
           }
         }
       },
@@ -3539,7 +3590,7 @@
           "messageIdentCode": {
             "type": "string",
             "description": "<p>Optional identification code for further classification of the message type.</p><p>Maximum length: 50</p>",
-            "example": "5627"
+            "example": 5627
           },
           "messageTexts": {
             "type": "array",
@@ -3583,13 +3634,12 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "shipmentReference": {
-            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO",
+            "description": "<p> Reference of the shipment the attachments belong to. Mandatory field. </p>"
           },
           "mode": {
             "type": "string",
@@ -3627,8 +3677,7 @@
             "description": "Attachment data/content.",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "Attachment data/content."
+              "format": "byte"
             }
           },
           "contentType": {
@@ -3695,16 +3744,16 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "shipmentReference": {
-            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO",
+            "description": "<p> The shipment to be cancelled. </p>"
           },
           "processParms": {
-            "$ref": "#/components/schemas/DLShipmentCancelParmsDTO"
+            "$ref": "#/components/schemas/DLShipmentCancelParmsDTO",
+            "description": "The process parameters for the cancel operation.<br> When no process parms are specified, the default values of the DLShipmentCancelParmsDTO fields apply."
           }
         },
         "required": [
@@ -3733,7 +3782,8 @@
         "description": "Parameters for the cancle operation for a shipment.",
         "properties": {
           "processMode": {
-            "$ref": "#/components/schemas/DLProcessModeDTO"
+            "$ref": "#/components/schemas/DLProcessModeDTO",
+            "description": "<p> Sets the process mode for the cancel operation.<br> <li>'BASIC': the shipment is cancelled asynchronously by a job. Therefore the response doesn't contain any errors or warnings of the cancel process itself. This is the default which is used, when no parms are specified. <li>'EXTENDED': the cancel operation is processed synchronously. The response contains all errors or warnings that occurred during the cancel process. </p> <br> <p> Keep in mind that processMode 'EXTENDED' consumes more system resources and reduces the effect of load balancing. It should only be used in case the client system needs an immediate response (e.g. if the client system makes subsequent business facade calls which have to rely on a successful cancellation) </p>"
           }
         },
         "required": [
@@ -3812,9 +3862,13 @@
             "description": "Only filled for \"image\" mime types. Specifies resolution of the image. <p> length = 8 </p>"
           },
           "content": {
-            "type": "string",
+            "type": "array",
             "format": "byte",
-            "description": "The document content"
+            "description": "The document content",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            }
           }
         }
       },
@@ -3845,19 +3899,20 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "creationParms": {
-            "$ref": "#/components/schemas/DLPickupCreationParmsDTO"
+            "$ref": "#/components/schemas/DLPickupCreationParmsDTO",
+            "description": "Controls how to create the pickup."
           },
           "pickup": {
-            "$ref": "#/components/schemas/DLPickupRequestDataDTO"
+            "$ref": "#/components/schemas/DLPickupRequestDataDTO",
+            "description": "The pickup data with the contained shipments."
           },
           "processParms": {
-            "$ref": "#/components/schemas/DLPickupProcessParmsDTO"
+            "$ref": "#/components/schemas/DLPickupProcessParmsDTO",
+            "description": "Controls how to process the pickup, especially the handling of the manifest documents."
           }
         },
         "required": [
@@ -3912,7 +3967,8 @@
             "description": "<p> 'true' or '1' = The shipment pickup is manifested. That means, that EDI data is sent to the carrier and the pickup is sealed, it cannot be changed, no shipments can be added or removed anymore. </p> <p> 'false' or '0' = The shipment pickup is left open, no EDI data is sent to the carrier yet, shipments can be added or removed using the GUI. If the pickup has already been manifested, nothing is done. </p>"
           },
           "documentOutputMode": {
-            "$ref": "#/components/schemas/DLDocumentOutputModeDTO"
+            "$ref": "#/components/schemas/DLDocumentOutputModeDTO",
+            "description": "The output mode for the manifest documents."
           },
           "workstationId": {
             "type": "string",
@@ -3954,7 +4010,8 @@
             "description": "Second license plate number. <p> length=50 </p>"
           },
           "driverSignature": {
-            "$ref": "#/components/schemas/DLSignatureDTO"
+            "$ref": "#/components/schemas/DLSignatureDTO",
+            "description": "Signature of the driver transporting the shipping orders."
           },
           "carrierIdentCode": {
             "type": "string",
@@ -3965,10 +4022,12 @@
             "description": "Shipping date in the format 'yyyy-MM-dd'. <p> length=10 </p>"
           },
           "shippingPt": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "Shipping point of the pickup.<br> If the shipping point is empty, the shipping point of the first shipment is used for the pickup."
           },
           "shippingPtContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "The contact of the pickup's shipping point."
           },
           "shipments": {
             "type": "array",
@@ -3999,8 +4058,7 @@
             "description": "Driver's signature image.",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "Driver's signature image."
+              "format": "byte"
             }
           },
           "mimetype": {
@@ -4071,7 +4129,8 @@
             }
           },
           "accountInfo": {
-            "$ref": "#/components/schemas/DLShipmentAccountInfoResponseDataDTO"
+            "$ref": "#/components/schemas/DLShipmentAccountInfoResponseDataDTO",
+            "description": "Information about the account used for the shipment. Only filled in case process mode is 'EXTENDED'."
           },
           "documents": {
             "type": "array",
@@ -4182,19 +4241,20 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "creationParms": {
-            "$ref": "#/components/schemas/DLShipmentCreationParmsDTO"
+            "$ref": "#/components/schemas/DLShipmentCreationParmsDTO",
+            "description": "Controls how to create the shipment."
           },
           "shipment": {
-            "$ref": "#/components/schemas/DLShipmentRequestDataDTO"
+            "$ref": "#/components/schemas/DLShipmentRequestDataDTO",
+            "description": "The data necessary to create the shipment."
           },
           "processParms": {
-            "$ref": "#/components/schemas/DLShipmentProcessParmsDTO"
+            "$ref": "#/components/schemas/DLShipmentProcessParmsDTO",
+            "description": "Controls how to process the shipment after it has been created."
           }
         },
         "required": [
@@ -4237,20 +4297,24 @@
         "description": "Process parameters for a shipment. Specifies which operations have to be performed after a shipment has been created.",
         "properties": {
           "processMode": {
-            "$ref": "#/components/schemas/DLProcessModeDTO"
+            "$ref": "#/components/schemas/DLProcessModeDTO",
+            "description": "<p> Controls the preparation process mode. In case of 'BASIC' preparation, the preparation is processed asynchronously in a job and the response only creates the shipment in the database. In case of 'EXTENDED' preparation, all preparation actions are directly executed synchronously and the response is not returned before the complete label preparation process is finished.<br> The preparation includes the computing of carrier specific information (e.g. routing codes) and the generation of the documents (labels) in printer language ready to be sent to a printer.<br> During the preparation process a carrier specific validation is performed on the shipment (e.g. if a routing code can be detected for the shipment). An error will be returned if the validation fails. </p> <p> Keep in mind that processMode 'EXTENDED' consumes more system resources and reduces the effect of load balancing. It should only be used in case the client system requires an immediate response including the label preparation results of the shipment and the packages. </p>"
           },
           "documentPrepareScope": {
-            "$ref": "#/components/schemas/DLDocumentScopeDTO"
+            "$ref": "#/components/schemas/DLDocumentScopeDTO",
+            "description": "<p> Controls the preparation of the shipment's package documents (labels).<br> The preparation includes the computing of carrier specific information (e.g. routing codes) and the generation of the documents (labels) in printer language ready to be sent to a printer.<br> During the preparation process a carrier specific validation is performed on the shipment (e.g. if a routing code can be detected for the shipment). An error will be returned if the validation fails. </p>"
           },
           "workstationId": {
             "type": "string",
             "description": "<p> The workstation used to detect the printer for which the documents should be prepared, printed or returned.<br> An error will be returned when the package documents (labels) are already prepared (invoked by a previous call) and are now be be printed with a different workstationId containing an incompatible printer. </p> <p> length=50 </p>"
           },
           "documentOutputScope": {
-            "$ref": "#/components/schemas/DLDocumentScopeDTO"
+            "$ref": "#/components/schemas/DLDocumentScopeDTO",
+            "description": "<p> Controls if and which documents (labels) should be printed or returned. Only prepared documents are regarded. </p>"
           },
           "documentOutputMode": {
-            "$ref": "#/components/schemas/DLDocumentOutputModeDTO"
+            "$ref": "#/components/schemas/DLDocumentOutputModeDTO",
+            "description": "Controls the output mode for the documents specified in <code>documentOutputScope</code>.<br> Has no effect when documentOutputScope=\"NONE\"."
           },
           "doCompletion": {
             "type": "boolean",
@@ -4324,13 +4388,12 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "shipmentItemReference": {
-            "$ref": "#/components/schemas/DLShipmentItemReferenceDTO"
+            "$ref": "#/components/schemas/DLShipmentItemReferenceDTO",
+            "description": "<p> The shipment item to be deleted. </p>"
           }
         },
         "required": [
@@ -4398,13 +4461,12 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "packageReference": {
-            "$ref": "#/components/schemas/DLPackageReferenceDTO"
+            "$ref": "#/components/schemas/DLPackageReferenceDTO",
+            "description": "<p> The package to be deleted. </p>"
           }
         },
         "required": [
@@ -4419,7 +4481,8 @@
         "description": "DTO for uniquely identifying a package. The context settings <code>clientIdentCode</code> and <code>clientSystemId</code> are also applied when filled.",
         "properties": {
           "shipmentReference": {
-            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO",
+            "description": "The shipment containing the package."
           },
           "packageTransactionId": {
             "type": "string",
@@ -4493,13 +4556,12 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "pickupReference": {
-            "$ref": "#/components/schemas/DLPickupReferenceDTO"
+            "$ref": "#/components/schemas/DLPickupReferenceDTO",
+            "description": "<p> The pickup to be cancelled. </p>"
           }
         },
         "required": [
@@ -4621,9 +4683,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         },
@@ -4722,8 +4782,7 @@
             "description": "<p> The WebLogo of the carrier from the Carrier-website. Possible values are: <li>byte[] </p> <br>",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "<p> The WebLogo of the carrier from the Carrier-website. Possible values are: <li>byte[] </p> <br>"
+              "format": "byte"
             }
           }
         }
@@ -4895,7 +4954,8 @@
             }
           },
           "extendedInfos": {
-            "$ref": "#/components/schemas/DLCarrierExtendedInfosDTO"
+            "$ref": "#/components/schemas/DLCarrierExtendedInfosDTO",
+            "description": "Extended information for the carrier."
           },
           "isDespatchCountriesGlobal": {
             "type": "boolean",
@@ -5003,17 +5063,14 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "carrierIdentCodes": {
             "type": "array",
             "description": "List of carriers for which the detailed information is requested. The valid codes can be retrieved with function 'getCarrierPortfolioNames'. If no list is supplied, all existing carriers will be returned.",
             "items": {
-              "type": "string",
-              "description": "List of carriers for which the detailed information is requested. The valid codes can be retrieved with function 'getCarrierPortfolioNames'. If no list is supplied, all existing carriers will be returned."
+              "type": "string"
             }
           }
         },
@@ -5133,17 +5190,14 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "additionalInfos": {
             "type": "array",
             "description": "List of additional infos which are requested for all carriers. If no list is supplied, no additional infos will be returned.",
             "items": {
-              "type": "string",
-              "description": "List of additional infos which are requested for all carriers. If no list is supplied, no additional infos will be returned."
+              "type": "string"
             }
           }
         },
@@ -5178,9 +5232,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "carrierIdentCode": {
@@ -5285,7 +5337,8 @@
             "description": "<p>Second license plate number.</p> <p> length=50 </p>"
           },
           "driverSignature": {
-            "$ref": "#/components/schemas/DLSignatureDTO"
+            "$ref": "#/components/schemas/DLSignatureDTO",
+            "description": "<p>Signature of the driver transporting the shipping orders. Only filled when asked for in request.</p>"
           },
           "carrierIdentCode": {
             "type": "string",
@@ -5310,20 +5363,24 @@
             "description": "The unique code of the carrier service. <p> length=50 </p>"
           },
           "accountInfo": {
-            "$ref": "#/components/schemas/DLShipmentAccountInfoResponseDataDTO"
+            "$ref": "#/components/schemas/DLShipmentAccountInfoResponseDataDTO",
+            "description": "Information about the account used for the pickup."
           },
           "shippingDate": {
             "type": "string",
             "description": "Shipping date in the format 'yyyy-MM-dd'. <p> length=10 </p>"
           },
           "shippingPt": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "Shipping point of the pickup."
           },
           "shippingPtContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact person on shipping point's side."
           },
           "boStatus": {
-            "$ref": "#/components/schemas/ComboboxEntryDTO"
+            "$ref": "#/components/schemas/ComboboxEntryDTO",
+            "description": "<p> The pickup's current status. Possible values are: <li>NEW This status is reached as soon as the pickup is created. <li>CLOSED This status is reached as soon as all shipments are included in the pickup. <li>MANIFESTCREATED This status is reached as soon as the EDI is generated and the EDI send job are created (the jobs are then executed asynchronously). And, if configured, the pickup was transmitted to the VCP and Billing. <li>COMPLETE The status is reached as soon the EDI send jobs have been processed successfully. </p>"
           },
           "isClosed": {
             "type": "boolean",
@@ -5356,7 +5413,8 @@
             "description": "The number of shipments actually included in the pickup. <p>length=5</p>"
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "The additional values for the pickup. For the semantics of the returned field names lookup customizing in GUI or use the <code>getCarrierProperties</code> business facade call."
           },
           "shipmentReferences": {
             "type": "array",
@@ -5422,7 +5480,8 @@
             "description": "<p>Unique identifier of the EDI definition.</p> <p>length = 20</p>"
           },
           "boStatus": {
-            "$ref": "#/components/schemas/ComboboxEntryDTO"
+            "$ref": "#/components/schemas/ComboboxEntryDTO",
+            "description": "<p> The EDI message's current status. Possible values are: <li>NEW This status is reached as soon as the EDI message is created. <li>COMPLETE This status is reached as soon as the EDI message was successfully sent to the carrier. </p>"
           },
           "numberOfShipmentsInEDI": {
             "type": "integer",
@@ -5465,9 +5524,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "pickupReferences": {
@@ -5486,7 +5543,8 @@
             "description": "Controls, if the signature of the driver should be included in the response of each pickup. Default is 'false'."
           },
           "filter": {
-            "$ref": "#/components/schemas/DLPickupFilterDTO"
+            "$ref": "#/components/schemas/DLPickupFilterDTO",
+            "description": "<p> Controls, which pickups should be returned. Cannot be used with pickup references at the same time.  </p>"
           }
         },
         "xml": {
@@ -5606,7 +5664,7 @@
           },
           "hazardRegulation": {
             "type": "string",
-            "description": "Hazardous regulation to be applied. Valid values are: <ul> <li>ADR</li> <li>IATA</li> <li>IMDG</li> <li>TDG</li> <li>CFR</li> </ul> <p> length=10 <p>"
+            "description": "Hazardous regulation to be applied. Valid values are: <ul> <li>ADR</li> <li>ADG</li> <li>NZDG</li> <li>IATA</li> <li>IMDG</li> <li>TDG</li> <li>CFR</li> </ul> <p> length=10 <p>"
           },
           "technicalName": {
             "type": "string",
@@ -5661,13 +5719,16 @@
             "description": "IdentCode of the package type. Valid values are depending on the client's package types in the master file data. <p> length=20 </p>"
           },
           "hazardWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The specific weight of the hazardous material. <p>"
           },
           "hazardNetQuantity": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The net quantity of the hazardous material. Can be net weight or volume like liter."
           },
           "netExplosiveWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The net explosive weight value of the hazardous material."
           },
           "numberOfPackages": {
             "type": "integer",
@@ -5696,7 +5757,8 @@
             "description": "Flash point <p> length=20 </p>"
           },
           "emergencyContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Emergency contact person."
           },
           "transportAuthorization": {
             "type": "string",
@@ -5727,7 +5789,8 @@
             "description": "Indicates if the transportation is only allowed in the cargo aircraft."
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "The additional values for the hazardous goods item. For the semantics of the returned field names lookup customizing in GUI or use the <code>getCarrierProperties</code> business facade call."
           }
         }
       },
@@ -5814,22 +5877,28 @@
             "description": "The description of the contents (goods) the package contains.  <p> length=250 </p>"
           },
           "dimensions": {
-            "$ref": "#/components/schemas/DLCuboidDimensionsDTO"
+            "$ref": "#/components/schemas/DLCuboidDimensionsDTO",
+            "description": "Dimensions"
           },
           "grossWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Gross weight"
           },
           "codValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "The cash on delivery value. Only filled when carrier needs them on package level."
           },
           "insuranceValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Insurance value of the package"
           },
           "boStatus": {
-            "$ref": "#/components/schemas/ComboboxEntryDTO"
+            "$ref": "#/components/schemas/ComboboxEntryDTO",
+            "description": "<p> The package's current status. Possible values are: <li>NEW This status is reached as soon as the package is created. <li>DATAREADY Package status \"data ready for printing labels\". This status is reached when the package is ready for printing labels. </p>"
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "The additional values for the package. For the semantics of the returned field names lookup customizing in GUI or use the <code>getCarrierProperties</code> business facade call."
           },
           "documents": {
             "type": "array",
@@ -5839,7 +5908,8 @@
             }
           },
           "hazardousGoodsData": {
-            "$ref": "#/components/schemas/DLPackageHazardousGoodsDataResponseDTO"
+            "$ref": "#/components/schemas/DLPackageHazardousGoodsDataResponseDTO",
+            "description": "Hazardous goods data concerning the package. Only relevant when shipping hazardous goods."
           },
           "marks": {
             "type": "string",
@@ -5885,7 +5955,8 @@
             "description": "The second reference number of the item. <p> length=50 </p>"
           },
           "boStatus": {
-            "$ref": "#/components/schemas/ComboboxEntryDTO"
+            "$ref": "#/components/schemas/ComboboxEntryDTO",
+            "description": "<p> The shipment item's current status. Possible values are: <li>NEW This status is reached as soon as the shipment item is created. <li>DATAREADY Shipment item status \"data ready for printing labels\". This status is reached as soon as all required fields for printing labels are entered. </p>"
           },
           "customsTariffNumber": {
             "type": "string",
@@ -5908,19 +5979,24 @@
             "description": "Certificate of origins. <p> length=50 </p>"
           },
           "quantity": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Quantity."
           },
           "netWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Net weight"
           },
           "grossWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Gross weight"
           },
           "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Total customs value of all item articles."
           },
           "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Total goods value of all item articles."
           },
           "despatchProcedureIdentCode": {
             "type": "string",
@@ -5934,7 +6010,8 @@
             }
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "The additional values for the shipping item. For the semantics of the returned field names lookup customizing in GUI or use the <code>getCarrierProperties</code> business facade call."
           },
           "hazardousGoodsItems": {
             "type": "array",
@@ -6049,7 +6126,8 @@
             "description": "<p> ID uniquely referencing the corresponding pickup in the client system. Is empty, when the shipment is not yet assigned to a pickup. </p> <p> length=250 </p>"
           },
           "boStatus": {
-            "$ref": "#/components/schemas/ComboboxEntryDTO"
+            "$ref": "#/components/schemas/ComboboxEntryDTO",
+            "description": "<p> The shipment's current status. Possible values are: <li>NEW This status is reached as soon as the shipment is created. <li>READY This status is reached as soon as all required fields for  printing labels are entered. <li>RDYFORCOMPLETE This status is reached as soon as all required  fields of all packages are entered. <li>COMPLETE This status is reached as soon as the labels are printed  and the shipment can be disposed to a pickup. <li>RDYFORDISPOSE This status is reached as soon as the shipment can  be disposed to a pickup. <li>DISPOSED This status is reached as soon as the shipment has been  disposed to a pickup. <li>RDYFORSHIPPING This status is reached as soon as the shipment is  fully prepared for shipping and all necessary preconditions are met. <li>SHIPPED This status is reached as  soon as the pickup of the  shipment has been manifested. <li>DELETED This reached status is reached as soon as the shipment  is canceled. </p>"
           },
           "isCompleted": {
             "type": "boolean",
@@ -6078,29 +6156,36 @@
             "description": "The unique code of the carrier service. <p> length=50 </p>"
           },
           "freightCosts": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "The freight costs that where calculated for this shipment."
           },
           "shippingDate": {
             "type": "string",
             "description": "Shipping date in the format 'yyyy-MM-dd'. <p> length=10 </p>"
           },
           "shippingPt": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "Shipping point of the shipment."
           },
           "shippingPtContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact person on shipping point's side."
           },
           "consignee": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "Consignee of the shipment."
           },
           "consigneeContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact person on consignee's side."
           },
           "altInvoiceRecipient": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The alternative recipient of the commercial invoice if different from consignee."
           },
           "altInvoiceRecipientContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "The contact of the alternative invoice recipient."
           },
           "termsOfDeliveryCode": {
             "type": "string",
@@ -6132,7 +6217,7 @@
           },
           "fixedDate": {
             "type": "string",
-            "description": "Fixed delivery date of the shipment in the format 'yyyy-MM-dd'. <p> length=10 </p>"
+            "description": "Fixed delivery date of the shipment in the format 'yyyy-MM-dd'. <p> <b>Important:</b> Only the date portion is transmitted to the carrier interfaces. The time portion is ignored, so it does not matter which time is passed. </p> <p> length=10 </p>"
           },
           "latestRequestedDeliveryDate": {
             "type": "string",
@@ -6155,46 +6240,68 @@
             "description": "The booking number of a requested collection booking assigned from carrier to this shipment. <p> length=20 </p>"
           },
           "pickupAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The pick up address of the shipment. Only used in case of return shipments because otherwise it's equal to the shipping point."
           },
           "pickupAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the pick up address of the shipment."
+          },
+          "altReturnAddress": {
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The alt. return address of the shipment. Only used in case of return shipments because otherwise it's equal to the shipping point."
+          },
+          "altReturnAddressContact": {
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the alt. return address of the shipment."
           },
           "notifyAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The notify address of the shipment."
           },
           "notifyAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the notify address of the shipment."
           },
           "coverAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The cover address of the shipment."
           },
           "coverAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the cover address of the shipment."
           },
           "customsAgent": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The customs agent of the shipment."
           },
           "customsAgentContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the customs agent of the shipment."
           },
           "alternativeCarrierAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "Alternative carrier address to be printed on the label and the paper manifest. The address is only used (and required) if the carrier is configured accordingly. Note that in most configurations however the address stored in the carrier’s account is used."
           },
           "alternativeCarrierAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Alternative contact of the carrier of the shipment. Used together with the alternative carrier address. The contact is optional. The contact is only used if the carrier is configured accordingly. Note that in most configurations however the address stored in the carrier’s account is used."
           },
           "importerAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The importer of the shipment."
           },
           "importerAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the importer of the shipment."
           },
           "exporterAddress": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The exporter of the shipment."
           },
           "exporterAddressContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the exporter of the shipment."
           },
           "valueAddedServices": {
             "type": "array",
@@ -6215,10 +6322,12 @@
             "description": "<p> The payer of charges. Possible values are: <li>SHIPPER <li>RECEIVER <li>THIRDPARTY </p> <br> <p> length=10 </p>"
           },
           "payerOfCharg": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The payer of charges address. Only required if payerOfChargRole is \"THIRDPARTY\"."
           },
           "payerOfChargContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the payer of charges."
           },
           "payerOfChargAccountNo": {
             "type": "string",
@@ -6229,10 +6338,12 @@
             "description": "<p> The payer of duties and taxes. Possible values are: <li>SHIPPER <li>RECEIVER <li>THIRDPARTY </p> <br> <p> length=10 </p>"
           },
           "payerOfDut": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The payer of duties and taxes address. Only required if payerOfDutRole is \"THIRDPARTY\"."
           },
           "payerOfDutContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the payer of duties and taxes."
           },
           "payerOfDutAccountNo": {
             "type": "string",
@@ -6243,10 +6354,12 @@
             "description": "<p> The alternative payer of taxes. Possible values are: <li>SHIPPER <li>RECEIVER <li>THIRDPARTY </p> <br> <p> length=10 </p>"
           },
           "altPayerOfTax": {
-            "$ref": "#/components/schemas/DLPartyDTO"
+            "$ref": "#/components/schemas/DLPartyDTO",
+            "description": "The alternative payer of taxes address."
           },
           "altPayerOfTaxContact": {
-            "$ref": "#/components/schemas/DLPersonDTO"
+            "$ref": "#/components/schemas/DLPersonDTO",
+            "description": "Contact of the alternative payer of taxes."
           },
           "altPayerOfTaxAccountNo": {
             "type": "string",
@@ -6257,16 +6370,20 @@
             "description": "Additional content discription <p> length=250 </p>"
           },
           "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Goods value of the shipment"
           },
           "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Customs value of the shipment"
           },
           "insuranceValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Insurance value of the shipment"
           },
           "codValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "The cash on delivery value."
           },
           "isDocumentShipment": {
             "type": "boolean",
@@ -6278,13 +6395,16 @@
             "description": "The number of packages <p> length=5 </p>"
           },
           "shipmentTotals": {
-            "$ref": "#/components/schemas/DLShipmentTotalsResponseDataDTO"
+            "$ref": "#/components/schemas/DLShipmentTotalsResponseDataDTO",
+            "description": "Information about the shipment totals."
           },
           "accountInfo": {
-            "$ref": "#/components/schemas/DLShipmentAccountInfoResponseDataDTO"
+            "$ref": "#/components/schemas/DLShipmentAccountInfoResponseDataDTO",
+            "description": "Information about the account used for the shipment. Note that the account information is only available when the shipment is prepared for document processing."
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "The additional values for the shipment. For the semantics of the returned field names lookup customizing in GUI or use the <code>getCarrierProperties</code> business facade call."
           },
           "packages": {
             "type": "array",
@@ -6366,10 +6486,12 @@
             "description": "The expected number of packages entered by user or ERP system Used to print the total number of packages on the label when documents are printed before all packages are available. Note: Should not be changed after the first label is printed. Otherwise the data on the label will be inconsistent. <p> length=5 </p>"
           },
           "grossWeight": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The exact gross weight of the shipment calculated from the gross weights of the individual packages. This value only is available when the shipment has been completed, so that all packages are known for sure."
           },
           "grossWeightExpected": {
-            "$ref": "#/components/schemas/QuantityDTO"
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "The expected shipment gross weight entered by user or ERP system. Used to print the gross weight on the label when documents are printed before all packages with their gross weights are available.<br> Note: Should not be changed after the first label is printed. Otherwise the data on the label will be inconsistent."
           },
           "loadingMeters": {
             "type": "number",
@@ -6408,9 +6530,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "shipmentReferences": {
@@ -6429,7 +6549,8 @@
             "description": "Controls, if canceled shipments should also be returned. Default is 'true'."
           },
           "filter": {
-            "$ref": "#/components/schemas/DLShipmentFilterDTO"
+            "$ref": "#/components/schemas/DLShipmentFilterDTO",
+            "description": "Controls, which shipments should be returned. Cannot be used with shipment references at the same time."
           }
         },
         "xml": {
@@ -6468,7 +6589,7 @@
           },
           "boStatusIdentCode": {
             "type": "string",
-            "description": "<p> The shipment's current status. Possible values are: <li>NEW This status is reached as soon as the shipment is created. <li>READY This status is reached as soon as all required fields for  printing labels are entered. <li>RDYFORCOMPLETE This status is reached as soon as all required  fields of all packages are entered. <li>COMPLETE This status is reached as soon as the labels are printed  and the shipment can be disposed to a pickup. <li>DISPOSED This status is reached as soon as the shipment has been  disposed to a pickup. <li>SHIPPED This status is reached as  soon as the pickup of the  shipment has been manifested. <li>DELETED This reached status is reached as soon as the shipment  is canceled. </p>"
+            "description": "<p> The shipment's current status. Possible values are: <li>NEW This status is reached as soon as the shipment is created. <li>READY This status is reached as soon as all required fields for  printing labels are entered. <li>RDYFORCOMPLETE This status is reached as soon as all required  fields of all packages are entered. <li>COMPLETE This status is reached as soon as the labels are printed  and the shipment can be disposed to a pickup. <li>RDYFORDISPOSE This status is reached as soon as the shipment can  be disposed to a pickup. <li>DISPOSED This status is reached as soon as the shipment has been  disposed to a pickup. <li>RDYFORSHIPPING This status is reached as soon as the shipment is  fully prepared for shipping and all necessary preconditions are met. <li>SHIPPED This status is reached as  soon as the pickup of the  shipment has been manifested. <li>DELETED This reached status is reached as soon as the shipment  is canceled. </p>"
           },
           "shipmentNumber": {
             "type": "string",
@@ -6583,20 +6704,24 @@
         "description": "Process parameters for a package. Specifies which operations have to be performed on a package.",
         "properties": {
           "processMode": {
-            "$ref": "#/components/schemas/DLProcessModeDTO"
+            "$ref": "#/components/schemas/DLProcessModeDTO",
+            "description": "<p> Controls the preparation process. In case of 'BASIC' preparation, the preparation is processed asynchronously in a job. In case of 'EXTENDED' preparation, all preparation actions are directly executed synchronously and the response is not returned before the complete label preparation process is finished. It may then include extended carrier validation results. An error will be returned if the validation fails.<br> </p> <p> Keep in mind that processMode 'EXTENDED' consumes more system resources and reduces the effect of load balancing. It should only be used in case the client system requires an immediate response including the label preparation results of the package. </p>"
           },
           "documentPrepareMode": {
-            "$ref": "#/components/schemas/DLPackageDocumentPrepareModeDTO"
+            "$ref": "#/components/schemas/DLPackageDocumentPrepareModeDTO",
+            "description": "Controls the extent of preparation for the referenced package."
           },
           "workstationId": {
             "type": "string",
             "description": "<p> The workstation used to detect the printer for which the documents should be prepared, printed or returned.<br> An error will be returned when the package documents (labels) are already prepared (invoked by a previous call) and are now be be printed with a different workstationId containing an incompatible printer. </p> <p> length=50 </p>"
           },
           "documentOutputMode": {
-            "$ref": "#/components/schemas/DLDocumentOutputModeDTO"
+            "$ref": "#/components/schemas/DLDocumentOutputModeDTO",
+            "description": "Controls the output mode for the package's documents."
           },
           "operationMode": {
-            "$ref": "#/components/schemas/DLPackageOperationModeDTO"
+            "$ref": "#/components/schemas/DLPackageOperationModeDTO",
+            "description": "Controls the operation mode performed on the package."
           }
         },
         "required": [
@@ -6633,22 +6758,24 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "packageReference": {
-            "$ref": "#/components/schemas/DLPackageReferenceDTO"
+            "$ref": "#/components/schemas/DLPackageReferenceDTO",
+            "description": "<p> The package to be processed. </p>"
           },
           "processParms": {
-            "$ref": "#/components/schemas/DLPackageProcessParmsDTO"
+            "$ref": "#/components/schemas/DLPackageProcessParmsDTO",
+            "description": "The operations to be performed on the referenced package."
           },
           "targetShipmentReference": {
-            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO",
+            "description": "A package can be moved to a different shipment. The operationMode \"MOVE_PACKAGE\" must be used."
           },
           "masterPackageReference": {
-            "$ref": "#/components/schemas/DLMasterPackageReferenceDTO"
+            "$ref": "#/components/schemas/DLMasterPackageReferenceDTO",
+            "description": "<p> Referencing the corresponding master package in the client system. </p>"
           },
           "items": {
             "type": "array",
@@ -6709,7 +6836,8 @@
         "description": "DTO for pickup fields which can be updated after the initial creation of the pickup",
         "properties": {
           "driverSignature": {
-            "$ref": "#/components/schemas/DLSignatureDTO"
+            "$ref": "#/components/schemas/DLSignatureDTO",
+            "description": "Signature of the driver transporting the shipping orders."
           }
         }
       },
@@ -6740,19 +6868,20 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "pickupReference": {
-            "$ref": "#/components/schemas/DLPickupReferenceDTO"
+            "$ref": "#/components/schemas/DLPickupReferenceDTO",
+            "description": "<p> The pickup containing the manifest documents to print or return in response. </p>"
           },
           "creationParms": {
-            "$ref": "#/components/schemas/DLPickupCreationParmsDTO"
+            "$ref": "#/components/schemas/DLPickupCreationParmsDTO",
+            "description": "Only relevant if the field 'shipments' is filled. Controls how the shipments are handled that should be added to the pickup."
           },
           "pickupUpdateData": {
-            "$ref": "#/components/schemas/DLPickupUpdateRequestDataDTO"
+            "$ref": "#/components/schemas/DLPickupUpdateRequestDataDTO",
+            "description": "Pickup update data. The field may be empty when the pickup should not be updated."
           },
           "shipments": {
             "type": "array",
@@ -6762,7 +6891,8 @@
             }
           },
           "processParms": {
-            "$ref": "#/components/schemas/DLPickupProcessParmsDTO"
+            "$ref": "#/components/schemas/DLPickupProcessParmsDTO",
+            "description": "Controls how to process the pickup, especially the handling of the manifest documents."
           }
         },
         "required": [
@@ -6861,22 +6991,24 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "creationParms": {
-            "$ref": "#/components/schemas/DLShipmentCreationParmsDTO"
+            "$ref": "#/components/schemas/DLShipmentCreationParmsDTO",
+            "description": "Controls how to create the new packages of the shipment. The field may be empty when no packages are specified in field 'packages'."
           },
           "shipmentReference": {
-            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO",
+            "description": "<p> Reference of the shipment to be processed. Mandatory field. </p>"
           },
           "shipmentTotals": {
-            "$ref": "#/components/schemas/DLShipmentTotalsRequestDataDTO"
+            "$ref": "#/components/schemas/DLShipmentTotalsRequestDataDTO",
+            "description": "Shipment totals. The field may be empty."
           },
           "shipmentUpdateData": {
-            "$ref": "#/components/schemas/DLShipmentUpdateRequestDataDTO"
+            "$ref": "#/components/schemas/DLShipmentUpdateRequestDataDTO",
+            "description": "Shipment update data. The field may be empty when the shipment should not be updated.<br> Unlike the data in field 'shipmentTotals', this field contains information that may influence pickup handling and EDI content."
           },
           "packages": {
             "type": "array",
@@ -6914,7 +7046,8 @@
             }
           },
           "processParms": {
-            "$ref": "#/components/schemas/DLShipmentProcessParmsDTO"
+            "$ref": "#/components/schemas/DLShipmentProcessParmsDTO",
+            "description": "The operations to be performed on the referenced shipment."
           },
           "carrierInfoTexts": {
             "type": "array",
@@ -6945,19 +7078,24 @@
             "description": "The new fixed date of the shipment in the format 'yyyy-MM-dd' or 'yyyyMMdd'. The fixed date is expected to be in timezone 'UTC'.<br> The field may be empty, the fixed date of the shipment remains unchanged.<br> If the field is filled, it is used as the new fixed date for the shipment. The change of the fixed date has no influence on already prepared documents (labels) or other prepared data (e.g. routing data).<br> The changed fixed date will be printed on new labels and will have effect on pickup and EDI handling. <p> length=10 </p>"
           },
           "codValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Update the cash on delivery value."
           },
           "insuranceValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Update the insurance value of the shipment"
           },
           "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Update goods value of the shipment"
           },
           "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Update customs value of the shipment"
           },
           "invoiceValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Update invoice value of the shipment"
           },
           "customsRegistrationNumber": {
             "type": "string",
@@ -7019,7 +7157,8 @@
             "description": "Update the name of the port or airport where the goods are unloaded."
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "Update of additional values for the shipment. The definition of the included fields depends on the carrier. Only field names defined in the carrier customizing are allowed here.<br> Use the <code>getCarrierProperties</code> business facade call to retrieve all valid field names for a specific carrier."
           },
           "extCarrierShipNum": {
             "type": "string",
@@ -7104,9 +7243,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "ageInDays": {
@@ -7204,9 +7341,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "ageInDays": {
@@ -7313,16 +7448,16 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "shipmentReference": {
-            "$ref": "#/components/schemas/DLShipmentReferenceDTO"
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO",
+            "description": "<p> Reference of the shipment to be updated. Mandatory field. </p>"
           },
           "customsShipmentData": {
-            "$ref": "#/components/schemas/DLUpdateCustomsShipmentRequestDataDTO"
+            "$ref": "#/components/schemas/DLUpdateCustomsShipmentRequestDataDTO",
+            "description": "Shipment data. The field may be empty when there's no need to update shipment data. Only a few customs fields in shipment are supported."
           },
           "customsItemData": {
             "type": "array",
@@ -7339,7 +7474,8 @@
             }
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "Additional values for the shipment. The definition of the included fields depends on the carrier. Only field names defined in the carrier customizing are allowed here.<br> Use the <code>getCarrierProperties</code> business facade call to retrieve all valid field names for a specific carrier."
           }
         },
         "required": [
@@ -7354,7 +7490,8 @@
         "description": "DTO for a few shipment item fields which can be updated after the initial creation of the shipment. This DTO includes customs data ONLY. No item net / gross weight or quantity is included, because this causes problems with packed items and is in most cases incompatible with the default shipping process. E.g. gross weight is often printed onto the label, updating weight after label printing is too late.",
         "properties": {
           "shipmentItemReference": {
-            "$ref": "#/components/schemas/DLShipmentItemReferenceUCDDTO"
+            "$ref": "#/components/schemas/DLShipmentItemReferenceUCDDTO",
+            "description": "Reference of the shipment item to be updated. Mandatory field."
           },
           "customsTariffNumber": {
             "type": "string",
@@ -7373,13 +7510,16 @@
             "description": "Certificate of origins. <p> length=50 </p>"
           },
           "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Total customs value of all item articles."
           },
           "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Total goods value of all item articles."
           },
           "additionalValues": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "Additional values for the shipping item. The definition of the included fields depends on the carrier. Only field names defined in the carrier customizing are allowed here.<br> Use the <code>getCarrierProperties</code> business facade call to retrieve all valid field names for a specific carrier."
           }
         },
         "required": [
@@ -7391,13 +7531,16 @@
         "description": "Request DTO for a few shipment fields which can be updated after the initial creation of the shipment.",
         "properties": {
           "customsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Customs value of the shipment. Updates customs value if both fields value & currency are filled. You cannot reset or delete an existing customs value."
           },
           "goodsValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Goods value of the shipment. Update goods value if both fields value & currency are filled. You cannot reset or delete an existing goods value."
           },
           "invoiceValue": {
-            "$ref": "#/components/schemas/AmountOfMoneyDTO"
+            "$ref": "#/components/schemas/AmountOfMoneyDTO",
+            "description": "Invoice value of the shipment. Update invoice value if both fields value & currency are filled. You cannot reset or delete an existing invoice value."
           }
         }
       },
@@ -7476,16 +7619,16 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "shipment": {
-            "$ref": "#/components/schemas/DLShipmentRequestDataDTO"
+            "$ref": "#/components/schemas/DLShipmentRequestDataDTO",
+            "description": "The data necessary to create the shipment."
           },
           "validationParms": {
-            "$ref": "#/components/schemas/DLShipmentValidationParmsDTO"
+            "$ref": "#/components/schemas/DLShipmentValidationParmsDTO",
+            "description": "Options used for the validation of the shipment data."
           }
         },
         "required": [
@@ -7527,8 +7670,7 @@
             "description": "This is the contents that has to be written to the file",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "This is the contents that has to be written to the file"
+              "format": "byte"
             }
           }
         }
@@ -7550,10 +7692,12 @@
             "description": "URL token to check on the remote system (for example SAP) if the browser was closed."
           },
           "executeProcess": {
-            "$ref": "#/components/schemas/AFExecuteProcessParmsDTO"
+            "$ref": "#/components/schemas/AFExecuteProcessParmsDTO",
+            "description": "Parameters when application is to be invoked via create process."
           },
           "shellExecute": {
-            "$ref": "#/components/schemas/AFShellExecuteParmsDTO"
+            "$ref": "#/components/schemas/AFShellExecuteParmsDTO",
+            "description": "Parameters when the application is to be invoked via shellExecute."
           }
         },
         "xml": {
@@ -7664,76 +7808,7 @@
           }
         }
       },
-      "IAdditionalUserInfo": {
-        "type": "object",
-        "properties": {
-          "externalUser": {
-            "type": "boolean"
-          },
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "authToken": {
-            "$ref": "#/components/schemas/JWT"
-          },
-          "aebUserId": {
-            "type": "string"
-          }
-        }
-      },
-      "JWT": {
-        "type": "object",
-        "properties": {
-          "signature": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
-          },
-          "type": {
-            "type": "string"
-          },
-          "algorithm": {
-            "type": "string"
-          },
-          "expirationTime": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "issuer": {
-            "type": "string"
-          },
-          "tokenStringForLog": {
-            "type": "string"
-          },
-          "keyId": {
-            "type": "string"
-          },
-          "audiences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "audience": {
-            "type": "string"
-          },
-          "rawString": {
-            "type": "string"
-          },
-          "jsonString": {
-            "type": "string"
-          }
-        }
-      },
-      "UserClientLoginDTO": {
+      "LogonArgument": {
         "type": "object",
         "properties": {
           "userName": {
@@ -7747,100 +7822,6 @@
           },
           "localeName": {
             "type": "string"
-          },
-          "createUser": {
-            "type": "boolean"
-          },
-          "sessionAuthDataKey": {
-            "type": "string"
-          },
-          "loginContext": {
-            "$ref": "#/components/schemas/XNSGLoginDiagnosticContext"
-          },
-          "isExternalLogon": {
-            "type": "boolean"
-          },
-          "isApplicationFacadeAuthentication": {
-            "type": "boolean"
-          },
-          "additionalInfo": {
-            "$ref": "#/components/schemas/IAdditionalUserInfo"
-          }
-        }
-      },
-      "XNSGLoginDiagnosticContext": {
-        "type": "object",
-        "properties": {
-          "loginType": {
-            "type": "string",
-            "enum": [
-              "GUI",
-              "AF",
-              "BF",
-              "REST",
-              "GRAPQHL",
-              "INTERNAL",
-              "GUI_REDIRECT_GET_WEBTOKEN_XNSG",
-              "ATC",
-              "UNKNOWN"
-            ]
-          },
-          "credentialType": {
-            "type": "string",
-            "enum": [
-              "ADMIN",
-              "DBUSER",
-              "LDAP",
-              "RFC",
-              "ENGINE",
-              "LOCAL_ACCESS",
-              "ANONYMOUS",
-              "WEBTOKEN_XNSG",
-              "WEBTOKEN_EXTERNAL_DBUSER",
-              "WEBTOKEN_EXTERNAL",
-              "HTTP_BASIC",
-              "HTTP_BEARER",
-              "K8S_SESSION_RESTORE",
-              "UNKNOWN"
-            ]
-          },
-          "originalCredentialType": {
-            "type": "string",
-            "enum": [
-              "ADMIN",
-              "DBUSER",
-              "LDAP",
-              "RFC",
-              "ENGINE",
-              "LOCAL_ACCESS",
-              "ANONYMOUS",
-              "WEBTOKEN_XNSG",
-              "WEBTOKEN_EXTERNAL_DBUSER",
-              "WEBTOKEN_EXTERNAL",
-              "HTTP_BASIC",
-              "HTTP_BEARER",
-              "K8S_SESSION_RESTORE",
-              "UNKNOWN"
-            ]
-          },
-          "language": {
-            "type": "string"
-          },
-          "wrongPasswordCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "locked": {
-            "type": "boolean"
-          },
-          "errorMsg": {
-            "type": "string"
-          },
-          "tokenInfo": {
-            "type": "string"
-          },
-          "fromRoleCache": {
-            "type": "boolean"
           }
         }
       },
@@ -7899,9 +7880,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "syncId": {
@@ -8026,9 +8005,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           }
         }
@@ -8104,9 +8081,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "reportClientIdentCode": {
@@ -8168,7 +8143,8 @@
             "description": "ident code for an XNSG client to file external telemetry reports for.<p>Maximum length: 10</p>"
           },
           "lastUpdate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "last date an external report has been filed"
           },
           "lastUpdateComment": {
             "type": "string",
@@ -8197,7 +8173,8 @@
             "description": "category for the value (see TMDataCategory enum for valid values)"
           },
           "value": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "data for the entry to report"
           }
         }
       },
@@ -8274,8 +8251,7 @@
             "type": "array",
             "description": "data for the entry to report",
             "items": {
-              "type": "string",
-              "description": "data for the entry to report"
+              "type": "string"
             }
           }
         }
@@ -8325,9 +8301,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "reportClientIdentCode": {
@@ -8339,7 +8313,8 @@
             "description": "unique id of the external system"
           },
           "reportData": {
-            "$ref": "#/components/schemas/ExternalTelemetryReportDTO"
+            "$ref": "#/components/schemas/ExternalTelemetryReportDTO",
+            "description": "the telemetry data to file"
           },
           "updateComment": {
             "type": "string",
@@ -8422,7 +8397,8 @@
             "description": "An identCode of the client. Controls data visibility."
           },
           "fileReference": {
-            "$ref": "#/components/schemas/SimpleFileDTO"
+            "$ref": "#/components/schemas/SimpleFileDTO",
+            "description": "The file which was transferred."
           }
         }
       },
@@ -8539,10 +8515,10 @@
       "CommandInfo": {
         "type": "object",
         "properties": {
-          "commandClass": {
+          "commandName": {
             "type": "string"
           },
-          "commandName": {
+          "commandClass": {
             "type": "string"
           }
         }
@@ -8560,25 +8536,19 @@
       },
       "DataHandler": {
         "type": "object",
-        "description": "The content of a file",
         "properties": {
           "dataSource": {
             "$ref": "#/components/schemas/DataSource"
           },
-          "name": {
-            "type": "string"
+          "allCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
+            }
           },
-          "inputStream": {
-            "type": "object"
-          },
-          "content": {
-            "type": "object"
-          },
-          "contentType": {
-            "type": "string"
-          },
-          "outputStream": {
-            "type": "object"
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap",
+            "writeOnly": true
           },
           "preferredCommands": {
             "type": "array",
@@ -8592,15 +8562,15 @@
               "$ref": "#/components/schemas/ActivationDataFlavor"
             }
           },
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap"
+          "name": {
+            "type": "string"
           },
-          "allCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
-          }
+          "inputStream": {},
+          "content": {},
+          "contentType": {
+            "type": "string"
+          },
+          "outputStream": {}
         }
       },
       "DataSource": {
@@ -8609,15 +8579,11 @@
           "name": {
             "type": "string"
           },
-          "inputStream": {
-            "type": "object"
-          },
+          "inputStream": {},
           "contentType": {
             "type": "string"
           },
-          "outputStream": {
-            "type": "object"
-          }
+          "outputStream": {}
         }
       },
       "DownloadFileResponseDTO": {
@@ -8633,7 +8599,8 @@
             "description": "A human-readable error message"
           },
           "downloadFile": {
-            "$ref": "#/components/schemas/FileDTO"
+            "$ref": "#/components/schemas/FileDTO",
+            "description": "The requested file, selected or generated depending on the use-case"
           }
         }
       },
@@ -8651,15 +8618,15 @@
             "description": "Size of a file"
           },
           "content": {
-            "$ref": "#/components/schemas/DataHandler"
+            "$ref": "#/components/schemas/DataHandler",
+            "description": "The content of a file"
           },
           "checksum": {
             "type": "array",
             "description": "MD5-hash of a file",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "MD5-hash of a file"
+              "format": "byte"
             }
           },
           "creationTimeMillis": {
@@ -8692,7 +8659,8 @@
             "description": "An identCode of the client. Controls data visibility."
           },
           "fileReference": {
-            "$ref": "#/components/schemas/SimpleFileDTO"
+            "$ref": "#/components/schemas/SimpleFileDTO",
+            "description": "reference to file for download"
           },
           "parameters": {
             "type": "array",
@@ -8830,14 +8798,14 @@
             "description": "This is the name of the product that is deployed to this server."
           },
           "productVersion": {
-            "$ref": "#/components/schemas/VersionInfoDTO"
+            "$ref": "#/components/schemas/VersionInfoDTO",
+            "description": "This data contains the version of the product."
           },
           "solutions": {
             "type": "array",
             "description": "This contains a list of names of all solutions, which are deployed to the server.",
             "items": {
-              "type": "string",
-              "description": "This contains a list of names of all solutions, which are deployed to the server."
+              "type": "string"
             }
           },
           "productNameInternal": {
@@ -8859,8 +8827,7 @@
             "description": "The version of the solution/product as numeric value. The main version is the first entry in the integer array.",
             "items": {
               "type": "integer",
-              "format": "int32",
-              "description": "The version of the solution/product as numeric value. The main version is the first entry in the integer array."
+              "format": "int32"
             }
           }
         }
@@ -8934,8 +8901,7 @@
           "runtimeProperties": {
             "type": "object",
             "additionalProperties": {
-              "type": "string",
-              "description": "Runtime-Properties. These are valid cluster-wide and stored in the DB, replacing/supplementing properties in  product_configuration.properties."
+              "type": "string"
             },
             "description": "Runtime-Properties. These are valid cluster-wide and stored in the DB, replacing/supplementing properties in  product_configuration.properties."
           }
@@ -8949,8 +8915,7 @@
             "type": "array",
             "description": "columns of a row",
             "items": {
-              "type": "string",
-              "description": "columns of a row"
+              "type": "string"
             }
           },
           "dummy": {
@@ -9098,8 +9063,7 @@
             "type": "array",
             "description": "the implied roles",
             "items": {
-              "type": "string",
-              "description": "the implied roles"
+              "type": "string"
             }
           }
         }
@@ -9127,8 +9091,7 @@
             "description": "Content of the attachment file",
             "items": {
               "type": "string",
-              "format": "byte",
-              "description": "Content of the attachment file"
+              "format": "byte"
             }
           },
           "fileContentType": {
@@ -9149,32 +9112,28 @@
             "type": "array",
             "description": "receivers of the mail",
             "items": {
-              "type": "string",
-              "description": "receivers of the mail"
+              "type": "string"
             }
           },
           "replytos": {
             "type": "array",
             "description": "reply to addresses of the mail",
             "items": {
-              "type": "string",
-              "description": "reply to addresses of the mail"
+              "type": "string"
             }
           },
           "ccs": {
             "type": "array",
             "description": "ccs of the mail",
             "items": {
-              "type": "string",
-              "description": "ccs of the mail"
+              "type": "string"
             }
           },
           "bccs": {
             "type": "array",
             "description": "bccs of the mail",
             "items": {
-              "type": "string",
-              "description": "bccs of the mail"
+              "type": "string"
             }
           },
           "subject": {
@@ -9485,9 +9444,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "syncId": {
@@ -9525,7 +9482,8 @@
             "maxLength": 20
           },
           "eventDate": {
-            "$ref": "#/components/schemas/DateAndZoneDTO"
+            "$ref": "#/components/schemas/DateAndZoneDTO",
+            "description": "Date when the event happened."
           },
           "syncId": {
             "type": "number",
@@ -9533,7 +9491,8 @@
             "maxLength": 20
           },
           "parameter": {
-            "$ref": "#/components/schemas/GenericDataRecordDTO"
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
+            "description": "Additional values/parameters of the event. <p> The definition of the included fields depends on the business object and event type and can be requested from the AEB. </p>"
           }
         }
       },
@@ -9611,9 +9570,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "syncId": {
@@ -9727,9 +9684,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "businessObjectType": {
@@ -9766,7 +9721,8 @@
             }
           },
           "syncPartnerSystem": {
-            "$ref": "#/components/schemas/SyncPartnerSystemDTO"
+            "$ref": "#/components/schemas/SyncPartnerSystemDTO",
+            "description": "Registered partner system subscription."
           }
         }
       },
@@ -9797,9 +9753,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "businessObjectType": {
@@ -9844,7 +9798,8 @@
             }
           },
           "syncPartnerSystem": {
-            "$ref": "#/components/schemas/SyncPartnerSystemDTO"
+            "$ref": "#/components/schemas/SyncPartnerSystemDTO",
+            "description": "Previously registered partner system subscription (if any)."
           }
         }
       },
@@ -9875,9 +9830,7 @@
               "de"
             ],
             "items": {
-              "type": "string",
-              "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
-              "example": "[\"en\",\"de\"]"
+              "type": "string"
             }
           },
           "businessObjectType": {
@@ -9897,7 +9850,7 @@
           "companyNumber": {
             "type": "string",
             "description": "Company number. The company number is in some AEB services not unique.",
-            "example": "12345",
+            "example": 12345,
             "maxLength": 20,
             "minLength": 1,
             "readOnly": true
@@ -9943,7 +9896,7 @@
           "postcode": {
             "type": "string",
             "description": "Postcode of the street address.",
-            "example": "70567",
+            "example": 70567,
             "maxLength": 10,
             "minLength": 0
           },
@@ -10030,6 +9983,7 @@
             "type": "string",
             "format": "date-time",
             "description": "Date at wich the company was set as disabled. Empty if the company is not disabled. This date is always UTC time zone and has the RFC-3339 date format.",
+            "example": "2000-01-01T00:00:00.000",
             "readOnly": true
           },
           "homepage": {
@@ -10279,34 +10233,6 @@
           "userActivityTimeoutMS": {
             "type": "integer",
             "format": "int64"
-          }
-        }
-      },
-      "GenericDataRecordDTORef": {
-        "type": "object",
-        "properties": {
-          "fields": {
-            "type": "array",
-            "description": "The fields of the record.",
-            "items": {
-              "$ref": "#/components/schemas/GenericDataFieldDTO"
-            }
-          },
-          "subrecords": {
-            "type": "array",
-            "description": "Subrecords of the record.",
-            "example": [
-              {
-                "name": "child",
-                "record": {
-                  "fields": [],
-                  "subrecords": []
-                }
-              }
-            ],
-            "items": {
-              "type": "object"
-            }
           }
         }
       }
