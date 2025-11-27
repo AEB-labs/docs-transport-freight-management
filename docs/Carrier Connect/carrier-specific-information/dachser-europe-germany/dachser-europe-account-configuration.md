@@ -71,13 +71,13 @@ In this section the EDI upload parameters are configured. Dachser offers several
 
 <br />
 
-| ID                | Comment |
-| :---------------- | :------ |
-| AVIS_CANCEL       |         |
-| AVIS_COMPLETE     |         |
-| AVIS_PACK_PREPARE |         |
-| AVIS_SHIP_PREPARE |         |
-| STANDARD          |         |
+| ID                | Comment                                                        |
+| :---------------- | :------------------------------------------------------------- |
+| AVIS_CANCEL       | Triggered                                                      |
+| AVIS_COMPLETE     | Triggered when the shipment is completed (doCompletion = true) |
+| AVIS_PACK_PREPARE | Triggered                                                      |
+| AVIS_SHIP_PREPARE | Triggered                                                      |
+| STANDARD          | Triggered when the pickup containing the shipment is closed.   |
 
 Select the EDI ID you want to configure and click on _Open_.
 
