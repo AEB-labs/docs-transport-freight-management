@@ -1,5 +1,5 @@
 ---
-title: Carrier, Service and Value-Added Service IDs
+title: IDs for Carrier, Service and Value-Added Service
 deprecated: false
 hidden: true
 metadata:
