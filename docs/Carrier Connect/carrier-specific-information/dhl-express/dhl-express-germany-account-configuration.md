@@ -218,10 +218,10 @@ You will need a second customer number and a second package number range, if you
 
 <Image align="center" border={false} src="https://files.readme.io/a0735ceae6e92372d6c64bc9e9958fb605c7139ec8112c42d24089f9b9f1163d-return-services.png" />
 
-| Number | Field               | Comment                                                                                                                                                                                                                                  |
-| :----- | :------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1      | Import Customer no. | Assigned by the carrier                                                                                                                                                                                                                  |
-| 2      | Return pack. range  | A second package number range assigned by the carrier. It's configure like the [package number range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#package-number-range). |
+| Number | Field               | Comment                                                                                                                                                                                                                                   |
+| :----- | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | Import Customer no. | Assigned by the carrier                                                                                                                                                                                                                   |
+| 2      | Return pack. range  | A second package number range assigned by the carrier. It's configured like the [package number range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#package-number-range). |
 
 # EDI setups
 
