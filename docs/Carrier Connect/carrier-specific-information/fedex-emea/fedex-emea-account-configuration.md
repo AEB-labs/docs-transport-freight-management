@@ -9,6 +9,14 @@ metadata:
 
 To create a new FedEx (EMEA) account in Carrier Connect, open FedEx in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
+Select account type FEDEX_RESTWS.
+
+<Image align="center" border={false} src="https://files.readme.io/88148cc6a68ffbf8794d9be1a75d93c91f21fa9e1672e5643e080d78e2bd4f28-account-type.png" />
+
+<CCOAccountTransfer />
+
+<br />
+
 # FedEx account
 
 <Image align="center" border={false} src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
