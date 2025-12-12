@@ -333,8 +333,8 @@ Select the EDI ID you want to configure and click on _Open_.
 
 | Number | Field          | Comment                                                      |
 | :----- | :------------- | :----------------------------------------------------------- |
-| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLFREIGHT_EDI       |
-| 2      | Name           | Choose a descriptive name. E.g. DHL Freight EDI number range |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLEXP_EDI           |
+| 2      | Name           | Choose a descriptive name. E.g. DHL Express EDI number range |
 | 3      | Start value    | 1                                                            |
 | 4      | Max. value     | 999                                                          |
 | 5      | Auto. re-start | Activated                                                    |
