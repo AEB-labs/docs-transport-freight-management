@@ -9,7 +9,7 @@ metadata:
 
 To create a new DHL Express account in Carrier Connect, open DHL Express in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-Select account type 
+Select account type
 
 * (1) DHLEXPINT_MYDHLAPIV2 **only** if you will use the value-added service **Pickup Booking** (DHLEXPINTPICKUP).
 * (2) DHLEXPINT_STD_IFTMIN in all other cases.
@@ -18,7 +18,7 @@ Select account type
 
 # DHL Express account
 
-## (2) Account type: DHLEXPINT_STD_IFTMIN 
+## (2) Account type: DHLEXPINT_STD_IFTMIN
 
 <Image align="center" border={false} src="https://files.readme.io/38e2cd3d9a17b218a89586718831aa511d10b54452740bb07ebf571e7bc18b85-account1.png" />
 
@@ -211,7 +211,7 @@ Select account type
       </td>
 
       <td>
-        See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range)
+        See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#package-number-range-1)
       </td>
     </tr>
   </tbody>
