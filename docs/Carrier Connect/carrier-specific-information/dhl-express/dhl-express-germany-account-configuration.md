@@ -150,7 +150,7 @@ Select account type
       </td>
 
       <td>
-        See [AWB no. range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#awb-no-range)
+        The Air Way Bill number range. See [AWB no. range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#awb-no-range)
       </td>
     </tr>
 
@@ -192,7 +192,7 @@ Select account type
       </td>
 
       <td>
-        Assigned by the carrier. There are two options:
+        DHL calls its package number range _License plate number_ range. Assigned by the carrier. There are two options:
 
         * ASC MH 10
         * GS1-128 (SSCC)
@@ -235,7 +235,17 @@ Select account type
 | 6      | Leading zeros  | Deactivated                                                  |
 | 7      | Char. length   | 9                                                            |
 
-### License pl. no. range
+### License plate type
+
+#### ASC MH 10
+
+<Image align="center" border={false} src="https://files.readme.io/d14368ff232e5fad8e0051d98ae474e7a07a21c470b64b176042d3a4468c0d2c-lp.png" />
+
+| Number | Field     | Comment                 |
+| :----- | :-------- | :---------------------- |
+| 1      | ASC MH 10 | Assigned by the carrier |
+
+##### ASC MH 10: License pl. no. range
 
 | Number | Field          | Comment                                                          |
 | :----- | :------------- | :--------------------------------------------------------------- |
@@ -245,17 +255,7 @@ Select account type
 | 4      | Max. value     | 999999999                                                        |
 | 5      | Auto. re-start | Activated                                                        |
 | 6      | Leading zeros  | Activated                                                        |
-| 7      | Char. length   | 9                                                                |
-
-## License plate type
-
-### ASC MH 10
-
-<Image align="center" border={false} src="https://files.readme.io/d14368ff232e5fad8e0051d98ae474e7a07a21c470b64b176042d3a4468c0d2c-lp.png" />
-
-| Number | Field     | Comment                 |
-| :----- | :-------- | :---------------------- |
-| 1      | ASC MH 10 | Assigned by the carrier |
+| 7      | Char. length   | 18                                                               |
 
 ### GS1-128 (SSCC)
 
