@@ -94,7 +94,7 @@ Select account type
       </td>
 
       <td>
-        See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/dhlfreight-account-configuration#single-package-handling)
+        See below: **Single Package Handling**
       </td>
     </tr>
 
@@ -211,7 +211,7 @@ Select account type
       </td>
 
       <td>
-        See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#package-number-range-1)
+        See [License pl. no. range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#license-pl-no-range-1)
       </td>
     </tr>
   </tbody>
@@ -223,7 +223,7 @@ Select account type
 
 <CCOPackageNumberRange />
 
-<br />
+### License pl. no. range
 
 | Number | Field          | Comment                                                          |
 | :----- | :------------- | :--------------------------------------------------------------- |
