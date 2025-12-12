@@ -251,11 +251,15 @@ Select account type
 
 ### ASC MH 10
 
+<Image align="center" border={false} src="https://files.readme.io/d14368ff232e5fad8e0051d98ae474e7a07a21c470b64b176042d3a4468c0d2c-lp.png" />
+
 | Number | Field     | Comment                 |
 | :----- | :-------- | :---------------------- |
 | 1      | ASC MH 10 | Assigned by the carrier |
 
 ### GS1-128 (SSCC)
+
+<Image align="center" border={false} src="https://files.readme.io/95d4b0311bac746ef9afc0412ec1e15f4e59eba51a5ce934ac216a13704da115-gs1.png" />
 
 | Number | Field | Comment                                          |
 | :----- | :---- | :----------------------------------------------- |
