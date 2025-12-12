@@ -10,3 +10,4 @@ metadata:
 next:
   description: ''
 ---
+[FedEx (EMEA): Account Configuration](doc:fedex-emea-account-configuration)
