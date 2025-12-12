@@ -104,7 +104,7 @@ Select account type
       </td>
 
       <td>
-        Customer number
+        Export Customer no.
       </td>
 
       <td>
@@ -118,7 +118,7 @@ Select account type
       </td>
 
       <td>
-        Depot number
+        Shipper IATA code
       </td>
 
       <td>
@@ -132,11 +132,11 @@ Select account type
       </td>
 
       <td>
-        Package no. range
+        Participation no.
       </td>
 
       <td>
-        See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range)
+        Assigned by the carrier
       </td>
     </tr>
 
@@ -146,11 +146,11 @@ Select account type
       </td>
 
       <td>
-        EDI transmission
+        AWB no. range
       </td>
 
       <td>
-        Set to _Send and log_
+
       </td>
     </tr>
 
@@ -160,16 +160,58 @@ Select account type
       </td>
 
       <td>
-        Tracking no. type
+        EDI transmission
+      </td>
+
+      <td>
+        Set to _Send and log_.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        10
+      </td>
+
+      <td>
+        Document upload
+      </td>
+
+      <td>
+        If you need to transmit documents electronically to DHL, set to _Send and log_.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        11
+      </td>
+
+      <td>
+        License plate type
       </td>
 
       <td>
         Assigned by the carrier. There are two options:
 
-        * ANSIFact ASC MH 10
-        * GS1 EAN 128 Licenseplate
+        * ASC MH 10
+        * GS1-128 (SSCC)
 
-        See [Tracking no. type](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#tracking-no-type)
+        See [License plate type](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#license-plate-type)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        12
+      </td>
+
+      <td>
+        License pl. no. range
+      </td>
+
+      <td>
+        See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range)
       </td>
     </tr>
   </tbody>
