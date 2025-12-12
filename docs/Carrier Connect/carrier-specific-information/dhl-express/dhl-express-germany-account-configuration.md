@@ -150,7 +150,7 @@ Select account type
       </td>
 
       <td>
-
+        See [AWB no. range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#awb-no-range)
       </td>
     </tr>
 
@@ -222,6 +222,18 @@ Select account type
 <br />
 
 <CCOPackageNumberRange />
+
+### AWB no. range
+
+| Number | Field          | Comment                                                          |
+| :----- | :------------- | :--------------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLFREIGHT_PCK           |
+| 2      | Name           | Choose a descriptive name. E.g. DHL Freight package number range |
+| 3      | Start value    | 1                                                                |
+| 4      | Max. value     | 999999999                                                        |
+| 5      | Auto. re-start | Activated                                                        |
+| 6      | Leading zeros  | Activated                                                        |
+| 7      | Char. length   | 9                                                                |
 
 ### License pl. no. range
 
