@@ -1,5 +1,5 @@
 ---
-title: 'FedEx (EMEA): Account Configuration'
+title: 'FedEx EMEA: Account Configuration'
 deprecated: false
 hidden: false
 metadata:
