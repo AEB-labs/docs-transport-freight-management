@@ -9,6 +9,13 @@ metadata:
 
 To create a new DHL Express account in Carrier Connect, open DHL Express in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
+Select account type 
+
+* (1) DHLEXPINT_MYDHLAPIV2 **only** if you will use the value-added service **Pickup Booking** (DHLEXPINTPICKUP).
+* (2) DHLEXPINT_STD_IFTMIN in all other cases.
+
+<Image align="center" border={false} src="https://files.readme.io/d796c2931115232843a976fab7f56f06983c041e2470fe02c8d686d6cabfbd4a-account-type.png" />
+
 # DHL Express account
 
 <Image align="center" border={false} src="https://files.readme.io/38e2cd3d9a17b218a89586718831aa511d10b54452740bb07ebf571e7bc18b85-account1.png" />
@@ -204,7 +211,7 @@ To create a new DHL Express account in Carrier Connect, open DHL Express in _Mas
 
 <br />
 
-# Returns 
+# Returns
 
 # EDI setups
 
