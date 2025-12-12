@@ -7,13 +7,13 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
+To create a new DHL Express account in Carrier Connect, open DHL Express in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-# DHL Freight account
+# DHL Express account
 
-<Image align="center" border={false} src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
+<Image align="center" border={false} src="https://files.readme.io/38e2cd3d9a17b218a89586718831aa511d10b54452740bb07ebf571e7bc18b85-account1.png" />
 
-<Image align="center" border={false} src="https://files.readme.io/6aaf090c3171d81ef4947d6421c2b9b1fb2c61f15bd9c8c7fb9c643394ea9c63-dhlfreight_account2.png" />
+<Image align="center" border={false} src="https://files.readme.io/656817ad7043b2882ef9b62c7b653cdac21dc110bce4ae8d0901dc7418314ff5-account2.png" />
 
 <Table align={["left","left","left"]}>
   <thead>
@@ -203,6 +203,8 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 | 1      | GLN   | The GS1 base number of your company (7-9 digits) |
 
 <br />
+
+# Returns 
 
 # EDI setups
 
