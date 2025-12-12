@@ -1,5 +1,5 @@
 ---
-title: 'Copy of DHL Freight (Germany): Account Configuration'
+title: 'FedEx (EMEA): Account Configuration'
 deprecated: false
 hidden: false
 metadata:
@@ -7,9 +7,9 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
+To create a new FedEx (EMEA) account in Carrier Connect, open FedEx in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-# DHL Freight account
+# FedEx account
 
 <Image align="center" border={false} src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
 
