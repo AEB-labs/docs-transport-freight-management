@@ -18,6 +18,8 @@ Select account type
 
 # DHL Express account
 
+## (2) Account type: DHLEXPINT_STD_IFTMIN 
+
 <Image align="center" border={false} src="https://files.readme.io/38e2cd3d9a17b218a89586718831aa511d10b54452740bb07ebf571e7bc18b85-account1.png" />
 
 <Image align="center" border={false} src="https://files.readme.io/656817ad7043b2882ef9b62c7b653cdac21dc110bce4ae8d0901dc7418314ff5-account2.png" />
@@ -191,19 +193,15 @@ Select account type
 | 6      | Leading zeros  | Activated                                                        |
 | 7      | Char. length   | 9                                                                |
 
-## Tracking no. type
+## License plate type
 
-### ANSIFact ASC MH 10
+### ASC MH 10
 
-<Image border={false} src="https://files.readme.io/16cbe88a7f6174ba37b1b0eee61030233af0cdd094517732b35ca91d7b2906d7-image.png" />
+| Number | Field     | Comment                 |
+| :----- | :-------- | :---------------------- |
+| 1      | ASC MH 10 | Assigned by the carrier |
 
-| Number | Field        | Comment                 |
-| :----- | :----------- | :---------------------- |
-| 1      | Dispose area | Assigned by the carrier |
-
-### GS1 EAN 128 Licenseplate
-
-<Image border={false} src="https://files.readme.io/dcf87f87eac2a3cacdd22cc337059d6c133c523d32fe6babdeb1977cb9036ce1-image.png" />
+### GS1-128 (SSCC)
 
 | Number | Field | Comment                                          |
 | :----- | :---- | :----------------------------------------------- |
@@ -212,6 +210,13 @@ Select account type
 <br />
 
 # Returns
+
+<Image align="center" border={false} src="https://files.readme.io/a0735ceae6e92372d6c64bc9e9958fb605c7139ec8112c42d24089f9b9f1163d-return-services.png" />
+
+| Number | Field               | Comment                                                                                                                                                                                                                                  |
+| :----- | :------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | Import Customer no. | Assigned by the carrier                                                                                                                                                                                                                  |
+| 2      | Return pack. range  | A second package number range assigned by the carrier. It's configure like the [package number range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#package-number-range). |
 
 # EDI setups
 
