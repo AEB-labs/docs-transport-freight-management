@@ -214,6 +214,20 @@ Select account type
         See [License pl. no. range](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#license-pl-no-range-1)
       </td>
     </tr>
+
+    <tr>
+      <td>
+        13
+      </td>
+
+      <td>
+        PLT Doc. connection
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
   </tbody>
 </Table>
 
@@ -267,15 +281,15 @@ Select account type
 
 ##### GS1-128 (SSCC): License pl. no. range
 
-| Number | Field          | Comment                                                                |
-| :----- | :------------- | :--------------------------------------------------------------------- |
-| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLEXP_LP                      |
-| 2      | Name           | Choose a descriptive name. E.g. DHL Freight license plate number range |
-| 3      | Start value    | Assigned by the carrier                                                |
-| 4      | Max. value     | 999999999                                                              |
-| 5      | Auto. re-start | Activated                                                              |
-| 6      | Leading zeros  | Activated                                                              |
-| 7      | Char. length   | 7-9                                                                    |
+| Number | Field          | Comment                                                                                                |
+| :----- | :------------- | :----------------------------------------------------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLEXP_LP                                                      |
+| 2      | Name           | Choose a descriptive name. E.g. DHL Freight license plate number range                                 |
+| 3      | Start value    | Assigned by the carrier                                                                                |
+| 4      | Max. value     | 999999999                                                                                              |
+| 5      | Auto. re-start | Activated                                                                                              |
+| 6      | Leading zeros  | Activated                                                                                              |
+| 7      | Char. length   | Between 7 and 9, depending on the length of your GS1 base number (in total both numbers must equal 16) |
 
 # Return services
 
@@ -295,15 +309,12 @@ You will need a second customer number and a second package number range, if you
 
 In this section the EDI upload parameters are configured.
 
-<Image border={false} src="https://files.readme.io/6614a386d5cd2caeb0efbf299999ed3f26ffb6e9e724de9b678adb30948265e1-image.png" />
+<Image align="center" border={false} src="https://files.readme.io/2b7b849338d30275a6ee26851fd374f21f7a7e42fbfaa3cf1c64d73c0eaa315f-edi.png" />
 
-<br />
-
-| Number | ID       | Comment                                                                                |
-| :----- | :------- | :------------------------------------------------------------------------------------- |
-| 1      | PICKUP   | Only needed if you use the value added service **Pickup booking (DHLFREIGHTPICKBOOK)** |
-| 2      | STANDARD | This will send the standard EDI (when closing the pickup)                              |
-| 3      | RETURN   | Only needed if you use the value added service **Return booking (DHLFREIGHTRETBOOK)**  |
+| Number | ID        | Comment                                                                                                                                                                                                                                                                                                                              |
+| :----- | :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | RETOURE   | Only needed if you use one of the value-added services: **Data staging – return (enclosed) (DHLEXPINTRETURN)** or **Data staging - Return (on demand) (DHLEXPINTRETURNOD)**. Also see [Return services](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#return-services) |
+| 2      | STANDARD2 | This will send the standard EDI (when closing the pickup)                                                                                                                                                                                                                                                                            |
 
 Select the EDI ID you want to configure and click on _Open_.
 
