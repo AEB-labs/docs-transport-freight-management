@@ -2,7 +2,7 @@
 title: DHL Express (Germany)
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
