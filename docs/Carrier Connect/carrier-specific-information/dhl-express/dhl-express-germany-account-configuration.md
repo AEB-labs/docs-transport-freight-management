@@ -225,15 +225,15 @@ Select account type
 
 ### AWB no. range
 
-| Number | Field          | Comment                                                          |
-| :----- | :------------- | :--------------------------------------------------------------- |
-| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLFREIGHT_PCK           |
-| 2      | Name           | Choose a descriptive name. E.g. DHL Freight package number range |
-| 3      | Start value    | 1                                                                |
-| 4      | Max. value     | 999999999                                                        |
-| 5      | Auto. re-start | Activated                                                        |
-| 6      | Leading zeros  | Activated                                                        |
-| 7      | Char. length   | 9                                                                |
+| Number | Field          | Comment                                                      |
+| :----- | :------------- | :----------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLEXP_AWB           |
+| 2      | Name           | Choose a descriptive name. E.g. DHL Express AWB number range |
+| 3      | Start value    | Assigned by the carrier                                      |
+| 4      | Max. value     | Assigned by the carrier                                      |
+| 5      | Auto. re-start | Activated                                                    |
+| 6      | Leading zeros  | Deactivated                                                  |
+| 7      | Char. length   | 9                                                            |
 
 ### License pl. no. range
 
@@ -267,7 +267,7 @@ Select account type
 
 <br />
 
-## Return services
+# Return services
 
 You will need a second customer number and a second package number range, if you are using one of the DHL Express return services:
 
