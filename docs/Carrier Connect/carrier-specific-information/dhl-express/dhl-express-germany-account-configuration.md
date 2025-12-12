@@ -1,7 +1,7 @@
 ---
 title: 'DHL Express (Germany): Account Configuration'
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
