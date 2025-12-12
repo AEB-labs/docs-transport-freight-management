@@ -209,7 +209,12 @@ Select account type
 
 <br />
 
-# Returns
+## Return services
+
+You will need a second customer number and a second package number range, if you are using one of the DHL Express return services:
+
+* Data staging – return (enclosed) (DHLEXPINTRETURN)
+* Data staging - Return (on demand) (DHLEXPINTRETURNOD)
 
 <Image align="center" border={false} src="https://files.readme.io/a0735ceae6e92372d6c64bc9e9958fb605c7139ec8112c42d24089f9b9f1163d-return-services.png" />
 
