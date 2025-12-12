@@ -1,7 +1,7 @@
 ---
-title: 'Copy of DHL Freight (Germany): Account Configuration'
+title: 'DHL Express (Germany): Account Configuration'
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
