@@ -247,17 +247,17 @@ Select account type
 
 ##### ASC MH 10: License pl. no. range
 
-| Number | Field          | Comment                                                          |
-| :----- | :------------- | :--------------------------------------------------------------- |
-| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLFREIGHT_PCK           |
-| 2      | Name           | Choose a descriptive name. E.g. DHL Freight package number range |
-| 3      | Start value    | 1                                                                |
-| 4      | Max. value     | 999999999                                                        |
-| 5      | Auto. re-start | Activated                                                        |
-| 6      | Leading zeros  | Activated                                                        |
-| 7      | Char. length   | 18                                                               |
+| Number | Field          | Comment                                                                |
+| :----- | :------------- | :--------------------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLEXP_LP                      |
+| 2      | Name           | Choose a descriptive name. E.g. DHL Express license plate number range |
+| 3      | Start value    | Assigned by the carrier                                                |
+| 4      | Max. value     | Assigned by the carrier                                                |
+| 5      | Auto. re-start | Activated                                                              |
+| 6      | Leading zeros  | Activated                                                              |
+| 7      | Char. length   | 18                                                                     |
 
-### GS1-128 (SSCC)
+#### GS1-128 (SSCC)
 
 <Image align="center" border={false} src="https://files.readme.io/95d4b0311bac746ef9afc0412ec1e15f4e59eba51a5ce934ac216a13704da115-gs1.png" />
 
@@ -265,7 +265,17 @@ Select account type
 | :----- | :---- | :----------------------------------------------- |
 | 1      | GLN   | The GS1 base number of your company (7-9 digits) |
 
-<br />
+##### GS1-128 (SSCC): License pl. no. range
+
+| Number | Field          | Comment                                                                |
+| :----- | :------------- | :--------------------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DHLEXP_LP                      |
+| 2      | Name           | Choose a descriptive name. E.g. DHL Freight license plate number range |
+| 3      | Start value    | Assigned by the carrier                                                |
+| 4      | Max. value     | 999999999                                                              |
+| 5      | Auto. re-start | Activated                                                              |
+| 6      | Leading zeros  | Activated                                                              |
+| 7      | Char. length   | 7-9                                                                    |
 
 # Return services
 
