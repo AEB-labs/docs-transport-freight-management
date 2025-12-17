@@ -23,8 +23,8 @@ next:
 
 <Authentication />
 
-<Callout icon="❗️">
-  **You cannot use regular users for API requests!** Instead you will need a special API user to transmit API requests, which usually starts with _WSM_.  
+<Callout icon="❗️" theme="error">
+  **You cannot use regular Carrier Connect users for API requests!** Instead you will need a special API user to transmit API requests, which usually starts with _WSM_.
 </Callout>
 
 The login data must be base 64–encoded. The password is written out, so this is why we require using HTTPS encryption and the data cannot be intercepted by unauthorized parties.
