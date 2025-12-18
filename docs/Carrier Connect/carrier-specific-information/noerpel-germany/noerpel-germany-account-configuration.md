@@ -28,20 +28,18 @@ Select account type
 
 <br />
 
-| Number | Field                                    | Comment                                                                                                                                                              |
-| :----- | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1      | Shipper                                  | The address of the shipper                                                                                                                                           |
-| 2      | Carrier address                          | The address of the carrier (depot)                                                                                                                                   |
-| 3      | Condition                                | See our <Anchor label="user guide" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-709043211-de-DE">user guide</Anchor>      |
-| 4      |                                          |                                                                                                                                                                      |
-| 5      | Customer no.                             | Assigned by the carrier                                                                                                                                              |
-| 6      | Depot no.                                | Your company's GS1 base number                                                                                                                                       |
-| 6      | Package no. range                        | See <a href="https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range">Package number range</a> |
-| 7      | Test user name (Web service data)        | Assigned by the carrier                                                                                                                                              |
-| 8      | Test password (Web service data)         | Assigned by the carrier                                                                                                                                              |
-| 9      | Test subscription key (Web service data) | Assigned by the carrier                                                                                                                                              |
-| 10     | Test subscription key (Document upload)  | Assigned by the carrier                                                                                                                                              |
-| 11     | Test auth sub. key (Authentication)      | Assigned by the carrier                                                                                                                                              |
+| Number | Field                | Comment                                                                                                                                                              |
+| :----- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | Shipper              | The address of the shipper                                                                                                                                           |
+| 2      | Carrier address      | The address of the carrier (depot)                                                                                                                                   |
+| 3      | Condition            | See our <Anchor label="user guide" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-709043211-de-DE">user guide</Anchor>      |
+| 4      | Single pkg. handling | See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/noerpel-germany-account-configuration#single-package-handling-1)     |
+| 5      | Customer no.         | Assigned by the carrier                                                                                                                                              |
+| 6      | Depot no.            | Assigned by the carrier                                                                                                                                              |
+| 6      | Package no. range    | See <a href="https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range">Package number range</a> |
+| 7      | Ship. no. range      | Assigned by the carrier. Usually 6 digits. This is used as the fixed part of the tracking number.                                                                    |
+| 8      |                      |                                                                                                                                                                      |
+| 9      |                      |                                                                                                                                                                      |
 
 <CCOSinglePackageHandling />
 
