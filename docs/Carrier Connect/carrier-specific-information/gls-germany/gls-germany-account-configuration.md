@@ -24,11 +24,16 @@ To create a new GLS account in Carrier Connect, open GLS in _Master data > Carri
 
 <br />
 
-| Number | Field                | Comment                                                                                                                                                         |
-| :----- | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1      | Shipper              | The address of the shipper                                                                                                                                      |
-| 2      | Carrier address      | The address of the carrier (depot)                                                                                                                              |
-| 3      | Condition            | See our <Anchor label="user guide" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-709043211-de-DE">user guide</Anchor> |
-| 4      | Single pkg. handling | See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/dhlfreight-account-configuration#single-package-handling)       |
-| 5      | Customer no.         | Assigned by the carrier                                                                                                                                         |
-|        |                      |                                                                                                                                                                 |
+| Number | Field                | Comment                                                                                                                                                                                  |
+| :----- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | Shipper              | The address of the shipper                                                                                                                                                               |
+| 2      | Carrier address      | The address of the carrier (depot)                                                                                                                                                       |
+| 3      | Condition            | See our <Anchor label="user guide" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-709043211-de-DE">user guide</Anchor>                          |
+| 4      | Single pkg. handling | See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/dhlfreight-account-configuration#single-package-handling)                                |
+| 5      | Customer no.         | Assigned by the carrier                                                                                                                                                                  |
+| 6      | EDI transmission     | Set to _Send and log_                                                                                                                                                                    |
+| 7      | Contact ID           | Assigned by the carrier                                                                                                                                                                  |
+| 8      | Alt. server URL      | Assigned by the carrier. The URL used for the GLS webservice. It looks like this: https://shipit-wbm-de01.gls-group.eu:8443/backend/ShipmentProcessingService/ShipmentProcessingPortType |
+| 9      |                      |                                                                                                                                                                                          |
+| 10     |                      |                                                                                                                                                                                          |
+| 11     |                      |                                                                                                                                                                                          |
