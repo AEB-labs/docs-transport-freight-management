@@ -28,18 +28,17 @@ Select account type
 
 <br />
 
-| Number | Field                | Comment                                                                                                                                                              |
-| :----- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1      | Shipper              | The address of the shipper                                                                                                                                           |
-| 2      | Carrier address      | The address of the carrier (depot)                                                                                                                                   |
-| 3      | Condition            | See our <Anchor label="user guide" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-709043211-de-DE">user guide</Anchor>      |
-| 4      | Single pkg. handling | See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/noerpel-germany-account-configuration#single-package-handling-1)     |
-| 5      | Customer no.         | Assigned by the carrier                                                                                                                                              |
-| 6      | Depot no.            | Assigned by the carrier                                                                                                                                              |
-| 6      | Package no. range    | See <a href="https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range">Package number range</a> |
-| 7      | Ship. no. range      | Assigned by the carrier. Usually 6 digits. This is used as the fixed part of the tracking number.                                                                    |
-| 8      | Package no. range    | See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/noerpel-germany-account-configuration#package-number-range)             |
-| 9      | EDI transmission     | Set to _Send and log_                                                                                                                                                |
+| Number | Field                | Comment                                                                                                                                                          |
+| :----- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1      | Shipper              | The address of the shipper                                                                                                                                       |
+| 2      | Carrier address      | The address of the carrier (depot)                                                                                                                               |
+| 3      | Condition            | See our <Anchor label="user guide" target="_blank" href="https://docs.aeb.com/doc/cm-620065803-801708043-de-DE/t-801708043-709043211-de-DE">user guide</Anchor>  |
+| 4      | Single pkg. handling | See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/noerpel-germany-account-configuration#single-package-handling-1) |
+| 5      | Customer no.         | Assigned by the carrier                                                                                                                                          |
+| 6      | Depot no.            | Assigned by the carrier                                                                                                                                          |
+| 7      | Ship. no. range      | Assigned by the carrier. Usually 6 digits. This is used as the fixed part of the tracking number.                                                                |
+| 8      | Package no. range    | See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/noerpel-germany-account-configuration#package-number-range)         |
+| 9      | EDI transmission     | Set to _Send and log_                                                                                                                                            |
 
 <CCOSinglePackageHandling />
 
