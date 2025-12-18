@@ -12,7 +12,7 @@ To create a new Noerpel account in Carrier Connect, open Noerpel in _Master data
 Select account type
 
 * (1) NOERPEL_ABHBORD **only** if you will use the value-added service **Pickup Booking** (PICKUP_BOOKING).
-* (2) NOERPEL_STDBORD in all other cases.
+* (2) NOERPEL_STDBORD in all other cases. It's the standard account type for outbound shipments.
 
 <Image align="center" border={false} src="https://files.readme.io/63058aa7976e714baeab2afe7821493afb87e2e2c500abd63ba1977c2d955b2a-account-type.png" />
 
