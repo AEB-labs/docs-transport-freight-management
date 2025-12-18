@@ -36,8 +36,8 @@ Select account type
 | 4      | Single pkg. handling | See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-noerpel-germany-account-configuration#single-package-handling-3) |
 | 5      | Customer no.         | Assigned by the carrier                                                                                                                                                  |
 | 6      | GS1 base no.         | Your company's GS1 base number                                                                                                                                           |
-| 8      | Package no. range    | See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/noerpel-germany-account-configuration#package-number-range)                 |
-| 9      | EDI transmission     | Set to _Send and log_                                                                                                                                                    |
+| 7      | Package no. range    | See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-noerpel-germany-account-configuration#package-number-range-1)       |
+| 8      | EDI transmission     | Set to _Send and log_                                                                                                                                                    |
 
 <CCOSinglePackageHandling />
 
