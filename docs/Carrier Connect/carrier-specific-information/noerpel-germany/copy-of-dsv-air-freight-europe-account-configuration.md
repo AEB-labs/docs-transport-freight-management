@@ -1,5 +1,5 @@
 ---
-title: 'Copy of DSV Air Freight (Europe): Account Configuration'
+title: 'Noerpel (Germany): Account Configuration'
 deprecated: false
 hidden: false
 metadata:
@@ -7,7 +7,7 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-To create a new DSV Air Freight (Europe) account in Carrier Connect, open DSV Air Freight (Europe) in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
+To create a new Noerpel account in Carrier Connect, open Noerpel in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
 Select account type DSVAIR_API2.
 
