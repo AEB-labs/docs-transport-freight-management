@@ -16,11 +16,6 @@ Select account type
 
 <Image border={false} src="https://files.readme.io/911a9dac0c2326d7168ecf08b068b1c15eb4e24361d720a63f62ec6276312090-image.png" />
 
-| Account Type          | Description                                                                                                                 |
-| :-------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| DACHSER_STD           | The standard account type for outbound shipments                                                                            |
-| DACHSER_PICKUPBOOKING | When using the value-added service **Collection booking (PICKUPBOOKING)** you have to create this account type additionally |
-
 <CCOAccountTransfer />
 
 # Dachser account
