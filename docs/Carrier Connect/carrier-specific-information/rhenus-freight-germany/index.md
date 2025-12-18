@@ -5,3 +5,4 @@ hidden: true
 metadata:
   robots: index
 ---
+[Rhenus Freight (Germany): Account Configuration](doc:rhenus-freight-germany-account-configuration)
