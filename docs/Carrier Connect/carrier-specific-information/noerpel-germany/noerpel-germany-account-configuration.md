@@ -9,15 +9,18 @@ metadata:
 
 To create a new Noerpel account in Carrier Connect, open Noerpel in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-Select account type DSVAIR_API2.
+Select account type
 
-<Image align="center" border={false} src="https://files.readme.io/0b2dd5954313fb70b6b5534ba6c0a4141f2b27a9812b89ad95aca70e03959b87-AccountType.png" />
+* (1) NOERPEL_ABHBORD **only** if you will use the value-added service **Pickup Booking** (PICKUP_BOOKING).
+* (2) NOERPEL_STDBORD in all other cases.
+
+<Image align="center" border={false} src="https://files.readme.io/63058aa7976e714baeab2afe7821493afb87e2e2c500abd63ba1977c2d955b2a-account-type.png" />
 
 <CCOAccountTransfer />
 
 <br />
 
-# DSV Air Freight (Europe) account
+# Noerpel (Germany) account
 
 <Image align="center" border={false} src="https://files.readme.io/f6c9457d987bc6e839a527689a9b625b9e3d5aac74d1f9ecd3e4046bf09f0b53-DSV_AIR1.png" />
 
