@@ -12,7 +12,9 @@ next:
 ---
 <br />
 
-<br />
+<CCOConfiguringCarriersInCarrierConnect />
+
+To create a new GLS account in Carrier Connect, open GLS in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
 # GLS account
 
