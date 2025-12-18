@@ -9,9 +9,10 @@ metadata:
 
 To create a new Dachser Road Freight account in Carrier Connect, open Dachser Road Freight (Dachser Landverkehr Europa) in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-# Dachser account
+Select account type
 
-When creating a new Dachser account, you can choose between two account types:
+* (1) DACHSER_PICKUPBOOKING **only** if you will use the value-added service **Pickup Booking** (PICKUPBOOKING).
+* (2) DACHSER_STD in all other cases. It's the standard account type for outbound shipments.
 
 <Image border={false} src="https://files.readme.io/911a9dac0c2326d7168ecf08b068b1c15eb4e24361d720a63f62ec6276312090-image.png" />
 
@@ -21,6 +22,8 @@ When creating a new Dachser account, you can choose between two account types:
 | DACHSER_PICKUPBOOKING | When using the value-added service **Collection booking (PICKUPBOOKING)** you have to create this account type additionally |
 
 <CCOAccountTransfer />
+
+# Dachser account
 
 <Image align="center" border={false} src="https://files.readme.io/85fa1b3f45eb08f572b9dcb8d61c8c761a1c3585dc0c475680df7616cb484f18-DACHSER1.png" />
 
