@@ -51,12 +51,12 @@ Select account type
 
 <br />
 
-| Number | Field          | Comment                                                                       |
-| :----- | :------------- | :---------------------------------------------------------------------------- |
-| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. DSVAIR_PCK                            |
-| 2      | Name           | Choose a descriptive name. E.g. DSV Air Freight (Europe) package number range |
-| 3      | Start value    | 1                                                                             |
-| 4      | Max. value     | 999.999.999                                                                   |
-| 5      | Auto. re-start | Activated                                                                     |
-| 6      | Leading zeros  | Activated                                                                     |
-| 7      | Char. length   | 9                                                                             |
+| Number | Field          | Comment                                                                |
+| :----- | :------------- | :--------------------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. NOERPEL_PCK                    |
+| 2      | Name           | Choose a descriptive name. E.g. Noerpel (Germany) package number range |
+| 3      | Start value    | Assigned by the carrier                                                |
+| 4      | Max. value     | Assigned by the carrier                                                |
+| 5      | Auto. re-start | Activated                                                              |
+| 6      | Leading zeros  | Activated                                                              |
+| 7      | Char. length   | 7                                                                      |
