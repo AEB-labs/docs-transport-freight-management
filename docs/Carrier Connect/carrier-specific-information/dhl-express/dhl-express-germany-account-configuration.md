@@ -12,7 +12,7 @@ To create a new DHL Express account in Carrier Connect, open DHL Express in _Mas
 Select account type
 
 * (1) DHLEXPINT_MYDHLAPIV2 **only** if you will use the value-added service **Pickup Booking** (DHLEXPINTPICKUP).
-* (2) DHLEXPINT_STD_IFTMIN in all other cases.
+* (2) DHLEXPINT_STD_IFTMIN in all other cases. It's the standard account type for outbound shipments.
 
 <Image align="center" border={false} src="https://files.readme.io/d796c2931115232843a976fab7f56f06983c041e2470fe02c8d686d6cabfbd4a-account-type.png" />
 
