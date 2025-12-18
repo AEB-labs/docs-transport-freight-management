@@ -1,5 +1,5 @@
 ---
-title: Copy of DHL Paket (Germany)
+title: DHL Paket International (Germany)
 deprecated: false
 hidden: true
 metadata:
