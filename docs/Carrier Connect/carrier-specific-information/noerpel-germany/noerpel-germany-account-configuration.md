@@ -38,8 +38,8 @@ Select account type
 | 6      | Depot no.            | Assigned by the carrier                                                                                                                                              |
 | 6      | Package no. range    | See <a href="https://transport-freight-management.docs.developers.aeb.com/docs/copy-of-ups-emea-carrier-configuration#package-number-range">Package number range</a> |
 | 7      | Ship. no. range      | Assigned by the carrier. Usually 6 digits. This is used as the fixed part of the tracking number.                                                                    |
-| 8      |                      |                                                                                                                                                                      |
-| 9      |                      |                                                                                                                                                                      |
+| 8      | Package no. range    | See [Package number range](https://transport-freight-management.docs.developers.aeb.com/docs/noerpel-germany-account-configuration#package-number-range)             |
+| 9      | EDI transmission     | Set to _Send and log_                                                                                                                                                |
 
 <CCOSinglePackageHandling />
 
