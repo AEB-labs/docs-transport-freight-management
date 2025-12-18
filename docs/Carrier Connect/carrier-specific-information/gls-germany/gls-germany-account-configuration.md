@@ -37,3 +37,7 @@ To create a new GLS account in Carrier Connect, open GLS in _Master data > Carri
 | 9      | Operating mode       | Choose _Test_, if you are in the test environment. Choose _Productive_, if you are in the productive environment.                                                                        |
 | 10     | User                 | Assigned by the carrier                                                                                                                                                                  |
 | 11     | Password             | Assigned by the carrier                                                                                                                                                                  |
+
+<CCOSinglePackageHandling />
+
+<br />
