@@ -1,5 +1,5 @@
 ---
-title: 'Rhenus Freight (Germany): Account Configuration'
+title: 'Rhenus Freight Logistics (Germany): Account Configuration'
 deprecated: false
 hidden: false
 metadata:
