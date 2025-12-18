@@ -66,3 +66,17 @@ Select account type
 # EDI setup
 
 In this section the EDI upload parameters are configured.
+
+<CCOEDINumberRange />
+
+<br />
+
+| Number | Field          | Comment                                                  |
+| :----- | :------------- | :------------------------------------------------------- |
+| 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. NOERPEL_EDI      |
+| 2      | Name           | Choose a descriptive name. E.g. Noerpel EDI number range |
+| 3      | Start value    | 1                                                        |
+| 4      | Max. value     | 999                                                      |
+| 5      | Auto. re-start | Activated                                                |
+| 6      | Leading zeros  | Activated                                                |
+| 7      | Char. length   | 3                                                        |
