@@ -1,8 +1,8 @@
 ---
-title: Copy of FedEx EMEA
+title: GLS (Germany)
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-[FedEx (EMEA): Account Configuration](doc:fedex-emea-account-configuration)
+[GLS (Germany): Account Configuration](doc:gls-germany)
