@@ -5,6 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-[DSV Air Freight (Europe): Account Configuration](doc:dsvair-account-configuration)
+[DSV Air Freight (Europe): Account Configuration](doc:dsvairfreight-account-configuration)
 
 <br />
