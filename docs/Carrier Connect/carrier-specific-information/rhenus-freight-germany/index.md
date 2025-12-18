@@ -1,7 +1,7 @@
 ---
 title: Rhenus Freight Logistics (Germany)
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
