@@ -10,4 +10,3 @@ metadata:
 next:
   description: ''
 ---
-[UPS EMEA](doc:ups-emea)
