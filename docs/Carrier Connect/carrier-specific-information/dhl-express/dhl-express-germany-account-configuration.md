@@ -94,7 +94,7 @@ Select account type
       </td>
 
       <td>
-        See below: **Single Package Handling**
+        See [Single Package Handling](https://transport-freight-management.docs.developers.aeb.com/docs/dhl-express-germany-account-configuration#single-package-handling-2)
       </td>
     </tr>
 
