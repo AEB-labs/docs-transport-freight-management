@@ -2,7 +2,7 @@
 title: 'GLS (Germany): Account Configuration'
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
