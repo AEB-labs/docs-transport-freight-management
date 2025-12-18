@@ -60,3 +60,9 @@ Select account type
 | 5      | Auto. re-start | Activated                                                              |
 | 6      | Leading zeros  | Activated                                                              |
 | 7      | Char. length   | 7                                                                      |
+
+<br />
+
+# EDI setup
+
+In this section the EDI upload parameters are configured.
