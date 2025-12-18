@@ -1,5 +1,5 @@
 ---
-title: 'Hellmann (Germany): Account Configuration'
+title: 'Hellmann Landverkehre (Germany): Account Configuration'
 deprecated: false
 hidden: false
 metadata:
