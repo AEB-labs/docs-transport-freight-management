@@ -46,7 +46,7 @@ To create a new Rhenus Freight account in Carrier Connect, open Rhenus Freight i
 | 4      | Max. value     | Assigned by the carrier                                               |
 | 5      | Auto. re-start | Activated                                                             |
 | 6      | Leading zeros  | Activated                                                             |
-| 7      | Char. length   | 7                                                                     |
+| 7      | Char. length   | 8                                                                     |
 
 <br />
 
@@ -62,8 +62,8 @@ In this section the EDI upload parameters are configured.
 | :----- | :------------- | :------------------------------------------------------ |
 | 1      | Abbreviation   | Choose a descriptive abbreviation. E.g. RHENUS_EDI      |
 | 2      | Name           | Choose a descriptive name. E.g. Rhenus EDI number range |
-| 3      | Start value    | 1                                                       |
-| 4      | Max. value     | 999                                                     |
+| 3      | Start value    | 1.000.001                                               |
+| 4      | Max. value     | 9.999.999                                               |
 | 5      | Auto. re-start | Activated                                               |
 | 6      | Leading zeros  | Activated                                               |
-| 7      | Char. length   | 3                                                       |
+| 7      | Char. length   | 7                                                       |
