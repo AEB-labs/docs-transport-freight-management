@@ -1,5 +1,5 @@
 ---
-title: 'Copy of Hellmann Landverkehre (Germany): Account Configuration'
+title: 'Rhenus Freight (Germany): Account Configuration'
 deprecated: false
 hidden: false
 metadata:
@@ -7,20 +7,9 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-To create a new Hellmann account in Carrier Connect, open Hellmann in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
+To create a new Rhenus Freight account in Carrier Connect, open Rhenus Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
-Select account type
-
-* (1) HELL_SAE_STD: This is the standard account type for outbound shipments.
-* (2) HELLSAE_PICKUP:  **Only** use it if you will use the value-added service **Pickup Booking** (HELL_PICKUP).
-
-<Image align="center" border={false} src="https://files.readme.io/72c81b2bdfdbd4f63aaeaeffcec9e5c52b2ad303815fb8ea6c4135e6b0578f0e-account-type.png" />
-
-<CCOAccountTransfer />
-
-<br />
-
-# Hellmann (Germany) account
+# Rhenus Freight (Germany) account
 
 <Image align="center" border={false} src="https://files.readme.io/10ce444029d5512f2647e30289b5f1159fd4206d1f98fdde0f5196b0fd7ba79d-account1.png" />
 
