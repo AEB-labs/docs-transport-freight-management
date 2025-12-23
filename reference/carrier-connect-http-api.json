@@ -2571,7 +2571,7 @@
           "packageNumber": {
             "type": "integer",
             "format": "int32",
-            "description": "The serial number of the package within the shipment. This number is mainly used to sort the packages in lists or in business logic (e.g. to detect the \"first\" package as master package).<br> When the field is left empty, the numbers will automatically computed by the engine. <p> length=4 </p>"
+            "description": "The serial number of the package within the shipment. This number is mainly used to sort the packages in lists or in business logic (e.g. to detect the \"first\" package as master package).<br> When the field is left empty, the numbers will automatically computed by the engine. <p> length=5 </p>"
           },
           "packageTransactionId": {
             "type": "string",
@@ -8515,10 +8515,10 @@
       "CommandInfo": {
         "type": "object",
         "properties": {
-          "commandName": {
+          "commandClass": {
             "type": "string"
           },
-          "commandClass": {
+          "commandName": {
             "type": "string"
           }
         }
@@ -8540,7 +8540,13 @@
           "dataSource": {
             "$ref": "#/components/schemas/DataSource"
           },
-          "allCommands": {
+          "transferDataFlavors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActivationDataFlavor"
+            }
+          },
+          "preferredCommands": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
@@ -8550,16 +8556,10 @@
             "$ref": "#/components/schemas/CommandMap",
             "writeOnly": true
           },
-          "preferredCommands": {
+          "allCommands": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
-            }
-          },
-          "transferDataFlavors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ActivationDataFlavor"
             }
           },
           "name": {
