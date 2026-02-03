@@ -1,6 +1,8 @@
 ---
 title: Carrier specific information
-excerpt: ''
+excerpt: >-
+  In this section you will find instructions for setting up your carrier
+  account.
 deprecated: false
 hidden: false
 metadata:
