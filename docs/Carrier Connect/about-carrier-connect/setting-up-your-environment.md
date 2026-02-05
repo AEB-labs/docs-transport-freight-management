@@ -46,13 +46,19 @@ HTTPS URLs use port **443** by default.
 
 # Endpoints
 
-You have to replace `<carrier_connect_system>` with the system you want to connect (e.g. demo1cai, test2cai, prod1cai).
+You can find the API endpoints under <Anchor label="API Reference" target="_blank" href="https://transport-freight-management.docs.developers.aeb.com/reference/addshipmentattachments">API Reference</Anchor> as shown in the screenshot below. 
 
-| \<carrier_connect_system> | Description                             |
-| :------------------------ | :-------------------------------------- |
-| test2cai                  | Test environment                        |
-| prod1cai                  | Productive environment                  |
-| prod2cai                  | Productive environment (First Customer) |
+<Image border={false} src="https://files.readme.io/0d25b222e8efc0e63dd67aa5780bb99393eb9f21c08226c1366d9c7a45a68e3d-image.png" />
+
+<br />
+
+You have to replace `demo1cai` with the system you want to connect (e.g. test2cai, prod1cai).
+
+| System   | Description                             |
+| :------- | :-------------------------------------- |
+| test2cai | Test environment                        |
+| prod1cai | Productive environment                  |
+| prod2cai | Productive environment (First Customer) |
 
 <br />
 
