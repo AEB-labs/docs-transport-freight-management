@@ -46,7 +46,7 @@ HTTPS URLs use port **443** by default.
 
 # Endpoints
 
-You can find the API endpoints under <Anchor label="API Reference" target="_blank" href="https://transport-freight-management.docs.developers.aeb.com/reference/addshipmentattachments">API Reference</Anchor> as shown in the screenshot below. 
+You can find the API endpoints under <Anchor label="API Reference" target="_blank" href="https://transport-freight-management.docs.developers.aeb.com/reference/addshipmentattachments">API Reference</Anchor> as shown in the screenshot below.
 
 <Image border={false} src="https://files.readme.io/0d25b222e8efc0e63dd67aa5780bb99393eb9f21c08226c1366d9c7a45a68e3d-image.png" />
 
@@ -60,16 +60,16 @@ You have to replace `demo1cai` with the system you want to connect (e.g. test2ca
 | prod1cai | Productive environment                  |
 | prod2cai | Productive environment (First Customer) |
 
-<br />
+# Documentation
 
 ## REST (OpenApi)
 
-https://rz3.aeb.de/test2cai/rest/openapi.json
+[https://rz3.aeb.de/test2cai/rest/openapi.json](https://rz3.aeb.de/test2cai/rest/openapi.json)
 
 ## SOAP
 
-https://rz3.aeb.de/test2cai/servlet/bf/DLCarrierBF?WSDL
-https://rz3.aeb.de/test2cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html
+[https://rz3.aeb.de/test2cai/servlet/bf/DLCarrierBF?WSDL](https://rz3.aeb.de/test2cai/servlet/bf/DLCarrierBF?WSDL)
+[https://rz3.aeb.de/test2cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html](https://rz3.aeb.de/test2cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html)
 
 <br />
 
