@@ -58,12 +58,12 @@ You have to replace `<carrier_connect_system>` with the system you want to conne
 
 ## REST (OpenApi)
 
-[https://rz3.aeb.de/`<carrier_connect_system>`/rest/openapi.json]()
+https://rz3.aeb.de/test2cai/rest/openapi.json
 
 ## SOAP
 
-[https://rz3.aeb.de/`<carrier_connect_system>`/servlet/bf/DLCarrierBF?WSDL]()
-[https://rz3.aeb.de/`<carrier_connect_system>`/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html]()
+https://rz3.aeb.de/test2cai/servlet/bf/DLCarrierBF?WSDL
+https://rz3.aeb.de/test2cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html
 
 <br />
 
