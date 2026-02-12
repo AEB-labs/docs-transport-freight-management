@@ -198,46 +198,6 @@
     "/FoundationBFBean/cancelAnnounceStop": {},
     "/FoundationBFBean/changeAdminPassword": {},
     "/FoundationBFBean/client": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests all clients from this engine, or one client identified by values in query parameter",
-        "operationId": "queryClients",
-        "parameters": [
-          {
-            "name": "identCode",
-            "in": "query",
-            "description": "Filter for client ident code",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "debtorNumber",
-            "in": "query",
-            "description": "Filter for debtor number",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Contains the client infos.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ClientDTO"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "post": {
         "tags": [
           "FoundationBFBean"
