@@ -193,36 +193,7 @@
     "/ExternalTelemetryBFBean/getStatus": {},
     "/ExternalTelemetryBFBean/status": {},
     "/ExternalTelemetryBFBean/telemetryReport": {},
-    "/FoundationBFBean/acknowledgeFile": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Acknowledges a file download.",
-        "operationId": "acknowledgeFile",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AcknowledgeFileRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AcknowledgeFileResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/acknowledgeFile": {},
     "/FoundationBFBean/announceStop": {
       "post": {
         "tags": [
