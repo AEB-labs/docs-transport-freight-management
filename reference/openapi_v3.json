@@ -195,36 +195,7 @@
     "/ExternalTelemetryBFBean/telemetryReport": {},
     "/FoundationBFBean/acknowledgeFile": {},
     "/FoundationBFBean/announceStop": {},
-    "/FoundationBFBean/cancelAnnounceStop": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Revokes an already announced stop.",
-        "operationId": "cancelAnnounceStop",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CancelAnnounceStopParmDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CancelAnnounceStopResultDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/cancelAnnounceStop": {},
     "/FoundationBFBean/changeAdminPassword": {
       "post": {
         "tags": [
