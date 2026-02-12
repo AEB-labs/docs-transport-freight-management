@@ -189,36 +189,7 @@
     "/logon/user": {},
     "/DataFeedBFBean/acknowledgePublishedDataFeedParts": {},
     "/DataFeedBFBean/dataFeedParts/{client}/{id}": {},
-    "/DataFeedBFBean/getPublishedDataFeedParts": {
-      "post": {
-        "tags": [
-          "DataFeedBFBean"
-        ],
-        "description": "Poll data about the next 10 published data feed parts. This data contains an id, which can be used to download the content of a part. To download the content, use the endpoint /DataFeedBFBean/dataFeedParts/{client}/{id} ",
-        "operationId": "getPublishedDataFeedParts",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetPublishedDataFeedPartsRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetPublishedDataFeedPartsResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/DataFeedBFBean/getPublishedDataFeedParts": {},
     "/ExternalTelemetryBFBean/getStatus": {
       "post": {
         "tags": [
