@@ -201,30 +201,7 @@
     "/FoundationBFBean/downloadFile": {},
     "/FoundationBFBean/generateClientIdentCode": {},
     "/FoundationBFBean/client/active": {},
-    "/FoundationBFBean/monitoringValue": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests all monitoring values from this engine.",
-        "operationId": "getAllMonitoringValues_1",
-        "responses": {
-          "200": {
-            "description": "Contains all monitoring values.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MonitoringDataProviderDTO"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/monitoringValue": {},
     "/FoundationBFBean/solution/{name}/build": {
       "get": {
         "tags": [
