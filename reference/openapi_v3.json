@@ -217,36 +217,7 @@
     "/FoundationBFBean/roles": {},
     "/FoundationBFBean/roles/{clientIdentCode}": {},
     "/FoundationBFBean/restartRFCServer": {},
-    "/FoundationBFBean/sendMail": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Sends a mail.",
-        "operationId": "sendMail",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SendMailParmDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SendMailResultDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/sendMail": {},
     "/FoundationBFBean/startScriptExecution": {
       "post": {
         "tags": [
