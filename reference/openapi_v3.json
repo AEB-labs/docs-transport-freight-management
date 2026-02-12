@@ -549,52 +549,7 @@
         ]
       }
     },
-    "/CarrierEventServiceBFBean/setCarrierTrackingConfigurations": {
-      "post": {
-        "tags": [
-          "CarrierEventServiceBFBean"
-        ],
-        "summary": "setCarrierTrackingConfigurations",
-        "description": "Creates or updates the given carrier tracking configurations.",
-        "operationId": "setCarrierTrackingConfigurations",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SetCarrierTrackingConfigurationRequestDTO"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/SetCarrierTrackingConfigurationRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SetCarrierTrackingConfigurationResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/SetCarrierTrackingConfigurationResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "BASIC_AUTH": []
-          }
-        ]
-      }
-    },
+    "/CarrierEventServiceBFBean/setCarrierTrackingConfigurations": {},
     "/CarrierEventServiceBFBean/synchronizeResolvedEvents": {
       "post": {
         "tags": [
