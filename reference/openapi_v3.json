@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Carrier Event Service HTTP API",
+    "title": "Carrier Event Service",
     "description": "Thank you for using our HTTP API documentation.",
     "version": "1.0"
   },
@@ -8081,5 +8081,6 @@
       }
     }
   },
-  "x-proxy-enabled": false
+  "x-proxy-enabled": false,
+  "x-readme": {}
 }
