@@ -1,4 +1,4 @@
 ---
 title: SyncBFBean
-hidden: false
+hidden: true
 ---
