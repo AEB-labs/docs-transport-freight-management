@@ -1,4 +1,4 @@
 ---
 title: CoreBFBean
-hidden: false
+hidden: true
 ---
