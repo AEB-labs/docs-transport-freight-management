@@ -203,36 +203,7 @@
     "/FoundationBFBean/client/active": {},
     "/FoundationBFBean/monitoringValue": {},
     "/FoundationBFBean/solution/{name}/build": {},
-    "/FoundationBFBean/downloadableFileRefs": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Retrieves refs for download.",
-        "operationId": "getDownloadableFilesRefs",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DLFilesRefsRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The download refs.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DLFilesRefsResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/downloadableFileRefs": {},
     "/FoundationBFBean/monitoringValue/{groupName}/{valueName}": {
       "get": {
         "tags": [
