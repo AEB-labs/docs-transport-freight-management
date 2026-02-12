@@ -211,38 +211,7 @@
     "/FoundationBFBean/scriptExecutionState": {},
     "/FoundationBFBean/tableUpdateState": {},
     "/FoundationBFBean/uploadSettings": {},
-    "/FoundationBFBean/solution/{name}/version": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests the version info for a solution from this engine.",
-        "operationId": "getVersionForSolution_1",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "description": "Name of solution.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Contains the version info.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VersionInfoDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/solution/{name}/version": {},
     "/FoundationBFBean/workplaceURL": {
       "get": {
         "tags": [
