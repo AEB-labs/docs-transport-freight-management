@@ -3,7 +3,6 @@
 - getallconverterinformation
 - geteventsforreferencenumber
 - getprovidedtrackingdata
-- getshipmentsevents
 - getshipmentseventsfiltered
 - getshipmentswithentrycertification
 - setcarriertrackingconfigurations
