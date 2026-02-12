@@ -224,36 +224,7 @@
     "/FoundationBFBean/uploadFileMultiPart": {},
     "/RemoteAdminBFBean/roles": {},
     "/SyncBFBean/acknowledgeEvents": {},
-    "/SyncBFBean/getNotAcknowledgedEvents": {
-      "post": {
-        "tags": [
-          "SyncBFBean"
-        ],
-        "description": "Poll any not acknowledged events for the client system.<br> This method does not require, that the client system fills {@link SyncEventsRequestDTO#syncId}.<br> However, it requires, that a call to {@link #acknowledgeEvents(AcknowledgeEventsRequestDTO)} is done for acknowledge of the events.<br> Since XNSG 4.0, Nov. FP, 2017<br>.",
-        "operationId": "getNotAcknowledgedEvents",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SyncEventsRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SyncEventsResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/SyncBFBean/getNotAcknowledgedEvents": {},
     "/SyncBFBean/getPartnerSystemSubscriptions": {
       "post": {
         "tags": [
