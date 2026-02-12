@@ -220,53 +220,7 @@
     "/FoundationBFBean/sendMail": {},
     "/FoundationBFBean/startScriptExecution": {},
     "/FoundationBFBean/startTableUpdate": {},
-    "/FoundationBFBean/systemSearch/{language}": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Performs a system search in this engine.",
-        "operationId": "systemSearch",
-        "parameters": [
-          {
-            "name": "language",
-            "in": "path",
-            "description": "the langauge",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/SystemSearchParameterDTO"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The search results.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/SystemSearchResultDTO"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/systemSearch/{language}": {},
     "/FoundationBFBean/uploadFileMultiPart": {
       "post": {
         "tags": [
