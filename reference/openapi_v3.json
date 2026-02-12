@@ -223,36 +223,7 @@
     "/FoundationBFBean/systemSearch/{language}": {},
     "/FoundationBFBean/uploadFileMultiPart": {},
     "/RemoteAdminBFBean/roles": {},
-    "/SyncBFBean/acknowledgeEvents": {
-      "post": {
-        "tags": [
-          "SyncBFBean"
-        ],
-        "description": "Acknowledge events got with {@link #getNotAcknowledgedEvents(SyncEventsRequestDTO)}.<br> Since XNSG 4.0, Nov. FP, 2017<br>.",
-        "operationId": "acknowledgeEvents",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AcknowledgeEventsRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AcknowledgeEventsResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/SyncBFBean/acknowledgeEvents": {},
     "/SyncBFBean/getNotAcknowledgedEvents": {
       "post": {
         "tags": [
