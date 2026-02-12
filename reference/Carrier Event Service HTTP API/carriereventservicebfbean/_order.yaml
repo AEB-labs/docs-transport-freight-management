@@ -1,0 +1,11 @@
+- createshipments
+- deletecarriertrackingconfigurations
+- getallconverterinformation
+- geteventsforreferencenumber
+- getprovidedtrackingdata
+- getshipmentsevents
+- getshipmentseventsfiltered
+- getshipmentswithentrycertification
+- setcarriertrackingconfigurations
+- synchronizeresolvedevents
+- testproviderconnection

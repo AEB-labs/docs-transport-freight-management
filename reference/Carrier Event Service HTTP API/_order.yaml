@@ -1,1 +1,12 @@
-[]
+- pushapirestendpoint
+- carriereventservicebfbean
+- corebfbean
+- foundationafbean
+- logon
+- datafeedbfbean
+- externaltelemetrybfbean
+- foundationbfbean
+- remoteadminbfbean
+- syncbfbean
+- companies
+- workstationserviceagent
