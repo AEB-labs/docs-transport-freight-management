@@ -1,4 +1,0 @@
----
-title: InternalProvisioningBFBean
-hidden: false
----

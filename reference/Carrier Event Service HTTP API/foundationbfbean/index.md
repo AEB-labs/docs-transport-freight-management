@@ -1,4 +1,0 @@
----
-title: FoundationBFBean
-hidden: false
----
