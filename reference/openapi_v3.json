@@ -221,46 +221,7 @@
     "/FoundationBFBean/startScriptExecution": {},
     "/FoundationBFBean/startTableUpdate": {},
     "/FoundationBFBean/systemSearch/{language}": {},
-    "/FoundationBFBean/uploadFileMultiPart": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Uploads a file using multipart.",
-        "operationId": "uploadFileMultiPart",
-        "requestBody": {
-          "content": {
-            "multipart/form-data": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "file": {
-                    "type": "string",
-                    "description": "Attach file to upload",
-                    "format": "binary"
-                  },
-                  "metaInfo": {
-                    "$ref": "#/components/schemas/UploadFileMultiPartRequestDTO"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UploadFileResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/uploadFileMultiPart": {},
     "/RemoteAdminBFBean/roles": {
       "get": {
         "tags": [
