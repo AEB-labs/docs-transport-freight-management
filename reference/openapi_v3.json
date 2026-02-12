@@ -71,52 +71,7 @@
   "paths": {
     "/PushApi/v1/push": {},
     "/CarrierEventServiceBFBean/createShipments": {},
-    "/CarrierEventServiceBFBean/deleteCarrierTrackingConfigurations": {
-      "post": {
-        "tags": [
-          "CarrierEventServiceBFBean"
-        ],
-        "summary": "deleteCarrierTrackingConfigurations",
-        "description": "Removes the carrier tracking configurations referenced in the request.",
-        "operationId": "deleteCarrierTrackingConfigurations",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DeleteCarrierTrackingConfigurationsRequestDTO"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/DeleteCarrierTrackingConfigurationsRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeleteCarrierTrackingConfigurationsResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/DeleteCarrierTrackingConfigurationsResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "BASIC_AUTH": []
-          }
-        ]
-      }
-    },
+    "/CarrierEventServiceBFBean/deleteCarrierTrackingConfigurations": {},
     "/CarrierEventServiceBFBean/getAllConverterInformation": {
       "post": {
         "tags": [
