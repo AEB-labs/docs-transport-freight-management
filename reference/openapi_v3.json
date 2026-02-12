@@ -212,20 +212,7 @@
     "/FoundationBFBean/tableUpdateState": {},
     "/FoundationBFBean/uploadSettings": {},
     "/FoundationBFBean/solution/{name}/version": {},
-    "/FoundationBFBean/workplaceURL": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests the workplace url from this engine.",
-        "operationId": "getWorkplaceURL",
-        "responses": {
-          "200": {
-            "description": "The workspace url."
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/workplaceURL": {},
     "/FoundationBFBean/checkDebtorNumber": {
       "get": {
         "tags": [
