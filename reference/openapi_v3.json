@@ -210,36 +210,7 @@
     "/FoundationBFBean/runtimeInfo": {},
     "/FoundationBFBean/scriptExecutionState": {},
     "/FoundationBFBean/tableUpdateState": {},
-    "/FoundationBFBean/uploadSettings": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Retrieves the upload settings.",
-        "operationId": "getUploadSettings",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UploadSettingsRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The upload settings.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UploadSettingsResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/uploadSettings": {},
     "/FoundationBFBean/solution/{name}/version": {
       "get": {
         "tags": [
