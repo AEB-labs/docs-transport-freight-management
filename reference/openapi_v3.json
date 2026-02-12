@@ -72,52 +72,7 @@
     "/PushApi/v1/push": {},
     "/CarrierEventServiceBFBean/createShipments": {},
     "/CarrierEventServiceBFBean/deleteCarrierTrackingConfigurations": {},
-    "/CarrierEventServiceBFBean/getAllConverterInformation": {
-      "post": {
-        "tags": [
-          "CarrierEventServiceBFBean"
-        ],
-        "summary": "getAllConverterInformation",
-        "description": "Returns all converters of the system and its associated parameters and information.",
-        "operationId": "getAllConverterInformation",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetAllConverterInformationRequestDTO"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/GetAllConverterInformationRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAllConverterInformationResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAllConverterInformationResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "BASIC_AUTH": []
-          }
-        ]
-      }
-    },
+    "/CarrierEventServiceBFBean/getAllConverterInformation": {},
     "/CarrierEventServiceBFBean/getEventsForReferenceNumber": {
       "post": {
         "tags": [
