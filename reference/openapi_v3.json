@@ -73,52 +73,7 @@
     "/CarrierEventServiceBFBean/createShipments": {},
     "/CarrierEventServiceBFBean/deleteCarrierTrackingConfigurations": {},
     "/CarrierEventServiceBFBean/getAllConverterInformation": {},
-    "/CarrierEventServiceBFBean/getEventsForReferenceNumber": {
-      "post": {
-        "tags": [
-          "CarrierEventServiceBFBean"
-        ],
-        "summary": "getEventsForReferenceNumber",
-        "description": "Returns the resolved and unresolved events associated with the requested shipment reference number.",
-        "operationId": "getEventsForReferenceNumber",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetEventsForReferenceNumberRequestDTO"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/GetEventsForReferenceNumberRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetEventsForReferenceNumberResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetEventsForReferenceNumberResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "BASIC_AUTH": []
-          }
-        ]
-      }
-    },
+    "/CarrierEventServiceBFBean/getEventsForReferenceNumber": {},
     "/CarrierEventServiceBFBean/getProvidedTrackingData": {},
     "/CarrierEventServiceBFBean/getShipmentsEvents": {
       "post": {
