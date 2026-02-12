@@ -1,4 +1,4 @@
 ---
 title: ExternalTelemetryBFBean
-hidden: false
+hidden: true
 ---
