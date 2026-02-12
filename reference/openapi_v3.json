@@ -207,27 +207,7 @@
     "/FoundationBFBean/monitoringValue/{groupName}/{valueName}": {},
     "/FoundationBFBean/numberOfClients": {},
     "/FoundationBFBean/productInfo": {},
-    "/FoundationBFBean/runtimeInfo": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests the runtime info from this engine.",
-        "operationId": "getRuntimeInfo_1",
-        "responses": {
-          "200": {
-            "description": "Contains the runtime info.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RuntimeInfoDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/runtimeInfo": {},
     "/FoundationBFBean/scriptExecutionState": {
       "post": {
         "tags": [
