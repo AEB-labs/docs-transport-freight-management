@@ -204,40 +204,7 @@
     "/FoundationBFBean/monitoringValue": {},
     "/FoundationBFBean/solution/{name}/build": {},
     "/FoundationBFBean/downloadableFileRefs": {},
-    "/FoundationBFBean/monitoringValue/{groupName}/{valueName}": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests a specific monitoring value from this engine.",
-        "operationId": "getMonitoringValue_1",
-        "parameters": [
-          {
-            "name": "groupName",
-            "in": "path",
-            "description": "group name",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "valueName",
-            "in": "path",
-            "description": "value name",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "The monitoring value."
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/monitoringValue/{groupName}/{valueName}": {},
     "/FoundationBFBean/numberOfClients": {
       "get": {
         "tags": [
