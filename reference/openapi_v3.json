@@ -181,37 +181,7 @@
     "/CoreBFBean/getRuntimeInfo": {},
     "/CoreBFBean/getRuntimeState": {},
     "/CoreBFBean/getThreadDump": {},
-    "/CoreBFBean/getVersionForSolution": {
-      "get": {
-        "tags": [
-          "CoreBFBean"
-        ],
-        "description": "Return the version information of a solution that is deployed in the product on this server. The RFC name of this function is \\\"/AEB/XNSG_IF_VERSOL\\\".",
-        "operationId": "getVersionForSolution",
-        "parameters": [
-          {
-            "name": "solutionName",
-            "in": "query",
-            "description": "solutionName the name of the solution for which version information is to be obtained",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VersionInfoDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/CoreBFBean/getVersionForSolution": {},
     "/CoreBFBean/restartRFCServer": {
       "post": {
         "tags": [
