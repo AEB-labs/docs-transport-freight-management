@@ -192,36 +192,7 @@
     "/DataFeedBFBean/getPublishedDataFeedParts": {},
     "/ExternalTelemetryBFBean/getStatus": {},
     "/ExternalTelemetryBFBean/status": {},
-    "/ExternalTelemetryBFBean/telemetryReport": {
-      "post": {
-        "tags": [
-          "ExternalTelemetryBFBean"
-        ],
-        "description": "Submits telemetry data for a new telemetry report.<br> The external system id must be sent with the request, a client IdentCode only if client dependent.",
-        "operationId": "sendTelemetryReport",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ExternalTMReportRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ExternalTMResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/ExternalTelemetryBFBean/telemetryReport": {},
     "/FoundationBFBean/acknowledgeFile": {
       "post": {
         "tags": [
