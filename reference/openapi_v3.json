@@ -194,36 +194,7 @@
     "/ExternalTelemetryBFBean/status": {},
     "/ExternalTelemetryBFBean/telemetryReport": {},
     "/FoundationBFBean/acknowledgeFile": {},
-    "/FoundationBFBean/announceStop": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Announces a stop of the installation.",
-        "operationId": "announceStop",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnnounceStopParmDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AnnounceStopResultDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/announceStop": {},
     "/FoundationBFBean/cancelAnnounceStop": {
       "post": {
         "tags": [
