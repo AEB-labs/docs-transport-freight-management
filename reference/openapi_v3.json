@@ -176,43 +176,7 @@
     "/CoreBFBean/echoUpperCase": {},
     "/CoreBFBean/getAllMonitoringValues": {},
     "/CoreBFBean/getBuildForSolution": {},
-    "/CoreBFBean/getMonitoringValue": {
-      "get": {
-        "tags": [
-          "CoreBFBean"
-        ],
-        "description": "Returns the current monitoring value for the given group and name.",
-        "operationId": "getMonitoringValue",
-        "parameters": [
-          {
-            "name": "groupName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "valueName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/CoreBFBean/getMonitoringValue": {},
     "/CoreBFBean/getProductInfo": {
       "get": {
         "tags": [
