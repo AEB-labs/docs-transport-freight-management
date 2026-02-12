@@ -503,52 +503,7 @@
         ]
       }
     },
-    "/CarrierEventServiceBFBean/getShipmentsWithEntryCertification": {
-      "post": {
-        "tags": [
-          "CarrierEventServiceBFBean"
-        ],
-        "summary": "getShipmentsWithEntryCertification",
-        "description": "Returns shipments with entry certifications.",
-        "operationId": "getShipmentsWithEntryCertification",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetShipmentsWithEntryCertificationRequestDTO"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/GetShipmentsWithEntryCertificationRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShipmentsWithEntryCertificationResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShipmentsWithEntryCertificationResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "BASIC_AUTH": []
-          }
-        ]
-      }
-    },
+    "/CarrierEventServiceBFBean/getShipmentsWithEntryCertification": {},
     "/CarrierEventServiceBFBean/setCarrierTrackingConfigurations": {},
     "/CarrierEventServiceBFBean/synchronizeResolvedEvents": {
       "post": {
