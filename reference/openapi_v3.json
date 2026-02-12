@@ -218,36 +218,7 @@
     "/FoundationBFBean/roles/{clientIdentCode}": {},
     "/FoundationBFBean/restartRFCServer": {},
     "/FoundationBFBean/sendMail": {},
-    "/FoundationBFBean/startScriptExecution": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Starts a script execution",
-        "operationId": "startScriptExecution",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/StartScriptExecutionParmDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/StartScriptExecutionResultDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/startScriptExecution": {},
     "/FoundationBFBean/startTableUpdate": {
       "post": {
         "tags": [
