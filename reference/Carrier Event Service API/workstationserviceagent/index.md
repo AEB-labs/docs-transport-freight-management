@@ -1,4 +1,4 @@
 ---
 title: WorkstationServiceAgent
-hidden: false
+hidden: true
 ---
