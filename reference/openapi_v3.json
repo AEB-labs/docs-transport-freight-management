@@ -641,52 +641,7 @@
         ]
       }
     },
-    "/CarrierEventServiceBFBean/testProviderConnection": {
-      "post": {
-        "tags": [
-          "CarrierEventServiceBFBean"
-        ],
-        "summary": "testProviderConnection",
-        "description": "Tests the connection of the requested tracking provider.",
-        "operationId": "testProviderConnection",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TestProviderConnectionRequestDTO"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/TestProviderConnectionRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TestProviderConnectionResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/TestProviderConnectionResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "BASIC_AUTH": []
-          }
-        ]
-      }
-    },
+    "/CarrierEventServiceBFBean/testProviderConnection": {},
     "/CoreBFBean/checkBFFunctionExists": {
       "post": {
         "tags": [
