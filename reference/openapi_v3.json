@@ -222,59 +222,7 @@
     "/FoundationBFBean/startTableUpdate": {},
     "/FoundationBFBean/systemSearch/{language}": {},
     "/FoundationBFBean/uploadFileMultiPart": {},
-    "/RemoteAdminBFBean/roles": {
-      "get": {
-        "tags": [
-          "RemoteAdminBFBean"
-        ],
-        "summary": "getRoles",
-        "description": "Returns a list of roles",
-        "operationId": "getRolesGET",
-        "parameters": [
-          {
-            "name": "scope",
-            "in": "query",
-            "description": "the dataset to return",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "clientIdentCodes",
-            "in": "query",
-            "description": "includeClientIdentCodes",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "resultLanguageIsoCodes",
-            "in": "query",
-            "description": "resultLanguageIsoCodes",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetRolesResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetRolesResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/RemoteAdminBFBean/roles": {},
     "/SyncBFBean/acknowledgeEvents": {
       "post": {
         "tags": [
