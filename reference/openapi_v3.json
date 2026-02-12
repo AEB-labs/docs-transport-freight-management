@@ -227,36 +227,7 @@
     "/SyncBFBean/getNotAcknowledgedEvents": {},
     "/SyncBFBean/getPartnerSystemSubscriptions": {},
     "/SyncBFBean/subscribePartnerSystem": {},
-    "/SyncBFBean/synchronizeEvents": {
-      "post": {
-        "tags": [
-          "SyncBFBean"
-        ],
-        "description": "Poll the next events for the client system.<br> This method requires the client system to persist the synchronisation state itself and passing a proper value for {@link SyncEventsRequestDTO#syncId}<br> See {@link #getNotAcknowledgedEvents(SyncEventsRequestDTO)} for a version of the method, were the syncronisation state is kept within the Engine.",
-        "operationId": "synchronizeEvents",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SyncEventsRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SyncEventsResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/SyncBFBean/synchronizeEvents": {},
     "/SyncBFBean/unsubscribePartnerSystem": {
       "post": {
         "tags": [
