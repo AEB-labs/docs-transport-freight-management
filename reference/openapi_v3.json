@@ -200,30 +200,7 @@
     "/FoundationBFBean/client": {},
     "/FoundationBFBean/downloadFile": {},
     "/FoundationBFBean/generateClientIdentCode": {},
-    "/FoundationBFBean/client/active": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests all active clients from this engine.",
-        "operationId": "getAllActiveClients",
-        "responses": {
-          "200": {
-            "description": "Contains the client infos.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ClientDTO"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/client/active": {},
     "/FoundationBFBean/monitoringValue": {
       "get": {
         "tags": [
