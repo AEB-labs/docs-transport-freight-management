@@ -188,41 +188,7 @@
     "/logon/authToken": {},
     "/logon/user": {},
     "/DataFeedBFBean/acknowledgePublishedDataFeedParts": {},
-    "/DataFeedBFBean/dataFeedParts/{client}/{id}": {
-      "get": {
-        "tags": [
-          "DataFeedBFBean"
-        ],
-        "description": "Retrieve the data feed part content.",
-        "operationId": "getDataFeedPartContentForRest",
-        "parameters": [
-          {
-            "name": "client",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "The content of the data feed part.",
-            "content": {
-              "application/octet-stream": {}
-            }
-          }
-        }
-      }
-    },
+    "/DataFeedBFBean/dataFeedParts/{client}/{id}": {},
     "/DataFeedBFBean/getPublishedDataFeedParts": {
       "post": {
         "tags": [
