@@ -180,27 +180,7 @@
     "/CoreBFBean/getProductInfo": {},
     "/CoreBFBean/getRuntimeInfo": {},
     "/CoreBFBean/getRuntimeState": {},
-    "/CoreBFBean/getThreadDump": {
-      "get": {
-        "tags": [
-          "CoreBFBean"
-        ],
-        "description": "Generate Thread-Dump.",
-        "operationId": "getThreadDump",
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/CoreBFBean/getThreadDump": {},
     "/CoreBFBean/getVersionForSolution": {
       "get": {
         "tags": [
