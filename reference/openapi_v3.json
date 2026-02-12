@@ -171,36 +171,7 @@
       }
     },
     "/CarrierEventServiceBFBean/testProviderConnection": {},
-    "/CoreBFBean/checkBFFunctionExists": {
-      "post": {
-        "tags": [
-          "CoreBFBean"
-        ],
-        "description": "Can be called to know if a BF function exist.",
-        "operationId": "checkBFFunctionExists",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/BFFunctionDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BFFunctionExistsDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/CoreBFBean/checkBFFunctionExists": {},
     "/CoreBFBean/echo": {
       "post": {
         "tags": [
