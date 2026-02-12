@@ -365,52 +365,7 @@
         ]
       }
     },
-    "/CarrierEventServiceBFBean/getProvidedTrackingData": {
-      "post": {
-        "tags": [
-          "CarrierEventServiceBFBean"
-        ],
-        "summary": "getProvidedTrackingData",
-        "description": "Returns CESProvidedTrackingData by its digest.",
-        "operationId": "getProvidedTrackingData",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetProvidedTrackingDataRequestDTO"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/GetProvidedTrackingDataRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetProvidedTrackingDataResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetProvidedTrackingDataResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "BASIC_AUTH": []
-          }
-        ]
-      }
-    },
+    "/CarrierEventServiceBFBean/getProvidedTrackingData": {},
     "/CarrierEventServiceBFBean/getShipmentsEvents": {
       "post": {
         "tags": [
