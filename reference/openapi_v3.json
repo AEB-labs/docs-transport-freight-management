@@ -196,36 +196,7 @@
     "/FoundationBFBean/acknowledgeFile": {},
     "/FoundationBFBean/announceStop": {},
     "/FoundationBFBean/cancelAnnounceStop": {},
-    "/FoundationBFBean/changeAdminPassword": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Changes the admin password.",
-        "operationId": "changeAdminPassword",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ChangeAdminPasswordParmDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ChangeAdminPasswordResultDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/changeAdminPassword": {},
     "/FoundationBFBean/client": {
       "get": {
         "tags": [
