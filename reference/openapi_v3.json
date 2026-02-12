@@ -202,31 +202,7 @@
     "/FoundationBFBean/generateClientIdentCode": {},
     "/FoundationBFBean/client/active": {},
     "/FoundationBFBean/monitoringValue": {},
-    "/FoundationBFBean/solution/{name}/build": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests the build info for a solution from this engine.",
-        "operationId": "getBuildForSolution_1",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "description": "Name of solution.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Contains the build info."
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/solution/{name}/build": {},
     "/FoundationBFBean/downloadableFileRefs": {
       "post": {
         "tags": [
