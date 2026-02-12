@@ -182,23 +182,7 @@
     "/CoreBFBean/getRuntimeState": {},
     "/CoreBFBean/getThreadDump": {},
     "/CoreBFBean/getVersionForSolution": {},
-    "/CoreBFBean/restartRFCServer": {
-      "post": {
-        "tags": [
-          "CoreBFBean"
-        ],
-        "description": "This method is only usefull to be called from SAP via RFC. It will restart the RFCServer which receives this method call. This method is useful to be called from SAP, if within SAP some structure definitions had changed, e.g. after installing a transport. The RFC name of this function is \\\"/AEB/XNSG_IF_RSTRFCSRV\\\".",
-        "operationId": "restartRFCServer",
-        "responses": {
-          "200": {
-            "description": "No result.",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
+    "/CoreBFBean/restartRFCServer": {},
     "/FoundationAFBean/releaseApplicationFacade": {
       "post": {
         "tags": [
