@@ -199,29 +199,7 @@
     "/FoundationBFBean/changeAdminPassword": {},
     "/FoundationBFBean/client": {},
     "/FoundationBFBean/downloadFile": {},
-    "/FoundationBFBean/generateClientIdentCode": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Generates a client ident code.",
-        "operationId": "generateClientIdentCode",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GenerateClientIdentCodeRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The client ident code."
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/generateClientIdentCode": {},
     "/FoundationBFBean/client/active": {
       "get": {
         "tags": [
