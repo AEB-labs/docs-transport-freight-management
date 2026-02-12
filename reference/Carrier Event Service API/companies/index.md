@@ -1,4 +1,4 @@
 ---
 title: Companies
-hidden: false
+hidden: true
 ---
