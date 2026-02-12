@@ -187,36 +187,7 @@
     "/FoundationAFBean/workplace": {},
     "/logon/authToken": {},
     "/logon/user": {},
-    "/DataFeedBFBean/acknowledgePublishedDataFeedParts": {
-      "post": {
-        "tags": [
-          "DataFeedBFBean"
-        ],
-        "description": "Acknowledge the processed published data feed parts retrieved with getPublishedDataFeedParts containing the synchronization ID up to which all parts are acknowledged.",
-        "operationId": "acknowledgePublishedDataFeedParts",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AcknowledgePublishedDataFeedPartsRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AcknowledgePublishedDataFeedPartsResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/DataFeedBFBean/acknowledgePublishedDataFeedParts": {},
     "/DataFeedBFBean/dataFeedParts/{client}/{id}": {
       "get": {
         "tags": [
