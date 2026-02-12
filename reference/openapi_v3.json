@@ -198,36 +198,7 @@
     "/FoundationBFBean/cancelAnnounceStop": {},
     "/FoundationBFBean/changeAdminPassword": {},
     "/FoundationBFBean/client": {},
-    "/FoundationBFBean/downloadFile": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Retrieves a file for download.",
-        "operationId": "downloadFile",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DownloadFileRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DownloadFileResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/downloadFile": {},
     "/FoundationBFBean/generateClientIdentCode": {
       "post": {
         "tags": [
