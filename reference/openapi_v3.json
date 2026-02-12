@@ -205,20 +205,7 @@
     "/FoundationBFBean/solution/{name}/build": {},
     "/FoundationBFBean/downloadableFileRefs": {},
     "/FoundationBFBean/monitoringValue/{groupName}/{valueName}": {},
-    "/FoundationBFBean/numberOfClients": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Returns the number of clients.",
-        "operationId": "getNumberOfClients",
-        "responses": {
-          "200": {
-            "description": "The client count."
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/numberOfClients": {},
     "/FoundationBFBean/productInfo": {
       "get": {
         "tags": [
