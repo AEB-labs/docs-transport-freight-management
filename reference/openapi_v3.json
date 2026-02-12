@@ -179,36 +179,7 @@
     "/CoreBFBean/getMonitoringValue": {},
     "/CoreBFBean/getProductInfo": {},
     "/CoreBFBean/getRuntimeInfo": {},
-    "/CoreBFBean/getRuntimeState": {
-      "post": {
-        "tags": [
-          "CoreBFBean"
-        ],
-        "description": "Return runtime state information about the server that is answering this request. This includes if the server is doing fine or not. Also included are the supported operations (bfs) for the installation repository The RFC name of this function is \\\"/AEB/XNSG_IF_RTSTATE\\\".",
-        "operationId": "getRuntimeState",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RuntimeStateParmDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RuntimeStateResultDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/CoreBFBean/getRuntimeState": {},
     "/CoreBFBean/getThreadDump": {
       "get": {
         "tags": [
