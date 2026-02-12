@@ -190,36 +190,7 @@
     "/DataFeedBFBean/acknowledgePublishedDataFeedParts": {},
     "/DataFeedBFBean/dataFeedParts/{client}/{id}": {},
     "/DataFeedBFBean/getPublishedDataFeedParts": {},
-    "/ExternalTelemetryBFBean/getStatus": {
-      "post": {
-        "tags": [
-          "ExternalTelemetryBFBean"
-        ],
-        "description": "Returns the current status of the telemetry system.<br> The external system id must be sent with the request.",
-        "operationId": "getTelemetryStatus",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ExternalTMIdentificationRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ExternalTMStatusResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/ExternalTelemetryBFBean/getStatus": {},
     "/ExternalTelemetryBFBean/status": {
       "get": {
         "tags": [
