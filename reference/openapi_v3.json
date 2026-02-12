@@ -213,30 +213,7 @@
     "/FoundationBFBean/uploadSettings": {},
     "/FoundationBFBean/solution/{name}/version": {},
     "/FoundationBFBean/workplaceURL": {},
-    "/FoundationBFBean/checkDebtorNumber": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Checks if debtor number is known.",
-        "operationId": "isDebtorNumberKnown",
-        "parameters": [
-          {
-            "name": "debtorNumber",
-            "in": "query",
-            "description": "the debtor number to check",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "True if known."
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/checkDebtorNumber": {},
     "/FoundationBFBean/roles": {
       "get": {
         "tags": [
