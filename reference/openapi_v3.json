@@ -226,36 +226,7 @@
     "/SyncBFBean/acknowledgeEvents": {},
     "/SyncBFBean/getNotAcknowledgedEvents": {},
     "/SyncBFBean/getPartnerSystemSubscriptions": {},
-    "/SyncBFBean/subscribePartnerSystem": {
-      "post": {
-        "tags": [
-          "SyncBFBean"
-        ],
-        "description": "Subscribe a partner system to be able to receive events for the specified business object type.<br>The subscription is uniquely identified by the <code>clientSystemId</code> and <code>businessObjectType</code> (both mandatory fields).<br> Since XNSG 4.0, Nov. FP, 2021<br>",
-        "operationId": "subscribePartnerSystem",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SubscribePartnerSystemRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SubscribePartnerSystemResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/SyncBFBean/subscribePartnerSystem": {},
     "/SyncBFBean/synchronizeEvents": {
       "post": {
         "tags": [
