@@ -219,36 +219,7 @@
     "/FoundationBFBean/restartRFCServer": {},
     "/FoundationBFBean/sendMail": {},
     "/FoundationBFBean/startScriptExecution": {},
-    "/FoundationBFBean/startTableUpdate": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Starts the table update.",
-        "operationId": "startTableUpdate",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/StartTableUpdateParmDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TableUpdateStateResultDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/startTableUpdate": {},
     "/FoundationBFBean/systemSearch/{language}": {
       "post": {
         "tags": [
