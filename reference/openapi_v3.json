@@ -457,52 +457,7 @@
         ]
       }
     },
-    "/CarrierEventServiceBFBean/getShipmentsEventsFiltered": {
-      "post": {
-        "tags": [
-          "CarrierEventServiceBFBean"
-        ],
-        "summary": "getShipmentsEventsFiltered",
-        "description": "Returns the resolved events of the shipments filtered by the requested filter sorted by CESTrackingEventResponseDTO's eventDate in ascending order, taking the time zone into account.",
-        "operationId": "getShipmentsEventsFiltered",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetShipmentsEventsFilteredRequestDTO"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/GetShipmentsEventsFilteredRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShipmentsEventsFilteredResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShipmentsEventsFilteredResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "BASIC_AUTH": []
-          }
-        ]
-      }
-    },
+    "/CarrierEventServiceBFBean/getShipmentsEventsFiltered": {},
     "/CarrierEventServiceBFBean/getShipmentsWithEntryCertification": {},
     "/CarrierEventServiceBFBean/setCarrierTrackingConfigurations": {},
     "/CarrierEventServiceBFBean/synchronizeResolvedEvents": {
