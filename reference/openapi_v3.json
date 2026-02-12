@@ -231,40 +231,7 @@
     "/SyncBFBean/unsubscribePartnerSystem": {},
     "/companies/{id}": {},
     "/companies": {},
-    "/company-roles": {
-      "get": {
-        "tags": [
-          "Companies"
-        ],
-        "description": "Returns all company roles of this AEB service. Company roles are domain specific characteristics and can differ between the different AEB services.",
-        "operationId": "getCompanyRoles",
-        "responses": {
-          "200": {
-            "description": "Successful call",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CompanyRoleList"
-                },
-                "examples": {
-                  "All companies roles for this specific AEB service": {
-                    "description": "All companies roles for this specific AEB service",
-                    "value": {
-                      "roles": [
-                        {
-                          "identCode": "DLSHIPPT",
-                          "description": "Shipping point"
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/company-roles": {},
     "/wssagent/connect": {
       "get": {
         "tags": [
