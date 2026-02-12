@@ -233,38 +233,6 @@
     "/companies": {},
     "/company-roles": {},
     "/wssagent/connect": {
-      "get": {
-        "tags": [
-          "WorkstationServiceAgent"
-        ],
-        "description": "Checks if workstation agent exists for given id, creates one if not exists and returns corresponding launch request. Returns response object.",
-        "operationId": "connect",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Response object",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WorkstationSessionInfoDTO"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Authentication is missing."
-          }
-        },
-        "deprecated": true
-      },
       "delete": {
         "tags": [
           "WorkstationServiceAgent"
