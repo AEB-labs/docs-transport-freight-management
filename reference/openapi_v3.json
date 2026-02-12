@@ -234,47 +234,7 @@
     "/company-roles": {},
     "/wssagent/connect": {},
     "/wssagent/connection/{id}": {},
-    "/wssagent/status": {
-      "get": {
-        "tags": [
-          "WorkstationServiceAgent"
-        ],
-        "description": "Returns response object with information about given workstation service agent.",
-        "operationId": "status",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "details",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Response object",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WorkstationSessionInfoDTO"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Authentication is missing."
-          }
-        },
-        "deprecated": true
-      }
-    }
+    "/wssagent/status": {}
   },
   "components": {
     "schemas": {
