@@ -181,52 +181,7 @@
         ]
       }
     },
-    "/CarrierEventServiceBFBean/createShipments": {
-      "post": {
-        "tags": [
-          "CarrierEventServiceBFBean"
-        ],
-        "summary": "createShipments",
-        "description": "Creates a new list of shipments.",
-        "operationId": "createShipments",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateShipmentsRequestDTO"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateShipmentsRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreateShipmentsResponseDTO"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreateShipmentsResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "BASIC_AUTH": []
-          }
-        ]
-      }
-    },
+    "/CarrierEventServiceBFBean/createShipments": {},
     "/CarrierEventServiceBFBean/deleteCarrierTrackingConfigurations": {
       "post": {
         "tags": [
