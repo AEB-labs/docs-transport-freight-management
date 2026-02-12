@@ -214,30 +214,7 @@
     "/FoundationBFBean/solution/{name}/version": {},
     "/FoundationBFBean/workplaceURL": {},
     "/FoundationBFBean/checkDebtorNumber": {},
-    "/FoundationBFBean/roles": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests the current engine to report all its roles",
-        "operationId": "requestReport",
-        "responses": {
-          "200": {
-            "description": "Contains all roles and clients.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RoleInfoDTO"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/roles": {},
     "/FoundationBFBean/roles/{clientIdentCode}": {
       "get": {
         "tags": [
