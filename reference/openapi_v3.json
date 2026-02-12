@@ -183,33 +183,7 @@
     "/CoreBFBean/getThreadDump": {},
     "/CoreBFBean/getVersionForSolution": {},
     "/CoreBFBean/restartRFCServer": {},
-    "/FoundationAFBean/releaseApplicationFacade": {
-      "post": {
-        "tags": [
-          "FoundationAFBean"
-        ],
-        "description": "Release a UI API which is no longer needed.<br> This call will save resources in the server, because the server must not wait for the timeout of the UI API session but can release it earlier.<br> The method should only be called if it is definitively known, that no access to the UI API by the user is possible any more, e.g. because the surrounding client GUI window was closed.<br> The RFC name of this function is \\\"/AEB/XNSG_IF_RELAF\\\".",
-        "operationId": "releaseApplicationFacade",
-        "parameters": [
-          {
-            "name": "sessionid",
-            "in": "query",
-            "description": "sessionid The sessionid returned by any UI API method, e.g. workplace @throws RemoteException",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "No result.",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
+    "/FoundationAFBean/releaseApplicationFacade": {},
     "/FoundationAFBean/workplace": {
       "post": {
         "tags": [
