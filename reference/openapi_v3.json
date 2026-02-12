@@ -174,30 +174,7 @@
     "/CoreBFBean/checkBFFunctionExists": {},
     "/CoreBFBean/echo": {},
     "/CoreBFBean/echoUpperCase": {},
-    "/CoreBFBean/getAllMonitoringValues": {
-      "get": {
-        "tags": [
-          "CoreBFBean"
-        ],
-        "description": "Returns all available monitoring values of the server.",
-        "operationId": "getAllMonitoringValues",
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MonitoringDataProviderDTO"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/CoreBFBean/getAllMonitoringValues": {},
     "/CoreBFBean/getBuildForSolution": {
       "get": {
         "tags": [
