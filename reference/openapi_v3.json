@@ -233,33 +233,7 @@
     "/companies": {},
     "/company-roles": {},
     "/wssagent/connect": {},
-    "/wssagent/connection/{id}": {
-      "delete": {
-        "tags": [
-          "WorkstationServiceAgent"
-        ],
-        "description": "Ends existing workstation agent. Noop if there is no agent for the id.",
-        "operationId": "disconnect1",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No content"
-          },
-          "401": {
-            "description": "Authentication is missing."
-          }
-        }
-      }
-    },
+    "/wssagent/connection/{id}": {},
     "/wssagent/status": {
       "get": {
         "tags": [
