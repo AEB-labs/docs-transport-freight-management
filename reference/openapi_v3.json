@@ -209,36 +209,7 @@
     "/FoundationBFBean/productInfo": {},
     "/FoundationBFBean/runtimeInfo": {},
     "/FoundationBFBean/scriptExecutionState": {},
-    "/FoundationBFBean/tableUpdateState": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Retrieve the status of the table update.",
-        "operationId": "getTableUpdateState",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TableUpdateStateParmDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The table update status.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TableUpdateStateResultDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/tableUpdateState": {},
     "/FoundationBFBean/uploadSettings": {
       "post": {
         "tags": [
