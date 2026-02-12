@@ -206,27 +206,7 @@
     "/FoundationBFBean/downloadableFileRefs": {},
     "/FoundationBFBean/monitoringValue/{groupName}/{valueName}": {},
     "/FoundationBFBean/numberOfClients": {},
-    "/FoundationBFBean/productInfo": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests the product info from this engine.",
-        "operationId": "getProductInfo_1",
-        "responses": {
-          "200": {
-            "description": "Contains the product info.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProductInfoDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/productInfo": {},
     "/FoundationBFBean/runtimeInfo": {
       "get": {
         "tags": [
