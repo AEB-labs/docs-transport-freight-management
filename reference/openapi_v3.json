@@ -215,47 +215,7 @@
     "/FoundationBFBean/workplaceURL": {},
     "/FoundationBFBean/checkDebtorNumber": {},
     "/FoundationBFBean/roles": {},
-    "/FoundationBFBean/roles/{clientIdentCode}": {
-      "get": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Requests the current engine to report all roles for a specific client",
-        "operationId": "requestReport_1",
-        "parameters": [
-          {
-            "name": "clientIdentCode",
-            "in": "path",
-            "description": "Client ident code for retrieving its roles.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Contains the roles of a specific client from the queried engine.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/RoleInfoDTO"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Client ident code is invalid."
-          },
-          "404": {
-            "description": "No client with that ident code exists."
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/roles/{clientIdentCode}": {},
     "/FoundationBFBean/restartRFCServer": {
       "post": {
         "tags": [
