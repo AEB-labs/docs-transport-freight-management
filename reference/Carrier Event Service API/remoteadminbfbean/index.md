@@ -1,4 +1,4 @@
 ---
 title: RemoteAdminBFBean
-hidden: false
+hidden: true
 ---
