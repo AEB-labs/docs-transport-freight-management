@@ -208,36 +208,7 @@
     "/FoundationBFBean/numberOfClients": {},
     "/FoundationBFBean/productInfo": {},
     "/FoundationBFBean/runtimeInfo": {},
-    "/FoundationBFBean/scriptExecutionState": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "gets a script execution state",
-        "operationId": "getScriptExecutionState",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ScriptExecutionStateParmDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ScriptExecutionStateResultDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/scriptExecutionState": {},
     "/FoundationBFBean/tableUpdateState": {
       "post": {
         "tags": [
