@@ -1,6 +1,5 @@
 - getshipmentsevents
 - synchronizeresolvedevents
-- pushapirestendpoint
 - carriereventservicebfbean
 - corebfbean
 - foundationafbean
