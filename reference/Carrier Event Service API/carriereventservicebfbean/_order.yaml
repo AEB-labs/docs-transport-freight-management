@@ -6,5 +6,4 @@
 - getshipmentseventsfiltered
 - getshipmentswithentrycertification
 - setcarriertrackingconfigurations
-- synchronizeresolvedevents
 - testproviderconnection
