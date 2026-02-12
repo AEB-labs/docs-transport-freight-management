@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Carrier Connect HTTP API",
+    "title": "Carrier Connect",
     "description": "Thank you for using our HTTP API documentation.",
     "version": "3.0"
   },
@@ -10249,5 +10249,6 @@
       }
     }
   },
-  "x-proxy-enabled": false
+  "x-proxy-enabled": false,
+  "x-readme": {}
 }
