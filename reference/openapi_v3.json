@@ -173,36 +173,7 @@
     "/CarrierEventServiceBFBean/testProviderConnection": {},
     "/CoreBFBean/checkBFFunctionExists": {},
     "/CoreBFBean/echo": {},
-    "/CoreBFBean/echoUpperCase": {
-      "post": {
-        "tags": [
-          "CoreBFBean"
-        ],
-        "description": "Returns the given echo parameter value in uppercase.",
-        "operationId": "echoUpperCase",
-        "parameters": [
-          {
-            "name": "echo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/CoreBFBean/echoUpperCase": {},
     "/CoreBFBean/getAllMonitoringValues": {
       "get": {
         "tags": [
