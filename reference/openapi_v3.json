@@ -172,36 +172,7 @@
     },
     "/CarrierEventServiceBFBean/testProviderConnection": {},
     "/CoreBFBean/checkBFFunctionExists": {},
-    "/CoreBFBean/echo": {
-      "post": {
-        "tags": [
-          "CoreBFBean"
-        ],
-        "description": "Returns the given echo parameter value.",
-        "operationId": "echo",
-        "parameters": [
-          {
-            "name": "echo",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/CoreBFBean/echo": {},
     "/CoreBFBean/echoUpperCase": {
       "post": {
         "tags": [
