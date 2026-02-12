@@ -197,36 +197,7 @@
     "/FoundationBFBean/announceStop": {},
     "/FoundationBFBean/cancelAnnounceStop": {},
     "/FoundationBFBean/changeAdminPassword": {},
-    "/FoundationBFBean/client": {
-      "post": {
-        "tags": [
-          "FoundationBFBean"
-        ],
-        "description": "Create a client.",
-        "operationId": "createClient",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateClientRequestDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "The operation result.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreateClientResponseDTO"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/FoundationBFBean/client": {},
     "/FoundationBFBean/downloadFile": {
       "post": {
         "tags": [
