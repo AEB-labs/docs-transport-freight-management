@@ -1,4 +1,0 @@
----
-title: FoundationAFBean
-hidden: false
----

@@ -1,4 +1,0 @@
----
-title: DataFeedBFBean
-hidden: false
----
