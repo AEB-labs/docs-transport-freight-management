@@ -186,36 +186,7 @@
     "/FoundationAFBean/releaseApplicationFacade": {},
     "/FoundationAFBean/workplace": {},
     "/logon/authToken": {},
-    "/logon/user": {
-      "post": {
-        "tags": [
-          "Logon"
-        ],
-        "description": "Logon with classical procedure: user, client and password.",
-        "operationId": "logonUser",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LogonArgument"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Returns information on logon process, including roles that have been granted to the user and a login token, or an error message when auth data is not correct.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LogonResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/logon/user": {},
     "/DataFeedBFBean/acknowledgePublishedDataFeedParts": {
       "post": {
         "tags": [
