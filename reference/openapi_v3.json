@@ -185,37 +185,7 @@
     "/CoreBFBean/restartRFCServer": {},
     "/FoundationAFBean/releaseApplicationFacade": {},
     "/FoundationAFBean/workplace": {},
-    "/logon/authToken": {
-      "get": {
-        "tags": [
-          "Logon"
-        ],
-        "description": "Logon from the \"Authorization\" header (e.g. type \"Basic\"). The generated authentication token can be used in subsequent calls in the \"Authorization\" header, type \"Bearer\".",
-        "operationId": "authToken",
-        "responses": {
-          "200": {
-            "description": "Returns the authentication token.",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Returns the cause why authentication has failed.",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
+    "/logon/authToken": {},
     "/logon/user": {
       "post": {
         "tags": [
