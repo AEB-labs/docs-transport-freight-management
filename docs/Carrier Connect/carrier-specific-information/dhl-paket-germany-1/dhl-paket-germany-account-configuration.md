@@ -1,5 +1,5 @@
 ---
-title: 'DHL Paket Deutschland (Germany): Account Configuration'
+title: 'DHL Paket (Germany): Account Configuration'
 deprecated: false
 hidden: false
 metadata:
@@ -8,6 +8,11 @@ metadata:
 <CCOConfiguringCarriersInCarrierConnect />
 
 To create a new DHL Paket Deutschland account in Carrier Connect, open DHL Paket Deutschland in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
+
+Select account type
+
+* (1) DHLEXPINT_MYDHLAPIV2 **only** if you will use the value-added service **Pickup Booking** (DHLEXPINTPICKUP).
+* (2) DHLEXPINT_STD_IFTMIN in all other cases. It's the standard account type for outbound shipments.
 
 # DHL Freight account
 
