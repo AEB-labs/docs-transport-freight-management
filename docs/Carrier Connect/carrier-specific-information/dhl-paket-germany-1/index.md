@@ -1,10 +1,10 @@
 ---
-title: DHL Paket Deutschland (Germany)
+title: DHL Paket (Germany)
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-<br />
+[DHL Paket (Germany): Account Configuration](doc:dhl-paket-germany-account-configuration)
 
 <br />
