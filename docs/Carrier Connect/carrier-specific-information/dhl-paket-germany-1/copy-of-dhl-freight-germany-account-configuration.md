@@ -1,5 +1,5 @@
 ---
-title: 'Copy of DHL Freight (Germany): Account Configuration'
+title: 'DHL Paket Deutschland (Germany): Account Configuration'
 deprecated: false
 hidden: false
 metadata:
@@ -7,13 +7,13 @@ metadata:
 ---
 <CCOConfiguringCarriersInCarrierConnect />
 
-To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
+To create a new DHL Paket Deutschland account in Carrier Connect, open DHL Paket Deutschland in _Master data > Carrier configurations_. In the tab _Accounts_ click on _New_.
 
 # DHL Freight account
 
-<Image align="center" border={false} src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
+<Image align="center" src="https://files.readme.io/192820f3023744b86bd1007e1acb84582472307308b1b522e4f9a6e52ce1c249-dhlfreight_account1.png" />
 
-<Image align="center" border={false} src="https://files.readme.io/6aaf090c3171d81ef4947d6421c2b9b1fb2c61f15bd9c8c7fb9c643394ea9c63-dhlfreight_account2.png" />
+<Image align="center" src="https://files.readme.io/6aaf090c3171d81ef4947d6421c2b9b1fb2c61f15bd9c8c7fb9c643394ea9c63-dhlfreight_account2.png" />
 
 <Table align={["left","left","left"]}>
   <thead>
@@ -188,7 +188,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 ### ANSIFact ASC MH 10
 
-<Image border={false} src="https://files.readme.io/16cbe88a7f6174ba37b1b0eee61030233af0cdd094517732b35ca91d7b2906d7-image.png" />
+![](https://files.readme.io/16cbe88a7f6174ba37b1b0eee61030233af0cdd094517732b35ca91d7b2906d7-image.png)
 
 | Number | Field        | Comment                 |
 | :----- | :----------- | :---------------------- |
@@ -196,7 +196,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 ### GS1 EAN 128 Licenseplate
 
-<Image border={false} src="https://files.readme.io/dcf87f87eac2a3cacdd22cc337059d6c133c523d32fe6babdeb1977cb9036ce1-image.png" />
+![](https://files.readme.io/dcf87f87eac2a3cacdd22cc337059d6c133c523d32fe6babdeb1977cb9036ce1-image.png)
 
 | Number | Field | Comment                                          |
 | :----- | :---- | :----------------------------------------------- |
@@ -208,7 +208,7 @@ To create a new DHL Freight account in Carrier Connect, open DHL Freight in _Mas
 
 In this section the EDI upload parameters are configured.
 
-<Image border={false} src="https://files.readme.io/6614a386d5cd2caeb0efbf299999ed3f26ffb6e9e724de9b678adb30948265e1-image.png" />
+![](https://files.readme.io/6614a386d5cd2caeb0efbf299999ed3f26ffb6e9e724de9b678adb30948265e1-image.png)
 
 <br />
 
@@ -220,7 +220,7 @@ In this section the EDI upload parameters are configured.
 
 Select the EDI ID you want to configure and click on _Open_.
 
-<Image border={false} src="https://files.readme.io/a4c145eec2a59f415d2db6a0c15752fa9136d5198eb9b9f158b1cf0d3f0eb1ef-image.png" />
+![](https://files.readme.io/a4c145eec2a59f415d2db6a0c15752fa9136d5198eb9b9f158b1cf0d3f0eb1ef-image.png)
 
 | Number | Field          | Comment                                                                                                                                                                 |
 | :----- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
