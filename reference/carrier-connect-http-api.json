@@ -8540,20 +8540,15 @@
           "dataSource": {
             "$ref": "#/components/schemas/DataSource"
           },
+          "name": {
+            "type": "string"
+          },
+          "inputStream": {},
+          "content": {},
           "contentType": {
             "type": "string"
           },
           "outputStream": {},
-          "allCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
-          },
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap",
-            "writeOnly": true
-          },
           "transferDataFlavors": {
             "type": "array",
             "items": {
@@ -8566,24 +8561,29 @@
               "$ref": "#/components/schemas/CommandInfo"
             }
           },
-          "name": {
-            "type": "string"
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap",
+            "writeOnly": true
           },
-          "inputStream": {},
-          "content": {}
+          "allCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
+            }
+          }
         }
       },
       "DataSource": {
         "type": "object",
         "properties": {
-          "contentType": {
-            "type": "string"
-          },
-          "outputStream": {},
           "name": {
             "type": "string"
           },
-          "inputStream": {}
+          "inputStream": {},
+          "contentType": {
+            "type": "string"
+          },
+          "outputStream": {}
         }
       },
       "DownloadFileResponseDTO": {
