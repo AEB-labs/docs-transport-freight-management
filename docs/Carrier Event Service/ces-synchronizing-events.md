@@ -21,7 +21,7 @@ next:
 
 It is possible to import resolved carrier tracking events into your host system. For this purpose you can use the [synchronizeResolvedEvents](https://transport-freight-management.docs.developers.aeb.com/reference/synchronizeresolvedevents) API call.
 
-For the **first request** you should use the `ageInDays` parameter which returns all carrier events later than the value of `ageInDays`. 
+For the **first request** you should use the `ageInDays` parameter which returns all carrier events later than the value of `ageInDays`.
 
 In the API response you will also get back a `syncId` which can be used in all **subsequent requests** instead of the `ageInDays` parameter. For more information regarding the `syncId` have a look [here](https://transport-freight-management.docs.developers.aeb.com/docs/sync#using-syncid).
 
@@ -57,9 +57,9 @@ The following is an example for a `synchronizeResolvedEvents` request:
 }
 ```
 
-* **Endpoints**:\
-  `https://xnsg.dc.aeb.com/{{cco_system}}/rest/CarrierEventServiceBFBean/synchronizeResolvedEvents`.\
-  Replace `{{cco_system}}` with the actuall CES engine: 
+* **Endpoints**:  
+  `https://xnsg.dc.aeb.com/{{cco_system}}/rest/CarrierEventServiceBFBean/synchronizeResolvedEvents`.  
+  Replace `{{cco_system}}` with the actuall CES engine:
   * `prod1ces` if you're using Carrier Connect `prod1cai`
   * `prod2ces` if you're using `prod2cai`.
 * The `blockSize` default is 200. In the API response the field `isComplete` indicates, if there are more than 200 events - in this case it is false, otherwise it’s true. So you should check that field and if it is false immediately send another request until `isComplete = true`.
@@ -69,7 +69,7 @@ The following is an example for a `synchronizeResolvedEvents` request:
 
 # AEB Standard Events
 
-You can find an explanation of the AEB standard events [here](https://rz3.aeb.de/docudata/data-sheets/cross-product/datasheet-aebengines-standardevents/en-US/index.html#684553611684580491).
+You can find an explanation of the AEB standard events <Anchor label="here" target="_blank" href="https://docs.aeb.com/doc/cm-684559499-822202891-en-US/t-822202891-684559499-en-US">here</Anchor>.
 
 # FAQ
 
