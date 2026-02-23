@@ -1377,12 +1377,9 @@
             "description": "This is the name of the file that has to be created in some temporary directory and filled with what contents contains"
           },
           "contents": {
-            "type": "array",
-            "description": "This is the contents that has to be written to the file",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "This is the contents that has to be written to the file"
           }
         }
       },
