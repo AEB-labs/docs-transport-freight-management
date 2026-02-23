@@ -1171,6 +1171,45 @@
               "TYPE_GENERAL"
             ]
           },
+          "carrierInfoTextParamHandling": {
+            "type": "string",
+            "description": "The parameter handling type of the carrier info text.",
+            "enum": [
+              "PARAMETER_NOT_REQUIRED",
+              "PARAMETER_REQUIRED",
+              "STRUCTURED_DATA_OPTIONAL"
+            ]
+          },
+          "carrierInfoTextStructuredData": {
+            "type": "string",
+            "description": "The structured data definition of the carrier info text, if applicable.",
+            "enum": [
+              "CONSIGNEE_CONTACT_PHONE_OR_EMAIL",
+              "CONSIGNEE_CONTACT_EMAIL",
+              "CONSIGNEE_CONTACT_PHONE",
+              "IMPORTER_ADDRESS",
+              "PAYER_OF_CHARG_ACC_NO",
+              "PICKUPADDR_CONTACT_PHONE",
+              "PORT_OF_DISCHARGE_CODE",
+              "SHIPPER_EORI_NO",
+              "SHIP_OR_PICK_ADDR_CONTACT_PHONE",
+              "UNDEFINED",
+              "CUSTOM_REGISTRATION_NO",
+              "DELIVERY_INSTRUCTION",
+              "DELIVERY_NOTE_NUMBER_SHIP",
+              "END_CUSTOMER_REFERENCE",
+              "GENERAL_INSTRUCTION",
+              "INVOICE_NUMBER",
+              "PICKUP_INSTRUCTION",
+              "PURCHASE_ORDER_NUMBER_SHIP",
+              "RECEIVER_EORI_NUMBER"
+            ]
+          },
+          "maxTextLength": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The maximum text length of the carrier info text, if applicable."
+          },
           "translations": {
             "type": "array",
             "description": "The description of the carrier info text in multiple languages.",
@@ -1180,6 +1219,7 @@
           }
         },
         "required": [
+          "carrierInfoTextParamHandling",
           "carrierInfoTextType",
           "identCode",
           "translations"
@@ -1276,28 +1316,19 @@
         "description": "The logos of the carrier.",
         "properties": {
           "logo": {
-            "type": "array",
-            "description": "The logo of the requested carrier.",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "The logo of the requested carrier."
           },
           "smallLogo": {
-            "type": "array",
-            "description": "The small logo of the requested carrier.",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "The small logo of the requested carrier."
           },
           "webLogo": {
-            "type": "array",
-            "description": "The web logo of the requested carrier.",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "The web logo of the requested carrier."
           }
         }
       },
@@ -3519,6 +3550,7 @@
             "description": "The name of this record, i.e. the role the record plays in the enclosing record.<br> When the same name is repeated in the context of the same parent record,  it is assumed that the parent defines this element as a repeatable (array) element."
           },
           "record": {
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
             "description": "The record associated with the name.<br> Especially in case, where the name is repeated in the context of the same parent record, this field may be null to indicate a null in a list of records."
           }
         }
@@ -3673,12 +3705,9 @@
             "description": "The MIME type of the document. Possible values: <ol> <li>\"application/pdf\" document is in PDF format <li>\"printer/raw\" document is in printer language (e.g. ZPL or EPL) and can be directly sent to a printer <li>\"image/<code>format</code>\" document is a printable image. <code>format</code> can be \"png\", \"jpeg\", etc. </ol> <p> length = 30 </p>"
           },
           "data": {
-            "type": "array",
-            "description": "Attachment data/content.",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "Attachment data/content."
           },
           "contentType": {
             "type": "string",
@@ -3862,13 +3891,9 @@
             "description": "Only filled for \"image\" mime types. Specifies resolution of the image. <p> length = 8 </p>"
           },
           "content": {
-            "type": "array",
+            "type": "string",
             "format": "byte",
-            "description": "The document content",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "description": "The document content"
           }
         }
       },
@@ -4054,12 +4079,9 @@
             "description": "Driver's signature text. <p> length=50 </p>"
           },
           "image": {
-            "type": "array",
-            "description": "Driver's signature image.",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "Driver's signature image."
           },
           "mimetype": {
             "type": "string",
@@ -4778,12 +4800,9 @@
             "description": "<p> The Url of the Carrier from the Carrier-website. Possible values are: <li>string </p> <br> <p> length=150 </p>"
           },
           "webLogo": {
-            "type": "array",
-            "description": "<p> The WebLogo of the carrier from the Carrier-website. Possible values are: <li>byte[] </p> <br>",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "<p> The WebLogo of the carrier from the Carrier-website. Possible values are: <li>byte[] </p> <br>"
           }
         }
       },
@@ -7666,12 +7685,9 @@
             "description": "This is the name of the file that has to be created in some temporary directory and filled with what contents contains"
           },
           "contents": {
-            "type": "array",
-            "description": "This is the contents that has to be written to the file",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "This is the contents that has to be written to the file"
           }
         }
       },
@@ -8540,15 +8556,6 @@
           "dataSource": {
             "$ref": "#/components/schemas/DataSource"
           },
-          "name": {
-            "type": "string"
-          },
-          "inputStream": {},
-          "content": {},
-          "contentType": {
-            "type": "string"
-          },
-          "outputStream": {},
           "transferDataFlavors": {
             "type": "array",
             "items": {
@@ -8570,7 +8577,16 @@
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
             }
-          }
+          },
+          "name": {
+            "type": "string"
+          },
+          "inputStream": {},
+          "content": {},
+          "contentType": {
+            "type": "string"
+          },
+          "outputStream": {}
         }
       },
       "DataSource": {
@@ -8622,12 +8638,9 @@
             "description": "The content of a file"
           },
           "checksum": {
-            "type": "array",
-            "description": "MD5-hash of a file",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "MD5-hash of a file"
           },
           "creationTimeMillis": {
             "type": "integer",
@@ -9023,6 +9036,151 @@
           }
         }
       },
+      "MessageDataDTO": {
+        "type": "object",
+        "description": "resulting user tip for one locale",
+        "properties": {
+          "locale": {
+            "type": "string",
+            "description": "locale of user tip whose results are given here"
+          },
+          "uuid": {
+            "type": "string",
+            "description": "the uuid of the tip (only filled when no error) - should be stored if later tip should be updated"
+          },
+          "error": {
+            "type": "string",
+            "description": "error message, if any error occurred during processing"
+          }
+        }
+      },
+      "PublishMessageResponseDTO": {
+        "type": "object",
+        "description": "Contains ids of user tips that were created, or error messages",
+        "properties": {
+          "messageResultPerLocale": {
+            "type": "array",
+            "description": "the data per locale, as supplied in request",
+            "items": {
+              "$ref": "#/components/schemas/MessageDataDTO"
+            }
+          }
+        }
+      },
+      "LinkDTO": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "url of the link"
+          },
+          "name": {
+            "type": "string",
+            "description": "text to be shown for the link"
+          }
+        }
+      },
+      "MessageTextsDTO": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string",
+            "description": "locale for the texts - must be a language supported by the system"
+          },
+          "uuid": {
+            "type": "string",
+            "description": "uuid of user tip - should only be filled when updating existing tip"
+          },
+          "title": {
+            "type": "string",
+            "description": "title of the user tip"
+          },
+          "text": {
+            "type": "string",
+            "description": "text of the user tip"
+          },
+          "titlePopup": {
+            "type": "string",
+            "description": "title of the popup, when shown as popup"
+          },
+          "textPopup": {
+            "type": "string",
+            "description": "text of the popup, when shown as popup"
+          },
+          "links": {
+            "type": "array",
+            "description": "links associated with the tip",
+            "items": {
+              "$ref": "#/components/schemas/LinkDTO"
+            }
+          }
+        }
+      },
+      "PublishMessageRequestDTO": {
+        "type": "object",
+        "description": "the for user tip, possibly in several locales",
+        "properties": {
+          "contentPerLocale": {
+            "type": "array",
+            "description": "locale specific data of the user tip. key is the language iso code.This language must be defined, or tip is not created.",
+            "items": {
+              "$ref": "#/components/schemas/MessageTextsDTO"
+            }
+          },
+          "clientIdentCode": {
+            "type": "string",
+            "description": "ident code of client - when call is not done with administrative rights, this must match the client of authentication"
+          },
+          "showAsPopup": {
+            "type": "boolean",
+            "description": "true when tip is to be shown as popup"
+          },
+          "clientGroup": {
+            "type": "string",
+            "description": "client group for which this tip is valid - can only be used when call is authenticated with administrative rights"
+          },
+          "validFrom": {
+            "type": "string",
+            "description": "timestamp from which on the tip is valid, format yyyy-MM-dd or yyyy-MM-ddThh-mm-ss - when null, no restriction is assumed"
+          },
+          "validTo": {
+            "type": "string",
+            "description": "timestamp until which tip is valid, format yyyy-MM-dd or yyyy-MM-ddThh-mm-ss - when null tip is valid indefinitely"
+          },
+          "isReleased": {
+            "type": "boolean",
+            "description": "when true tip is shown - empty means true"
+          },
+          "roleAccessType": {
+            "type": "string",
+            "description": "one of the subclasses of CRoleAccessType, namely REVOK, NECCE, GRANT"
+          },
+          "role": {
+            "type": "string",
+            "description": "role of a user that determines if tip is shown - see roleAccessType which decides if tip is shown to users having this role, not shown to users not having this role"
+          },
+          "isImportantMessage": {
+            "type": "boolean",
+            "description": "when true tip is shown as important message"
+          },
+          "clientLicenceRoles": {
+            "type": "string",
+            "description": "when filled, tip is only shown for clients that have licenced the roles specified here"
+          },
+          "visibilityProperties": {
+            "type": "string",
+            "description": "other properties that define if tip is shown"
+          },
+          "isMailToAdmin": {
+            "type": "boolean",
+            "description": "when true an email is sent to admin to inform about new tip"
+          },
+          "isRealUserTip": {
+            "type": "boolean",
+            "description": "when true tip is considered as real user tip"
+          }
+        }
+      },
       "RoleInfoDTO": {
         "type": "object",
         "description": "dto for roles",
@@ -9087,12 +9245,9 @@
         "description": "Contains an attachment for an email.",
         "properties": {
           "fileContent": {
-            "type": "array",
-            "description": "Content of the attachment file",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "Content of the attachment file"
           },
           "fileContentType": {
             "type": "string",
