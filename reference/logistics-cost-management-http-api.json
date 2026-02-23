@@ -1817,6 +1817,776 @@
           "totalElements"
         ]
       },
+      "BAmountOfMoneyDTO": {
+        "type": "object",
+        "description": "An amount of money with a value and an currency ISO code.",
+        "properties": {
+          "value": {
+            "type": "number",
+            "description": "The value of the amount of money. <p>length=15, scale=2</p>"
+          },
+          "currencyIso": {
+            "type": "string",
+            "description": "The three letter ISO code of the currency of the amount of money. <p>length=3</p>"
+          }
+        }
+      },
+      "BSettlementCompanyRestDTO": {
+        "type": "object",
+        "properties": {
+          "companyNo": {
+            "type": "string",
+            "description": "The Company Number."
+          }
+        },
+        "required": [
+          "companyNo"
+        ]
+      },
+      "BSettlementRestDTO": {
+        "type": "object",
+        "description": "Settlement REST Data Transfer Object containing master data, status flags and monetary totals for a settlement.",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when the settlement was created."
+          },
+          "lastDispoDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date of last disposition (e.g. last workflow / allocation step)."
+          },
+          "settlementType": {
+            "$ref": "#/components/schemas/SettlementTypeRestDTO",
+            "description": "Type / classification of the settlement."
+          },
+          "referenceNumber": {
+            "type": "string",
+            "description": "External reference number associated with the settlement (e.g. external system id).",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "settlementNumber": {
+            "type": "string",
+            "description": "Internal unique settlement number.",
+            "maxLength": 50,
+            "minLength": 1
+          },
+          "additionalReferenceNumber1": {
+            "type": "string",
+            "description": "Additional reference number (custom usage).",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "numberOfCancelledSettlement": {
+            "type": "string",
+            "description": "Number of cancelled settlements aggregated here (if applicable).",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "settlementDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Business date of the settlement (e.g. accounting / posting date)."
+          },
+          "chargeDateMin": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Minimum charge date across included settlement items."
+          },
+          "chargeDateMax": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Maximum charge date across included settlement items."
+          },
+          "valueDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Value date used for currency conversion / accounting."
+          },
+          "provider": {
+            "$ref": "#/components/schemas/BSettlementCompanyRestDTO",
+            "description": "Provider company involved in the settlement (service provider)."
+          },
+          "orderer": {
+            "$ref": "#/components/schemas/BSettlementCompanyRestDTO",
+            "description": "Ordering company (customer placing the order)."
+          },
+          "payer": {
+            "$ref": "#/components/schemas/BSettlementCompanyRestDTO",
+            "description": "Paying company (invoice recipient / payer)."
+          },
+          "status": {
+            "$ref": "#/components/schemas/BSettlementStatusRestDTO",
+            "description": "Business object status (workflow / lifecycle state)."
+          },
+          "cancellationTypeIdentCode": {
+            "type": "string",
+            "description": "The identCode of the cancellation type"
+          },
+          "isAnnulation": {
+            "type": "boolean",
+            "description": "Flag indicating the settlement represents an annulation (reversal)."
+          },
+          "totalSettlNetPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Total net price of the settlement in provider currency."
+          },
+          "totalSettlGrsPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Total gross price of the settlement in provider currency."
+          },
+          "totalSettlClNetPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Total net price of the settlement in client currency."
+          },
+          "totalSettlClGrsPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Total gross price of the settlement in client currency."
+          },
+          "totalSettlVatPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Total VAT amount of the settlement in provider currency."
+          },
+          "totalSettlClVatPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Total VAT amount of the settlement in client currency."
+          },
+          "rateDateClPrice": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Rate date used for pricing in client currency."
+          },
+          "period": {
+            "$ref": "#/components/schemas/PeriodRestDTO",
+            "description": "Accounting / service period covered by the settlement."
+          },
+          "serviceIdentCode": {
+            "type": "string",
+            "description": "Primary service associated with the settlement.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "billingScenarioIdentCode": {
+            "type": "string",
+            "description": "Billing scenario driving pricing logic."
+          },
+          "contractNumber": {
+            "type": "string",
+            "description": "Contract number related to the settlement.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "orderNumber": {
+            "type": "string",
+            "description": "Order number related to the settlement.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "clientOrgaId": {
+            "type": "string",
+            "description": "Client organization identifier.",
+            "maxLength": 20,
+            "minLength": 0
+          },
+          "paymentMethodIdentCode": {
+            "type": "string",
+            "description": "The Payment Method Ident Code."
+          },
+          "paymentTermIdentCode": {
+            "type": "string",
+            "description": "The PaymentTerm IdentCode."
+          }
+        },
+        "required": [
+          "billingScenarioIdentCode",
+          "cancellationTypeIdentCode",
+          "isAnnulation",
+          "orderer",
+          "payer",
+          "paymentMethodIdentCode",
+          "paymentTermIdentCode",
+          "period",
+          "provider",
+          "settlementNumber",
+          "settlementType",
+          "status",
+          "totalSettlClGrsPrice",
+          "totalSettlClNetPrice",
+          "totalSettlClVatPrice",
+          "totalSettlGrsPrice",
+          "totalSettlNetPrice",
+          "totalSettlVatPrice"
+        ]
+      },
+      "BSettlementStatusRestDTO": {
+        "type": "object",
+        "properties": {
+          "statusID": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The statusId"
+          },
+          "identCode": {
+            "type": "string",
+            "description": "The status Ident Code. Possible Status Codes are: READY, COMPILED, RELEASED, COMPLETE, CANCELLED",
+            "enum": [
+              "READY",
+              "COMPILED",
+              "RELEASED",
+              "COMPLETE",
+              "CANCELLED"
+            ]
+          }
+        },
+        "required": [
+          "identCode",
+          "statusID"
+        ]
+      },
+      "PeriodRestDTO": {
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The Start of the Period."
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The Start of the Period."
+          },
+          "type": {
+            "type": "string",
+            "description": "The Type of Period.",
+            "enum": [
+              "DAY",
+              "HALFAMONTH",
+              "HALFAYEAR",
+              "MONTH",
+              "QUARTER",
+              "DECADE",
+              "TWOWEEKS",
+              "WEEK",
+              "YEAR"
+            ]
+          }
+        },
+        "required": [
+          "end",
+          "start",
+          "type"
+        ]
+      },
+      "SettlementTypeRestDTO": {
+        "type": "object",
+        "properties": {
+          "identCode": {
+            "type": "string",
+            "description": "The SettlementType Ident Code."
+          },
+          "scenarioIdentCode": {
+            "type": "string",
+            "description": "The Scenario Ident Code."
+          }
+        },
+        "required": [
+          "identCode",
+          "scenarioIdentCode"
+        ]
+      },
+      "SettlementPage": {
+        "type": "object",
+        "properties": {
+          "totalElements": {
+            "type": "integer",
+            "description": "The total number of elements available to return.",
+            "example": 100,
+            "readOnly": true
+          },
+          "content": {
+            "type": "array",
+            "description": "List of settlements.",
+            "items": {
+              "$ref": "#/components/schemas/BSettlementRestDTO"
+            }
+          }
+        },
+        "required": [
+          "content",
+          "totalElements"
+        ]
+      },
+      "BQuantityDTO": {
+        "type": "object",
+        "description": "Quantities for Billing.",
+        "properties": {
+          "value": {
+            "type": "number",
+            "description": "The value of the quantity.",
+            "maximum": 999999999999.999,
+            "multipleOf": 0.001
+          },
+          "unit": {
+            "type": "string",
+            "description": " \t\t\tIdentifier of the quantity unit. Use quantity units known from your AEB application or alternatively domain specific or legacy quantity codes, but not the UNECE code.\n \t\t\tFor UNECE unit codes use the 'uneceUnit' field, if supported.\n\n \t\t\tWeight unit codes:\n \t\t\t* kg - Kilogram\n         \t* gr - Gram\n         \t* t - Metric ton\n         \t* lb - Pound\n         \t* oz - Ounce\n\n         \tLength unit codes:\n         \t* m - Meter\n         \t* mm - Milimeter\n         \t* cm - Centimeter\n         \t* dm - Decimeter\n         \t* km - Kilometer\n         \t* ft - Foot\n         \t* in - Inch\n         \t* mi - Mile\n         \t* nm - Nanometer\n         \t* µm - Micrometer\n\n         \tVolume unit codes:\n         \t* ccm - Cubic centimeter\n         \t* cdm - Cubic decimeter\n         \t* m3 - Cubic meter\n         \t* ml - Milliliter\n         \t* cl - Centiliter\n         \t* hl - Hectoliter\n         \t* l - Liter\n         \t* cuin - Cubic inch\n         \t* cuft - Cubic foot\n\n         \tQuantity unit codes:\n         \t* St - Piece\n         \t* Paar - Pair\n\n         \tDensity unit codes:\n         \t* g/ccm - grams per cubic centimeter\n         \t* kg/m3 - kilogram per cubic meter\n\n         \tTime unit codes:\n         \t* h - Hour\n         \t* stu - Hour\n         \t* std - Hour\n         \t* oph - Operational hour\n         \t* s - Second\n         \t* min - Minute\n         \t* 15m - 15 mins\n         \t* d - Day\n         \t* tag - Day\n         \t* wch - Week\n         \t* mon - Month\n         \t* jhr - Year\n         \t* mis - Millisecond\n         \t* ms - Microsecond\n         \t* ns - Nanosecond\n         \t* ps - Picosecond\n\n         \tArea unit codes:\n \t\t\t* qm - Square meter\n         \t* qmm - Square millimeter\n         \t* qcm - Square centimeter\n         \t* qdm - Square decimeter\n",
+            "example": "kg",
+            "maxLength": 10
+          },
+          "uneceUnit": {
+            "type": "string",
+            "description": " \t\t\tIdentifier of the quantity unit based on 'Recommendation No. 20 - Units of Measure used in International Trade'.<br/>\n \t\t\tThe #uneceUnit can be specified alternatively to #unit but is currently not supported by all AEB services. Please speak to your contact person at AEB if you are unsure whether #uneceUnit is supported or not.\n\n \t\t\tWeight unit codes:\n \t\t\t* `KGM` - Kilogram\n \t\t\t* `GRM` - Gram (10⁻³ kg)\n \t\t\t* `TNE` - Metric ton (10³ kg)\n \t\t\t* `LBR` - Pound (0,453 592 37 kg)\n \t\t\t* `ONZ` - Ounce (2,834 952 x 10⁻² kg)\n\n \t\t\tLength unit codes:\n \t\t\t* `MTR` - Meter\n \t\t\t* `CMT` - Centimeter (10⁻² m)\n \t\t\t* `MMT` - Millimeter (10⁻³ m)\n \t\t\t* `KMT` - Kilometer (10³ m)\n \t\t\t* `YRD` - Yard (0,914 4 m)\n \t\t\t* `FOT` - Foot (0,304 8 m)\n \t\t\t* `INH` - Inch (25,4 x 10⁻³ m)\n \t\t\t* `SMI` - Mile (statute mile) (1609,344 m)\n\n \t\t\tVolume unit codes:\n \t\t\t* `MTQ` - Cubic meter\n \t\t\t* `CMQ` - Cubic centimeter (10⁻⁶ m³)\n \t\t\t* `HLT` - Hectoliter (10⁻¹ m³)\n \t\t\t* `LTR` - Liter (10⁻³ m³)\n \t\t\t* `MLT` - Milliliter (10⁻⁶ m³)\n \t\t\t* `YDQ` - Cubic yard (0,764 555 m³)\n \t\t\t* `FTQ` - Cubic foot (2,831 685 x 10⁻² m³)\n \t\t\t* `INQ` - Cubic inch (16,387 064 x 10⁻⁶ m³)\n\n \t\t\tArea unit codes:\n \t\t\t* `MTK` - Square meter\n \t\t\t* `CMK` - Square centimeter (10⁻⁴ m²)\n \t\t\t* `MMK` - Square millimeter (10⁻⁶ m²)\n \t\t\t* `YDK` - Square yard (8.361 274 x 10⁻¹ m² )\n \t\t\t* `FTK` - Square foot (9,290 304 x 10⁻² m²)\n \t\t\t* `INK` - Square inch (6,451 6 x 10⁻⁴ m²)\n\n \t\t\tQuantity unit codes:\n \t\t\t* `NAR` - Number of articles\n \t\t\t* `NPR` - Number of pairs\n \t\t\t* `CEN` - A unit of count defining the number of units in multiples of 100\n \t\t\t* `MIL` - A unit of count defining the number of units in multiples of 1000\n",
+            "example": "NAR",
+            "maxLength": 3
+          }
+        }
+      },
+      "BSettlementItemStatusRestDTO": {
+        "type": "object",
+        "properties": {
+          "statusID": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The statusId"
+          },
+          "identCode": {
+            "type": "string",
+            "description": "The status Ident Code. Possible Status Codes are: READY, COMPLETE, CANCELLED",
+            "enum": [
+              "READY",
+              "COMPLETE",
+              "CANCELLED"
+            ]
+          }
+        },
+        "required": [
+          "identCode",
+          "statusID"
+        ]
+      },
+      "BSettlementItemTranslationRestDTO": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "2-letter ISO code of the language.",
+            "example": "DE",
+            "maxLength": 2,
+            "minLength": 2,
+            "pattern": "[A-Z]{2}"
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the model object.",
+            "maxLength": 250,
+            "minLength": 0
+          }
+        },
+        "required": [
+          "language"
+        ]
+      },
+      "CalculationReferencesRestDTO": {
+        "type": "object",
+        "properties": {
+          "contractNumber": {
+            "type": "string",
+            "description": "The Number of the contract of the service item."
+          },
+          "apsContractNumber": {
+            "type": "string",
+            "description": " The number of the contract that contained the pricing customizing that created the settlement item."
+          },
+          "apsNumber": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The number of the assigned price schema that was selected from the contract."
+          },
+          "apsSchemaNumber": {
+            "type": "string",
+            "description": " Number of the price schema of the assigned price schema. In case of a master price schema this is not the schema that contains the component that calculated the settlement item."
+          },
+          "apsComponentNumber": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Number of the component from the price schema that was used. In case of a master price schema this is not the component that calculated the settlement item."
+          },
+          "calcSchemaNumber": {
+            "type": "string",
+            "description": "Number of the priceSchema that contained the component that calculated the settlement item. This is either the used master price schema or the same as apsSchemaNumber."
+          },
+          "calcComponentNumber": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Number of the component that calculated the settlement item."
+          },
+          "calcComponentAttribute": {
+            "type": "string",
+            "description": "Mark of the component that calculated the settlement item."
+          },
+          "calcCompDescription": {
+            "type": "string",
+            "description": "Description of the component that calculated the settlement item."
+          },
+          "calcTid": {
+            "type": "string",
+            "description": "TID of the  CPriceCalculation-subclass of the component that calculated the settlement item. Either fix-price, business rule, or generic. Never master price schema."
+          },
+          "calcGenericIdentCode": {
+            "type": "string",
+            "description": "Ident code of the generic calculation type of the component that calculated the settlement item. Empty if the price calculation is not generic."
+          }
+        }
+      },
+      "ComparisonCodeRestDTO": {
+        "type": "object",
+        "properties": {
+          "code1": {
+            "type": "string",
+            "description": "Comparison Code 1."
+          },
+          "code2": {
+            "type": "string",
+            "description": "Comparison Code 2."
+          }
+        },
+        "required": [
+          "code1",
+          "code2"
+        ]
+      },
+      "CurrencyRateRestDTO": {
+        "type": "object",
+        "properties": {
+          "quantityNotation": {
+            "type": "number",
+            "description": "Quantity notation of the currency rate."
+          },
+          "valueNotation": {
+            "type": "number",
+            "description": "Value notation of the currency rate."
+          },
+          "isoCurrencyTo": {
+            "type": "string",
+            "description": "ISO code of the target currency."
+          },
+          "rateDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Currency rate date."
+          },
+          "validFrom": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Valid from date."
+          }
+        }
+      },
+      "SettlementItem": {
+        "type": "object",
+        "description": "Settlement item REST DTO containing pricing, partner and status information, mapped from the BSettlementItem domain object.",
+        "properties": {
+          "orderNumber": {
+            "type": "string",
+            "description": "Order number (reference from original service item).",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "serviceItemId": {
+            "type": "string",
+            "description": "Service item technical id.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "numberInServiceItem": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Sequential number of this settlement item within the service item."
+          },
+          "referenceNumber": {
+            "type": "string",
+            "description": "Primary reference number of the item.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "serviceItemDescription": {
+            "type": "string",
+            "description": "Description copied from service item (long description).",
+            "maxLength": 250,
+            "minLength": 0
+          },
+          "orderDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Order date of the underlying service item."
+          },
+          "referenceDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Main reference date of the service item."
+          },
+          "chargeDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Charge date relevant for period assignment."
+          },
+          "serviceDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Service (fulfillment) date of the item."
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when the settlement item was created."
+          },
+          "status": {
+            "$ref": "#/components/schemas/BSettlementItemStatusRestDTO",
+            "description": "Business object status of the settlement item."
+          },
+          "clientSystemId": {
+            "type": "string",
+            "description": "Client system identifier.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "clientOrgaId": {
+            "type": "string",
+            "description": "Client organization identifier.",
+            "maxLength": 20,
+            "minLength": 0
+          },
+          "costCenter": {
+            "type": "string",
+            "description": "Cost center code for the item.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "provider": {
+            "$ref": "#/components/schemas/BSettlementCompanyRestDTO",
+            "description": "Provider company (service provider)."
+          },
+          "orderer": {
+            "$ref": "#/components/schemas/BSettlementCompanyRestDTO",
+            "description": "Orderer company (ordering party)."
+          },
+          "payer": {
+            "$ref": "#/components/schemas/BSettlementCompanyRestDTO",
+            "description": "Payer company (invoice recipient)."
+          },
+          "beneficiary": {
+            "$ref": "#/components/schemas/BSettlementCompanyRestDTO",
+            "description": "Beneficiary company (VAT/context party)."
+          },
+          "billingScenarioIdentCode": {
+            "type": "string",
+            "description": "Billing scenario ident code (pricing context)."
+          },
+          "serviceIdentCode": {
+            "type": "string",
+            "description": "Primary service associated with the settlement item.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "quantity": {
+            "$ref": "#/components/schemas/BQuantityDTO",
+            "description": "Measured quantity driving pricing."
+          },
+          "pricingDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Pricing date used to evaluate contract validity."
+          },
+          "calcRef": {
+            "$ref": "#/components/schemas/CalculationReferencesRestDTO",
+            "description": "Calculation references (contract/component numbers)."
+          },
+          "descriptions": {
+            "type": "array",
+            "description": "localized descriptions.",
+            "items": {
+              "$ref": "#/components/schemas/BSettlementItemTranslationRestDTO"
+            }
+          },
+          "chargeableQty": {
+            "$ref": "#/components/schemas/BQuantityDTO",
+            "description": "Chargeable quantity after rules (may differ from original quantity)."
+          },
+          "groupingIdentCode1": {
+            "type": "string",
+            "description": "First grouping ident code for aggregation.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "groupingIdentCode2": {
+            "type": "string",
+            "description": "Second grouping ident code for aggregation.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "priceTypeIdentCode": {
+            "type": "string",
+            "description": "Price type ident code (pricing method).",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "settlementType": {
+            "$ref": "#/components/schemas/SettlementTypeRestDTO",
+            "description": "Settlement type (workflow classification)."
+          },
+          "period": {
+            "$ref": "#/components/schemas/PeriodRestDTO",
+            "description": "Period covered by this settlement item."
+          },
+          "price": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Net price in service provider currency."
+          },
+          "settlementPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Net settlement price in settlement currency."
+          },
+          "settlVatPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "VAT amount for the item."
+          },
+          "settlGrsPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Gross settlement price (net + VAT)."
+          },
+          "settlementPriceRate": {
+            "$ref": "#/components/schemas/CurrencyRateRestDTO",
+            "description": "Currency rate information for settlement price."
+          },
+          "clientPrice": {
+            "$ref": "#/components/schemas/BAmountOfMoneyDTO",
+            "description": "Net client price in client currency."
+          },
+          "kindOfCreation": {
+            "type": "string",
+            "description": "Kind of creation (manual, offset, etc.).",
+            "enum": [
+              "ADJUST",
+              "EMPTY",
+              "AUDIT",
+              "AUDITOFFSETANNULMENT",
+              "AUDITOFFSET",
+              "AUDITWITHOFFSET",
+              "OFFSET",
+              "OTHER",
+              "PRICING",
+              "STTLMNTCANCELLATION"
+            ]
+          },
+          "creationReason": {
+            "type": "string",
+            "description": "Reason/details for creation (long description).",
+            "maxLength": 250,
+            "minLength": 0
+          },
+          "reason": {
+            "type": "string",
+            "description": "Short reason / code for creation (short description).",
+            "maxLength": 75,
+            "minLength": 0
+          },
+          "vatInfo": {
+            "$ref": "#/components/schemas/VATInfoRestDTO",
+            "description": "VAT info including rate and type."
+          },
+          "vatSplitCode": {
+            "type": "string",
+            "description": "VAT split code for audit/reference.",
+            "maxLength": 50,
+            "minLength": 0
+          },
+          "comparisonCode": {
+            "$ref": "#/components/schemas/ComparisonCodeRestDTO",
+            "description": "Comparison codes (used for audits / grouping)."
+          },
+          "parentNumberInServiceItem": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Parent settlement number in service item."
+          },
+          "settlementNumber": {
+            "type": "string",
+            "description": "Settlement internal number this item belongs to.",
+            "maxLength": 50
+          }
+        },
+        "required": [
+          "beneficiary",
+          "billingScenarioIdentCode",
+          "calcRef",
+          "chargeableQty",
+          "clientPrice",
+          "comparisonCode",
+          "orderer",
+          "payer",
+          "period",
+          "price",
+          "provider",
+          "quantity",
+          "settlGrsPrice",
+          "settlVatPrice",
+          "settlementPrice",
+          "settlementType",
+          "status",
+          "vatInfo"
+        ]
+      },
+      "VATInfoRestDTO": {
+        "type": "object",
+        "properties": {
+          "scenarioIdentCode": {
+            "type": "string",
+            "description": "Scenario ID"
+          },
+          "typeIdentCode": {
+            "type": "string",
+            "description": "VAT Type ID"
+          },
+          "ratePercent": {
+            "type": "number",
+            "description": "VAT rate in %."
+          },
+          "vatDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "VAT date"
+          }
+        },
+        "required": [
+          "ratePercent",
+          "scenarioIdentCode",
+          "typeIdentCode",
+          "vatDate"
+        ]
+      },
+      "BSettlementItemListRestDTO": {
+        "type": "object",
+        "properties": {
+          "totalElements": {
+            "type": "integer",
+            "description": "The total number of elements available to return.",
+            "example": 100,
+            "readOnly": true
+          },
+          "content": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SettlementItem"
+            }
+          }
+        },
+        "required": [
+          "content",
+          "totalElements"
+        ]
+      },
       "BAcknowledgeChangedSettlementsResponseDTO": {
         "type": "object",
         "description": "Response for IBillingBF#acknowledgeChangedSettlements.",
@@ -2040,20 +2810,6 @@
           }
         }
       },
-      "BAmountOfMoneyDTO": {
-        "type": "object",
-        "description": "An amount of money with a value and an currency ISO code.",
-        "properties": {
-          "value": {
-            "type": "number",
-            "description": "The value of the amount of money. <p>length=15, scale=2</p>"
-          },
-          "currencyIso": {
-            "type": "string",
-            "description": "The three letter ISO code of the currency of the amount of money. <p>length=3</p>"
-          }
-        }
-      },
       "BCompanyDTO": {
         "type": "object",
         "description": "A complete address of a company for Logistics Cost Management.",
@@ -2184,30 +2940,6 @@
           }
         }
       },
-      "BQuantityDTO": {
-        "type": "object",
-        "description": "Quantities for Billing.",
-        "properties": {
-          "value": {
-            "type": "number",
-            "description": "The value of the quantity.",
-            "maximum": 999999999999.999,
-            "multipleOf": 0.001
-          },
-          "unit": {
-            "type": "string",
-            "description": " \t\t\tIdentifier of the quantity unit. Use quantity units known from your AEB application or alternatively domain specific or legacy quantity codes, but not the UNECE code.\n \t\t\tFor UNECE unit codes use the 'uneceUnit' field, if supported.\n\n \t\t\tWeight unit codes:\n \t\t\t* kg - Kilogram\n         \t* gr - Gram\n         \t* t - Metric ton\n         \t* lb - Pound\n         \t* oz - Ounce\n\n         \tLength unit codes:\n         \t* m - Meter\n         \t* mm - Milimeter\n         \t* cm - Centimeter\n         \t* dm - Decimeter\n         \t* km - Kilometer\n         \t* ft - Foot\n         \t* in - Inch\n         \t* mi - Mile\n         \t* nm - Nanometer\n         \t* µm - Micrometer\n\n         \tVolume unit codes:\n         \t* ccm - Cubic centimeter\n         \t* cdm - Cubic decimeter\n         \t* m3 - Cubic meter\n         \t* ml - Milliliter\n         \t* cl - Centiliter\n         \t* hl - Hectoliter\n         \t* l - Liter\n         \t* cuin - Cubic inch\n         \t* cuft - Cubic foot\n\n         \tQuantity unit codes:\n         \t* St - Piece\n         \t* Paar - Pair\n\n         \tDensity unit codes:\n         \t* g/ccm - grams per cubic centimeter\n         \t* kg/m3 - kilogram per cubic meter\n\n         \tTime unit codes:\n         \t* h - Hour\n         \t* stu - Hour\n         \t* std - Hour\n         \t* oph - Operational hour\n         \t* s - Second\n         \t* min - Minute\n         \t* 15m - 15 mins\n         \t* d - Day\n         \t* tag - Day\n         \t* wch - Week\n         \t* mon - Month\n         \t* jhr - Year\n         \t* mis - Millisecond\n         \t* ms - Microsecond\n         \t* ns - Nanosecond\n         \t* ps - Picosecond\n\n         \tArea unit codes:\n \t\t\t* qm - Square meter\n         \t* qmm - Square millimeter\n         \t* qcm - Square centimeter\n         \t* qdm - Square decimeter\n",
-            "example": "kg",
-            "maxLength": 10
-          },
-          "uneceUnit": {
-            "type": "string",
-            "description": " \t\t\tIdentifier of the quantity unit based on 'Recommendation No. 20 - Units of Measure used in International Trade'.<br/>\n \t\t\tThe #uneceUnit can be specified alternatively to #unit but is currently not supported by all AEB services. Please speak to your contact person at AEB if you are unsure whether #uneceUnit is supported or not.\n\n \t\t\tWeight unit codes:\n \t\t\t* `KGM` - Kilogram\n \t\t\t* `GRM` - Gram (10⁻³ kg)\n \t\t\t* `TNE` - Metric ton (10³ kg)\n \t\t\t* `LBR` - Pound (0,453 592 37 kg)\n \t\t\t* `ONZ` - Ounce (2,834 952 x 10⁻² kg)\n\n \t\t\tLength unit codes:\n \t\t\t* `MTR` - Meter\n \t\t\t* `CMT` - Centimeter (10⁻² m)\n \t\t\t* `MMT` - Millimeter (10⁻³ m)\n \t\t\t* `KMT` - Kilometer (10³ m)\n \t\t\t* `YRD` - Yard (0,914 4 m)\n \t\t\t* `FOT` - Foot (0,304 8 m)\n \t\t\t* `INH` - Inch (25,4 x 10⁻³ m)\n \t\t\t* `SMI` - Mile (statute mile) (1609,344 m)\n\n \t\t\tVolume unit codes:\n \t\t\t* `MTQ` - Cubic meter\n \t\t\t* `CMQ` - Cubic centimeter (10⁻⁶ m³)\n \t\t\t* `HLT` - Hectoliter (10⁻¹ m³)\n \t\t\t* `LTR` - Liter (10⁻³ m³)\n \t\t\t* `MLT` - Milliliter (10⁻⁶ m³)\n \t\t\t* `YDQ` - Cubic yard (0,764 555 m³)\n \t\t\t* `FTQ` - Cubic foot (2,831 685 x 10⁻² m³)\n \t\t\t* `INQ` - Cubic inch (16,387 064 x 10⁻⁶ m³)\n\n \t\t\tArea unit codes:\n \t\t\t* `MTK` - Square meter\n \t\t\t* `CMK` - Square centimeter (10⁻⁴ m²)\n \t\t\t* `MMK` - Square millimeter (10⁻⁶ m²)\n \t\t\t* `YDK` - Square yard (8.361 274 x 10⁻¹ m² )\n \t\t\t* `FTK` - Square foot (9,290 304 x 10⁻² m²)\n \t\t\t* `INK` - Square inch (6,451 6 x 10⁻⁴ m²)\n\n \t\t\tQuantity unit codes:\n \t\t\t* `NAR` - Number of articles\n \t\t\t* `NPR` - Number of pairs\n \t\t\t* `CEN` - A unit of count defining the number of units in multiples of 100\n \t\t\t* `MIL` - A unit of count defining the number of units in multiples of 1000\n",
-            "example": "NAR",
-            "maxLength": 3
-          }
-        }
-      },
       "BServiceItemResultDTO": {
         "type": "object",
         "description": "Result for one service item, used both by IBillingBF#createServiceItems and IBillingBF#getServiceItems. <br><br> --IBillingBF#createServiceItems--<br> The following messageIdentCodes are used:<br> \"ITEM_RETRANSMISSION_ERROR\": Retransmission of one of the items was detected.<br> \"INVALID_DATA_ERROR\": One of the ident codes send was not recognized by the engine, e.g. an service type was used which was not customized.<br> \"PRICING_ERROR\": An error occured during pricing because of customizing problems. E.g. no price schema was found for an item. <br> \"PRICING_TRACE\": Detailed information about the pricing process (this is no error).<br> \"LOCK_ERROR\": Service item or dependent objects are locked. <br><br> --IBillingBF.getServiceItems--<br> The following messageIdentCodes are used:<br> \"ITEM_NOT_FOUND_ERROR\": A service item was not found.",
@@ -2262,6 +2994,10 @@
           "orderNumber": {
             "type": "string",
             "description": "Order number of service item."
+          },
+          "billingScenarioIdentCode": {
+            "type": "string",
+            "description": "Ident code of the billing scenario of the service item."
           },
           "serviceIdentCode": {
             "type": "string",
@@ -2606,6 +3342,7 @@
             "description": "The name of this record, i.e. the role the record plays in the enclosing record.<br> When the same name is repeated in the context of the same parent record,  it is assumed that the parent defines this element as a repeatable (array) element."
           },
           "record": {
+            "$ref": "#/components/schemas/GenericDataRecordDTO",
             "description": "The record associated with the name.<br> Especially in case, where the name is repeated in the context of the same parent record, this field may be null to indicate a null in a list of records."
           }
         }
@@ -3348,7 +4085,7 @@
           },
           "delete": {
             "type": "boolean",
-            "default": "false",
+            "default": false,
             "description": "If true, the rate sheet entry with the given #id will be deleted (if it exists). If set, #id must be filled. All other values can be omitted."
           }
         },
@@ -3552,12 +4289,9 @@
         "description": "DTO including bytes and some additional data, from which an attachment is created and linked to it's model object.",
         "properties": {
           "bytes": {
-            "type": "array",
-            "description": "A byte stream which is added as new document (attachment) in the documents list of the invoice.<br> You have to fill fileExtension also, so that the attachment will be opened with the correct editor.<br> It is highly recommended to upload only smaller files/data, smaller than 10MB. <br> Otherwise a timeout may appear while sending the request.",
-            "items": {
-              "type": "string",
-              "format": "byte"
-            }
+            "type": "string",
+            "format": "byte",
+            "description": "A byte stream which is added as new document (attachment) in the documents list of the invoice.<br> You have to fill fileExtension also, so that the attachment will be opened with the correct editor.<br> It is highly recommended to upload only smaller files/data, smaller than 10MB. <br> Otherwise a timeout may appear while sending the request."
           },
           "fileExtension": {
             "type": "string",
