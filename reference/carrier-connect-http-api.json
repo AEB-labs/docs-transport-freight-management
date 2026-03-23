@@ -1453,10 +1453,14 @@
               "COD",
               "COLL_BOOK",
               "DEL_CONF",
+              "IRR_PICKUP",
+              "MINIMUM_VALIDATION",
               "NONE",
               "NOTIFY",
               "PALLET_EXCHANGE",
               "REQ_DELDATE",
+              "RETURN_ENCL",
+              "RETURN_DEMAND",
               "SAT_DEL",
               "UPL_DOCS"
             ]
@@ -8556,16 +8560,25 @@
           "dataSource": {
             "$ref": "#/components/schemas/DataSource"
           },
-          "transferDataFlavors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ActivationDataFlavor"
-            }
+          "name": {
+            "type": "string"
+          },
+          "inputStream": {},
+          "content": {},
+          "outputStream": {},
+          "contentType": {
+            "type": "string"
           },
           "preferredCommands": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
+            }
+          },
+          "transferDataFlavors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActivationDataFlavor"
             }
           },
           "commandMap": {
@@ -8577,16 +8590,7 @@
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
             }
-          },
-          "name": {
-            "type": "string"
-          },
-          "inputStream": {},
-          "content": {},
-          "contentType": {
-            "type": "string"
-          },
-          "outputStream": {}
+          }
         }
       },
       "DataSource": {
@@ -8596,10 +8600,10 @@
             "type": "string"
           },
           "inputStream": {},
+          "outputStream": {},
           "contentType": {
             "type": "string"
-          },
-          "outputStream": {}
+          }
         }
       },
       "DownloadFileResponseDTO": {
