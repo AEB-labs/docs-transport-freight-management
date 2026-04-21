@@ -1,8 +1,4 @@
 ---
-title: createExternalInvoices
-excerpt: >-
-  Creates one external invoice for every BExternalInvoiceDTO included in the
-  BCreateExternalInvoicesRequestDTO.
 api:
   file: logistics-cost-management-http-api.json
   operationId: createExternalInvoices
