@@ -8535,10 +8535,10 @@
       "CommandInfo": {
         "type": "object",
         "properties": {
-          "commandClass": {
+          "commandName": {
             "type": "string"
           },
-          "commandName": {
+          "commandClass": {
             "type": "string"
           }
         }
@@ -8565,9 +8565,19 @@
           },
           "inputStream": {},
           "content": {},
-          "outputStream": {},
           "contentType": {
             "type": "string"
+          },
+          "outputStream": {},
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap",
+            "writeOnly": true
+          },
+          "allCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
+            }
           },
           "preferredCommands": {
             "type": "array",
@@ -8580,16 +8590,6 @@
             "items": {
               "$ref": "#/components/schemas/ActivationDataFlavor"
             }
-          },
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap",
-            "writeOnly": true
-          },
-          "allCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
           }
         }
       },
@@ -8600,10 +8600,10 @@
             "type": "string"
           },
           "inputStream": {},
-          "outputStream": {},
           "contentType": {
             "type": "string"
-          }
+          },
+          "outputStream": {}
         }
       },
       "DownloadFileResponseDTO": {
