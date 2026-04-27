@@ -8535,10 +8535,10 @@
       "CommandInfo": {
         "type": "object",
         "properties": {
-          "commandName": {
+          "commandClass": {
             "type": "string"
           },
-          "commandClass": {
+          "commandName": {
             "type": "string"
           }
         }
@@ -8569,16 +8569,6 @@
             "type": "string"
           },
           "outputStream": {},
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap",
-            "writeOnly": true
-          },
-          "allCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
-          },
           "preferredCommands": {
             "type": "array",
             "items": {
@@ -8589,6 +8579,16 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ActivationDataFlavor"
+            }
+          },
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap",
+            "writeOnly": true
+          },
+          "allCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
             }
           }
         }
@@ -10279,6 +10279,9 @@
           "tracingInfo": {
             "$ref": "#/components/schemas/TracingInfo"
           },
+          "perfMonitoringInfo": {
+            "$ref": "#/components/schemas/PerfMonitoringInfo"
+          },
           "lastNetworkActivityTime": {
             "type": "string",
             "format": "date-time"
@@ -10293,6 +10296,23 @@
           },
           "zoneName": {
             "type": "string"
+          }
+        }
+      },
+      "PerfMonitoringInfo": {
+        "type": "object",
+        "properties": {
+          "createdToRegisteredDurationMs": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdToFirstNetworkActivityDurationMs": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdToLaunchRequestedDurationMs": {
+            "type": "integer",
+            "format": "int64"
           }
         }
       },
