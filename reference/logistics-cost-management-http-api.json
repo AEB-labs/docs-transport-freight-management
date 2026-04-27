@@ -5246,6 +5246,9 @@
           "tracingInfo": {
             "$ref": "#/components/schemas/TracingInfo"
           },
+          "perfMonitoringInfo": {
+            "$ref": "#/components/schemas/PerfMonitoringInfo"
+          },
           "lastNetworkActivityTime": {
             "type": "string",
             "format": "date-time"
@@ -5260,6 +5263,23 @@
           },
           "zoneName": {
             "type": "string"
+          }
+        }
+      },
+      "PerfMonitoringInfo": {
+        "type": "object",
+        "properties": {
+          "createdToRegisteredDurationMs": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdToFirstNetworkActivityDurationMs": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdToLaunchRequestedDurationMs": {
+            "type": "integer",
+            "format": "int64"
           }
         }
       },
