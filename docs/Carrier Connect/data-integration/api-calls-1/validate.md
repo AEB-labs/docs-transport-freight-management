@@ -22,7 +22,7 @@ next:
 The <a href="https://transport-freight-management.docs.developers.aeb.com/reference/validateshipment" target="_blank">validateShipment</a> call provides the advantage of validating shipment data _before_ a `createShipment` call will persist a shipment in the database.
 
 <Callout icon="📘" theme="info">
-  * There is no general answer, what the `validateShipment` call will check beforehand. * It is also good to know that the `validateShipment` will not be successful for all carriers. When the `validateShipment` call does not check anything or is not implemented yet, the response will be "The carrier does not support carrier-specific route validations."
+  There is no general answer, what the `validateShipment` call will check beforehand. * It is also good to know that the `validateShipment` will not be successful for all carriers. When the `validateShipment` call does not check anything or is not implemented yet, the response will be "The carrier does not support carrier-specific route validations."
 </Callout>
 
 # Pre-validation
