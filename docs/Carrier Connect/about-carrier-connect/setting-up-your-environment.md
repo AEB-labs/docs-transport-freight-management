@@ -33,8 +33,7 @@ The login data must be base 64–encoded. The password is written out, so this i
 
 The string "API_TEST@APITEST:API_TEST2024", when encoded in base 64, yields “QVBJX1RFU1RAQVBJVEVTVDpBUElfVEVTVDIwMjQ=".
 
-The following line would therefore be added to the HTTP header:
-Authorization: Basic QVBJX1RFU1RAQVBJVEVTVDpBUElfVEVTVDIwMjQ
+The following line would therefore be added to the HTTP header: Authorization: Basic QVBJX1RFU1RAQVBJVEVTVDpBUElfVEVTVDIwMjQ
 
 ## IP of the AEB data center
 
@@ -48,7 +47,7 @@ HTTPS URLs use port **443** by default.
 
 You can find the API endpoints under <Anchor label="API Reference" target="_blank" href="https://transport-freight-management.docs.developers.aeb.com/reference/addshipmentattachments">API Reference</Anchor> as shown in the screenshot below.
 
-<Image border={false} src="https://files.readme.io/0d25b222e8efc0e63dd67aa5780bb99393eb9f21c08226c1366d9c7a45a68e3d-image.png" />
+![](https://files.readme.io/0d25b222e8efc0e63dd67aa5780bb99393eb9f21c08226c1366d9c7a45a68e3d-image.png)
 
 <br />
 
@@ -68,8 +67,7 @@ You have to replace `demo1cai` with the system you want to connect (e.g. test2ca
 
 ## SOAP
 
-[https://rz3.aeb.de/test2cai/servlet/bf/DLCarrierBF?WSDL](https://rz3.aeb.de/test2cai/servlet/bf/DLCarrierBF?WSDL)
-[https://rz3.aeb.de/test2cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html](https://rz3.aeb.de/test2cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html)
+[https://rz3.aeb.de/test2cai/servlet/bf/DLCarrierBF?WSDL](https://rz3.aeb.de/test2cai/servlet/bf/DLCarrierBF?WSDL) [https://rz3.aeb.de/test2cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html](https://rz3.aeb.de/test2cai/servlet/bf/doc/DLCarrierBF/de/aeb/xnsg/dl/bf/IDLCarrierBF.html)
 
 <br />
 
@@ -81,6 +79,10 @@ You have to replace `demo1cai` with the system you want to connect (e.g. test2ca
 
 Before you can start using the Carrier Connect API, you need a user and a password. AEB will provide them to you.
 
+<Callout icon="❗️" theme="error">
+  The client "APITEST" is intended for basic connectivity testing and is used by different users. Don't use it with sensitive data.
+</Callout>
+
 **If you do not have your own client yet, you can use the following credentials to test the API:**
 
 | Parameter              | Value        |
@@ -89,7 +91,3 @@ Before you can start using the Carrier Connect API, you need a user and a passwo
 | Client                 | APITEST      |
 | User                   | API_TEST     |
 | Password               | API_TEST2024 |
-
-<Callout icon="❗️" theme="error">
-  The client "APITEST" is intended for basic connectivity testing and is used by different users. Don't use it with sensitive data.
-</Callout>
