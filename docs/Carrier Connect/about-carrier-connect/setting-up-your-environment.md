@@ -80,7 +80,7 @@ You have to replace `demo1cai` with the system you want to connect (e.g. test2ca
 Before you can start using the Carrier Connect API, you need a user and a password. AEB will provide them to you.
 
 <Callout icon="❗️" theme="error">
-  The client "APITEST" is intended for basic connectivity testing and is used by different users. Don't use it with sensitive data.
+  The client "APITEST" is intended for **basic connectivity testing** and is used by different users. **This is not intended to use for API integration tests**. Don't use it with sensitive data.
 </Callout>
 
 **If you do not have your own client yet, you can use the following credentials to test the API:**
