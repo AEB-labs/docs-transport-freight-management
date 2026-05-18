@@ -2967,6 +2967,10 @@
             "type": "string",
             "description": "<p>Status of the item after save and optional operations</p> <p>length=10</p>"
           },
+          "contractNumber": {
+            "type": "string",
+            "description": "Number of the contract that will be used to calculate the service item. If this field is filled a valid contract was found for the service item. The price calculation might still fail because of other errors."
+          },
           "clientPrice": {
             "$ref": "#/components/schemas/BAmountOfMoneyDTO",
             "description": "The price of the service item in client currency. The sum of the prices in client currency of the settlement items."
@@ -4136,7 +4140,7 @@
           },
           "entries": {
             "type": "array",
-            "description": "Entries to be updated. Entries are uniquely identified by BRateSheetEntryUpdateDTO#id. This field can be omitted; in this case neither update nor delete will be possible for the entry. If the ID is filled and a corresponding entry already exists it will be either replaced with the passed content or deleted if BRateSheetEntryUpdateDTO#delete is set. Otherwise a new entry will be created (or the entry will be ignored if BRateSheetEntryUpdateDTO#delete is set). Creation will fail if an entry with identical key values already exists. In this case an error will be returned and no entries will be updated. The number of entries is limited to 10,000 items. Use sequential calls together with #updateDependentEntities to update more entries.",
+            "description": "Entries to be updated. Entries are uniquely identified by BRateSheetEntryUpdateDTO#id. This field can be omitted; in this case neither update nor delete will be possible for the entry. If the ID is filled and a corresponding entry already exists it will be either replaced with the passed content or deleted if BRateSheetEntryUpdateDTO#delete is set. Otherwise a new entry will be created (or the entry will be ignored if BRateSheetEntryUpdateDTO#delete is set). Creation will fail if an entry with identical key values already exists. In this case an error will be returned and no entries will be updated. The number of entries is limited to 10,000 items.",
             "items": {
               "$ref": "#/components/schemas/BRateSheetEntryUpdateDTO"
             }
