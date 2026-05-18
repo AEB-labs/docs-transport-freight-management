@@ -669,6 +669,52 @@
         ]
       }
     },
+    "/DLCarrierBFBean/processPackageReturnEnclosedLabel": {
+      "post": {
+        "tags": [
+          "Shipping"
+        ],
+        "summary": "processPackageReturnEnclosedLabel",
+        "description": "Returns a return enclosed label in case of a return shipment.",
+        "operationId": "processPackageReturnEnclosedLabel",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DLProcessPackageReturnEnclosedLabelRequestDTO"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/DLProcessPackageReturnEnclosedLabelRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DLProcessPackageReturnEnclosedLabelResponseDTO"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/DLProcessPackageReturnEnclosedLabelResponseDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BASIC_AUTH": []
+          }
+        ]
+      }
+    },
     "/DLCarrierBFBean/processPickup": {
       "post": {
         "tags": [
@@ -1202,7 +1248,8 @@
               "INVOICE_NUMBER",
               "PICKUP_INSTRUCTION",
               "PURCHASE_ORDER_NUMBER_SHIP",
-              "RECEIVER_EORI_NUMBER"
+              "RECEIVER_EORI_NUMBER",
+              "REFERENCENUMBER1"
             ]
           },
           "maxTextLength": {
@@ -1460,6 +1507,7 @@
               "PALLET_EXCHANGE",
               "REQ_DELDATE",
               "RETURN_ENCL",
+              "RETURN_ENCL_ADV",
               "RETURN_DEMAND",
               "SAT_DEL",
               "UPL_DOCS"
@@ -2820,7 +2868,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p> The type of the reference number or text. Valid values are: <li>DELNOTE_NUMBER - Delivery note number. <li>INVOICE_NUMBER - Invoice number. <li>PO_NUMBER - Purchase order number. <li>TRANSORDER_NUMBER - Transport order number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>PICKUP_INSTRUCTION - Pickup instruction/notice. <li>DELIVERY_INSTRUCTION - Delivery instruction/notice. <li>GENERAL_INSTRUCTION - General instruction/notice. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number.<li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER - Shipper Employee Identification Number. <li>ENDCUSTOMER_REFERENCE - End-customer reference. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent DUTY DEFERMENT number. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver DUTY DEFERMENT number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer DUTY DEFERMENT number. <li>EKAER_NUMBER - EKAER number. <li>SENT_NUMBER - SENT number. <li>UIT_NUMBER - UIT number.  <li>RECEIVER_CPF_TAX_ID_NUMBER - Receiver CPF tax ID number for Brasil. <li>SHIPPER_CPF_TAX_ID_NUMBER - Shipper CPF tax ID number for Brasil. <li>RECEIVER_CNPJ_TAX_ID_NUMBER - Receiver CNPJ tax ID number for Brasil. <li>SHIPPER_CNPJ_TAX_ID_NUMBER - Shipper CNPJ tax ID number for Brasil. <li>IMPORTER_CNPJ_TAX_ID_NUMBER - Importer CNPJ tax ID number for Brasil. <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER - Customs agent CNPJ tax ID number for Brasil. </P> <p> length=15 </p>"
+            "description": "<p> The type of the reference number or text. Valid values are: <li>DELNOTE_NUMBER - Delivery note number. <li>INVOICE_NUMBER - Invoice number. <li>PO_NUMBER - Purchase order number. <li>TRANSORDER_NUMBER - Transport order number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>PICKUP_INSTRUCTION - Pickup instruction/notice. <li>DELIVERY_INSTRUCTION - Delivery instruction/notice. <li>GENERAL_INSTRUCTION - General instruction/notice. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number.<li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER - Shipper Employee Identification Number. <li>ENDCUSTOMER_REFERENCE - End-customer reference. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent DUTY DEFERMENT number. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver DUTY DEFERMENT number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer DUTY DEFERMENT number. <li>EKAER_NUMBER - EKAER number. <li>SENT_NUMBER - SENT number. <li>UIT_NUMBER - UIT number.  <li>RECEIVER_CPF_TAX_ID_NUMBER - Receiver CPF tax ID number for Brasil. <li>SHIPPER_CPF_TAX_ID_NUMBER - Shipper CPF tax ID number for Brasil. <li>RECEIVER_CNPJ_TAX_ID_NUMBER - Receiver CNPJ tax ID number for Brasil. <li>SHIPPER_CNPJ_TAX_ID_NUMBER - Shipper CNPJ tax ID number for Brasil. <li>IMPORTER_CNPJ_TAX_ID_NUMBER - Importer CNPJ tax ID number for Brasil. <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER - Customs agent CNPJ tax ID number for Brasil. <li>SUPPLIER_REFERENCE - Supplier reference used to identify the shipment or delivery. <li>SPOT_CODE - Reference number for a specific spot quote that is used when booking the shipment, required for billing. </P> <p> length=15 </p>"
           },
           "value": {
             "type": "string",
@@ -3047,7 +3095,7 @@
           },
           "shippingDate": {
             "type": "string",
-            "description": "Shipping date of the shipment in the format 'yyyy-MM-dd' or 'yyyyMMdd'. The shipping date is expected to be in timezone 'UTC'. <p> length=10 </p>"
+            "description": "Shipping date of the shipment in the format 'yyyy-MM-dd' or 'yyyyMMdd'. The shipping date is expected to be in the time zone of the shipping point. <p> length=10 </p>"
           },
           "contents": {
             "type": "string",
@@ -3135,23 +3183,23 @@
           },
           "fixedDate": {
             "type": "string",
-            "description": "Fixed delivery date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in timezone 'UTC'. <p> <b>Important:</b> Only the date portion is transmitted to the carrier interfaces. The time portion is ignored, so it does not matter which time is passed. </p> <p> length=19 </p>"
+            "description": "Fixed delivery date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in the time zone of the delivery point. <p> <b>Important:</b> Only the date portion is transmitted to the carrier interfaces. The time portion is ignored, so it does not matter which time is passed. </p> <p> length=19 </p>"
           },
           "earliestCollectionBookingDate": {
             "type": "string",
-            "description": "Earliest collection booking date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in timezone 'UTC'. <p> length=19 </p>"
+            "description": "Earliest collection booking date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in the time zone of the shipping point. <p> length=19 </p>"
           },
           "latestCollectionBookingDate": {
             "type": "string",
-            "description": "Latest collection booking date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in timezone 'UTC'. <p> length=19 </p>"
+            "description": "Latest collection booking date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in the time zone of the shipping point. <p> length=19 </p>"
           },
           "latestRequestedDeliveryDate": {
             "type": "string",
-            "description": "Latest requested delivery date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in timezone 'UTC'. <p> length=19 </p>"
+            "description": "Latest requested delivery date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in the time zone of the delivery point. <p> length=19 </p>"
           },
           "earliestRequestedDeliveryDate": {
             "type": "string",
-            "description": "Earliest requested delivery date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in timezone 'UTC'. <p> length=19 </p>"
+            "description": "Earliest requested delivery date of the shipment in the format 'yyyy-MM-dd HH:mm:ss' or 'yyyyMMddHHmm'. The date is expected to be in the time zone of the delivery point. <p> length=19 </p>"
           },
           "airline": {
             "type": "string",
@@ -4048,7 +4096,7 @@
           },
           "shippingDate": {
             "type": "string",
-            "description": "Shipping date in the format 'yyyy-MM-dd'. <p> length=10 </p>"
+            "description": "Shipping date in the format 'yyyy-MM-dd'. The shipping date is expected to be in the time zone of the shipping point. <p> length=10 </p>"
           },
           "shippingPt": {
             "$ref": "#/components/schemas/DLPartyDTO",
@@ -4230,6 +4278,10 @@
         "type": "object",
         "description": "Holds information from the account used for the shipment",
         "properties": {
+          "identCode": {
+            "type": "string",
+            "description": "Ident code of the account.  <p>length=50</p>"
+          },
           "customerNumberAtCarrier": {
             "type": "string",
             "description": "Account number of the shipper assigned from the carrier.  <p>length=25</p>"
@@ -6816,6 +6868,122 @@
           "name": "processPackageRequestDTO"
         }
       },
+      "DLProcessPackageReturnEnclosedLabelResponseDTO": {
+        "type": "object",
+        "description": "Response DTO for the processPackageReturnEnclosedLabel business facade method",
+        "properties": {
+          "hasErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>An error usually means that the request could not be performed.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": false
+          },
+          "hasOnlyRetryableErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
+          },
+          "hasWarnings": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
+          },
+          "messages": {
+            "type": "array",
+            "description": "<p>Error or warning messages at the request level.</p><p>There may be additional messages[] arrays at lower data levels as specified in the documentation.</p>",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessageDTO"
+            }
+          },
+          "documents": {
+            "type": "array",
+            "description": "The return labels for the package. Only filled when asked for in request (documentOutputMode).",
+            "items": {
+              "$ref": "#/components/schemas/DLDocumentDTO"
+            }
+          }
+        },
+        "xml": {
+          "name": "processPackageReturnEnclosedLabelDTO"
+        }
+      },
+      "DLPackageReturnEnclosedLabelProcessParmsDTO": {
+        "type": "object",
+        "description": "Process parameters for a package enclosed return label. Specifies which operations have to be performed on a package return enclosed label.",
+        "properties": {
+          "workstationId": {
+            "type": "string",
+            "description": "<p> The workstation used to detect the printer for which the labels should be prepared, printed or returned.<br> An error will be returned when the package documents (labels) are already prepared (invoked by a previous call) and are now be be printed with a different workstationId containing an incompatible printer. </p> <p> length=50 </p>"
+          },
+          "returnEnclosedLabelOutputMode": {
+            "$ref": "#/components/schemas/DLReturnEnclosedLabelOutputModeDTO",
+            "description": "Controls the output mode for the package's return enclosed labels."
+          }
+        },
+        "required": [
+          "returnEnclosedLabelOutputMode",
+          "workstationId"
+        ]
+      },
+      "DLProcessPackageReturnEnclosedLabelRequestDTO": {
+        "type": "object",
+        "description": "Request DTO for the processPackageReturnEnclosedLabel business facade method.",
+        "properties": {
+          "clientSystemId": {
+            "type": "string",
+            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
+            "example": "TEST_ID"
+          },
+          "clientIdentCode": {
+            "type": "string",
+            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
+            "example": "APITEST"
+          },
+          "userName": {
+            "type": "string",
+            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
+            "example": "API_TEST"
+          },
+          "resultLanguageIsoCodes": {
+            "type": "array",
+            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+            "example": [
+              "en",
+              "de"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "packageReference": {
+            "$ref": "#/components/schemas/DLPackageReferenceDTO",
+            "description": "<p> The package to be processed. </p>"
+          },
+          "processParms": {
+            "$ref": "#/components/schemas/DLPackageReturnEnclosedLabelProcessParmsDTO",
+            "description": "The operations to be performed on the referenced package."
+          }
+        },
+        "required": [
+          "packageReference",
+          "processParms"
+        ],
+        "xml": {
+          "name": "processPackageReturnEnclosedLabelDTO"
+        }
+      },
+      "DLReturnEnclosedLabelOutputModeDTO": {
+        "type": "object",
+        "description": "DTO specifying the output mode for return enclosed labels.",
+        "properties": {
+          "mode": {
+            "type": "string",
+            "description": "<p> The output mode for the return enclosed label. Valid values are: <li>RETURN The print data of the return enclosed label will be returned to the client system to be printed there. This is also the default when mode is left empty. <li>NONE No lables will be returned or printed. </P> <br><br> Return enclosed label documents will be created if not already existent<br> <p> length=15 </p>"
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
       "DLProcessPickupResponseDTO": {
         "type": "object",
         "description": "Response DTO for the printDocumentsForPickup business facade method",
@@ -8560,16 +8728,11 @@
           "dataSource": {
             "$ref": "#/components/schemas/DataSource"
           },
-          "name": {
-            "type": "string"
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap",
+            "writeOnly": true
           },
-          "inputStream": {},
-          "content": {},
-          "contentType": {
-            "type": "string"
-          },
-          "outputStream": {},
-          "preferredCommands": {
+          "allCommands": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
@@ -8581,16 +8744,21 @@
               "$ref": "#/components/schemas/ActivationDataFlavor"
             }
           },
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap",
-            "writeOnly": true
-          },
-          "allCommands": {
+          "preferredCommands": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
             }
-          }
+          },
+          "name": {
+            "type": "string"
+          },
+          "inputStream": {},
+          "content": {},
+          "contentType": {
+            "type": "string"
+          },
+          "outputStream": {}
         }
       },
       "DataSource": {
@@ -9081,6 +9249,11 @@
           "name": {
             "type": "string",
             "description": "text to be shown for the link"
+          },
+          "position": {
+            "type": "integer",
+            "format": "int32",
+            "description": "position of the link"
           }
         }
       },
@@ -9483,6 +9656,73 @@
             "type": "integer",
             "format": "int64",
             "description": "file attribute lastAccessTime as FileTime millis"
+          }
+        }
+      },
+      "RoleDTO": {
+        "type": "object",
+        "description": "data about a role",
+        "properties": {
+          "identCode": {
+            "type": "string",
+            "description": "the role ident code - this value is unique in the system"
+          },
+          "localizedTexts": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/RoleTextDTO"
+            },
+            "description": "localized data of the role - key is language, value is RoleTextDTO with 'name' and 'description'"
+          },
+          "impliedRoles": {
+            "type": "array",
+            "description": "the implied roles - a user having this role also has all the roles that appear in this list",
+            "items": {
+              "type": "string"
+            }
+          },
+          "apiPredefined": {
+            "type": "boolean",
+            "description": "true if role is predefined by code, and not manually created by an administrator"
+          },
+          "systemRole": {
+            "type": "boolean",
+            "description": "true if this is a role which is referenced in code and implies various effects"
+          },
+          "clientDefined": {
+            "type": "boolean",
+            "description": "true if this role is defined specifically for the current client"
+          }
+        }
+      },
+      "RoleTextDTO": {
+        "type": "object",
+        "description": "language dependent values of a role",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "the name of the role, a short word describing the role"
+          },
+          "description": {
+            "type": "string",
+            "description": "a longer description that explains what this role is for"
+          }
+        }
+      },
+      "RolesOfClientDTO": {
+        "type": "object",
+        "description": "Response DTO for listing roles assignable to users of a client.",
+        "properties": {
+          "clientIdentCode": {
+            "type": "string",
+            "description": "the ident code of the client for which the roles are returned"
+          },
+          "roles": {
+            "type": "array",
+            "description": "list of roles which are defined for the specified client",
+            "items": {
+              "$ref": "#/components/schemas/RoleDTO"
+            }
           }
         }
       },
