@@ -2,7 +2,6 @@
 api:
   file: logistics-cost-management-http-api.json
   operationId: searchScenarios
-deprecated: false
 hidden: false
 metadata:
   title: ''
