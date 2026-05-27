@@ -2,7 +2,6 @@
 api:
   file: carrier-select-http-api.json
   operationId: getRoutingTaskResult
-deprecated: false
 hidden: false
 metadata:
   title: ''
