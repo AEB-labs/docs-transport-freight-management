@@ -2,7 +2,6 @@
 api:
   file: carrier-connect-http-api.json
   operationId: syncPickups
-deprecated: false
 hidden: false
 metadata:
   title: ''
