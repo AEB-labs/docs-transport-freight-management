@@ -1,4 +1,3 @@
-- processpackagereturnenclosedlabel
 - addshipmentattachments
 - cancelshipment
 - createpickup
@@ -13,6 +12,7 @@
 - getpickups
 - getshipments
 - processpackage
+- processpackagereturnenclosedlabel
 - processpickup
 - processshipment
 - syncpickups
