@@ -2769,7 +2769,7 @@
           },
           "name": {
             "type": "string",
-            "maxLength": 50,
+            "maxLength": 250,
             "minLength": 0
           }
         },
@@ -2825,7 +2825,7 @@
           },
           "name": {
             "type": "string",
-            "maxLength": 50,
+            "maxLength": 250,
             "minLength": 0
           }
         },
