@@ -8737,16 +8737,6 @@
             "type": "string"
           },
           "outputStream": {},
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap",
-            "writeOnly": true
-          },
-          "allCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
-          },
           "transferDataFlavors": {
             "type": "array",
             "items": {
@@ -8758,6 +8748,16 @@
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
             }
+          },
+          "allCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
+            }
+          },
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap",
+            "writeOnly": true
           }
         }
       },
