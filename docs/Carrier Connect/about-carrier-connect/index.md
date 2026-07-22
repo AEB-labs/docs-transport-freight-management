@@ -17,7 +17,7 @@ Our flexible API covers simple and complex shipping scenarios, giving you the ab
 <Callout icon="🔎" theme="default">
   ### Overview available carrier
 
-  For available carriers please refer to our <a href="https://carrier-documentation.app.aeb.com/ui/carrier-documentation/home" target="_blank">System description "Functional scope of offered carriers</a>.
+  For available carriers please refer to our <a href="https://carrier-documentation.app.aeb.com/ui/carrier-documentation/home" target="_blank">System Description Multi-Carrier-Management</a>.
 </Callout>
 
 <br />
