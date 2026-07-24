@@ -139,11 +139,11 @@ createPickup       → assign shipments to a pickup and manifest to the carrier
 
 ## Where to go next
 
-- **Setting up your environment** — credentials, tokens, installations.
-- **The First Shipment** — a complete, copy-paste `createShipment` call.
-- **Creation Parameters** and **Process Parameters** — the `creationParms` / `processParms` options in full.
-- **Error Handling** — the complete message model and codes.
-- **Sync and Get calls** — retrieving results, labels, and changes.
-- **OpenAPI spec** (`/rest/openapi.json`) — the authoritative schema for every field.
+- [Setting up your environment](doc:setting-up-your-environment) — credentials, tokens, installations.
+- [The First Shipment](doc:the-first-shipment-v2) — a complete, copy-paste `createShipment` call.
+- [Creation Parameters](doc:creation-parameters-v2) and [Process Parameters](doc:process-parameters) — the `creationParms` / `processParms` options in full.
+- [Error Handling](doc:error-handling-v2) — the complete message model and codes.
+- [Sync and Get calls](doc:sync) — retrieving results, labels, and changes.
+- <Anchor target="_blank" href="https://rz3.aeb.de/prod1cai/rest/openapi.json">**OpenAPI spec**</Anchor> (`/rest/openapi.json`) — the authoritative schema for every field.
 
 <br />
