@@ -16,15 +16,15 @@ This page is the one-page orientation. Read it before your first call — it cov
 ## Base URL and endpoints
 
 ```
-https://{host}/{installation}/rest/DLCarrierBFBean/{operation}
+https://rz3.aeb.de/{installation}/rest/DLCarrierBFBean/{operation}
 ```
 
-For example: `https://{host}/{installation}/rest/DLCarrierBFBean/createShipment`.
+For example: `https://rz3.aeb.de/prod1cai/rest/DLCarrierBFBean/createShipment`.
 
 `{installation}` identifies your environment (e.g. a test vs. production installation). The full machine-readable contract for every operation is the **OpenAPI 3.1 spec** at:
 
 ```
-https://{host}/{installation}/rest/openapi.json
+https://rz3.aeb.de/prod1cai/rest/openapi.json
 ```
 
 That spec covers the whole Transport & Freight Management platform; Carrier Connect operations are tagged `Shipping` and live under the `DLCarrierBFBean` bean.
