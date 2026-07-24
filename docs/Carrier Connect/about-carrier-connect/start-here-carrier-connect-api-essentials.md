@@ -11,7 +11,7 @@ metadata:
 ---
 Carrier Connect is AEB's multi-carrier shipping system. You use it to **create, validate, update, and cancel shipments and pickups**, generate **carrier labels and customs documents**, and handle **returns and hazardous goods**. Operations are RPC-style calls exposed over REST as JSON or XML.
 
-This page is the one-page orientation. Read it before your first call — it covers the four things that aren't obvious from the individual endpoint pages: **how errors are returned, how asynchronous processing works, why `createShipment` isn't idempotent, and the order to call things in.**
+This page is the one-page orientation. Read it before your first call — it covers the four things that aren't obvious from the individual endpoint pages: **how errors are returned, how asynchronous processing works, why&#x20;**`createShipment`**&#x20;isn't idempotent, and the order to call things in.**
 
 ## Base URL and endpoints
 
@@ -57,14 +57,14 @@ Every `createShipment` call has three **required** top-level objects plus option
 | `shipment`      | The shipment data itself (see below).                                                                                |
 | `processParms`  | _What happens after_ creation — label preparation, label output, completion, pickup assignment.                      |
 
-At minimum, `shipment` requires: `transactionId`, `referenceNumber1`, `shippingDate`, `contents`, `shippingPt` (sender address), `consignee` (recipient address), `carrierIdentCode`, `serviceCode`, and `termsOfDeliveryCode`. The full object is large and deeply nested — **use the OpenAPI spec as the source of truth** and the **The First Shipment** guide for a complete copy-paste example. Don't hand-build it from memory.
+At minimum, `shipment` requires: `transactionId`, `referenceNumber1`, `shippingDate`, `contents`, `shippingPt` (sender address), `consignee` (recipient address), `carrierIdentCode`, `serviceCode`, and `termsOfDeliveryCode`. The full object is large and deeply nested — **use the OpenAPI spec as the source of truth** and the [The First Shipment](doc:the-first-shipment-v2) guide for a complete copy-paste example. Don't hand-build it from memory.
 
 ## Synchronous vs. asynchronous — this determines what you get back
 
 `processParms.processMode` controls the single most important behaviour:
 
-- **`BASIC` (light path):** Label preparation runs **asynchronously** in a background job. The response **only confirms the shipment was written to the database** — the labels and any label-preparation errors are **not in the response**. You retrieve them afterwards with `syncShipments` or `getShipments`.
-- **`EXTENDED` (synchronous):** The response does not return until label preparation is finished, so labels and preparation errors come back in-band. It uses more resources and reduces load-balancing benefit — use it only when you need an immediate, complete response.
+- `BASIC`**&#x20;(light path):** Label preparation runs **asynchronously** in a background job. The response **only confirms the shipment was written to the database** — the labels and any label-preparation errors are **not in the response**. You retrieve them afterwards with `syncShipments` or `getShipments`.
+- `EXTENDED`**&#x20;(synchronous):** The response does not return until label preparation is finished, so labels and preparation errors come back in-band. It uses more resources and reduces load-balancing benefit — use it only when you need an immediate, complete response.
 
 <Callout icon="🚧" theme="warning">
   ### In `BASIC` mode, a successful `createShipment` response does **not** mean the label succeeded. Always poll `syncShipments`/`getShipments` to confirm the operation result.
@@ -72,7 +72,7 @@ At minimum, `shipment` requires: `transactionId`, `referenceNumber1`, `shippingD
 
 ## How to read every response
 
-Operations return **HTTP `200`** even for business errors. **Do not rely on the HTTP status code.** Instead, always inspect the body:
+Operations return **HTTP&#x20;**`200` even for business errors. **Do not rely on the HTTP status code.** Instead, always inspect the body:
 
 - `hasErrors` — `true` means the request could generally not be performed.
 - `hasWarnings` — `true` means non-fatal issues.
