@@ -31,21 +31,19 @@ That spec covers the whole Transport & Freight Management platform; Carrier Conn
 
 ## Authentication
 
-Authenticate in the request `Authorization`**&#x20;header** — credentials never go in the request body. Per the OpenAPI spec, all Carrier Connect (`DLCarrierBFBean`) operations accept **HTTP Basic**:
+Authenticate in the request `Authorization`**&#x20;header** — credentials never go in the request body. Carrier Connect (`DLCarrierBFBean`) operations accept **either** scheme:
 
-```
-Authorization: Basic base64(user:password)
-```
+- **HTTP Basic** — `Authorization: Basic base64(user:password)`
+- **Bearer token** — call `GET /logon/authToken` once with Basic credentials (or `POST /logon/user` with `userName` / `password` / `clientName`), then send the returned token as `Authorization: Bearer <token>` on subsequent calls.
 
-A token flow also exists: call `GET /logon/authToken` with Basic credentials (or `POST /logon/user` with user/client/password) to obtain a token, then send it as `Authorization: Bearer <token>` on subsequent calls.
+Always send `Accept: application/json` too, so error responses come back as JSON rather than an HTML error page.
+
+The globally-declared `X-XNSG_WEB_TOKEN` header is the browser/web **session token**, not an API integration path — it is rejected on these operations.
 
 See **Setting up your environment** for obtaining credentials and tokens for your installation.
 
-{/* TODO (author): The spec is internally inconsistent about auth and must be confirmed before publishing.
-     - Shipment operations formally declare BASIC_AUTH only.
-     - The /logon endpoints describe a Bearer token for reuse, but NO bearer scheme is declared in securitySchemes.
-     - A separate X-XNSG_WEB_TOKEN apiKey header scheme exists globally but is NOT offered on DLCarrierBFBean ops (likely the web/Swagger session token).
-     Verify empirically (curl Basic vs Bearer vs X-XNSG_WEB_TOKEN against a read op) and with the API owner, then keep only the supported path here and delete this note. */}
+{/* Author note: auth verified live on test1cai — Basic OK, Bearer OK (token from GET /logon/authToken), X-XNSG_WEB_TOKEN rejected ("Authentication required").
+     Doc-defect to fix at source: the OpenAPI spec under-declares — DLCarrierBFBean ops list BASIC_AUTH only and no bearer scheme is declared, yet Bearer works at the gateway. Add a bearer securityScheme and list it on these ops so the spec matches reality. */}
 
 <Callout icon="📘" theme="info">
   ### The `userName` field in the request body is **not** authentication. It selects which roles the request runs under: if the user exists in user management or the connected LDAP, the request runs with that user's roles; if not, it falls back to the basic `I_EVERYONE` role. Actual authentication is always the header above.
