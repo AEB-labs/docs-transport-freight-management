@@ -11,11 +11,11 @@ metadata:
 ---
 Carrier Connect is AEB's multi-carrier shipping system. You use it to **create, validate, update, and cancel shipments and pickups**, generate **carrier labels and customs documents**, and handle **returns and hazardous goods**. Operations are RPC-style calls exposed over REST as JSON or XML.
 
-This page is the one-page orientation. Read it before your first call — it covers the four things that aren't obvious from the individual endpoint pages: **how errors are returned, how asynchronous processing works, why&#x20;**`createShipment`**&#x20;isn't idempotent, and the order to call things in.**
+This page is the one-page orientation. Read it before your first call — it covers the four things that aren't obvious from the individual endpoint pages: **how errors are returned, how asynchronous processing works, why `createShipment` isn't idempotent, and the order to call things in.**
 
 ## Base URL and endpoints
 
-```
+```text
 https://rz3.aeb.de/{installation}/rest/DLCarrierBFBean/{operation}
 ```
 
@@ -23,7 +23,7 @@ For example: `https://rz3.aeb.de/prod1cai/rest/DLCarrierBFBean/createShipment`.
 
 `{installation}` identifies your environment (e.g. a test vs. production installation). The full machine-readable contract for every operation is the **OpenAPI 3.1 spec** at:
 
-```
+```text
 https://rz3.aeb.de/prod1cai/rest/openapi.json
 ```
 
@@ -63,16 +63,16 @@ At minimum, `shipment` requires: `transactionId`, `referenceNumber1`, `shippingD
 
 `processParms.processMode` controls the single most important behaviour:
 
-- `BASIC`**&#x20;(light path):** label preparation runs **asynchronously** in a background job. The response **only confirms the shipment was written to the database** — the labels and any label-preparation errors are **not in the response**. You retrieve them afterwards with `syncShipments` or `getShipments`.
-- `EXTENDED`**&#x20;(synchronous):** the response does not return until label preparation is finished, so labels and preparation errors come back in-band. It uses more resources and reduces load-balancing benefit — use it only when you need an immediate, complete response.
+- **`BASIC` (light path):** Label preparation runs **asynchronously** in a background job. The response **only confirms the shipment was written to the database** — the labels and any label-preparation errors are **not in the response**. You retrieve them afterwards with `syncShipments` or `getShipments`.
+- **`EXTENDED` (synchronous):** The response does not return until label preparation is finished, so labels and preparation errors come back in-band. It uses more resources and reduces load-balancing benefit — use it only when you need an immediate, complete response.
 
-<Callout icon="🚧" theme="warn">
+<Callout icon="🚧" theme="warning">
   ### In `BASIC` mode, a successful `createShipment` response does **not** mean the label succeeded. Always poll `syncShipments`/`getShipments` to confirm the operation result.
 </Callout>
 
 ## How to read every response
 
-Operations return **HTTP&#x20;**`200` even for business errors. **Do not rely on the HTTP status code.** Instead, always inspect the body:
+Operations return **HTTP `200`** even for business errors. **Do not rely on the HTTP status code.** Instead, always inspect the body:
 
 - `hasErrors` — `true` means the request could generally not be performed.
 - `hasWarnings` — `true` means non-fatal issues.
@@ -99,7 +99,7 @@ Operations return **HTTP&#x20;**`200` even for business errors. **Do not rely on
 
 Branch on `messageIdentCode` (stable, language-independent), not on the message text.
 
-<Callout icon="🚧" theme="warn">
+<Callout icon="🚧" theme="warning">
   ### One special case: with `processParms.doCompletion = true` **and** `creationParms.creationMode = VALIDATION_OK`, a response of `hasErrors = false` **and** `hasWarnings = true` means **no shipment was created**. In this combination you must treat warnings as errors.
 </Callout>
 
@@ -115,7 +115,7 @@ Because of this, a naive retry after a timeout (common with `EXTENDED` mode or n
 
 ## The typical workflow
 
-```
+```text
 validateShipment   (optional) → check the shipment can be processed
       │
 createShipment     → create; processParms drives label prep/output/completion
