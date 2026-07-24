@@ -31,12 +31,21 @@ That spec covers the whole Transport & Freight Management platform; Carrier Conn
 
 ## Authentication
 
-Two schemes are supported, both sent in the request **headers** — credentials never go in the request body:
+Authenticate in the request `Authorization`**&#x20;header** — credentials never go in the request body. Per the OpenAPI spec, all Carrier Connect (`DLCarrierBFBean`) operations accept **HTTP Basic**:
 
-- **HTTP Basic** auth, or
-- a session token in the `X-XNSG_WEB_TOKEN` header (obtained via the logon endpoint).
+```
+Authorization: Basic base64(user:password)
+```
+
+A token flow also exists: call `GET /logon/authToken` with Basic credentials (or `POST /logon/user` with user/client/password) to obtain a token, then send it as `Authorization: Bearer <token>` on subsequent calls.
 
 See **Setting up your environment** for obtaining credentials and tokens for your installation.
+
+{/* TODO (author): The spec is internally inconsistent about auth and must be confirmed before publishing.
+     - Shipment operations formally declare BASIC_AUTH only.
+     - The /logon endpoints describe a Bearer token for reuse, but NO bearer scheme is declared in securitySchemes.
+     - A separate X-XNSG_WEB_TOKEN apiKey header scheme exists globally but is NOT offered on DLCarrierBFBean ops (likely the web/Swagger session token).
+     Verify empirically (curl Basic vs Bearer vs X-XNSG_WEB_TOKEN against a read op) and with the API owner, then keep only the supported path here and delete this note. */}
 
 <Callout icon="📘" theme="info">
   ### The `userName` field in the request body is **not** authentication. It selects which roles the request runs under: if the user exists in user management or the connected LDAP, the request runs with that user's roles; if not, it falls back to the basic `I_EVERYONE` role. Actual authentication is always the header above.
