@@ -40,7 +40,7 @@ Always send `Accept: application/json` too, so error responses come back as JSON
 
 The globally-declared `X-XNSG_WEB_TOKEN` header is the browser/web **session token**, not an API integration path — it is rejected on these operations.
 
-See **Setting up your environment** for obtaining credentials and tokens for your installation.
+See [Setting up your environment](doc:setting-up-your-environment) for obtaining credentials and tokens for your installation.
 
 {/* Author note: auth verified live on test1cai — Basic OK, Bearer OK (token from GET /logon/authToken), X-XNSG_WEB_TOKEN rejected ("Authentication required").
      Doc-defect to fix at source: the OpenAPI spec under-declares — DLCarrierBFBean ops list BASIC_AUTH only and no bearer scheme is declared, yet Bearer works at the gateway. Add a bearer securityScheme and list it on these ops so the spec matches reality. */}
