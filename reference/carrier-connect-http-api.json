@@ -2868,7 +2868,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p> The type of the reference number or text. Valid values are: <li>DELNOTE_NUMBER - Delivery note number. <li>INVOICE_NUMBER - Invoice number. <li>PO_NUMBER - Purchase order number. <li>TRANSORDER_NUMBER - Transport order number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>PICKUP_INSTRUCTION - Pickup instruction/notice. <li>DELIVERY_INSTRUCTION - Delivery instruction/notice. <li>GENERAL_INSTRUCTION - General instruction/notice. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number.<li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER - Shipper Employee Identification Number. <li>ENDCUSTOMER_REFERENCE - End-customer reference. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent DUTY DEFERMENT number. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver DUTY DEFERMENT number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer DUTY DEFERMENT number. <li>EKAER_NUMBER - EKAER number. <li>SENT_NUMBER - SENT number. <li>UIT_NUMBER - UIT number.  <li>RECEIVER_CPF_TAX_ID_NUMBER - Receiver CPF tax ID number for Brasil. <li>SHIPPER_CPF_TAX_ID_NUMBER - Shipper CPF tax ID number for Brasil. <li>RECEIVER_CNPJ_TAX_ID_NUMBER - Receiver CNPJ tax ID number for Brasil. <li>SHIPPER_CNPJ_TAX_ID_NUMBER - Shipper CNPJ tax ID number for Brasil. <li>IMPORTER_CNPJ_TAX_ID_NUMBER - Importer CNPJ tax ID number for Brasil. <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER - Customs agent CNPJ tax ID number for Brasil. <li>SUPPLIER_REFERENCE - Supplier reference used to identify the shipment or delivery. <li>SPOT_CODE - Reference number for a specific spot quote that is used when booking the shipment, required for billing. </P> <p> length=15 </p>"
+            "description": "<p> The type of the reference number or text. Valid values are: <li>DELNOTE_NUMBER - Delivery note number. <li>INVOICE_NUMBER - Invoice number. <li>PO_NUMBER - Purchase order number. <li>TRANSORDER_NUMBER - Transport order number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>PICKUP_INSTRUCTION - Pickup instruction/notice. <li>DELIVERY_INSTRUCTION - Delivery instruction/notice. <li>GENERAL_INSTRUCTION - General instruction/notice. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number.<li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER - Shipper Employee Identification Number. <li>ENDCUSTOMER_REFERENCE - End-customer reference. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent DUTY DEFERMENT number. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver DUTY DEFERMENT number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer DUTY DEFERMENT number. <li>EKAER_NUMBER - EKAER number. <li>SENT_NUMBER - SENT number. <li>UIT_NUMBER - UIT number.  <li>RECEIVER_CPF_TAX_ID_NUMBER - Receiver CPF tax ID number for Brasil. <li>SHIPPER_CPF_TAX_ID_NUMBER - Shipper CPF tax ID number for Brasil. <li>RECEIVER_CNPJ_TAX_ID_NUMBER - Receiver CNPJ tax ID number for Brasil. <li>SHIPPER_CNPJ_TAX_ID_NUMBER - Shipper CNPJ tax ID number for Brasil. <li>IMPORTER_CNPJ_TAX_ID_NUMBER - Importer CNPJ tax ID number for Brasil. <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER - Customs agent CNPJ tax ID number for Brasil. <li>SUPPLIER_REFERENCE - Supplier reference used to identify the shipment or delivery. <li>SPOT_CODE - Reference number for a specific spot quote that is used when booking the shipment, required for billing. <li>ACID_NUMBER - Advance Cargo Information Approval Number used to identify a pre-arrival cargo information filing within customs or governmental clearance processes. <li>ADDRESS_REFERENCE_CODE - Unique address reference code used to identify a delivery or pickup address. May be assigned by national postal or address management systems.</P> <p> length=15 </p>"
           },
           "value": {
             "type": "string",
@@ -2921,6 +2921,20 @@
         "required": [
           "shipmentReference"
         ]
+      },
+      "DLShipmentItemReferenceTextDTO": {
+        "type": "object",
+        "description": "DTO for reference texts of shipment items.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "<p>\nThe type of the reference number or text. Valid values are:\n<li>MERCHANT_PRODUCT_ID - Merchant product identifier.</li>\n<li>MFR_PRODUCT_ID_NONSTD - Non-standardised manufacturer product identifier.</li>\n<li>MFR_PRODUCT_ID_STD - Standardised manufacturer product identifier.</li>\n</p>\n<p>length=30</p>\n"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the reference number or text. <p> length=500 </p>"
+          }
+        }
       },
       "DLShipmentItemRequestDataDTO": {
         "type": "object",
@@ -2986,6 +3000,13 @@
           "despatchProcedureIdentCode": {
             "type": "string",
             "description": "<p> The despatch procedure. Possible values are: <ul> <li>NONE</li> <li>T1</li> <li>T2</li> </ul> </p> <p> length=10 </p>"
+          },
+          "referencesTexts": {
+            "type": "array",
+            "description": "Further references texts for the item. Multiple references texts with same type are allowed.",
+            "items": {
+              "$ref": "#/components/schemas/DLShipmentItemReferenceTextDTO"
+            }
           },
           "additionalValues": {
             "$ref": "#/components/schemas/GenericDataRecordDTO",
@@ -6084,6 +6105,13 @@
               "$ref": "#/components/schemas/TextInLanguageDTO"
             }
           },
+          "referencesTexts": {
+            "type": "array",
+            "description": "Further references texts of the item.",
+            "items": {
+              "$ref": "#/components/schemas/DLShipmentItemReferenceTextDTO"
+            }
+          },
           "additionalValues": {
             "$ref": "#/components/schemas/GenericDataRecordDTO",
             "description": "The additional values for the shipping item. For the semantics of the returned field names lookup customizing in GUI or use the <code>getCarrierProperties</code> business facade call."
@@ -6858,6 +6886,10 @@
             "items": {
               "$ref": "#/components/schemas/DLShipmentItemReferenceDTO"
             }
+          },
+          "updateData": {
+            "$ref": "#/components/schemas/DLProcessPackageUpdateRequestDataDTO",
+            "description": "Package update data. The field may be empty when the package should not be updated."
           }
         },
         "required": [
@@ -6867,6 +6899,23 @@
         "xml": {
           "name": "processPackageRequestDTO"
         }
+      },
+      "DLProcessPackageUpdateRequestDataDTO": {
+        "type": "object",
+        "description": "DTO for package fields which can be updated after the initial creation of the package",
+        "properties": {
+          "grossWeight": {
+            "$ref": "#/components/schemas/QuantityDTO",
+            "description": "Gross weight"
+          },
+          "dimensions": {
+            "$ref": "#/components/schemas/DLCuboidDimensionsDTO",
+            "description": "Dimensions"
+          }
+        },
+        "required": [
+          "grossWeight"
+        ]
       },
       "DLProcessPackageReturnEnclosedLabelResponseDTO": {
         "type": "object",
@@ -7590,7 +7639,21 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p> The type of the reference number or text. Valid values are: <li>INVOICE_NUMBER - Invoice number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number.<li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent duty deferment number. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver duty deferment number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer duty deferment number. <li>SENT_NUMBER - SENT number. <li>UIT_NUMBER - UIT number. <li>EKAER_NUMBER - EKAER number. </P> <p> length=15 </p>"
+            "description": "<p> The type of the reference number or text. Valid values are: <li>INVOICE_NUMBER - Invoice number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number.<li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent duty deferment number. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver duty deferment number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer duty deferment number. <li>SENT_NUMBER - SENT number. <li>UIT_NUMBER - UIT number. <li>EKAER_NUMBER - EKAER number. <li>ACID_NUMBER - Advance Cargo Information Approval Number used to identify a pre-arrival cargo information filing within customs or governmental clearance processes. </P> <p> length=15 </p>"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the reference number or text. <p> length=500 </p>"
+          }
+        }
+      },
+      "DLShipmentItemReferenceTextUCDDTO": {
+        "type": "object",
+        "description": "DTO for reference numbers and texts of a certain (predefined) type. This is the same DTO like DLShipmentItemReferenceTextDTO, but supports fewer types.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "<p>\nThe type of the reference number or text. Valid values are:\n<li>MERCHANT_PRODUCT_ID - Merchant product identifier.</li>\n<li>MFR_PRODUCT_ID_NONSTD - Non-standardised manufacturer product identifier.</li>\n<li>MFR_PRODUCT_ID_STD - Standardised manufacturer product identifier.</li>\n</p>\n<p>length=30</p>\n"
           },
           "value": {
             "type": "string",
@@ -7707,6 +7770,13 @@
           "goodsValue": {
             "$ref": "#/components/schemas/AmountOfMoneyDTO",
             "description": "Total goods value of all item articles."
+          },
+          "customsReferencesTexts": {
+            "type": "array",
+            "description": "Updates reference texts data.\nThe field may be empty when there's no need to update any references and texts.<br>\nThis update deletes all existing references with the types included in this request from the item\nand adds the references and texts from the request to the item.\n",
+            "items": {
+              "$ref": "#/components/schemas/DLShipmentItemReferenceTextUCDDTO"
+            }
           },
           "additionalValues": {
             "$ref": "#/components/schemas/GenericDataRecordDTO",
@@ -8737,10 +8807,14 @@
             "type": "string"
           },
           "outputStream": {},
-          "transferDataFlavors": {
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap",
+            "writeOnly": true
+          },
+          "allCommands": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ActivationDataFlavor"
+              "$ref": "#/components/schemas/CommandInfo"
             }
           },
           "preferredCommands": {
@@ -8749,15 +8823,11 @@
               "$ref": "#/components/schemas/CommandInfo"
             }
           },
-          "allCommands": {
+          "transferDataFlavors": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CommandInfo"
+              "$ref": "#/components/schemas/ActivationDataFlavor"
             }
-          },
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap",
-            "writeOnly": true
           }
         }
       },
