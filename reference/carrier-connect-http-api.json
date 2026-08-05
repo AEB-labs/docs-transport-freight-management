@@ -8807,16 +8807,6 @@
             "type": "string"
           },
           "outputStream": {},
-          "commandMap": {
-            "$ref": "#/components/schemas/CommandMap",
-            "writeOnly": true
-          },
-          "allCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
-          },
           "preferredCommands": {
             "type": "array",
             "items": {
@@ -8828,6 +8818,16 @@
             "items": {
               "$ref": "#/components/schemas/ActivationDataFlavor"
             }
+          },
+          "allCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
+            }
+          },
+          "commandMap": {
+            "$ref": "#/components/schemas/CommandMap",
+            "writeOnly": true
           }
         }
       },
