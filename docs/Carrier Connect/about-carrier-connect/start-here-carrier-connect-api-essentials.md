@@ -5,7 +5,7 @@ excerpt: >-
   the create-then-poll workflow you need before your first call — including the
   asynchronous and idempotency behaviour that most integrations get wrong.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
