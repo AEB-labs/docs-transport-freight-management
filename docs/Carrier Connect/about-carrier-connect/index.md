@@ -27,3 +27,16 @@ Our flexible API covers simple and complex shipping scenarios, giving you the ab
 <CCOHowToUseThisGuide />
 
 <br />
+
+# Where to start
+
+Work through _Getting Started_ in order — each page assumes the one before it.
+
+| # | Page                                                                              | What you get                                                              |
+| :- | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| 1 | [Basic features and processes](doc:learn-about-carrier-connect-and-processes)      | What Carrier Connect does, and the four steps of the shipping process      |
+| 2 | [Get to know the Object Model](doc:get-to-know-the-object-model)                   | Shipping order and pickup — the two objects the API works with            |
+| 3 | [Setting up your environment](doc:setting-up-your-environment)                     | Credentials, systems, endpoints, and your first authenticated call         |
+| 4 | [Carrier Connect API Essentials](doc:start-here-carrier-connect-api-essentials)    | The request envelope, the response model, async behaviour, the call order  |
+
+After that, continue with [The First Shipment](doc:the-first-shipment-v2) for a complete, copy-paste `createShipment` call.
