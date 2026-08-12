@@ -9,9 +9,18 @@ hidden: false
 metadata:
   robots: index
 ---
+<HTMLBlock>{`
+<style>
+  span.cm-s-neo {
+    background-color: #f2f2f2;
+    color: red;
+  }
+</style>
+`}</HTMLBlock>
+
 Carrier Connect is AEB's multi-carrier shipping system. You use it to **create, validate, update, and cancel shipments and pickups**, generate **carrier labels and customs documents**, and handle **returns and hazardous goods**. Operations are RPC-style calls exposed over REST as JSON or XML, and also over SOAP.
 
-This page is the one-page orientation. Read it before your first call — it covers the four things that aren't obvious from the individual endpoint pages: **how errors are returned, how asynchronous processing works, why `createShipment` isn't idempotent, and the order to call things in.**
+This page is the one-page orientation. Read it before your first call — it covers the four things that aren't obvious from the individual endpoint pages: **how errors are returned, how asynchronous processing works, why&#x20;**`createShipment`**&#x20;isn't idempotent, and the order to call things in.**
 
 <Callout icon="📘" theme="info">
   ### This page summarises; the linked pages are authoritative
@@ -68,22 +77,22 @@ Send `Content-Type: application/json` (or `application/xml`); set `Accept` to ma
 
 Every request carries the same four optional top-level fields alongside its payload:
 
-| Field                    | Purpose                                                                                                                                                                                          |
-| :----------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `clientSystemId`         | Id of the sending host or ERP system (max. 20). Formally optional, but several operations reject the request without it — set it.                                                                 |
-| `clientIdentCode`        | Client identification code (max. 10).                                                                                                                                                            |
-| `userName`               | User who initiated the request in your system — role selection and logging, not authentication.                                                                                                   |
+| Field                    | Purpose                                                                                                                                                                                                                        |
+| :----------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `clientSystemId`         | Id of the sending host or ERP system (max. 20). Formally optional, but several operations reject the request without it — set it.                                                                                              |
+| `clientIdentCode`        | Client identification code (max. 10).                                                                                                                                                                                          |
+| `userName`               | User who initiated the request in your system — role selection and logging, not authentication.                                                                                                                                |
 | `resultLanguageIsoCodes` | Ordered list of 2-letter ISO codes for the returned message texts. `en` and `de` are supported by default; translations fall back to the next language in the list. Leave it empty and Carrier Connect warns and uses English. |
 
 ## The shipment request envelope
 
 Every `createShipment` call has three **required** top-level objects:
 
-| Object          | Purpose                                                                                                                                  |
-| :-------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
-| `creationParms` | _Whether_ the shipment is created. Required member: `creationMode` = `VALIDATION_OK` (create only if validation passes) or `ALWAYS`.      |
-| `shipment`      | The shipment data itself.                                                                                                                |
-| `processParms`  | _What happens after_ creation — label preparation, label output, completion, pickup assignment.                                           |
+| Object          | Purpose                                                                                                                              |
+| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| `creationParms` | _Whether_ the shipment is created. Required member: `creationMode` = `VALIDATION_OK` (create only if validation passes) or `ALWAYS`. |
+| `shipment`      | The shipment data itself.                                                                                                            |
+| `processParms`  | _What happens after_ creation — label preparation, label output, completion, pickup assignment.                                      |
 
 `shipment` requires nine fields: `transactionId`, `referenceNumber1`, `shippingDate`, `contents`, `shippingPt` (sender address), `consignee` (recipient address), `carrierIdentCode`, `serviceCode`, `termsOfDeliveryCode`.
 
@@ -97,8 +106,8 @@ _Full reference: [Creation Parameters](doc:creation-parameters-v2), [Process Par
 
 `processParms.processMode.mode` — an object with a `mode` member, not a plain string — controls the single most important behaviour:
 
-- **`BASIC`** (light path): label preparation runs asynchronously in a background job. The response only confirms the shipment was written to the database — the labels and any label-preparation errors are **not** in the response. You retrieve them afterwards with `syncShipments` or `getShipments`.
-- **`EXTENDED`** (synchronous): the response does not return until label preparation is finished, so labels and preparation errors come back in-band. It uses more resources and reduces load-balancing benefit — use it only when you need an immediate, complete response.
+- `BASIC` (light path): label preparation runs asynchronously in a background job. The response only confirms the shipment was written to the database — the labels and any label-preparation errors are **not** in the response. You retrieve them afterwards with `syncShipments` or `getShipments`.
+- `EXTENDED` (synchronous): the response does not return until label preparation is finished, so labels and preparation errors come back in-band. It uses more resources and reduces load-balancing benefit — use it only when you need an immediate, complete response.
 
 These response fields are filled **only** in `EXTENDED` mode: `carrierShipmentNumber`, `carrierShipmentNumberReturn`, `accountInfo`, and parts of `packageResults[]`. `shipmentNumber` is filled in both.
 
@@ -149,14 +158,14 @@ Branch on `messageIdentCode` (stable, language-independent), not on the message 
 _Full reference: [Error Handling](doc:error-handling-v2) — the complete message model and codes._
 
 <Callout icon="🚧" theme="warn">
-  ### With creationMode = VALIDATION\_OK, a warning also prevents creation
+  ### With creationMode = VALIDATION_OK, a warning also prevents creation
 
   `hasErrors = false` and `hasWarnings = true` then means **no shipment was created**. In this creation mode you must treat warnings as errors. This applies regardless of `doCompletion` — setting `doCompletion = true` only makes warnings more likely, because it raises the status the shipment must reach.
 
   Two consequences that surprise people:
 
-  * In `EXTENDED` mode, label preparation runs before the creation decision is final, and a preparation problem can surface as a _warning_ rather than an error. Under `VALIDATION_OK` that warning is enough to discard the shipment — so a label problem can cost you the shipment record too.
-  * Use `creationMode = ALWAYS` if you want the shipment kept for inspection when validation is incomplete.
+  - In `EXTENDED` mode, label preparation runs before the creation decision is final, and a preparation problem can surface as a _warning_ rather than an error. Under `VALIDATION_OK` that warning is enough to discard the shipment — so a label problem can cost you the shipment record too.
+  - Use `creationMode = ALWAYS` if you want the shipment kept for inspection when validation is incomplete.
 </Callout>
 
 ## Idempotency and retries
