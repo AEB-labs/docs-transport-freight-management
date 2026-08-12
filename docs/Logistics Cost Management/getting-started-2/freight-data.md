@@ -16,1276 +16,142 @@ Here you can find a description of the fields in the standard freight data:
 
 # BFreightTransportExtendedData
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        auxiliaryServiceEntries
-      </td>
-
-      <td>
-        Standard.Collection
-      </td>
-
-      <td>
-        Dependent single services of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        carrierValueAddedServices
-      </td>
-
-      <td>
-        Standard.Collection
-      </td>
-
-      <td>
-        TSP value-added services of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        exportOrder
-      </td>
-
-      <td>
-        BillingFreightTransport.BExportDeliveryOrderExtData
-      </td>
-
-      <td>
-        Customs service of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        customsValue
-      </td>
-
-      <td>
-        Billing.BAmountOfMoney
-      </td>
-
-      <td>
-        Customs value of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        isDangerousGoods
-      </td>
-
-      <td>
-        Standard.Boolean
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        distance
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-        The distance from transport start to transport end.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        isDocumentShipment
-      </td>
-
-      <td>
-        Standard.Boolean
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        goodsValue
-      </td>
-
-      <td>
-        Billing.BAmountOfMoney
-      </td>
-
-      <td>
-        Goods value of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        grossWeight
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-        The gross weight of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        incotermIdentCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Incoterms of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        items
-      </td>
-
-      <td>
-        Standard.Collection
-      </td>
-
-      <td>
-        Delivery items of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        loadingMeters
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-        The loading meters of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        modeOfTransportIdentCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        The mode of transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        numberOfDeliveryNotes
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-        Number of delivery notes of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        numberOfInvoices
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-        Number of invoices of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        numberOfItems
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-        Number of items of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        numberOfPackages
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-        Number of packages in transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        packages
-      </td>
-
-      <td>
-        Standard.Collection
-      </td>
-
-      <td>
-        Packages of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        palletPlaces
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-        Number of required pallet places of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        referenceNumber
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Reference number of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        transportEnd
-      </td>
-
-      <td>
-        LogisticsExtension.AreaAddress
-      </td>
-
-      <td>
-        Transport end of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        transportStart
-      </td>
-
-      <td>
-        LogisticsExtension.AreaAddress
-      </td>
-
-      <td>
-        Transport start of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        carrierDefinitionIdentCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        TSP abbreviation of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        volume
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-        The total volume of the transport.
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name              | Type                                                | Comment                                             |
+| :------------------------- | :-------------------------------------------------- | :-------------------------------------------------- |
+| auxiliaryServiceEntries    | Standard.Collection                                 | Dependent single services of the transport.         |
+| carrierValueAddedServices  | Standard.Collection                                 | TSP value-added services of the transport.          |
+| exportOrder                | BillingFreightTransport.BExportDeliveryOrderExtData | Customs service of the delivery order.              |
+| customsValue               | Billing.BAmountOfMoney                              | Customs value of the delivery order.                |
+| isDangerousGoods           | Standard.Boolean                                    |                                                     |
+| distance                   | Billing.BQuantity                                   | The distance from transport start to transport end. |
+| isDocumentShipment         | Standard.Boolean                                    |                                                     |
+| goodsValue                 | Billing.BAmountOfMoney                              | Goods value of the delivery order.                  |
+| grossWeight                | Billing.BQuantity                                   | The gross weight of the transport.                  |
+| incotermIdentCode          | Standard.String                                     | Incoterms of the delivery order.                    |
+| items                      | Standard.Collection                                 | Delivery items of the delivery order.               |
+| loadingMeters              | Billing.BQuantity                                   | The loading meters of the transport.                |
+| modeOfTransportIdentCode   | Standard.String                                     | The mode of transport.                              |
+| numberOfDeliveryNotes      | Standard.Number                                     | Number of delivery notes of the delivery order.     |
+| numberOfInvoices           | Standard.Number                                     | Number of invoices of the delivery order.           |
+| numberOfItems              | Standard.Number                                     | Number of items of the delivery order.              |
+| numberOfPackages           | Standard.Number                                     | Number of packages in transport.                    |
+| packages                   | Standard.Collection                                 | Packages of the transport.                          |
+| palletPlaces               | Standard.Number                                     | Number of required pallet places of the transport.  |
+| referenceNumber            | Standard.String                                     | Reference number of the delivery order.             |
+| transportEnd               | LogisticsExtension.AreaAddress                      | Transport end of the transport.                     |
+| transportStart             | LogisticsExtension.AreaAddress                      | Transport start of the transport.                   |
+| carrierDefinitionIdentCode | Standard.String                                     | TSP abbreviation of the transport.                  |
+| volume                     | Billing.BQuantity                                   | The total volume of the transport.                  |
 
 ## auxiliaryServiceEntries
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        quantity
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-        Quantity and quantity unit of single service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        singleServiceDate
-      </td>
-
-      <td>
-        Billing.BDateAndZone
-      </td>
-
-      <td>
-        Date of service provision of the single service.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        singleServiceTypeCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Ident code of the single service type.
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name         | Type                 | Comment                                          |
+| :-------------------- | :------------------- | :----------------------------------------------- |
+| quantity              | Billing.BQuantity    | Quantity and quantity unit of single service.    |
+| singleServiceDate     | Billing.BDateAndZone | Date of service provision of the single service. |
+| singleServiceTypeCode | Standard.String      | Ident code of the single service type.           |
 
 ## carrierValueAddedServices
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        identCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name | Type            | Comment |
+| :------------ | :-------------- | :------ |
+| identCode     | Standard.String |         |
 
 ## exportOrder
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        numberOfExportItems
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-        Number of customs items of the delivery order.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        isCustomsHandlingEU
-      </td>
-
-      <td>
-        Standard.Boolean
-      </td>
-
-      <td>
-        Indicates that the delivery order is subject to EU customs processing.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        isSubjectToExportControls
-      </td>
-
-      <td>
-        Standard.Boolean
-      </td>
-
-      <td>
-        Indicates that the delivery order is subject to export controls.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        exportItems
-      </td>
-
-      <td>
-        Standard.Collection
-      </td>
-
-      <td>
-        Customs items of the delivery order
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        quantity
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-        Quantity of the customs item
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        isLetterOfCredit
-      </td>
-
-      <td>
-        Standard.Boolean
-      </td>
-
-      <td>
-        Indicates that the delivery order is processed with a letter of credit.
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name             | Type                | Comment                                                                 |
+| :------------------------ | :------------------ | :---------------------------------------------------------------------- |
+| numberOfExportItems       | Standard.Number     | Number of customs items of the delivery order.                          |
+| isCustomsHandlingEU       | Standard.Boolean    | Indicates that the delivery order is subject to EU customs processing.  |
+| isSubjectToExportControls | Standard.Boolean    | Indicates that the delivery order is subject to export controls.        |
+| exportItems               | Standard.Collection | Customs items of the delivery order                                     |
+| quantity                  | Billing.BQuantity   | Quantity of the customs item                                            |
+| isLetterOfCredit          | Standard.Boolean    | Indicates that the delivery order is processed with a letter of credit. |
 
 ### exportItems
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        customsTariffNumber
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Commodity code of the item
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        procedureCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Procedure code of the customs item
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name       | Type            | Comment                            |
+| :------------------ | :-------------- | :--------------------------------- |
+| customsTariffNumber | Standard.String | Commodity code of the item         |
+| procedureCode       | Standard.String | Procedure code of the customs item |
 
 ## items
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        itemNumber
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Item number of the delivery item.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        productCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Material number of the delivery item.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        quantity
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-        Quantity of the delivery item.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        transactionNumber
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Transaction number of the delivery item, e.g. delivery note number.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        netPrice
-      </td>
-
-      <td>
-        Billing.BAmountOfMoney
-      </td>
-
-      <td>
-        Unit net price of the delivery item.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        netWeight
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-        Unit net weight of the delivery item.
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name     | Type                   | Comment                                                             |
+| :---------------- | :--------------------- | :------------------------------------------------------------------ |
+| itemNumber        | Standard.String        | Item number of the delivery item.                                   |
+| productCode       | Standard.String        | Material number of the delivery item.                               |
+| quantity          | Billing.BQuantity      | Quantity of the delivery item.                                      |
+| transactionNumber | Standard.String        | Transaction number of the delivery item, e.g. delivery note number. |
+| netPrice          | Billing.BAmountOfMoney | Unit net price of the delivery item.                                |
+| netWeight         | Billing.BQuantity      | Unit net weight of the delivery item.                               |
 
 ## packages
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        dangerousGoodsHandlingCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        dimensions
-      </td>
-
-      <td>
-        Logistics.CuboidDimensions
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        numberOfPackages
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        packageTypeIdentCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        packageReferenceNumber
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        grossWeight
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        volume
-      </td>
-
-      <td>
-        Billing.BQuantity
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        palletPlaces
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-        Number of required pallet places of the transport.
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        referenceNumber
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Reference number of the delivery order.
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name              | Type                       | Comment                                                                                                                              |
+| :------------------------- | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| dangerousGoodsHandlingCode | Standard.String            |                                                                                                                                      |
+| dimensions                 | Logistics.CuboidDimensions |                                                                                                                                      |
+| numberOfPackages           | Standard.Number            |                                                                                                                                      |
+| packageTypeIdentCode       | Standard.String            |                                                                                                                                      |
+| packageReferenceNumber     | Standard.String            |                                                                                                                                      |
+| grossWeight                | Billing.BQuantity          |                                                                                                                                      |
+| volume                     | Billing.BQuantity          |                                                                                                                                      |
+| palletPlaces               | Standard.Number            | Number of required pallet places of the transport.                                                                                   |
+| referenceNumber            | Standard.String            | Reference number of the delivery order.                                                                                              |
+| processingIndicator        | Standard.String            | Indicator that specifies how the handling unit is to be handled during transport, e.g. hanging, vertical, upright, or roll-transport |
 
 ## Types
 
 ### Billing.BQuantity
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        value
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-        Amount of quantity
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        unit
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Quantity unit abbreviation
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name | Type            | Comment                    |
+| :------------ | :-------------- | :------------------------- |
+| value         | Standard.Number | Amount of quantity         |
+| unit          | Standard.String | Quantity unit abbreviation |
 
 ### Billing.BDateAndZone
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        dateInTimezone
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        timezone
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name  | Type            | Comment |
+| :------------- | :-------------- | :------ |
+| dateInTimezone | Standard.String |         |
+| timezone       | Standard.String |         |
 
 ### Billing.BAmountOfMoney
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        value
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-        Value of the monetary amount
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        currencyIso
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-        Currency of amount of money (ISO code)
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name | Type            | Comment                                |
+| :------------ | :-------------- | :------------------------------------- |
+| value         | Standard.Number | Value of the monetary amount           |
+| currencyIso   | Standard.String | Currency of amount of money (ISO code) |
 
 ### Logistics.CuboidDimensions
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        height
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        length
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        quantityUnit
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        width
-      </td>
-
-      <td>
-        Standard.Number
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name | Type            | Comment |
+| :------------ | :-------------- | :------ |
+| height        | Standard.Number |         |
+| length        | Standard.Number |         |
+| quantityUnit  | Standard.String |         |
+| width         | Standard.Number |         |
 
 ### LogisticsExtension.AreaAddress
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        postalAddress
-      </td>
-
-      <td>
-        LogisticsExtension.AreaPostalAddress
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        locationRef
-      </td>
-
-      <td>
-        LogisticsExtension.AreaLocationRef
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name | Type                                 | Comment |
+| :------------ | :----------------------------------- | :------ |
+| postalAddress | LogisticsExtension.AreaPostalAddress |         |
+| locationRef   | LogisticsExtension.AreaLocationRef   |         |
 
 ### LogisticsExtension.AreaPostalAddress
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        city
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        countryIsoCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        postcode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        stateRegion
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name  | Type            | Comment |
+| :------------- | :-------------- | :------ |
+| city           | Standard.String |         |
+| countryIsoCode | Standard.String |         |
+| postcode       | Standard.String |         |
+| stateRegion    | Standard.String |         |
 
 ### LogisticsExtension.AreaLocationRef
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Variable name
-      </th>
-
-      <th>
-        Type
-      </th>
-
-      <th>
-        Comment
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        identCode
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        typeId
-      </td>
-
-      <td>
-        Standard.String
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Variable name | Type            | Comment |
+| :------------ | :-------------- | :------ |
+| identCode     | Standard.String |         |
+| typeId        | Standard.String |         |
