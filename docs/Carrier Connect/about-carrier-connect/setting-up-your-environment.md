@@ -47,17 +47,30 @@ Authorization: Basic QVBJX1RFU1RAQVBJVEVTVDpBUElfVEVTVDIwMjQ=
 
 Always send `Accept: application/json` as well, so that error responses come back as JSON rather than as an HTML error page.
 
-### IP of the AEB data center
+### Firewall: IP subnetworks of the AEB data centers
 
-194.175.186.2
+Carrier Connect is reached over **HTTPS on port 443** only. If your firewall or proxy restricts outbound traffic, allow AEB's inbound web subnetworks:
 
-### Port
+```text
+194.15.60.0/25
+194.15.61.0/25
+194.15.62.0/25
+193.98.221.0/25
+194.175.186.0/24
+```
 
-HTTPS URLs use port **443** by default.
+Allow **all five**, not the single IP address of the host you happen to call. AEB moves services between data centers, and a rule pinned to one address stops working on failover.
 
 <Callout icon="💡" theme="default">
   ### The API is only available via Secure Socket Layer (SSL).
+
+  Port 443. There is no plain-HTTP endpoint.
 </Callout>
+
+Two cases need more than the rows above, and both are covered by <a href="https://service.aeb.com/hc/en-us/articles/18380335264273-Public-IP-subnetworks-of-the-AEB-data-centers" target="_blank">Public IP subnetworks of the AEB data centers</a> — the maintained source, which wins over this page:
+
+* **SFTP** (TCP 22), if you exchange EDI files with AEB — its own set of subnetworks.
+* **AEB's outbound source IPs**, if your own firewall filters traffic coming *from* AEB.
 
 ## Systems
 
