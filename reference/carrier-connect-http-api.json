@@ -8773,10 +8773,10 @@
       "CommandInfo": {
         "type": "object",
         "properties": {
-          "commandClass": {
+          "commandName": {
             "type": "string"
           },
-          "commandName": {
+          "commandClass": {
             "type": "string"
           }
         }
