@@ -74,8 +74,6 @@ You can now activate the service consumer. During activation, SAP generates the 
 
 If activation fails, refer to the troubleshooting guide.
 
-<br />
-
 ## Create an executable program
 
 The service consumer is now available for implementation. To test the API connection and demonstrate the required components, create an executable ABAP program and insert the provided code snippet.
@@ -152,8 +150,13 @@ The logical port configuration connects the service consumer with the endpoint a
 **Step 4: SOAP Protocol**
 
 1. Set Message ID Protocol to "Suppress ID Transfer".
-2. Data transfer scope: &#x20;
+2. Set Data transfer scope to "Minimal data transfer"
+3. Set Transfer protocol to "Transfer via HTTP header" &#x20;
 
 Proceed through the next two steps without changing the default settings. Finally, complete the wizard to save the logical port configuration.
 
 ## Importing certificates for HTTPS connections
+
+Follow the instructions at [https://docs.aeb.com/doc/cm-387110283-860970507-en-US/t-860970507-391691019-en-US](https://docs.aeb.com/doc/cm-387110283-860970507-en-US/t-860970507-391691019-en-US "https://docs.aeb.com/doc/cm-387110283-860970507-en-US/t-860970507-391691019-en-US") &#x20;
+
+<br />
