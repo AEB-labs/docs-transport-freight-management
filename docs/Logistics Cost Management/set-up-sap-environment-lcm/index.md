@@ -28,25 +28,31 @@ Before you can start using the API, you need a user and a password. See [Authent
 
 ## Generate Enterprise Services from WSDL
 
-If you like to implement against the Logistics Cost Management - API from S/4Hana or SAP ERP 6.0 you have to generate one or more Enterprise services. You have to generate an Enterprise Service for each WSDL you like to use.
+To consume the Logistics Cost Management API in SAP S/4HANA or SAP ERP 6.0, you must generate one or more enterprise services. Generate one service consumer for each WSDL that you intend to use.
 
-First, create a package from SE80. Then right click on the package choose Create -> Enterprise Services.  
-Then a wizard will be shown.
+1. Open transaction SE80 and create a package.
+2. Right-click the package and choose Create → Enterprise Services.
+3. In the wizard, select Service Consumer and choose Continue.
 
-![](https://files.readme.io/d332db3-2019-05-16_163832.png "2019-05-16_163832.png")
+   <Image src="https://files.readme.io/50f4fa7e2d471cd5310344b7bf20f7c29345db8b37d750a2a56412868a6e9e61-image.png" width="75%" />
 
-In the wizard choose Service Consumer and click on continue. Then you have to choose where source of your service is located. Choose External WSDL/Schema. Then you have to choose the data source. Here you have to choose URL. Go on with continue.  
-The url you have to set is [https://rz3.aeb.de/test2billing/servlet/bf/BillingBF?WSDL](https://rz3.aeb.de/test2billing/servlet/bf/BillingBF?WSDL).  
-For Logistics Cost Management this is the main API. There are some more. But for the beginning that should be enough. Go on with continue.  
-Now choose the package you have created before. Set a request and leave the Prefix empty and go on with continue. Confirm the popup "No prefix entered" with enter and click on complete.  
-Now the Service Consumer is created. You should see something like that:
+4. Select External WSDL/Schema as the service source.
+5. Select URL as the data source and choose Continue.
+6. Enter the following URL: [https://rz3.aeb.de/test2billing/servlet/bf/BillingBF?WSDL](https://rz3.xyz.de/test2billing/servlet/bf/BillingBF?WSDL) This WSDL represents the main API for Logistics Cost Management. Additional WSDLs are available, but this one is sufficient for the initial implementation.
+7. Select the package created previously.
+8. Assign a transport request.
+9. Leave the Prefix field empty and choose Continue.
+10. Confirm the "No prefix entered" dialog by pressing Enter, and then choose Complete.
+
+The service consumer is now generated:
+
+<br />
 
 ![](https://files.readme.io/55bcecc-2019-05-17_133835.png "2019-05-17_133835.png")
 
 ## Activating Service Consumer
 
-If that was not working please refer the the troubleshooting guide  
-If there were no errors just save the Service Consumer. The next step is to activate the Service Consumer.
+If that was not working please refer the the troubleshooting guide<br />If there were no errors just save the Service Consumer. The next step is to activate the Service Consumer.
 
 But one thing you have to fix first. If you check the service consumer, it will tell you that there is recursions used and that is not allowed in this context. So we have to fix that. Go to the menu -> utilities -> Settings. In the popup go to tab "Proxy Generation and there you have to mark the checkbox "Show Untyped Mapping in Proxy Editor".
 
@@ -58,8 +64,7 @@ Now we can activate the service consumer. This step will generate the ABAP-Struc
 
 ## Create an executable program
 
-We have to do some steps to be able to call the webservice, but you are now able to implement something against the API. So let us do that. So that I can explain the components you will have to use if you like to call our API.  
-Create an executable program and put the following code snippet into the program.
+We have to do some steps to be able to call the webservice, but you are now able to implement something against the API. So let us do that. So that I can explain the components you will have to use if you like to call our API.<br />Create an executable program and put the following code snippet into the program.
 
 ```text ABAP
 DATA:
@@ -91,9 +96,7 @@ TRY.
 ENDTRY.
 ```
 
-Activate the program and execute it. The report should say "could not instantiate the billingBF". And the report tells us that there is no logical port ZBILLING_BF_TEST2 for the proxy class "ZCO_IBILLING_BF".  
-But no problem we will handle that. So the next step is to create a logical port for our proxy class.  
-The logical port brings the consumer service, the endpoint and the authentication data together.
+Activate the program and execute it. The report should say "could not instantiate the billingBF". And the report tells us that there is no logical port ZBILLING_BF_TEST2 for the proxy class "ZCO_IBILLING_BF".<br />But no problem we will handle that. So the next step is to create a logical port for our proxy class.<br />The logical port brings the consumer service, the endpoint and the authentication data together.
 
 ## Create a logical port
 
@@ -105,13 +108,11 @@ You can stay on the tab Service Administration. Go to Web Service Configuration 
 
 ![](https://files.readme.io/8afb351-2019-05-17_142646.png "2019-05-17_142646.png")
 
-You should see the entry for ZCO_IBILLING_BF. Click on the blue highlighted link I marked in the screenshot. You are now on the configurations tab for ZCO_IBILLING_BF. Click on the button create and choose manual configuration. Now you see a little wizard with some steps to finish your logical port. Ok let us start.  
-First you have to define the name for your logical port. Right it is the name we put in our program. So set the logical port name to ZBILLING_BF_TEST2. In the description field write whatever you want. Let the checkbox "Logical Port is Default" empty. Go on to the next step.  
-You are now at step 2 "Consumer Security". Choose User ID / Password. In the field User Name you have to write "API_TEST@APITEST" (user@client) and the password in the field password. Go on to the next step. Now you have to define the HTTP Settings. Choose Complete URL and set the Url to "https://rz3.aeb.de/test2billing/servlet/bf/BillingBF". On the step SOAP Protocol set the Message ID Protocol to "Suppress ID Transfer". Then just go over the next two steps, let them with the default settings. Finally finish the configuration.
+You should see the entry for ZCO_IBILLING_BF. Click on the blue highlighted link I marked in the screenshot. You are now on the configurations tab for ZCO_IBILLING_BF. Click on the button create and choose manual configuration. Now you see a little wizard with some steps to finish your logical port. Ok let us start.<br />First you have to define the name for your logical port. Right it is the name we put in our program. So set the logical port name to ZBILLING_BF_TEST2. In the description field write whatever you want. Let the checkbox "Logical Port is Default" empty. Go on to the next step.<br />You are now at step 2 "Consumer Security". Choose User ID / Password. In the field User Name you have to write "API_TEST\@APITEST" (user\@client) and the password in the field password. Go on to the next step. Now you have to define the HTTP Settings. Choose Complete URL and set the Url to "[https://rz3.aeb.de/test2billing/servlet/bf/BillingBF](https://rz3.aeb.de/test2billing/servlet/bf/BillingBF)". On the step SOAP Protocol set the Message ID Protocol to "Suppress ID Transfer". Then just go over the next two steps, let them with the default settings. Finally finish the configuration.
 
 | Field name                        | Value                              | Explanation                                                                                                                  |
 | :-------------------------------- | :--------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| URL access path                   | test2billing /servlet/bf/BillingBF | `<Pathname target system>`/servlet/bf/BillingBF                                                                               |
+| URL access path                   | test2billing /servlet/bf/BillingBF | `<Pathname target system>`/servlet/bf/BillingBF                                                                              |
 | Computer name of access URL       | rz3.aeb.de                         | Server name of target system                                                                                                 |
 | Port number of access URL         | 443                                | Port under which the target system can be accessed                                                                           |
 | URL Protocol Information          | HTTPS                              | HTTP or HTTPS. To be selected according to the desired connection type.                                                      |
@@ -119,8 +120,7 @@ You are now at step 2 "Consumer Security". Choose User ID / Password. In the fie
 | Compressing the HTTP message      | Active                             |                                                                                                                              |
 | Compressing the response          | True                               |                                                                                                                              |
 
-Ok now we have configured our logical port. Let us go back to our little program. Execute it.  
-You will now get another error. The instance for class ZCO_IBILLING_BF could be created, but the call we wanted to do, has an error.
+Ok now we have configured our logical port. Let us go back to our little program. Execute it.<br />You will now get another error. The instance for class ZCO_IBILLING_BF could be created, but the call we wanted to do, has an error.
 
 ## Setting up the connection
 
