@@ -156,4 +156,4 @@ The logical port configuration connects the service consumer with the endpoint a
 
 Proceed through the next two steps without changing the default settings. Finally, complete the wizard to save the logical port configuration.
 
-## Importing certificates for HTTPS conections
+## Importing certificates for HTTPS connections
