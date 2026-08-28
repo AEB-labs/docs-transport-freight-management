@@ -22,10 +22,6 @@ next:
       slug: sap-wsdl-trouble-shooting-lcm
       title: SAP WSDL trouble shooting (LCM)
 ---
-## Credentials
-
-Before you can start using the API, you need a user and a password. See [Authentication](https://transport-freight-management.docs.developers.aeb.com/v2/docs/setup-your-environment-1) for more details.
-
 ## Generate Enterprise Services from WSDL
 
 To consume the Logistics Cost Management API in SAP S/4HANA or SAP ERP 6.0, you must generate one or more enterprise services. Generate one service consumer for each WSDL that you intend to use.
@@ -138,8 +134,8 @@ The logical port configuration connects the service consumer with the endpoint a
 **Step 2: Consumer Security**
 
 1. Select User ID / Password.
-2. Enter the user name: API_TEST\@APITEST The format is user\@client.
-3. Enter the corresponding password and choose Next.
+2. Enter the user name and corresponding password:  see  [Authentication](https://transport-freight-management.docs.developers.aeb.com/v2/docs/setup-your-environment-1) for more details.&#x20;
+3. Choose Next.
 
 **Step 3: HTTP Settings**
 
@@ -159,4 +155,4 @@ Proceed through the next two steps without changing the default settings. Finall
 
 Follow the instructions at [https://docs.aeb.com/doc/cm-387110283-860970507-en-US/t-860970507-391691019-en-US](https://docs.aeb.com/doc/cm-387110283-860970507-en-US/t-860970507-391691019-en-US "https://docs.aeb.com/doc/cm-387110283-860970507-en-US/t-860970507-391691019-en-US") &#x20;
 
-<br />
+## Credentials
