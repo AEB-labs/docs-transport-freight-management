@@ -120,30 +120,40 @@ The logical port configuration connects the service consumer with the endpoint a
 
 ## Create a logical port
 
-Start the transaction SOAMANAGER. The SOAMANAGER will be started in an external browser window. You should like see the following.
+1. Start transaction SOAMANAGER. The transaction opens in an external browser window.
+2. Remain on the Service Administration tab.
+3. Open Web Service Configuration.
+4. Search for the proxy class ZCO_IBILLING_BF by entering it in the Object Name filter field.
+5. Choose Search.
+6. Select the entry for ZCO_IBILLING_BF.
+7. Open the Configurations tab.
+8. Choose Create and select Manual Configuration.
+9. A wizard opens to guide you through the logical port configuration.
 
-![](https://files.readme.io/428e4fd-2019-05-16_172758.png "2019-05-16_172758.png")
+**Step 1: Logical Port**
 
-You can stay on the tab Service Administration. Go to Web Service Configuration and search for our proxy class ZCO_IBILLING_BF. Just put the string ZCO_IBILLING_BF to the filter field object name and click on search.
+1. Enter ZBILLING_BF_TEST2 as the logical port name. This name must correspond to the name specified in the ABAP program.
+2. Enter an appropriate description.
+3. Leave Logical Port is Default unselected.
+4. Choose Next.
 
-![](https://files.readme.io/8afb351-2019-05-17_142646.png "2019-05-17_142646.png")
+**Step 2: Consumer Security**
 
-You should see the entry for ZCO_IBILLING_BF. Click on the blue highlighted link I marked in the screenshot. You are now on the configurations tab for ZCO_IBILLING_BF. Click on the button create and choose manual configuration. Now you see a little wizard with some steps to finish your logical port. Ok let us start.<br />First you have to define the name for your logical port. Right it is the name we put in our program. So set the logical port name to ZBILLING_BF_TEST2. In the description field write whatever you want. Let the checkbox "Logical Port is Default" empty. Go on to the next step.<br />You are now at step 2 "Consumer Security". Choose User ID / Password. In the field User Name you have to write "API_TEST\@APITEST" (user\@client) and the password in the field password. Go on to the next step. Now you have to define the HTTP Settings. Choose Complete URL and set the Url to "[https://rz3.aeb.de/test2billing/servlet/bf/BillingBF](https://rz3.aeb.de/test2billing/servlet/bf/BillingBF)". On the step SOAP Protocol set the Message ID Protocol to "Suppress ID Transfer". Then just go over the next two steps, let them with the default settings. Finally finish the configuration.
+1. Select User ID / Password.
+2. Enter the user name: API_TEST\@APITEST The format is user\@client.
+3. Enter the corresponding password and choose Next.
 
-| Field name                        | Value                              | Explanation                                                                                                                  |
-| :-------------------------------- | :--------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| URL access path                   | test2billing /servlet/bf/BillingBF | `<Pathname target system>`/servlet/bf/BillingBF                                                                              |
-| Computer name of access URL       | rz3.aeb.de                         | Server name of target system                                                                                                 |
-| Port number of access URL         | 443                                | Port under which the target system can be accessed                                                                           |
-| URL Protocol Information          | HTTPS                              | HTTP or HTTPS. To be selected according to the desired connection type.                                                      |
-| Name of the proxy computer / etc. |                                    | Name of the proxy server. If a proxy must be used, enter the relevant access data for the proxy here and in the other fields |
-| Compressing the HTTP message      | Active                             |                                                                                                                              |
-| Compressing the response          | True                               |                                                                                                                              |
+**Step 3: HTTP Settings**
 
-Ok now we have configured our logical port. Let us go back to our little program. Execute it.<br />You will now get another error. The instance for class ZCO_IBILLING_BF could be created, but the call we wanted to do, has an error.
+1. Select "Complete URL"
+2. Enter the following URL: [https://rz3.aeb.de/test2billing/servlet/bf/BillingBF](https://rz3.xyz.de/test2billing/servlet/bf/BillingBF)
+3. Choose Next.
 
-## Setting up the connection
+**Step 4: SOAP Protocol**
 
-The issue is that we have to import the aeb-certificates into STRUST. Then the SAP-System is allowed to communicate with rz3.aeb.de. After that the environment is set up and you can start with your business. If you run the program call should not return an error.
+1. Set Message ID Protocol to "Suppress ID Transfer".
+2. Data transfer scope: &#x20;
 
-If you have trouble with setting up the connection refer to our communication trouble guide.
+Proceed through the next two steps without changing the default settings. Finally, complete the wizard to save the logical port configuration.
+
+## Importing certificates for HTTPS conections
