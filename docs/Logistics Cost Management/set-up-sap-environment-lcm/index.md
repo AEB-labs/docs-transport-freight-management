@@ -50,23 +50,37 @@ The service consumer is now generated:
 <Image src="https://files.readme.io/09cba344110e1752401dd99f31bd2ff8df2d23fd5cbb7aab7ebb07832292d6d8-image.png" framed={true} />
 
 
-## Activating Service Consumer
+## Activate the Service Consumer
 
-If that was not working please refer the the troubleshooting guide<br />If there were no errors just save the Service Consumer. The next step is to activate the Service Consumer.
+If the service consumer cannot be generated or activated, refer to the troubleshooting guide.
 
-But one thing you have to fix first. If you check the service consumer, it will tell you that there is recursions used and that is not allowed in this context. So we have to fix that. Go to the menu -> utilities -> Settings. In the popup go to tab "Proxy Generation and there you have to mark the checkbox "Show Untyped Mapping in Proxy Editor".
+If no errors occur during generation, save the service consumer. Before activating it, however, you must adjust the proxy editor settings because the service definition contains recursive structures that are not permitted in the current context.
 
-![](https://files.readme.io/a6f5e5d-2019-05-17_134336.png "2019-05-17_134336.png")
+1. Open the service consumer.
+2. Choose Utilities → Settings.
+3. In the dialog box, open the Proxy Generation tab.
+4. Select "Show Untyped Mapping" in Proxy Editor.
 
-Save the settings and go back to the Service Consumer. There you have to go to the "External View" Tab. Click on the binoculars and search for "record" and activate the checkbox pattern. Then on the right side you should see some details for the element "record". Click the checkbox "Untyped Mapping" and save it.
+   ![](https://files.readme.io/a6f5e5d-2019-05-17_134336.png "2019-05-17_134336.png")
+5. Save the settings and return to the service consumer.
+6. Open the External View tab.
+7. Choose the search help icon and search for "record".
+8. Select the Pattern checkbox.
+9. Select the record element in the results.
+10. In the details area on the right, select "Untyped Mapping".
+11. Save the service consumer.
 
-Now we can activate the service consumer. This step will generate the ABAP-Structures and ABAP-Classes what you need to implement against it. The Service consumer should now be active. If there were errors refer to the troubleshooting guide.
+You can now activate the service consumer. During activation, SAP generates the ABAP structures and classes required to consume the API.
+
+If activation fails, refer to the troubleshooting guide.
+
+<br />
 
 ## Create an executable program
 
-We have to do some steps to be able to call the webservice, but you are now able to implement something against the API. So let us do that. So that I can explain the components you will have to use if you like to call our API.<br />Create an executable program and put the following code snippet into the program.
+The service consumer is now available for implementation. To test the API connection and demonstrate the required components, create an executable ABAP program and insert the provided code snippet.
 
-```text ABAP
+```text Execute test call
 DATA:
   billing_bf             TYPE REF TO zco_ibilling_bf,
   output_data            TYPE zcreate_service_items_respons1,
@@ -96,7 +110,13 @@ TRY.
 ENDTRY.
 ```
 
-Activate the program and execute it. The report should say "could not instantiate the billingBF". And the report tells us that there is no logical port ZBILLING_BF_TEST2 for the proxy class "ZCO_IBILLING_BF".<br />But no problem we will handle that. So the next step is to create a logical port for our proxy class.<br />The logical port brings the consumer service, the endpoint and the authentication data together.
+Activate and execute the report. The following error is expected: &#x20;
+
+> Could not instantiate the billingBF.
+
+The error message indicates that no logical port named ZBILLING_BF_TEST2 has been configured for the proxy class ZCO_IBILLING_BF.
+
+The logical port configuration connects the service consumer with the endpoint and the authentication data. The next step is therefore to create a logical port for the proxy class.
 
 ## Create a logical port
 
