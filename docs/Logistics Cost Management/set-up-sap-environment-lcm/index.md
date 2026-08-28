@@ -34,7 +34,7 @@ To consume the Logistics Cost Management API in SAP S/4HANA or SAP ERP 6.0, you 
 2. Right-click the package and choose Create → Enterprise Services.
 3. In the wizard, select Service Consumer and choose Continue.
 
-   <Image src="https://files.readme.io/50f4fa7e2d471cd5310344b7bf20f7c29345db8b37d750a2a56412868a6e9e61-image.png" width="75%" />
+   <Image src="https://files.readme.io/50f4fa7e2d471cd5310344b7bf20f7c29345db8b37d750a2a56412868a6e9e61-image.png" width="75%" framed={true} />
 
 4. Select External WSDL/Schema as the service source.
 5. Select URL as the data source and choose Continue.
@@ -46,9 +46,9 @@ To consume the Logistics Cost Management API in SAP S/4HANA or SAP ERP 6.0, you 
 
 The service consumer is now generated:
 
-<br />
 
-![](https://files.readme.io/55bcecc-2019-05-17_133835.png "2019-05-17_133835.png")
+<Image src="https://files.readme.io/09cba344110e1752401dd99f31bd2ff8df2d23fd5cbb7aab7ebb07832292d6d8-image.png" framed={true} />
+
 
 ## Activating Service Consumer
 
