@@ -8986,18 +8986,15 @@
           "dataSource": {
             "$ref": "#/components/schemas/DataSource"
           },
-          "preferredCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
+          "name": {
+            "type": "string"
           },
-          "transferDataFlavors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ActivationDataFlavor"
-            }
+          "inputStream": {},
+          "content": {},
+          "contentType": {
+            "type": "string"
           },
+          "outputStream": {},
           "allCommands": {
             "type": "array",
             "items": {
@@ -9008,15 +9005,18 @@
             "$ref": "#/components/schemas/CommandMap",
             "writeOnly": true
           },
-          "name": {
-            "type": "string"
+          "transferDataFlavors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActivationDataFlavor"
+            }
           },
-          "inputStream": {},
-          "content": {},
-          "contentType": {
-            "type": "string"
-          },
-          "outputStream": {}
+          "preferredCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
+            }
+          }
         }
       },
       "DataSource": {
