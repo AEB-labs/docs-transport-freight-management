@@ -2434,6 +2434,32 @@
           "createdToLaunchRequestedDurationMs": {
             "type": "integer",
             "format": "int64"
+          },
+          "activeCommunications": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalCommunications": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "errorCommunications": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalAgentMessages": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "failedClientRequests": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pingTimingInfo": {
+            "$ref": "#/components/schemas/RunningAvgInfo"
+          },
+          "commProcessingBps": {
+            "$ref": "#/components/schemas/RunningAvgInfo"
           }
         }
       },
@@ -2457,6 +2483,27 @@
           },
           "initError": {
             "type": "string"
+          }
+        }
+      },
+      "RunningAvgInfo": {
+        "type": "object",
+        "properties": {
+          "last": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "avg": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "min": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "max": {
+            "type": "integer",
+            "format": "int64"
           }
         }
       },
@@ -3263,7 +3310,11 @@
           },
           "handlingUnitType": {
             "type": "string",
-            "description": "The identCode of the handling unit type. length=35"
+            "description": "The identCode of the handling unit type. length=50"
+          },
+          "processingIndicator": {
+            "type": "string",
+            "description": "Indicator that specifies how the handling unit is to be handled during transport, e.g. hanging, vertical, upright, or roll-transport. length=50"
           },
           "dangerousGoodsCode": {
             "$ref": "#/components/schemas/DangerousGoodsCodeDTO",
@@ -4474,7 +4525,8 @@
           "waitingTimeoutInSeconds": {
             "type": "integer",
             "format": "int32",
-            "description": "Waiting timeout in seconds."
+            "description": "Waiting timeout in seconds. It indicates how long the response is going to take in case the routing task is not finished yet.",
+            "maximum": 10
           }
         },
         "required": [
