@@ -2917,7 +2917,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p> The type of the reference number or text. Valid values are:  </p>  <li>ACID_NUMBER - Advance Cargo Information Approval Number used to identify a pre-arrival cargo information filing within customs or governmental clearance processes. <li>ADDRESS_REFERENCE_CODE - Unique address reference code used to identify a delivery or pickup address. May be assigned by national postal or address management systems. <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER - Customs agent CNPJ tax ID number for Brasil. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent DUTY DEFERMENT number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>DELIVERY_INSTRUCTION - Delivery instruction/notice. <li>DELNOTE_NUMBER - Delivery note number. <li>EKAER_NUMBER - EKAER number. <li>ENDCUSTOMER_REFERENCE - End-customer reference. <li>GENERAL_INSTRUCTION - General instruction/notice. <li>IMPORTER_CNPJ_TAX_ID_NUMBER - Importer CNPJ tax ID number for Brasil. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer DUTY DEFERMENT number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>INVOICE_NUMBER - Invoice number. <li>PICKUP_INSTRUCTION - Pickup instruction/notice. <li>PO_NUMBER - Purchase order number. <li>RECEIVER_CNPJ_TAX_ID_NUMBER - Receiver CNPJ tax ID number for Brasil. <li>RECEIVER_CPF_TAX_ID_NUMBER - Receiver CPF tax ID number for Brasil. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver DUTY DEFERMENT number. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>SENT_NUMBER - SENT number. <li>SHIPPER_CNPJ_TAX_ID_NUMBER - Shipper CNPJ tax ID number for Brasil. <li>SHIPPER_CPF_TAX_ID_NUMBER - Shipper CPF tax ID number for Brasil. <li>SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER - Shipper EIN (Employee Identification Number). <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SPOT_CODE - Reference number for a specific spot quote that is used when booking the shipment, required for billing. <li>SUPPLIER_REFERENCE - Supplier reference used to identify the shipment or delivery. <li>TRANSORDER_NUMBER - Transport order number. <li>UIT_NUMBER - UIT number. </P> <p>Note: Shortened aliases (up to 30 chars) are supported for inbound APIs (towards CCO), e.g.: <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NO instead of CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER <li>CUSTOMS_AGENT_DUTYDEFERMENT_NO instead of CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER <li>SHIPPER_EMPLOYEE_ID_NO instead of SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER </p> <p> Outbound APIs always return the original long values for backward compatibility. </p> <p> length=38 </p>"
+            "description": "<p> The type of the reference number or text. Valid values are:  </p>  <li>ACID_NUMBER - Advance Cargo Information Approval Number used to identify a pre-arrival cargo information filing within customs or governmental clearance processes. <li>ADDRESS_REFERENCE_CODE - Unique address reference code used to identify a delivery or pickup address. May be assigned by national postal or address management systems. <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER - Customs agent CNPJ tax ID number for Brasil. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent DUTY DEFERMENT number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>DELIVERY_INSTRUCTION - Delivery instruction/notice. <li>DELNOTE_NUMBER - Delivery note number. <li>EKAER_NUMBER - EKAER number. <li>ENDCUSTOMER_REFERENCE - End-customer reference. <li>GENERAL_INSTRUCTION - General instruction/notice. <li>IMPORTER_CNPJ_TAX_ID_NUMBER - Importer CNPJ tax ID number for Brasil. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer DUTY DEFERMENT number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>INVOICE_NUMBER - Invoice number. <li>ITN_NUMBER - International Transaction Number (ITN) <li>PICKUP_INSTRUCTION - Pickup instruction/notice. <li>PO_NUMBER - Purchase order number. <li>RECEIVER_CNPJ_TAX_ID_NUMBER - Receiver CNPJ tax ID number for Brasil. <li>RECEIVER_CPF_TAX_ID_NUMBER - Receiver CPF tax ID number for Brasil. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver DUTY DEFERMENT number. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>SENT_NUMBER - SENT number. <li>SHIPPER_CNPJ_TAX_ID_NUMBER - Shipper CNPJ tax ID number for Brasil. <li>SHIPPER_CPF_TAX_ID_NUMBER - Shipper CPF tax ID number for Brasil. <li>SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER - Shipper EIN (Employee Identification Number). <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>SPOT_CODE - Reference number for a specific spot quote that is used when booking the shipment, required for billing. <li>SUPPLIER_REFERENCE - Supplier reference used to identify the shipment or delivery. <li>TRANSORDER_NUMBER - Transport order number. <li>UIT_NUMBER - UIT number. </P> <p>Note: Shortened aliases (up to 30 chars) are supported for inbound APIs (towards CCO), e.g.: <li>CUSTOMS_AGENT_CNPJ_TAX_ID_NO instead of CUSTOMS_AGENT_CNPJ_TAX_ID_NUMBER <li>CUSTOMS_AGENT_DUTYDEFERMENT_NO instead of CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER <li>SHIPPER_EMPLOYEE_ID_NO instead of SHIPPER_EMPLOYEE_IDENTIFICATION_NUMBER </p> <p> Outbound APIs always return the original long values for backward compatibility. </p> <p> length=38 </p>"
           },
           "value": {
             "type": "string",
@@ -2977,7 +2977,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p>\nThe type of the reference number or text. Valid values are:\n<li>MERCHANT_PRODUCT_ID - Merchant product identifier.</li>\n<li>MFR_PRODUCT_ID_NONSTD - Non-standardised manufacturer product identifier.</li>\n<li>MFR_PRODUCT_ID_STD - Standardised manufacturer product identifier.</li>\n</p>\n<p>length=30</p>\n"
+            "description": "<p>\nThe type of the reference number or text. Valid values are:\n\n<li>GTIN - Global trade item number</li>\n<li>MODEL_NUMBER - Model number</li>\n<li>MPN - Manufacturer part number</li>\n<li>PART_NUMBER - Part number</li>\n<li>SKU - Stock keeping unit</li>\n\n</p>\n<p>length=30</p>\n"
           },
           "value": {
             "type": "string",
@@ -6723,7 +6723,7 @@
           },
           "consigneeName": {
             "type": "string",
-            "description": "Considers the company number and the name of the consignee's address.. <p> length=50 </p>"
+            "description": "Considers the name of the consignee's address. <p> length=50 </p>"
           },
           "shippingDateFrom": {
             "type": "string",
@@ -7094,11 +7094,15 @@
         "properties": {
           "grossWeight": {
             "$ref": "#/components/schemas/QuantityDTO",
-            "description": "Gross weight"
+            "description": "Gross weight. If null is passed, the existing gross weight will not be changed."
           },
           "dimensions": {
             "$ref": "#/components/schemas/DLCuboidDimensionsDTO",
-            "description": "Dimensions"
+            "description": "Dimensions. If null is passed, the existing dimensions will not be changed."
+          },
+          "hazardousGoodsData": {
+            "$ref": "#/components/schemas/DLPackageHazardousGoodsDataRequestDTO",
+            "description": "Hazardous goods data concerning the package. Only relevant when shipping hazardous goods. If null is passed, the existing hazardous goods data will not be changed."
           }
         },
         "required": [
@@ -7827,7 +7831,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p> The type of the reference number or text. Valid values are:  <li>ACID_NUMBER - Advance Cargo Information Approval Number used to identify a pre-arrival cargo information filing within customs or governmental clearance processes. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent duty deferment number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>EKAER_NUMBER - EKAER number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer duty deferment number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>INVOICE_NUMBER - Invoice number. <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver duty deferment number. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>SENT_NUMBER - SENT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>UIT_NUMBER - UIT number. </P> <p> Shortened aliases (up to 30 chars) are supported for inbound APIs (towards CCO), e.g.: <li>CUSTOMS_AGENT_DUTYDEFERMENT_NO instead of CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER </p> <p> Outbound APIs always return the original long values for backward compatibility. </p> <p> length=35 </p>"
+            "description": "<p> The type of the reference number or text. Valid values are:  <li>ACID_NUMBER - Advance Cargo Information Approval Number used to identify a pre-arrival cargo information filing within customs or governmental clearance processes. <li>CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER - Customs agent duty deferment number. <li>CUSTOMS_AGENT_EORI_NUMBER - Customs agent EORI number. <li>CUSTOMS_AGENT_UKIMS_NUMBER - Customs agent UKIMS number. <li>CUSTOMS_AGENT_VAT_NUMBER - Customs agent VAT number. <li>CUSTOMS_REGISTRATION_NUMBER - Customs registration number. <li>EKAER_NUMBER - EKAER number. <li>IMPORTER_DUTY_DEFERMENT_NUMBER - Importer duty deferment number. <li>IMPORTER_EORI_NUMBER - Importer EORI number. <li>IMPORTER_UKIMS_NUMBER - Importer UKIMS number. <li>IMPORTER_VAT_NUMBER - Importer VAT number. <li>INVOICE_NUMBER - Invoice number. <li>ITN_NUMBER - International Transaction Number (ITN). <li>RECEIVER_DUTY_DEFERMENT_NUMBER - Receiver duty deferment number. <li>RECEIVER_EORI_NUMBER - Receiver EORI number. <li>RECEIVER_UKIMS_NUMBER - Receiver UKIMS number. <li>RECEIVER_VAT_NUMBER - Receiver VAT number. <li>SENT_NUMBER - SENT number. <li>SHIPPER_IOSS_NUMBER - Shipper IOSS (Import OneStopShop) registration number. <li>SHIPPER_PVA_NUMBER - Shipper PVA (British Postponed VAT Accounting) registration number. <li>SHIPPER_VOEC_NUMBER - Shipper VOEC (Norwegian VAT on eCommerce) registration number. <li>UIT_NUMBER - UIT number. </P> <p> Shortened aliases (up to 30 chars) are supported for inbound APIs (towards CCO), e.g.: <li>CUSTOMS_AGENT_DUTYDEFERMENT_NO instead of CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER </p> <p> Outbound APIs always return the original long values for backward compatibility. </p> <p> length=35 </p>"
           },
           "value": {
             "type": "string",
@@ -7841,7 +7845,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p>\nThe type of the reference number or text. Valid values are:\n<li>MERCHANT_PRODUCT_ID - Merchant product identifier.</li>\n<li>MFR_PRODUCT_ID_NONSTD - Non-standardised manufacturer product identifier.</li>\n<li>MFR_PRODUCT_ID_STD - Standardised manufacturer product identifier.</li>\n</p>\n<p>length=30</p>\n"
+            "description": "<p>\nThe type of the reference number or text. Valid values are:\n\n<li>GTIN - Global trade item number</li>\n<li>MODEL_NUMBER - Model number</li>\n<li>MPN - Manufacturer part number</li>\n<li>PART_NUMBER - Part number</li>\n<li>SKU - Stock keeping unit</li>\n\n</p>\n<p>length=30</p>\n"
           },
           "value": {
             "type": "string",
@@ -7910,7 +7914,7 @@
           },
           "customsReferencesTexts": {
             "type": "array",
-            "description": "Updates references and texts data. The field may be empty when there's no need to update any references and texts. This update deletes all existing references with the types included in this request from the shipment and adds the references and texts from the request to the shipment. Remember: All references of every reference type included in this request will be deleted! Only customs relevant references and texts are accepted. Therefore the following reference types are allowed only: <li>TYPE_CUSTOMS_REGISTRATION_NUMBER</li> <li>TYPE_IMPORTER_EORI_NUMBER</li> <li>TYPE_RECEIVER_EORI_NUMBER</li> <li>TYPE_IMPORTER_VAT_NUMBER</li> <li>TYPE_RECEIVER_VAT_NUMBER</li> <li>TYPE_INVOICE_NUMBER</li> <li>TYPE_SHIPPER_IOSS_NUMBER</li> <li>TYPE_SHIPPER_PVA_NUMBER</li> <li>TYPE_SHIPPER_VOEC_NUMBER</li> <li>TYPE_RECEIVER_UKIMS_NUMBER</li> <li>TYPE_IMPORTER_UKIMS_NUMBER</li> <li>TYPE_RECEIVER_DUTY_DEFERMENT_NUMBER</li> <li>TYPE_IMPORTER_DUTY_DEFERMENT_NUMBER</li> <li>TYP_CUSTOMS_AGENT_EORI_NUMBER</li> <li>TYPE_CUSTOMS_AGENT_VAT_NUMBER</li> <li>TYPE_CUSTOMS_AGENT_UKIMS_NUMBER</li> <li>TYPE_CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER</li> <li>TYPE_SENT_NUMBER</li> <li>TYPE_EKAER_NUMBER</li> <li>TYPE_UIT_NUMBER</li>",
+            "description": "Updates references and texts data. The field may be empty when there's no need to update any references and texts. This update deletes all existing references with the types included in this request from the shipment and adds the references and texts from the request to the shipment. Remember: All references of every reference type included in this request will be deleted! Only customs relevant references and texts are accepted. Therefore the following reference types are allowed only: <li>TYPE_CUSTOMS_REGISTRATION_NUMBER</li> <li>TYPE_IMPORTER_EORI_NUMBER</li> <li>TYPE_RECEIVER_EORI_NUMBER</li> <li>TYPE_IMPORTER_VAT_NUMBER</li> <li>TYPE_RECEIVER_VAT_NUMBER</li> <li>TYPE_INVOICE_NUMBER</li> <li>TYPE_SHIPPER_IOSS_NUMBER</li> <li>TYPE_SHIPPER_PVA_NUMBER</li> <li>TYPE_SHIPPER_VOEC_NUMBER</li> <li>TYPE_RECEIVER_UKIMS_NUMBER</li> <li>TYPE_IMPORTER_UKIMS_NUMBER</li> <li>TYPE_RECEIVER_DUTY_DEFERMENT_NUMBER</li> <li>TYPE_IMPORTER_DUTY_DEFERMENT_NUMBER</li> <li>TYP_CUSTOMS_AGENT_EORI_NUMBER</li> <li>TYPE_CUSTOMS_AGENT_VAT_NUMBER</li> <li>TYPE_CUSTOMS_AGENT_UKIMS_NUMBER</li> <li>TYPE_CUSTOMS_AGENT_DUTY_DEFERMENT_NUMBER</li> <li>TYPE_SENT_NUMBER</li> <li>TYPE_EKAER_NUMBER</li> <li>TYPE_UIT_NUMBER</li> <li>TYPE_ITN_NUMBER</li>",
             "items": {
               "$ref": "#/components/schemas/DLReferenceTextUCDDTO"
             }
@@ -8986,15 +8990,18 @@
           "dataSource": {
             "$ref": "#/components/schemas/DataSource"
           },
-          "name": {
-            "type": "string"
+          "preferredCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
+            }
           },
-          "inputStream": {},
-          "content": {},
-          "contentType": {
-            "type": "string"
+          "transferDataFlavors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActivationDataFlavor"
+            }
           },
-          "outputStream": {},
           "allCommands": {
             "type": "array",
             "items": {
@@ -9005,18 +9012,15 @@
             "$ref": "#/components/schemas/CommandMap",
             "writeOnly": true
           },
-          "transferDataFlavors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ActivationDataFlavor"
-            }
+          "name": {
+            "type": "string"
           },
-          "preferredCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
-          }
+          "inputStream": {},
+          "content": {},
+          "contentType": {
+            "type": "string"
+          },
+          "outputStream": {}
         }
       },
       "DataSource": {
