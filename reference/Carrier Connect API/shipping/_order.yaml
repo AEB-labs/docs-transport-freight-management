@@ -1,4 +1,3 @@
-- processitem
 - addshipmentattachments
 - cancelshipment
 - createpickup
@@ -16,6 +15,7 @@
 - processpackagereturnenclosedlabel
 - processpickup
 - processshipment
+- processitem
 - syncpickups
 - syncshipments
 - updatecustomsdata
