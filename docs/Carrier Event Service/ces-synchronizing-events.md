@@ -27,20 +27,6 @@ In the API response you will also get back a `syncId` which can be used in all *
 
 The following is an example for a `synchronizeResolvedEvents` request:
 
-```xml
-<request>
-	<clientSystemId>TEST_ID</clientSystemId>
-	<clientIdentCode>APITEST</clientIdentCode>
-	<userName>API_TEST</userName>
-	<resultLanguageIsoCodes>en</resultLanguageIsoCodes>
-	<resultLanguageIsoCodes>de</resultLanguageIsoCodes>
-	<syncId></syncId>
-	<ageInDays>5</ageInDays>
-	<blockSize>200</blockSize>
-	<isStandardEventTextIncluded>true</isStandardEventTextIncluded>
-	<isOriginalDescriptionIncluded>true</isOriginalDescriptionIncluded>
-</request>
-```
 ```json
 {
      "clientSystemId": "TEST_ID",
@@ -55,6 +41,20 @@ The following is an example for a `synchronizeResolvedEvents` request:
      "isStandardEventTextIncluded": true,
      "isOriginalDescriptionIncluded": true
 }
+```
+```xml
+<request>
+	<clientSystemId>TEST_ID</clientSystemId>
+	<clientIdentCode>APITEST</clientIdentCode>
+	<userName>API_TEST</userName>
+	<resultLanguageIsoCodes>en</resultLanguageIsoCodes>
+	<resultLanguageIsoCodes>de</resultLanguageIsoCodes>
+	<syncId></syncId>
+	<ageInDays>5</ageInDays>
+	<blockSize>200</blockSize>
+	<isStandardEventTextIncluded>true</isStandardEventTextIncluded>
+	<isOriginalDescriptionIncluded>true</isOriginalDescriptionIncluded>
+</request>
 ```
 
 * **Endpoints**:  
