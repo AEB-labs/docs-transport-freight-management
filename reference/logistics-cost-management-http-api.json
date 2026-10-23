@@ -24,6 +24,14 @@
       "description": "REST API for billing scenarios"
     },
     {
+      "name": "Settlement",
+      "description": "REST API for settlements"
+    },
+    {
+      "name": "SettlementItem",
+      "description": "REST API for settlementitems"
+    },
+    {
       "name": "Billing",
       "description": "API for the billing of services"
     },
@@ -174,6 +182,523 @@
                           ]
                         }
                       ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/settlements/{id}": {
+      "get": {
+        "tags": [
+          "Settlement"
+        ],
+        "summary": "get settlement",
+        "description": "Returns the settlement with the requested ID",
+        "operationId": "getSettlement",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The Settlementnumber of the requested Settlement.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "000001"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BSettlementRestDTO"
+                },
+                "examples": {
+                  "Settlement entry": {
+                    "description": "Settlement entry",
+                    "value": {
+                      "settlementNumber": "SETTL-2025-000123",
+                      "createdAt": "2025-10-01T08:15:30Z",
+                      "lastDispoDate": "2025-10-02T09:20:00Z",
+                      "lastDispoUserLoginName": "jane.doe",
+                      "settlementType": {
+                        "identCode": "STANDARD",
+                        "scenIdentCode": "SCEN_MAIN"
+                      },
+                      "referenceNumber": "EXT-REF-456",
+                      "additionalReferenceNumber1": "CUST-ADD-01",
+                      "numberOfCancelledSettlement": "0",
+                      "settlementDate": "2025-10-01",
+                      "chargeDateMin": "2025-09-01",
+                      "chargeDateMax": "2025-09-30",
+                      "valueDate": "2025-10-03",
+                      "provider": {
+                        "companyNo": "PROV001"
+                      },
+                      "orderer": {
+                        "companyNo": "ORD001"
+                      },
+                      "payer": {
+                        "companyNo": "PAY001"
+                      },
+                      "isDataReady": true,
+                      "isCompiled": false,
+                      "isCumulated": false,
+                      "isReleased": false,
+                      "isCompleted": false,
+                      "isAutoConfirmStatusSuppressed": false,
+                      "boStatus": {
+                        "statusID": 200,
+                        "dirty": false,
+                        "identCode": "READY",
+                        "error": false
+                      },
+                      "isCancelled": false,
+                      "cancellationType": null,
+                      "isAnnulation": false,
+                      "settlementItemRevisionNumber": 1,
+                      "note": "Quarterly settlement for September.",
+                      "processingIdentCode": "PROC_MAIN",
+                      "totalSettlNetPrice": {
+                        "value": 1000,
+                        "currency": "EUR"
+                      },
+                      "totalSettlGrsPrice": {
+                        "value": 1190,
+                        "currency": "EUR"
+                      },
+                      "totalSettlClNetPrice": {
+                        "value": 1065,
+                        "currency": "USD"
+                      },
+                      "totalSettlClGrsPrice": {
+                        "value": 1267.35,
+                        "currency": "USD"
+                      },
+                      "totalSettlVatPrice": {
+                        "value": 190,
+                        "currency": "EUR"
+                      },
+                      "totalSettlClVatPrice": {
+                        "value": 202.35,
+                        "currency": "USD"
+                      },
+                      "rateDateClPrice": "2025-09-30",
+                      "usdSpltFlds": {
+                        "usePayer": true,
+                        "useProvider": true,
+                        "useSettlCurrency": true,
+                        "useSettlType": true,
+                        "useBillingScenario": true,
+                        "useOrderer": false,
+                        "usePeriod": true,
+                        "useService": true,
+                        "useOrderNumber": false,
+                        "useClientOrga": false
+                      },
+                      "period": {
+                        "start": "2025-09-01",
+                        "end": "2025-09-30",
+                        "type": "MONTH"
+                      },
+                      "service": {
+                        "identCode": "SRV_TRANSPORT",
+                        "description": "International Transport"
+                      },
+                      "billingScenario": {
+                        "identCode": "BILL_SCEN_STD"
+                      },
+                      "contractNumber": "CON-778899",
+                      "orderNumber": "ORD-556677",
+                      "clientOrgaId": "CL001",
+                      "paymentTerm": {
+                        "identCode": "NET30",
+                        "description": "Net 30 Days"
+                      },
+                      "paymentMethod": {
+                        "identCode": "BANK_TRANSFER",
+                        "description": "Bank Transfer"
+                      },
+                      "isPartiallyDeleted": false,
+                      "archiveInfo": {
+                        "archiveState": "NEW",
+                        "archivedAt": "2025-10-01T08:15:30Z",
+                        "archiveId": "ARCH-00001",
+                        "transactionId": "TX-123456789",
+                        "onRetrySince": "2025-10-01T08:15:30Z"
+                      },
+                      "storageAdapterId": "S3-STORAGE-01"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Requested settlement does not exist.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Settlement not found": {
+                    "description": "Settlement not found",
+                    "value": {
+                      "error": "No settlement with the ID '0001' found."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/settlements": {
+      "get": {
+        "tags": [
+          "Settlement"
+        ],
+        "summary": "Search settlements",
+        "description": "Returns all settlements matching the given filter criteria. In case no settlement matches, an empty collection is returned. Supports wildcards in filter fields.",
+        "operationId": "searchSettlements",
+        "parameters": [
+          {
+            "name": "settlement_number_like",
+            "in": "query",
+            "description": "Filter settlements by Settlementnumber. Place holders are supported.",
+            "schema": {
+              "type": "string",
+              "maxLength": 50,
+              "minLength": 0
+            },
+            "example": "000001"
+          },
+          {
+            "name": "settlement_type_like",
+            "in": "query",
+            "description": "Filter settlements by Settlementtype. Place holders are supported.",
+            "schema": {
+              "type": "string",
+              "maxLength": 50,
+              "minLength": 0
+            },
+            "example": "Storno"
+          },
+          {
+            "name": "billing_scenario_like",
+            "in": "query",
+            "description": "Filter settlements by Billingscenario. Place holders are supported.",
+            "schema": {
+              "type": "string",
+              "maxLength": 50,
+              "minLength": 0
+            },
+            "example": "CAI"
+          },
+          {
+            "name": "provider_like",
+            "in": "query",
+            "description": "Filter settlements by Provider companyNo. Place holders are supported.",
+            "schema": {
+              "type": "string",
+              "maxLength": 50,
+              "minLength": 0
+            },
+            "example": "UPS"
+          },
+          {
+            "name": "status_list",
+            "in": "query",
+            "description": "Filter settlements by status code. Possible Status Codes are: READY, COMPILED, RELEASED, COMPLETE, CANCELLED Place holders are supported.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 50,
+              "minItems": 0
+            },
+            "example": [
+              "READY",
+              "COMPILED"
+            ]
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "The starting point from which to return elements of the ordered list.<br><i>Minimum : 0</i>",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0,
+              "minimum": 0
+            },
+            "example": 0
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The maximum number of elements to be returned from the ordered list.<br><i>Minimum : 1</i><br><i>Maximum : 1000</i>",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1000,
+              "maximum": 1000,
+              "minimum": 1
+            },
+            "example": 200
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettlementPage"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Status.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Invalid Status": {
+                    "description": "Invalid Status",
+                    "value": {
+                      "error": "Invalid status 'Status'."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/settlements/{id}/settlement-items": {
+      "get": {
+        "tags": [
+          "SettlementItem"
+        ],
+        "summary": "Search settlements",
+        "description": "Returns all settlement items matching the given filter criteria. In case no settlement items matches, an empty collection is returned. Supports wildcards in filter fields.",
+        "operationId": "searchSettlementItem",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The Settlementnumber of the requested Settlement.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "000001"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "The starting point from which to return elements of the ordered list.<br><i>Minimum : 0</i>",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0,
+              "minimum": 0
+            },
+            "example": 0
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "The maximum number of elements to be returned from the ordered list.<br><i>Minimum : 1</i><br><i>Maximum : 1000</i>",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1000,
+              "maximum": 1000,
+              "minimum": 1
+            },
+            "example": 200
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful call.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettlementItem"
+                },
+                "examples": {
+                  "Settlement item list": {
+                    "description": "Settlement item list",
+                    "value": {
+                      "totalElements": 1,
+                      "content": [
+                        {
+                          "orderNumber": "ORD-556677",
+                          "serviceItemId": "SRVITEM-00042",
+                          "numberInServiceItem": 1,
+                          "referenceNumber": "REF-456",
+                          "serviceItemDescription": "International freight – sea FCL",
+                          "orderDate": "2025-09-10",
+                          "referenceDate": "2025-09-15",
+                          "chargeDate": "2025-09-20",
+                          "serviceDate": "2025-09-21",
+                          "createdAt": "2025-09-21T14:22:05Z",
+                          "isCancelled": false,
+                          "boStatus": {
+                            "statusID": 210,
+                            "dirty": false,
+                            "identCode": "ITEM_READY",
+                            "error": false
+                          },
+                          "clientSystemId": "CLIENT_SYS_A",
+                          "clientOrgaId": "CL001",
+                          "costCenter": "COST-CC-01",
+                          "provider": {
+                            "companyNo": "PROV001"
+                          },
+                          "orderer": {
+                            "companyNo": "ORD001"
+                          },
+                          "payer": {
+                            "companyNo": "PAY001"
+                          },
+                          "beneficiary": {
+                            "companyNo": "BEN001"
+                          },
+                          "billingScenario": {
+                            "identCode": "BILL_SCEN_STD"
+                          },
+                          "serviceId": "SRV_TRANSPORT",
+                          "quantity": {
+                            "value": 10,
+                            "unit": "PALLET",
+                            "factor": "1"
+                          },
+                          "pricingDate": "2025-09-18",
+                          "calcRef": {
+                            "contractNumber": "CON-778899",
+                            "apsContractNumber": "APS-1122",
+                            "apsNumber": 3,
+                            "apsSchemaNumber": "APS-SCHEMA-01",
+                            "apsComponentNumber": 5,
+                            "calcSchemaNumber": "CALC-SCHEMA-ROOT",
+                            "calcComponentNumber": 12,
+                            "calcComponentAttribute": "BASE",
+                            "calcCompDescription": "Base tariff component",
+                            "calcTid": "GENERIC",
+                            "calcGenericIdentCode": "GEN_TARIFF"
+                          },
+                          "translations": [
+                            {
+                              "description": "International freight – sea FCL"
+                            },
+                            {
+                              "description": "Internationale Seefracht – FCL"
+                            }
+                          ],
+                          "chargeableQty": {
+                            "value": 10,
+                            "unit": "PALLET",
+                            "factor": "1"
+                          },
+                          "groupingIdentCode1": "GRP_ORIGIN",
+                          "groupingIdentCode2": "GRP_DESTINATION",
+                          "priceType": "STANDARD",
+                          "settlementType": {
+                            "identCode": "STANDARD",
+                            "scenIdentCode": "SCEN_MAIN"
+                          },
+                          "period": {
+                            "start": "2025-09-01",
+                            "end": "2025-09-30",
+                            "type": "MONTH"
+                          },
+                          "price": {
+                            "value": 100,
+                            "currency": "EUR"
+                          },
+                          "settlementPrice": {
+                            "value": 100,
+                            "currency": "EUR"
+                          },
+                          "settlVatPrice": {
+                            "value": 19,
+                            "currency": "EUR"
+                          },
+                          "settlGrsPrice": {
+                            "value": 119,
+                            "currency": "EUR"
+                          },
+                          "settlementPriceRate": {
+                            "quantNot": 1,
+                            "valueNot": 1.067,
+                            "isoCurrTo": "USD",
+                            "tableCode": "ECB",
+                            "rateDate": "2025-09-30",
+                            "validFrom": "2025-09-29"
+                          },
+                          "clientPrice": {
+                            "value": 106.7,
+                            "currency": "USD"
+                          },
+                          "kindOfCreation": {
+                            "code": "AUTO"
+                          },
+                          "creationReason": "Automatically generated from contract.",
+                          "reason": "BASE",
+                          "vatInfo": {
+                            "scenarioIdentCode": "VAT_SCEN_STD",
+                            "typeIdentCode": "VAT_STD",
+                            "ratePercent": 19,
+                            "vatDate": "2025-09-30"
+                          },
+                          "vatSplitCode": "VAT_SPLIT_A",
+                          "comparisonCode": {
+                            "code1": "CMP1",
+                            "code2": "CMP2"
+                          },
+                          "archiveInfo": {
+                            "archiveState": "NEW",
+                            "archivedAt": "2025-09-21T14:22:05Z",
+                            "archiveId": "ARCH-ITEM-0001",
+                            "transactionId": "TX-ITEM-123456",
+                            "onRetrySince": "2025-09-21T14:22:05Z"
+                          },
+                          "parentItemId": null,
+                          "rootItemId": "ROOT-ITEM-0001",
+                          "childItemIds": [
+                            "ROOT-ITEM-0001-CH1",
+                            "ROOT-ITEM-0001-CH2"
+                          ],
+                          "settlementId": "SETTL-2025-000123",
+                          "storageAdapterId": "S3-STORAGE-01"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Requested settlement does not exist.",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Settlement not found": {
+                    "description": "Settlement not found",
+                    "value": {
+                      "error": "No settlement with the ID '0001' found."
                     }
                   }
                 }
