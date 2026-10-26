@@ -5711,12 +5711,12 @@
           "shippingDateFrom": {
             "type": "string",
             "format": "date-time",
-            "description": "Shipping date of the pickup in the format 'yyyy-MM-dd' or 'yyyyMMdd'. The shipping date is expected to be in timezone 'UTC'. <p> length=10 </p>"
+            "description": "Shipping date of the pickup in the format 'yyyy-MM-dd'. The shipping date is expected to be in timezone 'UTC'. <p> length=10 </p>"
           },
           "shippingDateTo": {
             "type": "string",
             "format": "date-time",
-            "description": "Shipping date of the pickup in the format 'yyyy-MM-dd' or 'yyyyMMdd'. The shipping date is expected to be in timezone 'UTC'. <p> length=10 </p>"
+            "description": "Shipping date of the pickup in the format 'yyyy-MM-dd'. The shipping date is expected to be in timezone 'UTC'. <p> length=10 </p>"
           },
           "isClosed": {
             "type": "boolean",
@@ -6728,12 +6728,12 @@
           "shippingDateFrom": {
             "type": "string",
             "format": "date-time",
-            "description": "Shipping date of the shipment in the format 'yyyy-MM-dd' or 'yyyyMMdd'. The shipping date is expected to be in time zone 'UTC'. <p> length=10 </p>"
+            "description": "Shipping date of the shipment in the format 'yyyy-MM-dd'. The shipping date is expected to be in time zone 'UTC'. <p> length=10 </p>"
           },
           "shippingDateTo": {
             "type": "string",
             "format": "date-time",
-            "description": "Shipping date of the shipment in the format 'yyyy-MM-dd' or 'yyyyMMdd'. The shipping date is expected to be in time zone 'UTC'. <p> length=10 </p>"
+            "description": "Shipping date of the shipment in the format 'yyyy-MM-dd'. The shipping date is expected to be in time zone 'UTC'. <p> length=10 </p>"
           },
           "isNotCompleted": {
             "type": "boolean",
@@ -8990,16 +8990,25 @@
           "dataSource": {
             "$ref": "#/components/schemas/DataSource"
           },
-          "preferredCommands": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommandInfo"
-            }
+          "name": {
+            "type": "string"
           },
+          "inputStream": {},
+          "content": {},
+          "contentType": {
+            "type": "string"
+          },
+          "outputStream": {},
           "transferDataFlavors": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ActivationDataFlavor"
+            }
+          },
+          "preferredCommands": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommandInfo"
             }
           },
           "allCommands": {
@@ -9011,16 +9020,7 @@
           "commandMap": {
             "$ref": "#/components/schemas/CommandMap",
             "writeOnly": true
-          },
-          "name": {
-            "type": "string"
-          },
-          "inputStream": {},
-          "content": {},
-          "contentType": {
-            "type": "string"
-          },
-          "outputStream": {}
+          }
         }
       },
       "DataSource": {
