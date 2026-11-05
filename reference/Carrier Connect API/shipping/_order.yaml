@@ -5,6 +5,7 @@
 - processshipment
 - addshipmentattachments
 - deleteitem
+- processitem
 - createpickup
 - deletepackage
 - deletepickup
@@ -16,7 +17,6 @@
 - processpackage
 - processpackagereturnenclosedlabel
 - processpickup
-- processitem
 - syncpickups
 - updatecustomsdata
 - validateshipment
