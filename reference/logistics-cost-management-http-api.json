@@ -488,7 +488,7 @@
         "tags": [
           "SettlementItem"
         ],
-        "summary": "Get settlement items",
+        "summary": "get settlement items",
         "description": "Returns all settlement items matching the given filter criteria. In case no settlement items matches, an empty collection is returned. Supports wildcards in filter fields.",
         "operationId": "searchSettlementItem",
         "parameters": [
