@@ -4,8 +4,8 @@
 - cancelshipment
 - processshipment
 - addshipmentattachments
-- deleteitem
 - processitem
+- deleteitem
 - deletepackage
 - createpickup
 - deletepickup
