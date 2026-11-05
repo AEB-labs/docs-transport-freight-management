@@ -1,5 +1,6 @@
 - createshipment
 - getshipments
+- syncshipments
 - processshipment
 - addshipmentattachments
 - cancelshipment
@@ -17,6 +18,5 @@
 - processpickup
 - processitem
 - syncpickups
-- syncshipments
 - updatecustomsdata
 - validateshipment
