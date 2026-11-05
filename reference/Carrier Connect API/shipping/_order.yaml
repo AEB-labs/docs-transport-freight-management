@@ -6,6 +6,7 @@
 - addshipmentattachments
 - processitem
 - deleteitem
+- processpackage
 - deletepackage
 - createpickup
 - deletepickup
@@ -14,7 +15,6 @@
 - getcarrierportfolionames
 - getcarrierproperties
 - getpickups
-- processpackage
 - processpackagereturnenclosedlabel
 - processpickup
 - syncpickups
