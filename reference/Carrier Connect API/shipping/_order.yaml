@@ -1,5 +1,6 @@
 - createshipment
 - getshipments
+- processshipment
 - addshipmentattachments
 - cancelshipment
 - createpickup
@@ -14,7 +15,6 @@
 - processpackage
 - processpackagereturnenclosedlabel
 - processpickup
-- processshipment
 - processitem
 - syncpickups
 - syncshipments
