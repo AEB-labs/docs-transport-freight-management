@@ -1,5 +1,5 @@
-- createshipment
 - validateshipment
+- createshipment
 - getshipments
 - syncshipments
 - cancelshipment
