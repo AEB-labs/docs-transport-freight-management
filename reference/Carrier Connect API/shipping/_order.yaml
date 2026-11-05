@@ -1,4 +1,5 @@
 - createshipment
+- validateshipment
 - getshipments
 - syncshipments
 - cancelshipment
@@ -19,4 +20,3 @@
 - getcarrierportfoliodetails
 - getcarrierportfolionames
 - getcarrierproperties
-- validateshipment
