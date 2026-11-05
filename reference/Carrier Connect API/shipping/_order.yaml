@@ -4,6 +4,7 @@
 - cancelshipment
 - processshipment
 - addshipmentattachments
+- updatecustomsdata
 - processitem
 - deleteitem
 - processpackage
@@ -18,5 +19,4 @@
 - getcarrierportfoliodetails
 - getcarrierportfolionames
 - getcarrierproperties
-- updatecustomsdata
 - validateshipment
