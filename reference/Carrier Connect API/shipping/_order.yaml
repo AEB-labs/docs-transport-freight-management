@@ -12,11 +12,11 @@
 - createpickup
 - getpickups
 - syncpickups
+- processpickup
 - deletepickup
 - getallcarriers
 - getcarrierportfoliodetails
 - getcarrierportfolionames
 - getcarrierproperties
-- processpickup
 - updatecustomsdata
 - validateshipment
