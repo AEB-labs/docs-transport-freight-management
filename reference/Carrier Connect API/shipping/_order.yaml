@@ -10,12 +10,12 @@
 - processpackagereturnenclosedlabel
 - deletepackage
 - createpickup
+- getpickups
 - deletepickup
 - getallcarriers
 - getcarrierportfoliodetails
 - getcarrierportfolionames
 - getcarrierproperties
-- getpickups
 - processpickup
 - syncpickups
 - updatecustomsdata
