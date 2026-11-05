@@ -363,7 +363,7 @@
         "tags": [
           "Settlement"
         ],
-        "summary": "Search settlements",
+        "summary": "get settlements",
         "description": "Returns all settlements matching the given filter criteria. In case no settlement matches, an empty collection is returned. Supports wildcards in filter fields.",
         "operationId": "searchSettlements",
         "parameters": [
