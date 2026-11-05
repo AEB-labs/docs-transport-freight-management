@@ -4,8 +4,8 @@
 - cancelshipment
 - processshipment
 - addshipmentattachments
-- createpickup
 - deleteitem
+- createpickup
 - deletepackage
 - deletepickup
 - getallcarriers
