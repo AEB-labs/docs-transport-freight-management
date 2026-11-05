@@ -6,8 +6,8 @@
 - addshipmentattachments
 - deleteitem
 - processitem
-- createpickup
 - deletepackage
+- createpickup
 - deletepickup
 - getallcarriers
 - getcarrierportfoliodetails
