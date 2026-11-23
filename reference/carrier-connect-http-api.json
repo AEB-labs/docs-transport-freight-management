@@ -577,6 +577,52 @@
         ]
       }
     },
+    "/DLCarrierBFBean/getShipmentAttachments": {
+      "post": {
+        "tags": [
+          "Shipping"
+        ],
+        "summary": "getShipmentAttachments",
+        "description": "Returns all attachments of a shipment.",
+        "operationId": "getShipmentAttachments",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DLGetShipmentAttachmentsRequestDTO"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/DLGetShipmentAttachmentsRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "default response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DLGetShipmentAttachmentsResponseDTO"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/DLGetShipmentAttachmentsResponseDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BASIC_AUTH": []
+          }
+        ]
+      }
+    },
     "/DLCarrierBFBean/getShipments": {
       "post": {
         "tags": [
@@ -2977,7 +3023,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p>\nThe type of the reference number or text. Valid values are:\n\n<li>GTIN - Global trade item number</li>\n<li>MODEL_NUMBER - Model number</li>\n<li>MPN - Manufacturer part number</li>\n<li>PART_NUMBER - Part number</li>\n<li>SKU - Stock keeping unit</li>\n\n</p>\n<p>length=30</p>\n"
+            "description": "<p>\nThe type of the reference number or text. Valid values are:\n\n<li>DDS_NUMBER - Due diligence statement number</li>\n<li>GTIN - Global trade item number</li>\n<li>MODEL_NUMBER - Model number</li>\n<li>MPN - Manufacturer part number</li>\n<li>PART_NUMBER - Part number</li>\n<li>SKU - Stock keeping unit</li>\n<li>TARIC_DOCUMENT_CODE - TARIC Document Code</li>\n\n</p>\n<p>length=30</p>\n"
           },
           "value": {
             "type": "string",
@@ -5761,6 +5807,113 @@
           }
         }
       },
+      "DLGetShipmentAttachmentsResponseDTO": {
+        "type": "object",
+        "description": "Response DTO for the getShipmentAttachments business facade method.",
+        "properties": {
+          "hasErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>An error usually means that the request could not be performed.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": false
+          },
+          "hasOnlyRetryableErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
+          },
+          "hasWarnings": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
+          },
+          "messages": {
+            "type": "array",
+            "description": "<p>Error or warning messages at the request level.</p><p>There may be additional messages[] arrays at lower data levels as specified in the documentation.</p>",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessageDTO"
+            }
+          },
+          "attachments": {
+            "type": "array",
+            "description": "Attachments of the requested shipment.",
+            "items": {
+              "$ref": "#/components/schemas/DLShipmentAttachmentDTO"
+            }
+          }
+        },
+        "xml": {
+          "name": "getShipmentAttachmentsResponseDTO"
+        }
+      },
+      "DLShipmentAttachmentDTO": {
+        "type": "object",
+        "description": "DTO for an attachment read from a shipment. If the attachment was created through the API, its data should correspond to DLAttachmentDTO.",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "description": "File name including a file extension."
+          },
+          "mimeType": {
+            "type": "string",
+            "description": "MIME type of the attachment."
+          },
+          "data": {
+            "type": "string",
+            "format": "byte",
+            "description": "Attachment data/content, if requested."
+          },
+          "contentType": {
+            "type": "string",
+            "description": "Attachment type."
+          }
+        }
+      },
+      "DLGetShipmentAttachmentsRequestDTO": {
+        "type": "object",
+        "description": "Request DTO for the getShipmentAttachments business facade method.",
+        "properties": {
+          "clientSystemId": {
+            "type": "string",
+            "description": "<p>Id of the sending client system.</p><p>e.g. Installation ID of the sending host or ERP system.</p><p>Maximum length: 20</p>",
+            "example": "TEST_ID"
+          },
+          "clientIdentCode": {
+            "type": "string",
+            "description": "<p>Client identification code.</p><p>Maximum length: 10</p>",
+            "example": "APITEST"
+          },
+          "userName": {
+            "type": "string",
+            "description": "<p>User who initiated the request from the client system.</p><p>If the user is found either in the system's user management or in a connected LDAP directory, the request runs under this user's roles.</p><p>If the user is not found, the request is only granted the basic 'I_EVERYONE' role. The user name may be used for logging purposes in this case.</p><p>Actual authentication is handled separately via the request's headers, so no password is required in the request's data.</p>",
+            "example": "API_TEST"
+          },
+          "resultLanguageIsoCodes": {
+            "type": "array",
+            "description": "<p>2-letter ISO codes of the languages in which texts will be returned.</p><p>English ('en') and German ('de') are typically supported by default. Other languages may be supported.</p><p>Translations will be looked up in the order of the provided language codes. If a translation is not available in one language, the next language is used instead.</p>",
+            "example": [
+              "en",
+              "de"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "shipmentReference": {
+            "$ref": "#/components/schemas/DLShipmentReferenceDTO",
+            "description": "Reference of the shipment whose attachments are requested."
+          },
+          "includeAttachmentContent": {
+            "type": "boolean",
+            "description": "Controls, if the attachment content should be included in the response. Defaults to \"false\"."
+          }
+        },
+        "required": [
+          "shipmentReference"
+        ],
+        "xml": {
+          "name": "getShipmentAttachmentsRequestDTO"
+        }
+      },
       "DLGetShipmentsResponseDTO": {
         "type": "object",
         "description": "Data Transfer Object for shipment search result.",
@@ -7845,7 +7998,7 @@
         "properties": {
           "type": {
             "type": "string",
-            "description": "<p>\nThe type of the reference number or text. Valid values are:\n\n<li>GTIN - Global trade item number</li>\n<li>MODEL_NUMBER - Model number</li>\n<li>MPN - Manufacturer part number</li>\n<li>PART_NUMBER - Part number</li>\n<li>SKU - Stock keeping unit</li>\n\n</p>\n<p>length=30</p>\n"
+            "description": "<p>\nThe type of the reference number or text. Valid values are:\n\n<li>DDS_NUMBER - Due diligence statement number</li>\n<li>GTIN - Global trade item number</li>\n<li>MODEL_NUMBER - Model number</li>\n<li>MPN - Manufacturer part number</li>\n<li>PART_NUMBER - Part number</li>\n<li>SKU - Stock keeping unit</li>\n<li>TARIC_DOCUMENT_CODE - TARIC Document Code</li>\n\n</p>\n<p>length=30</p>\n"
           },
           "value": {
             "type": "string",
@@ -8965,10 +9118,10 @@
       "CommandInfo": {
         "type": "object",
         "properties": {
-          "commandClass": {
+          "commandName": {
             "type": "string"
           },
-          "commandName": {
+          "commandClass": {
             "type": "string"
           }
         }
@@ -9009,16 +9162,16 @@
               "$ref": "#/components/schemas/CommandInfo"
             }
           },
-          "transferDataFlavors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ActivationDataFlavor"
-            }
-          },
           "preferredCommands": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CommandInfo"
+            }
+          },
+          "transferDataFlavors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActivationDataFlavor"
             }
           }
         }
@@ -9954,6 +10107,10 @@
           "clientDefined": {
             "type": "boolean",
             "description": "true if this role is defined specifically for the current client"
+          },
+          "assignableByClientAdmin": {
+            "type": "boolean",
+            "description": "true if assignable by client"
           }
         }
       },
