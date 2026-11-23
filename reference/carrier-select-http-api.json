@@ -1332,11 +1332,14 @@
           }
         },
         "responses": {
-          "default": {
-            "description": "default response",
+          "200": {
+            "description": "Successfully retrieved routing task result",
             "content": {
-              "application/json": {},
-              "application/xml": {}
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WaitForRoutingTaskResultResponseDTO"
+                }
+              }
             }
           }
         },
@@ -3991,11 +3994,9 @@
             }
           },
           "startHop": {
-            "$ref": "#/components/schemas/HopDTO",
             "description": "The handover point where at the leg starts. This could be a HopStartDTO or a HopReferenceDTO"
           },
           "endHop": {
-            "$ref": "#/components/schemas/HopDTO",
             "description": "The handover point where the leg ends. This could be a HopEndDTO or a HopReferenceDTO"
           },
           "legSchedule": {
@@ -4487,6 +4488,38 @@
         "required": [
           "taskId"
         ]
+      },
+      "WaitForRoutingTaskResultResponseDTO": {
+        "type": "object",
+        "description": "Response DTO of a waiting routing task request.",
+        "properties": {
+          "hasErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>An error usually means that the request could not be performed.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": false
+          },
+          "hasOnlyRetryableErrors": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
+          },
+          "hasWarnings": {
+            "type": "boolean",
+            "description": "<p>True, if there are any error messages.</p><p>Error details are provided in the messages[] array.</p>",
+            "example": true
+          },
+          "messages": {
+            "type": "array",
+            "description": "<p>Error or warning messages at the request level.</p><p>There may be additional messages[] arrays at lower data levels as specified in the documentation.</p>",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMessageDTO"
+            }
+          },
+          "routingTaskResult": {
+            "$ref": "#/components/schemas/RoutingTaskResultDTO",
+            "description": "Contains a list of ranked proposals and information on the current calculation status for the requested routing task."
+          }
+        }
       },
       "WaitForRoutingTaskResultRequestDTO": {
         "type": "object",
