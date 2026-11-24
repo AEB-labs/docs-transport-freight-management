@@ -5,6 +5,7 @@
 - cancelshipment
 - processshipment
 - addshipmentattachments
+- getshipmentattachments
 - updatecustomsdata
 - processitem
 - deleteitem
